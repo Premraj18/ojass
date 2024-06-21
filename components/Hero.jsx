@@ -99,14 +99,6 @@ const Hero = () => {
                         <motion.p className='text-3xl tracking-wider ' variants={cosmosvarients}>The Annual Techno Management Fest of National Institute of Technology, Jamshedpur</motion.p>
                     </motion.div>
                 </div>
-                <motion.div className='absolute left-10 top-10 z-10'
-                    style={{
-                        y: yBg,
-                        x: xBg
-                    }}
-                >
-                    <img src="/space.png" alt="" className='w-[60vw] blur-[1px]' />
-                </motion.div>
                 <div className=''>
                     <About />
                 </div>

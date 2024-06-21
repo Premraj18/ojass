@@ -19,7 +19,7 @@ const variants = {
 
 const aboutvarients = {
     initial: {
-        y: 40,
+        y: 30,
         opacity: 0,
     },
     animate: {

@@ -13,7 +13,7 @@ const Event = () => {
       >
         <h2 className='text-center tracking-wider text-6xl pt-8'>Events</h2>
         <div className='border'>
-          <EventCard/>
+          {/* <EventCard/> */}
         </div>
       </div>
     </div>
