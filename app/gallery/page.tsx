@@ -2,7 +2,7 @@
 import { ParallaxScroll } from "../../components/ui/parallax-scroll";
 import { images } from '../../images'
 
-export default function () {
+export default function Page() {
 
     return (
         <div className="w-full sm:mt-0 mt-20 bg-fixed"
