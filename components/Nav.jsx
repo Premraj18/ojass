@@ -8,6 +8,7 @@ import {
   HiChatBubbleBottomCenterText,
   HiEnvelope,
 } from 'react-icons/hi2';
+import { motion, useMotionValueEvent, useScroll } from "framer-motion";
 
 // nav data
 export const navData = [
@@ -30,12 +31,33 @@ export const navData = [
 import Link from 'next/link';
 
 import { usePathname } from 'next/navigation'
+import { useState } from 'react';
 
 const Nav = () => {
   const pathname = usePathname();
   console.log(pathname)
+
+  const { scrollY } = useScroll();
+
+  const [hidden, setHidden] = useState(false)
+
+  useMotionValueEvent(scrollY, 'change', (latest) => {
+    if (latest > 50) {
+      setHidden(true);
+    } else {
+      setHidden(false)
+    }
+  })
+
   return (
-    <header className="w-full fixed top-0 z-50 py-3 sm:px-10 px-5 flex justify-between items-center bg-transparent">
+    <motion.header className="w-full fixed top-0 z-50 py-3 sm:px-10 px-5 flex justify-between items-center bg-transparent"
+      variants={{
+        visible: { background: 'transparent' },
+        hidden: { background: 'linear-gradient(rgba(109, 109, 109, 0.133),rgba(0, 0, 0, 0.919))', boxShadow: '0px 0.01px 5px rgba(24, 22, 22, 0.155)' },
+      }}
+      animate={hidden ? "hidden" : "visible"}
+      transition={{ duration: 0.1, }}
+    >
       <nav className='flex w-full screen-max-width justify-center items-center'>
         <img src='/ojasslogo.png' alt="Apple" className='w-20 ' />
         <div className='flex flex-1 justify-center max-sm:hidden'>
@@ -59,7 +81,7 @@ const Nav = () => {
           <button className='border p-1 px-2 bg-white/15 rounded-full'>Sign up</button>
         </div>
       </nav>
-    </header>
+    </motion.header>
   )
 };
 

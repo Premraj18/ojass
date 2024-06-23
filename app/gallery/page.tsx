@@ -5,7 +5,7 @@ import { images } from '../../images'
 export default function Page() {
 
     return (
-        <div className="w-full sm:mt-0 mt-20 bg-fixed"
+        <div className="w-full sm:pt-20 pt-20 bg-fixed"
             style={{
                 backgroundImage: "url(" + "/img3.jpg" + ")",
                 backgroundPosition: 'center',
