@@ -65,12 +65,12 @@ const Hero = () => {
                     />
 
                 </div>
-                <div className='min-h-[90vh] flex flex-col items-center justify-center'>
+                <div className='min-h-[110vh] flex flex-col items-center justify-center'>
                     <motion.div
                         className="hidden side md:flex space-x-5 uppercase font-sans 
                     text-3xl sm:text-[7vw] md:text-8xl font-extrabold 
                     [-webkit-text-stroke:1px_#f5f5f5] text-transparent m-1 mt-10
-                    md:mt-0 tracking-wide whitespace-pre pb-10 z-20"
+                    md:mt-20 tracking-wide whitespace-pre pb-10 z-20"
                         variants={variants}
                         initial='initial'
                         whileInView='animate'

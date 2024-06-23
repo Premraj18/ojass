@@ -11,17 +11,17 @@ import {
 
 // nav data
 export const navData = [
-  { name: 'home', path: '/', icon: <HiHome /> },
-  { name: 'about', path: '/about', icon: <HiUser /> },
-  { name: 'services', path: '/services', icon: <HiRectangleGroup /> },
-  { name: 'gallery', path: '/gallery', icon: <HiViewColumns /> },
+  { name: 'Home', path: '/', icon: <HiHome /> },
+  { name: 'About', path: '/about', icon: <HiUser /> },
+  { name: 'Services', path: '/services', icon: <HiRectangleGroup /> },
+  { name: 'Gallery', path: '/gallery', icon: <HiViewColumns /> },
   {
-    name: 'testimonials',
-    path: '/testimonials',
+    name: 'Sponser',
+    path: '/sponser',
     icon: <HiChatBubbleBottomCenterText />,
   },
   {
-    name: 'contact',
+    name: 'Contact',
     path: '/contact',
     icon: <HiEnvelope />,
   },
@@ -35,7 +35,7 @@ const Nav = () => {
   const pathname = usePathname();
   console.log(pathname)
   return (
-    <header className="w-full sticky top-0 z-50 py-3 sm:px-10 px-5 flex justify-between items-center bg-transparent">
+    <header className="w-full fixed top-0 z-50 py-3 sm:px-10 px-5 flex justify-between items-center bg-transparent">
       <nav className='flex w-full screen-max-width justify-center items-center'>
         <img src='/ojasslogo.png' alt="Apple" className='w-20 ' />
         <div className='flex flex-1 justify-center max-sm:hidden'>
