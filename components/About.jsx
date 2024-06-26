@@ -22,7 +22,7 @@ const variants = {
 const About = () => {
     return (
         <motion.div className="w-full sm:mt-0 bg-center bg-fixed bg-cover bg-no-repeat">
-            <motion.div className="h-full w-full justify-center items-center gap-y-10 flex flex-col [-webkit-text-stroke:0.5px_#f5f5f5] text-transparent "
+            <motion.div className="h-full w-full justify-center items-center gap-y-10 pb-10 flex flex-col [-webkit-text-stroke:0.5px_#f5f5f5] text-transparent "
                 style={{
                     background: 'linear-gradient(to bottom, rgba(2, 2, 2, 0.133),rgba(2, 2, 2, 0.133))'
                 }}
