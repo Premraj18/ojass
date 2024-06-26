@@ -44,10 +44,9 @@ const About = () => {
                         </div>
                     </motion.div>
                     <motion.div className='lg:w-2/5 lg:text-lg' variants={variants}>
-                        <motion.p variants={variants}>ProDex is not just a technical society, its much more than that.
-                            It provides you an opportunity to be a part of a group which strives
-                            to nurture the innovator in you, so that you understand that it is
-                            time for us to change ourselves, and hence, be the change.</motion.p>
+                        <motion.p variants={variants}> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore sit ex, 
+                            minima dolorum architecto ut delectus odio illum magni 
+                            commodi omnis molestias ea doloremque quos.</motion.p>
 
                         <motion.p className='my-6' variants={variants}>Here, you will be exposed to various fields and work with different
                             technologies spanning various engineering backgrounds, be it electrical
