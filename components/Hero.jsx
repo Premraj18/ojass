@@ -67,10 +67,10 @@ const Hero = () => {
                 </div>
                 <div className='min-h-[110vh] flex flex-col items-center justify-center'>
                     <motion.div
-                        className="hidden side md:flex space-x-5 uppercase font-sans 
-                    text-3xl sm:text-[7vw] md:text-8xl font-extrabold 
-                    [-webkit-text-stroke:1px_#f5f5f5] text-transparent m-1 mt-10
-                    md:mt-20 tracking-wide whitespace-pre pb-10 z-20"
+                        className="side flex space-x-5 uppercase font-sans 
+                    text-5xl sm:text-[7vw] md:text-8xl font-extrabold 
+                    [-webkit-text-stroke:1px_#f5f5f5] text-transparent m-1 mt-20
+                    md:mt-20 tracking-wide whitespace-pre pb-10 z-20 "
                         variants={variants}
                         initial='initial'
                         whileInView='animate'
@@ -91,12 +91,12 @@ const Hero = () => {
                             S
                         </motion.p>
                     </motion.div>
-                    <motion.div className="w-2/3 text-center font-light flex justify-center z-20 items-center"
+                    <motion.div className="md:w-2/3 text-center font-light flex justify-center z-20 items-center px-5"
                         variants={cosmosvarients}
                         initial='initial'
                         whileInView='animate'
                     >
-                        <motion.p className='text-3xl tracking-wider ' variants={cosmosvarients}>The Annual Techno Management Fest of National Institute of Technology, Jamshedpur</motion.p>
+                        <motion.p className='md:text-3xl text-xl tracking-wider ' variants={cosmosvarients}>The Annual Techno Management Fest of National Institute of Technology, Jamshedpur</motion.p>
                     </motion.div>
                 </div>
                 <div className=''>
