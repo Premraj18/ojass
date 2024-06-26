@@ -6,11 +6,11 @@ import Link from 'next/link';
 
 const variants = {
     initial: {
-        x: 200,
+        y: 30,
         opacity: 0,
     },
     animate: {
-        x: 0,
+        y: 0,
         opacity: 1,
         transition: {
             duration: 0.8,
