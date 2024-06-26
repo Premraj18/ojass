@@ -37,7 +37,7 @@ import { useRef, useState } from 'react';
 
 const Nav = () => {
   const pathname = usePathname();
-  console.log(pathname)
+  // console.log(pathname)
 
   const { scrollY } = useScroll();
 

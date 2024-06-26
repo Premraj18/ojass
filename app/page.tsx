@@ -13,7 +13,7 @@ export default function Home() {
       <div className="">
         <Hero />
         {/* <About/> */}
-        <Event/>
+        {/* <Event/> */}
       </div>
     </>
   );

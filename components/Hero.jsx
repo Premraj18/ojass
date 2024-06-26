@@ -3,6 +3,7 @@ import React, { useRef } from 'react'
 import { SparklesCore } from "../components/ui/sparkles";
 import { delay, motion, useScroll, useTransform } from 'framer-motion'
 import About from './About';
+import Event from './Event';
 
 const variants = {
     initial: {
@@ -45,9 +46,9 @@ const Hero = () => {
     const yBg = useTransform(scrollYProgress, [0, 1], ["0%", "180%"]);
     const xBg = useTransform(scrollYProgress, [0, 1], ["0%", "150%"]);
     return (
-        <div ref={ref} className="min-h-[100vh] relative -z-10 -mt-24 w-full 
+        <div ref={ref} className="min-h-[100vh] relative -mt-24 w-full 
         flex flex-col items-center justify-center overflow-hidden bg-[url('/bghero.jpg')] bg-fixed bg-center bg-cover">
-            <div className='min-h-[100vh] relative -z-10  w-full flex flex-col items-center justify-center'
+            <div className='min-h-[100vh] relative  w-full flex flex-col items-center justify-center'
                 style={{
                     background: 'linear-gradient(to bottom, rgba(2, 2, 2, 0.233),rgba(2, 2, 2, 0.933))'
                 }}
@@ -60,7 +61,7 @@ const Hero = () => {
                         maxSize={1}
                         particleDensity={50}
                         speed={0.5}
-                        className="w-full h-full"
+                        className="w-full h-full -z-10"
                         particleColor="#FFFFFF"
                     />
 
@@ -70,7 +71,7 @@ const Hero = () => {
                         className="side flex space-x-5 uppercase font-sans 
                     text-5xl sm:text-[7vw] md:text-8xl font-extrabold 
                     [-webkit-text-stroke:1px_#f5f5f5] text-transparent m-1 mt-20
-                    md:mt-20 tracking-wide whitespace-pre pb-10 z-20 "
+                    md:mt-20 tracking-wide whitespace-pre pb-10 "
                         variants={variants}
                         initial='initial'
                         whileInView='animate'
@@ -91,7 +92,7 @@ const Hero = () => {
                             S
                         </motion.p>
                     </motion.div>
-                    <motion.div className="md:w-2/3 text-center font-light flex justify-center z-20 items-center px-5"
+                    <motion.div className="md:w-2/3 text-center font-light flex justify-center items-center px-5"
                         variants={cosmosvarients}
                         initial='initial'
                         whileInView='animate'
@@ -99,8 +100,11 @@ const Hero = () => {
                         <motion.p className='md:text-3xl text-xl tracking-wider ' variants={cosmosvarients}>The Annual Techno Management Fest of National Institute of Technology, Jamshedpur</motion.p>
                     </motion.div>
                 </div>
-                <div className=''>
+                <div className='z-20'>
                     <About />
+                </div>
+                <div className='w-full z-10'>
+                    <Event/>
                 </div>
             </div>
         </div>

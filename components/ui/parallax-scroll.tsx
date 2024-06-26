@@ -25,8 +25,8 @@ export const ParallaxScroll = ({
   const third = Math.ceil(images.length / 3);
 
   const firstPart = images.slice(0, third);
-  const secondPart = images.slice(third, (2 * third-2));
-  const thirdPart = images.slice(2 * third-2);
+  const secondPart = images.slice(third, (2 * third - 2));
+  const thirdPart = images.slice(2 * third - 2);
 
   return (
     <div
@@ -34,7 +34,10 @@ export const ParallaxScroll = ({
       className={cn("h-[50rem] items-start overflow-y-auto w-full", className)}
       ref={gridRef}
     >
-      <h2 className='text-center tracking-wider text-7xl pt-10'>Gallery</h2>
+      {/* <h2 className='text-center tracking-wider text-7xl pt-10'>Gallery</h2> */}
+      <div className='pt-10 flex w-full justify-center items-center'>
+        <img src="/gallerytext.png" alt="" className='w-60 md:w-1/4 md:py-16 py-10' />
+      </div>
       <div
         className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-start  max-w-8xl mx-auto gap-20 py-10 px-10"
         ref={gridRef}

@@ -6,11 +6,11 @@ import Link from 'next/link';
 
 const variants = {
     initial: {
-        y: 30,
+        x: -200,
         opacity: 0,
     },
     animate: {
-        y: 0,
+        x: 0,
         opacity: 1,
         transition: {
             duration: 0.8,
@@ -21,13 +21,16 @@ const variants = {
 
 const About = () => {
     return (
-        <motion.div className="w-full sm:mt-0 -z-10 bg-[url('/bghero.jpg')] bg-center bg-fixed bg-cover bg-no-repeat">
-            <motion.div className="h-full w-full justify-center items-center gap-y-10 pb-20 flex flex-col [-webkit-text-stroke:0.5px_#f5f5f5] text-transparent "
+        <motion.div className="w-full sm:mt-0 bg-center bg-fixed bg-cover bg-no-repeat">
+            <motion.div className="h-full w-full justify-center items-center gap-y-10 flex flex-col [-webkit-text-stroke:0.5px_#f5f5f5] text-transparent "
                 style={{
-                    background: 'linear-gradient(to bottom, rgba(2, 2, 2, 0.633),rgba(2, 2, 2, 0.633))'
+                    background: 'linear-gradient(to bottom, rgba(2, 2, 2, 0.133),rgba(2, 2, 2, 0.133))'
                 }}
             >
-                <h3 className='text-4xl font-semibold text-white pt-10'>ABOUT US</h3>
+                {/* <h3 className='text-4xl font-semibold text-white pt-10'>ABOUT US</h3> */}
+                <div className='pt-10'>
+                    <img src="/abouttext2.png" alt="" className='w-60 md:w-full' />
+                </div>
                 <motion.div className='flex w-full flex-col lg:flex-row justify-center items-center px-5 lg:px-20 gap-8 gap-y-14 lg:gap-y-0'
                     variants={variants}
                     initial='initial'
@@ -52,7 +55,7 @@ const About = () => {
                             technologies spanning various engineering backgrounds, be it electrical
                             engineering or mechanical engineering, biotech or cse.</motion.p>
                         <Link href='/about'>
-                            <motion.button className='px-2 py-1 text-base border-2 rounded-full text-white hover:text-gray-400' variants={variants}>Learn More</motion.button>
+                            <motion.button className='px-4 py-1 text-base border-2 rounded-full text-white hover:text-gray-400' variants={variants}>Learn More</motion.button>
                         </Link>
                     </motion.div>
                 </motion.div>
