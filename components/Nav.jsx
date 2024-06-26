@@ -114,7 +114,7 @@ const Nav = () => {
                     key={index}>
                     <div className={`${link.path === pathname && 'text-white border rounded-full'}  transition-all hover:text-white text-center flex px-5 py-1 justify-center items-center`}>
                       {link.icon}
-                      <div className='px-1 cursor-pointer '>
+                      <div className='px-1 cursor-pointer ' onClick={toggleCart}>
                         <span className=''>{link.name}</span>
                       </div>
                     </div>

@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 const variants = {
     initial: {
-        x: -200,
+        x: 200,
         opacity: 0,
     },
     animate: {
