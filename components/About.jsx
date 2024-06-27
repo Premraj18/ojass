@@ -21,46 +21,80 @@ const variants = {
 
 const About = () => {
     return (
-        <motion.div className="w-full sm:mt-0 bg-center bg-fixed bg-cover bg-no-repeat">
-            <motion.div className="h-full w-full justify-center items-center gap-y-10 pb-10 flex flex-col [-webkit-text-stroke:0.5px_#f5f5f5] text-transparent "
-                style={{
-                    background: 'linear-gradient(to bottom, rgba(2, 2, 2, 0.133),rgba(2, 2, 2, 0.133))'
-                }}
+        <section className="flex items-center w-full font-poppins sm:pt-14 sm:pb-20">
+            <motion.div className="justify-center flex-1 w-full py-4 mx-auto lg:py-4 md:px-6"
+                variants={variants}
+                initial='initial'
+                whileInView='animate'
             >
-                {/* <h3 className='text-4xl font-semibold text-white pt-10'>ABOUT US</h3> */}
-                <div className='pt-10'>
-                    <img src="/abouttext2.png" alt="" className='w-60 md:w-full' />
+                <div className="px-4 mb-10 md:text-center md:mb-20">
+                    <div className='flex justify-center'>
+                        <img src="/abouttext2.png" alt="" className='w-56 md:w-80 ' />
+                    </div>
                 </div>
-                <motion.div className='flex w-full flex-col lg:flex-row justify-center items-center px-5 lg:px-20 gap-8 gap-y-14 lg:gap-y-0'
-                    variants={variants}
-                    initial='initial'
-                    whileInView='animate'
-                >
-                    <motion.div className='lg:w-2/5 lg:text-lg' variants={variants}>
-                        <motion.p variants={variants}>Prodex is a workplace for innovation, technology and research
-                            driven activists who aspire to shape their ideas into reality.</motion.p>
-                        <motion.p className='my-5' variants={variants}>ProDex provides you a platform to :-</motion.p>
-                        <div className='text-base flex flex-col gap-3'>
-                            <motion.p className='flex items-center gap-x-3' variants={variants}><span className='text-orange-600 text-xl'><BiCheckDouble /></span> Develop new ideas and shape them into real-worldly models.</motion.p>
-                            <motion.p className='flex items-center gap-x-3' variants={variants}><span className='text-orange-600 text-xl'><BiCheckDouble /></span> Work with a team of like minded, tech-savvy, innovation driven people.</motion.p>
-                            <motion.p className='flex items-center gap-x-3' variants={variants}><span className='text-orange-600 text-xl'><BiCheckDouble /></span> Represent your team, yourself and the society in various competitions and events.</motion.p>
-                        </div>
-                    </motion.div>
-                    <motion.div className='lg:w-2/5 lg:text-lg' variants={variants}>
-                        <motion.p variants={variants}> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore sit ex, 
-                            minima dolorum architecto ut delectus odio illum magni 
-                            commodi omnis molestias ea doloremque quos.</motion.p>
+                <div className="flex flex-wrap items-center justify-center lg:px-32 w-full">
+                    <motion.div className="w-full px-4 mb-10 lg:w-1/2 flex justify-center lg:mb-0"
+                        variants={variants}
 
-                        <motion.p className='my-6' variants={variants}>Here, you will be exposed to various fields and work with different
-                            technologies spanning various engineering backgrounds, be it electrical
-                            engineering or mechanical engineering, biotech or cse.</motion.p>
-                        <Link href='/about'>
-                            <motion.button className='px-4 py-1 text-base border-2 rounded-full text-white hover:text-gray-400' variants={variants}>Learn More</motion.button>
+                    >
+                        {/* <img src="https://i.postimg.cc/j5L5bX2d/pexels-andrea-piacquadio-3757946.jpg" alt=""
+                            className="relative object-cover border-2 lg:w-[500px] w-full h-96 rounded-tr-3xl rounded-bl-3xl" /> */}
+                        <iframe className='w-[350px] md:w-[550px] h-[315px] md:h-[415px] rounded-3xl' src="https://www.youtube.com/embed/Zh2j5CyPV9o?si=qxwqd8dYum076apM" title="YouTube video player" 
+                        frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+                    </motion.div>
+                    <motion.div className="w-full px-4 mb-10 lg:w-1/2 lg:mb-0 "
+                        variants={variants}
+
+                    >
+                        <motion.h2
+                            className="py-3 pl-2 mb-4 text-2xl font-bold text-gray-200 border-l-4 border-white 00 " variants={variants}>
+                            We are providing a better facility
+                        </motion.h2>
+                        <motion.p className="mb-4 text-base leading-7 text-gray-300 " variants={variants}>
+                            We believe in transforming spaces into captivating experiences. Our team of passionate designers
+                            merges creativity with functionality, delivering interiors that reflect your unique style and enhance your daily life.
+                        </motion.p>
+                        <ul className="mb-10">
+                            <motion.li className="flex items-center mb-4 text-base " variants={variants}>
+                                <span className="mr-3 text-white  ">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        className="w-5 h-5 bi bi-patch-check-fill" viewBox="0 0 16 16">
+                                        <path
+                                            d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01-.622-.636zm.287 5.984-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7 8.793l2.646-2.647a.5.5 0 0 1 .708.708z" />
+                                    </svg>
+                                </span>
+                                Every project is a canvas, and we tailor our designs to align with your vision and lifestyle.
+                            </motion.li>
+                            <motion.li className="flex items-center mb-4 text-base " variants={variants}>
+                                <span className="mr-3 text-white ">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        className="w-5 h-5 bi bi-patch-check-fill" viewBox="0 0 16 16">
+                                        <path
+                                            d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01-.622-.636zm.287 5.984-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7 8.793l2.646-2.647a.5.5 0 0 1 .708.708z" />
+                                    </svg>
+                                </span>
+                                We obsess over the details, ensuring every element harmonizes seamlessly within the space.
+                            </motion.li>
+                            <motion.li className="flex items-center mb-4 text-base " variants={variants}>
+                                <span className="mr-3 text-white  ">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        className="w-5 h-5 bi bi-patch-check-fill" viewBox="0 0 16 16">
+                                        <path
+                                            d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01-.622-.636zm.287 5.984-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7 8.793l2.646-2.647a.5.5 0 0 1 .708.708z" />
+                                    </svg>
+                                </span>
+                                We collaborate closely with you, turning your ideas into stunning, functional realities.
+                            </motion.li>
+                        </ul>
+                        <Link href='/about'
+                            className="px-4 py-3 text-white transition-all transform border border-white hover:bg-white/15 rounded-full  hover:text-gray-100" variants={variants}>
+                            Discover more
                         </Link>
                     </motion.div>
-                </motion.div>
+                </div>
             </motion.div>
-        </motion.div>
+        </section>
     )
 }
 
