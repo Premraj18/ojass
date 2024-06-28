@@ -24,13 +24,13 @@ const Page = () => {
     return (
         <>
             <div className="w-full min-h-[100vh] sm:mt-0 lg:pt-14 pt-20 bg-[url('/img8.jpeg')] bg-center bg-cover bg-no-repeat bg-fixed">
-                <div className='min-h-[100vh] -mt-16 relative  w-full flex flex-col items-center justify-center'
+                <div className='min-h-[100vh] -mt-20 relative  w-full flex flex-col items-center justify-center'
                     style={{
                         background: 'linear-gradient(to bottom, rgba(2, 2, 2, 0.633),rgba(2, 2, 2, 0.633))'
                     }}
                 >
                     {/* <h2 className='text-5xl text-center mt-20 underline'>Team Ojass</h2> */}
-                    <div className='pt-44 w-full flex justify-center items-center'>
+                    <div className='pt-48 w-full flex justify-center items-center'>
                         <img src="/contacttext.png" alt="" className='w-[80%] lg:w-1/3' />
                     </div>
                     {/* <div className='flex justify-center px-5'>
@@ -82,7 +82,7 @@ const Page = () => {
                     </div>
 
                     <div className=' w-full flex flex-col items-center justify-center pb-20'>
-                        <h3 className='text-2xl font-medium my-10'>Find us on google</h3>
+                        <h3 className='text-2xl font-medium my-10'>Find us on map</h3>
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3678.6863772192432!2d86.14154107508409!3d22.77701737934658!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f5e4daa475a5cd%3A0xd87b53fadcd771a1!2sNational%20Institute%20of%20Technology%2C%20Jamshedpur!5e0!3m2!1sen!2sjp!4v1718941681102!5m2!1sen!2sjp"
                             width="80%"
                             height="450"
