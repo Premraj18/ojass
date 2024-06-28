@@ -97,7 +97,7 @@ const Hero = () => {
                         initial='initial'
                         whileInView='animate'
                     >
-                        <motion.p className='md:text-3xl text-xl tracking-wider ' variants={cosmosvarients}>The Annual Techno Management Fest of National Institute of Technology, Jamshedpur</motion.p>
+                        <motion.p className='md:text-2xl text-gray-300 text-xl tracking-[8px] uppercase ' variants={cosmosvarients}>Techno-Management Fest of NIT Jamshedpur</motion.p>
                     </motion.div>
                 </div>
                 <div className='z-20'>
