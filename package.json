@@ -29,6 +29,7 @@
     "react-slick": "^0.30.2",
     "react-slideshow-image": "^4.3.1",
     "slick-carousel": "^1.8.1",
+    "swiper": "^11.1.4",
     "tailwind-merge": "^2.3.0",
     "three": "^0.165.0",
     "three-globe": "^2.31.0"

@@ -5,7 +5,7 @@ import Link from 'next/link'
 
 const Event = () => {
   return (
-    <div className="w-full min-h-[100vh] sm:mt-0 lg:pt-14 pt-20 bg-center bg-cover bg-no-repeat"
+    <div className="w-full min-h-[80vh] sm:mt-0 lg:pt-14 pt-20 bg-center bg-cover bg-no-repeat"
     >
       <div className="h-full w-full justify-center items-center pb-20 flex flex-col [-webkit-text-stroke:0.5px_#f5f5f5] text-transparent "
         style={{

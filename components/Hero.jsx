@@ -4,6 +4,9 @@ import { SparklesCore } from "../components/ui/sparkles";
 import { delay, motion, useScroll, useTransform } from 'framer-motion'
 import About from './About';
 import Event from './Event';
+import Celeb from './Celeb';
+import Glimpse from './Glimpse';
+import Footer from './Footer';
 
 const variants = {
     initial: {
@@ -105,6 +108,15 @@ const Hero = () => {
                 </div>
                 <div className='w-full z-10'>
                     <Event/>
+                </div>
+                <div className='w-full z-10'>
+                    <Glimpse/>
+                </div>
+                <div className='w-full z-10'>
+                    <Celeb/>
+                </div>
+                <div className='w-full z-10'>
+                    <Footer/>
                 </div>
             </div>
         </div>
