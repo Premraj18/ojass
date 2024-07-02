@@ -65,7 +65,7 @@ const Celeb = () => {
                     {
                         Data.map((d) => {
                             return (
-                                <SwiperSlide color='green' className=''>
+                                <SwiperSlide key={d.id} color='green' className=''>
                                     <img src={d.imgUrl} className='w-full h-full object-cover border-2 rounded-3xl' />
                                 </SwiperSlide>
                             )
