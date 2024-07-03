@@ -19,28 +19,28 @@ const Glimpse = () => {
                         <div className='w-80 h-96 relative bg-white/10 rounded-xl p-4 px-6'>
                             <div className='border w-full h-full py-2 '>
                                 <div className='border absolute w-[286px] h-[335px] right-4 '>
-
+                                    <img src="/gimg1.jpg" alt="" className='w-full h-full object-cover px-2' />
                                 </div>
                             </div>
                         </div>
                         <div className='w-80 h-96 relative bg-white/10 rounded-xl p-4 px-6'>
                             <div className='border w-full h-full py-2 '>
                                 <div className='border absolute w-[286px] h-[335px] right-4 '>
-
+                                    <img src="/gimg2.jpg" alt="" className='w-full h-full object-cover px-2' />
                                 </div>
                             </div>
                         </div>
                         <div className='w-80 h-96 relative bg-white/10 rounded-xl p-4 px-6'>
                             <div className='border w-full h-full py-2 '>
                                 <div className='border absolute w-[286px] h-[335px] right-4 '>
-
+                                    <img src="/gimg3.jpg" alt="" className='w-full h-full object-cover px-2' />
                                 </div>
                             </div>
                         </div>
                         <div className='w-80 h-96 relative bg-white/10 rounded-xl p-4 px-6'>
                             <div className='border w-full h-full py-2 '>
                                 <div className='border absolute w-[286px] h-[335px] right-4 '>
-
+                                    <img src="/gimg4.jpg" alt="" className='w-full h-full object-cover px-2' />
                                 </div>
                             </div>
                         </div>
