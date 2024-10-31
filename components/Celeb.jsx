@@ -1,4 +1,5 @@
 import React, { useRef, useState } from 'react';
+import PastCelebCard from './pastcelebCard'
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import 'swiper/css';
@@ -50,28 +51,8 @@ const Celeb = () => {
             <div className='flex justify-center mb-10'>
                 <img src="/celebtext.png" alt="" className='w-80 md:w-[35vw] ' />
             </div>
-            <div className='min-h-[50vh]'>
-                <Swiper
-                    pagination={{
-                        dynamicBullets: true,
-                    }}
-                    autoplay={{
-                        delay: 1500,
-                        disableOnInteraction: false,
-                    }}
-                    modules={[Autoplay, Pagination]}
-                    className="mySwiper"
-                >
-                    {
-                        Data.map((d) => {
-                            return (
-                                <SwiperSlide key={d.id} color='green' className=''>
-                                    <img src={d.imgUrl} className='w-full h-full object-cover border-2 rounded-3xl' />
-                                </SwiperSlide>
-                            )
-                        })
-                    }
-                </Swiper>
+            <div className='min-h-[50vh] w-full'>
+                <PastCelebCard/>
             </div>
         </div>
     )
