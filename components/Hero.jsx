@@ -50,7 +50,7 @@ const Hero = () => {
     const xBg = useTransform(scrollYProgress, [0, 1], ["0%", "150%"]);
     return (
         <div ref={ref} className="min-h-[100vh] relative -mt-24 w-full 
-        flex flex-col items-center justify-center overflow-hidden bg-[url('/bghero.jpg')] bg-fixed bg-center bg-cover">
+        flex flex-col items-center justify-center overflow-hidden bg-[url('/bghero.webp')] bg-fixed bg-center bg-cover">
             <div className='min-h-[100vh] relative  w-full flex flex-col items-center justify-center'
                 style={{
                     background: 'linear-gradient(to bottom, rgba(2, 2, 2, 0.233),rgba(2, 2, 2, 0.933))'

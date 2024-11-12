@@ -49,7 +49,7 @@ const Celeb = () => {
     return (
         <div className='mb-20 flex flex-col justify-center items-center'>
             <div className='flex justify-center mb-10'>
-                <img src="/celebtext.png" alt="" className='w-80 md:w-[35vw] ' />
+                <img src="/celebtext.webp" alt="" className='w-80 md:w-[35vw] ' />
             </div>
             <div className='min-h-[50vh] w-full'>
                 <PastCelebCard/>

@@ -23,7 +23,7 @@ const Page = () => {
 
     return (
         <>
-            <div className="w-full min-h-[100vh] sm:mt-0 lg:pt-14 pt-20 bg-[url('/img8.jpeg')] bg-center bg-cover bg-no-repeat bg-fixed">
+            <div className="w-full min-h-[100vh] sm:mt-0 lg:pt-14 pt-20 bg-[url('/img8.webp')] bg-center bg-cover bg-no-repeat bg-fixed">
                 <div className='min-h-[100vh] -mt-20 relative  w-full flex flex-col items-center justify-center'
                     style={{
                         background: 'linear-gradient(to bottom, rgba(2, 2, 2, 0.633),rgba(2, 2, 2, 0.633))'
@@ -31,7 +31,7 @@ const Page = () => {
                 >
                     {/* <h2 className='text-5xl text-center mt-20 underline'>Team Ojass</h2> */}
                     <div className='pt-48 w-full flex justify-center items-center'>
-                        <img src="/contacttext.png" alt="" className='w-[80%] lg:w-1/3' />
+                        <img src="/contacttext.webp" alt="" className='w-[80%] lg:w-1/3' />
                     </div>
                     {/* <div className='flex justify-center px-5'>
                         <p className='text-center my-10 lg:w-[50%]'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur, ut corrupti sint libero repellendus voluptas, fugit animi error, modi cupiditate nulla illum sequi.</p>

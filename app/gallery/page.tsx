@@ -7,7 +7,7 @@ export default function Page() {
     return (
         <div className="w-full sm:pt-20 pt-20 bg-fixed"
             style={{
-                backgroundImage: "url(" + "/img3.jpg" + ")",
+                backgroundImage: "url(" + "/img3.webp" + ")",
                 backgroundPosition: 'center',
                 backgroundSize: 'cover',
                 backgroundRepeat: 'no-repeat',

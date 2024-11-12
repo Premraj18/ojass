@@ -36,7 +36,7 @@ export const ParallaxScroll = ({
     >
       {/* <h2 className='text-center tracking-wider text-7xl pt-10'>Gallery</h2> */}
       <div className='pt-10 flex w-full justify-center items-center'>
-        <img src="/gallerytext.png" alt="" className='w-60 md:w-1/4 md:py-16 py-10' />
+        <img src="/gallerytext.webp" alt="" className='w-60 md:w-1/4 md:py-16 py-10' />
       </div>
       <div
         className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-start  max-w-8xl mx-auto gap-20 py-10 px-10"

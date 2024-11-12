@@ -50,13 +50,13 @@ const variants3 = {
 
 const Page = () => {
     return (
-        <div className="w-full min-h-[100vh] sm:mt-0 lg:pt-14 pt-20 bg-[url('/img1.jpg')] bg-center bg-cover bg-no-repeat bg-fixed">
+        <div className="w-full min-h-[100vh] sm:mt-0 lg:pt-14 pt-20 bg-[url('/img1.webp')] bg-center bg-cover bg-no-repeat bg-fixed">
             {/* <h2 className='text-3xl md:text-5xl text-center mt-20 underline' variants={variants}>Our Sponser And Partners</h2> */}
             <div className='pt-20 w-full hidden md:flex justify-center items-center'>
-                <img src="/sponsertext.png" alt="" className=' lg:w-1/2' />
+                <img src="/sponsertext.webp" alt="" className=' lg:w-1/2' />
             </div>
             <div className='pt-20 w-full flex justify-center md:hidden items-center'>
-                <img src="/sponsertext2.png" alt="" className='w-[70%]' />
+                <img src="/sponsertext2.webp" alt="" className='w-[70%]' />
             </div>
             <motion.div className='mt-10 flex flex-col justify-center items-center'
                 variants={variants}

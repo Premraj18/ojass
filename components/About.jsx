@@ -29,7 +29,7 @@ const About = () => {
             >
                 <div className="px-4 mb-10 md:text-center md:mb-20">
                     <div className='flex justify-center'>
-                        <img src="/abouttext2.png" alt="" className='w-56 md:w-80 ' />
+                        <img src="/abouttext2.webp" alt="" className='w-56 md:w-80 ' />
                     </div>
                 </div>
                 <div className="flex flex-wrap items-center justify-center lg:px-32 w-full">

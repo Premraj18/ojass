@@ -13,7 +13,7 @@ const Glimpse = () => {
                 >
                     {/* <h2 className='text-center tracking-wider text-4xl lg:text-6xl pt-8'>Events</h2> */}
                     <div className='mb-10'>
-                        <img src="/glimpsetext.png" alt="" className='w-80 md:w-full' />
+                        <img src="/glimpsetext.webp" alt="" className='w-80 md:w-full' />
                     </div>
                     <div className='w-full flex flex-wrap justify-center items-center gap-10 my-10'>
                         <div className='w-80 h-96 relative bg-white/10 rounded-xl p-4 px-6'>

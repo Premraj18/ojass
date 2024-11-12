@@ -10,7 +10,7 @@ const Event = () => {
       <div className="h-full w-full justify-center items-center pb-20 flex flex-col [-webkit-text-stroke:0.5px_#f5f5f5] text-transparent ">
         {/* <h2 className='text-center tracking-wider text-4xl lg:text-6xl pt-8'>Events</h2> */}
         <div className='mb-10'>
-          <img src="/eventtext.png" alt="" className='w-52 md:w-full'/>
+          <img src="/eventtext.webp" alt="" className='w-52 md:w-full'/>
         </div>
         <div className='w-full'>
           <EventCard />

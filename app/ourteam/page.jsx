@@ -20,10 +20,10 @@ const variants = {
 
 const Page = () => {
   return (
-    <div className="w-full min-h-[100vh] sm:mt-0 lg:pt-14 pt-20 bg-[url('/img1.jpg')] bg-center bg-cover bg-no-repeat bg-fixed">
+    <div className="w-full min-h-[100vh] sm:mt-0 lg:pt-14 pt-20 bg-[url('/img1.webp')] bg-center bg-cover bg-no-repeat bg-fixed">
       {/* <h2 className='text-5xl text-center mt-20 underline'>Team Ojass</h2> */}
       <div className='pt-20 w-full flex justify-center items-center'>
-        <img src="/teamtext.png" alt="" className='w-[80%] lg:w-1/3' />
+        <img src="/teamtext.webp" alt="" className='w-[80%] lg:w-1/3' />
       </div>
       <motion.div className='flex flex-wrap items-center justify-center md:gap-x-24 md:gap-y-16 gap-8 py-20 lg:px-16 px-5'
         variants={variants}

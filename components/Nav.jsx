@@ -8,6 +8,7 @@ import {
   HiChatBubbleBottomCenterText,
   HiEnvelope,
 } from 'react-icons/hi2';
+import { MdEmojiEvents } from "react-icons/md";
 import { RxCross2 } from 'react-icons/rx'
 import { FiMenu } from "react-icons/fi";
 import { motion, useMotionValueEvent, useScroll } from "framer-motion";
@@ -15,7 +16,7 @@ import { motion, useMotionValueEvent, useScroll } from "framer-motion";
 // nav data
 export const navData = [
   { name: 'Home', path: '/', icon: <HiHome /> },
-  { name: 'About', path: '/about', icon: <HiUser /> },
+  { name: 'Event', path: '/event', icon: <MdEmojiEvents /> },
   { name: 'Our Team', path: '/ourteam', icon: <HiRectangleGroup /> },
   { name: 'Gallery', path: '/gallery', icon: <HiViewColumns /> },
   {
@@ -75,7 +76,7 @@ const Nav = () => {
       transition={{ duration: 0.1, }}
     >
       <nav className='flex w-full screen-max-width md:justify-center justify-between items-center'>
-        <img src='/ojasslogo.png' alt="Apple" className='w-20 ' />
+        <img src='/ojasslogo.webp'  className='w-20 ' />
         <div className='flex flex-1 justify-center max-md:hidden'>
           {navData.map((link, index) => {
             return (
