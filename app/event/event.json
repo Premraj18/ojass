@@ -2,6 +2,8 @@
     [
         {
             "name": "HACK-DE-SCIENCE",
+            "teamSizeMin" : "3",
+            "teamSizeMax" : "5",
             "img": "https://ojass-2024.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2FQv8sgXQ%2FVISHWA-CODE-GENESIS.png%20&w=384&q=75",
             "redirect": "event/0/0",
             "organizer": "Vishwa-Code Genesis",

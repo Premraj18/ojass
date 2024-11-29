@@ -1,4 +1,5 @@
 "use client"
+import Foter from "./Footer2";
 import Nav from "./Nav";
 
 
@@ -7,6 +8,7 @@ const Layout = ({ children }) => {
     <div className="">
       <Nav/>
       {children}
+      {/* <Foter/> */}
     </div>
   )
 };

@@ -7,6 +7,7 @@ import Event from './Event';
 import Celeb from './Celeb';
 import Glimpse from './Glimpse';
 import Footer from './Footer';
+import Foter from "./Footer2";
 
 const variants = {
     initial: {
@@ -116,7 +117,8 @@ const Hero = () => {
                     <Celeb/>
                 </div>
                 <div className='w-full z-10'>
-                    <Footer/>
+                    {/* <Footer/> */}
+                    <Foter/>
                 </div>
             </div>
         </div>
