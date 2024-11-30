@@ -41,24 +41,24 @@ export default function Foter() {
                             
                         <nav className="list-none mt-5">
                             <li>
-                                <p className="text-gray-50  lg:text-base text-center flex justify-center items-center" ><MdLocationPin size={35}/> <span> National Institute of Technology Jamshedpur, <br/> Adityapur, Jamshedpur, Jharkhand 831014 </span></p>
+                                <p className="text-gray-50  lg:text-base text-sm text-center flex justify-center items-center" ><MdLocationPin size={35}/> <span> National Institute of Technology Jamshedpur, <br/> Adityapur, Jamshedpur, Jharkhand 831014 </span></p>
                             </li>
                             <li>
-                                <p className="text-gray-50  lg:text-base flex gap-x-5 my-3 items-center justify-center" ><BsTelephone size={25}/><span>+91 8210258224</span></p>
+                                <p className="text-gray-50  lg:text-base text-sm flex gap-x-5 my-3 items-center justify-center" ><BsTelephone size={25}/><span>+91 8210258224</span></p>
                             </li>
                             <li>
-                                <p className="text-gray-50  lg:text-base flex gap-x-5 my-3 items-center justify-center" ><MdMail size={25}/><span>ojass@nitjsr.ac.in</span> </p>
+                                <p className="text-gray-50  lg:text-base text-sm flex gap-x-5 my-3 items-center justify-center" ><MdMail size={25}/><span>ojass@nitjsr.ac.in</span> </p>
                             </li>
                         </nav>
                     </div>
                 </div>
-                <div className='lg:text-lg text-white flex '>
+                <div className='lg:text-lg text-white flex pt-5 justify-center md:pt-0 md:justify-normal'>
                     <p >Designed&Develop By: <a href="" className='text-red-500'>Prem Raj</a> </p>
                 </div>
             </div>
 
             {/* <div className="bg-gray-200"> */}
-                <div className="container px-5 py-3 mx-auto flex items-center sm:flex-row flex-col">
+                <div className="container px-5 py-3 mx-auto flex items-center justify-center sm:flex-row flex-col">
                     <Link href={'/'} className='flex'>
                         <div className="flex ">
                             <h1 className=' text-2xl font-bold text-white  px-2 py-1 rounded' >OJASS</h1>
@@ -67,7 +67,7 @@ export default function Foter() {
                     <p className="text-sm text-gray-50 sm:ml-6 sm:mt-0 mt-4" >© 2024 NIT Jamshedpur —
                         <a href="https://twitter.com/knyttneve" rel="noopener noreferrer" className="text-gray-100 ml-1" target="_blank" >www.ojass.org</a>
                     </p>
-                    <span className="inline-flex sm:ml-auto mr-20 sm:mt-0 mt-4 justify-center sm:justify-start">
+                    {/* <span className="inline-flex sm:ml-auto mr-20 sm:mt-0 mt-4 justify-center sm:justify-start">
                         <a href='https://www.facebook.com/teamdaksh.nitjsr/' target='_blank' className="text-gray-50 hover:text-red-500 cursor-pointer">
                             <svg fill="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} className="w-5 h-5" viewBox="0 0 24 24">
                                 <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" />
@@ -86,7 +86,7 @@ export default function Foter() {
                                 <circle cx={4} cy={4} r={2} stroke="none" />
                             </svg>
                         </a>
-                    </span>
+                    </span> */}
                 </div>
             {/* </div> */}
         </footer>

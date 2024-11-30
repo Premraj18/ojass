@@ -47,7 +47,7 @@ const Data = [
 
 const Celeb = () => {
     return (
-        <div className='mb-20 flex flex-col justify-center items-center'>
+        <div className='mb-5 md:mb-20 flex flex-col justify-center items-center'>
             <div className='flex justify-center mb-10'>
                 <img src="/celebtext.webp" alt="" className='hidden md:block w-80 md:w-[50vw] ' />
                 <img src="/celebtext2.webp" alt="" className='md:hidden w-80 md:w-[50vw] ' />

@@ -2,6 +2,7 @@
 import React from 'react'
 
 import { delay, motion } from 'framer-motion'
+import { BsDownload } from 'react-icons/bs';
 
 const variants = {
     initial: {
@@ -66,49 +67,37 @@ const Page = () => {
 
                 {/* Title sponser */}
                 <div className='titleSPonse  mt-10 flex flex-col justify-center items-center'>
-                    <motion.h3 className='text-2xl md:text-4xl' variants={variants}>Title Sponser</motion.h3>
-                    <motion.img src="/sponserimg1.png" alt="" className='w-[60%]' variants={variants} />
+                    <h3 className='text-2xl md:text-4xl' variants={variants}>Be Our Sponsor</h3>
+                    <p className='text-center px-5 lg:w-[70vw] py-8'>
+                        Be at the forefront of innovation! Support Ojass, the Techno-Management
+                        Fest of NIT Jamshedpur, where creativity meets cutting-edge technology.
+                        By sponsoring us, you align your brand with groundbreaking innovations,
+                        vibrant competitions, and a community of future leaders. Partner with
+                        us to drive progress, inspire excellence, and be a part of the legacy
+                        that shapes tomorrow.
+                    </p>
+                    <p className='text-center px-5 lg:w-[70vw] py-8'>For more details, we’ve attached our comprehensive brochure. We look forward to having you as a valued partner in this exhilarating venture!</p>
+                    <div className="m-6 flex flex-col items-center">
+                        <h1 className="text-lg sm:text-2xl mb-2">Brochure</h1>
+                        <a download='brouchre' target='_blank' href='https://drive.google.com/file/d/1TX9WoQPsOf7UKtfadHtC5nxNu1Oy0igT/view?usp=sharing' className='text-white my-4'>
+                            <BsDownload size={50} />
+                        </a>
+                    </div>
                 </div>
 
-                {/* Associate Title sponser */}
-                <div className='titleSPonse  mt-10 flex flex-col justify-center items-center'>
-                    <motion.h3 className='text-2xl md:text-4xl' variants={variants}>Associate Title Sponser</motion.h3>
-                    <motion.img src="/sponserimg2.png" alt="" className='md:w-[60%] w-[50%] my-10 mt-20' variants={variants} />
-                </div>
 
-                {/* Bevarage Sponser */}
-                <motion.div className='titleSPonse  mt-10 flex flex-col justify-center items-center'>
-                    <motion.h3 className='text-2xl md:text-4xl' variants={variants}>Bevarage Sponser</motion.h3>
+                <motion.div className='titleSPonse  mt-10 flex flex-col justify-center items-center'
+                    variants={variants2}
+                    initial='initial'
+                    whileInView='animate'
+                >
+                    <motion.h3 className='text-2xl md:text-4xl' variants={variants2}>Our Past Sponser & Partners</motion.h3>
                     <motion.div className='flex w-full flex-wrap my-10 justify-center items-center gap-10' variants={variants}>
                         <motion.img src="/Sponser/bigCola.webp" alt="" className='w-36 md:w-44 h-32 md:h-36' variants={variants} />
                         <motion.img src="/Sponser/juice.webp" alt="" className='w-36 md:w-44 h-32 md:h-40' variants={variants} />
                         <motion.img src="/Sponser/shudhJal.webp" alt="" className='w-36 md:w-44 h-32 md:h-40' variants={variants} />
                         <motion.img src="/Sponser/tataGlucoPlus.webp" alt="" className='w-36 md:w-44 h-32 md:h-40' variants={variants} />
                     </motion.div>
-                </motion.div>
-                <motion.div className='titleSPonse  mt-10 flex flex-col justify-center items-center'
-                    variants={variants3}
-                    initial='initial'
-                    whileInView='animate'
-                >
-                    <motion.h3 className='text-2xl md:text-4xl' variants={variants3}>Media Sponser</motion.h3>
-                    <motion.div className='flex flex-wrap md:w-[70%] my-10 justify-center items-center gap-10' variants={variants3}>
-                        <motion.img src="/Sponser/allevents.webp" alt="" className='w-36 md:w-44 h-32 md:h-40' variants={variants3} />
-                        <motion.img src="/Sponser/DEDUexpress.webp" alt="" className='w-36 md:w-44 h-32 md:h-40' variants={variants3} />
-                        <motion.img src="/Sponser/DUbeat.webp" alt="" className='w-36 md:w-44 h-32 md:h-40' variants={variants3} />
-                        <motion.img src="/Sponser/kawctopus.webp" alt="" className='w-36 md:w-44 h-32 md:h-40' variants={variants3} />
-                        <motion.img src="/Sponser/noticeBard.webp" alt="" className='w-36 md:w-44 h-32 md:h-40' variants={variants3} />
-                        <motion.img src="/Sponser/knowafest.webp" alt="" className='w-36 md:w-44 h-32 md:h-40' variants={variants3} />
-                        <motion.img src="/Sponser/theCollegeFever.webp" alt="" className='w-36 md:w-44 h-32 md:h-40' variants={variants3} />
-                        <motion.img src="/Sponser/vohCampus.webp" alt="" className='w-36 md:w-44 h-32 md:h-40' variants={variants3} />
-                    </motion.div>
-                </motion.div>
-                <motion.div className='titleSPonse  mt-10 flex flex-col justify-center items-center'
-                    variants={variants2}
-                    initial='initial'
-                    whileInView='animate'
-                >
-                    <motion.h3 className='text-2xl md:text-4xl' variants={variants2}>Partners</motion.h3>
                     <motion.div className='flex flex-wrap md:w-[70%] my-10 justify-center items-center gap-10' variants={variants2}>
                         <motion.img src="/Sponser/aptrion.webp" alt="" className='w-36 md:w-44 h-32 md:h-40' variants={variants2} />
                         <motion.img src="/Sponser/aptron.webp" alt="" className='w-36 md:w-44 h-32 md:h-40' variants={variants2} />
@@ -135,6 +124,16 @@ const Page = () => {
                         <motion.img src="/Sponser/turtle.webp" alt="" className='w-36 md:w-44 h-32 md:h-40' variants={variants2} />
                         <motion.img src="/Sponser/rapido.webp" alt="" className='w-36 md:w-44 h-32 md:h-40' variants={variants2} />
                         <motion.img src="/Sponser/radioDhoom.webp" alt="" className='w-36 md:w-44 h-32 md:h-40' variants={variants2} />
+                    </motion.div>
+                    <motion.div className='flex flex-wrap md:w-[70%] my-10 justify-center items-center gap-10' variants={variants3}>
+                        <motion.img src="/Sponser/allevents.webp" alt="" className='w-36 md:w-44 h-32 md:h-40' variants={variants3} />
+                        <motion.img src="/Sponser/DEDUexpress.webp" alt="" className='w-36 md:w-44 h-32 md:h-40' variants={variants3} />
+                        <motion.img src="/Sponser/DUbeat.webp" alt="" className='w-36 md:w-44 h-32 md:h-40' variants={variants3} />
+                        <motion.img src="/Sponser/kawctopus.webp" alt="" className='w-36 md:w-44 h-32 md:h-40' variants={variants3} />
+                        <motion.img src="/Sponser/noticeBard.webp" alt="" className='w-36 md:w-44 h-32 md:h-40' variants={variants3} />
+                        <motion.img src="/Sponser/knowafest.webp" alt="" className='w-36 md:w-44 h-32 md:h-40' variants={variants3} />
+                        <motion.img src="/Sponser/theCollegeFever.webp" alt="" className='w-36 md:w-44 h-32 md:h-40' variants={variants3} />
+                        <motion.img src="/Sponser/vohCampus.webp" alt="" className='w-36 md:w-44 h-32 md:h-40' variants={variants3} />
                     </motion.div>
                 </motion.div>
             </motion.div>

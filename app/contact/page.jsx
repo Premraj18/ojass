@@ -38,7 +38,7 @@ const Page = () => {
                     </div> */}
                     <div className='flex flex-col text-center items-center justify-center px-5 gap-10 mt-10'>
                         {/* <h2 className='text-5xl tracking-wider font-medium'>Get In Touch</h2> */}
-                        <p className='md:w-[70%] mt-10'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, voluptates reprehenderit atque dolorum obcaecati quis, veritatis molestias iusto vero, sunt facere unde deleniti ipsam et sapiente quam aperiam totam numquam.</p>
+                        <p className='md:w-[70%] mt-10'>Feel free to reach out to us with any inquiries, feedback, or concerns. Your communication is important to us, and we aim to respond promptly to assist you.</p>
 
                         <div className='flex flex-wrap items-center justify-center md:gap-40 gap-10 md:mt-10'>
                             <div className="flex flex-col items-center justify-center text-center">
@@ -50,7 +50,8 @@ const Page = () => {
 
                                 <h2 className="mt-4 text-lg font-medium text-gray-400 ">Email</h2>
                                 <p className="mt-2 text-gray-300 ">Our friendly team is here to help.</p>
-                                <p className="mt-2 text-white ">hello@merakiui.com</p>
+                                <p className="mt-2 text-white ">ojass@nitjsr.ac.in</p>
+                                <p className="mt-2 text-white ">corporate.ojass@nitjsr.ac.in</p>
                             </div>
                             <div className="flex flex-col items-center justify-center text-center">
                                 <span className="p-3 text-white rounded-full bg-white/15 ">
@@ -60,9 +61,9 @@ const Page = () => {
                                     </svg>
                                 </span>
 
-                                <h2 className="mt-4 text-lg font-medium text-gray-400 ">Location</h2>
-                                <p className="mt-2 text-gray-300 ">Come say hello at our office HQ.</p>
-                                <p className="mt-2 text-white ">100 Smith Street Collingwood VIC 3066 AU</p>
+                                <h2 className="mt-4 text-lg font-medium text-gray-400 ">Office</h2>
+                                <p className="mt-2 text-gray-300 ">Drop mail before coming</p>
+                                <p className="mt-2 text-white ">Nit Jamshedpur</p>
                             </div>
                             <div className="flex flex-col items-center justify-center text-center">
                                 <span className="p-3 text-white rounded-full bg-white/15 ">
@@ -72,7 +73,7 @@ const Page = () => {
                                 </span>
                                 <h2 className="mt-4 text-lg font-medium text-gray-400 ">Phone</h2>
                                 <p className="mt-2 text-gray-300 ">Mon-Fri from 8am to 5pm.</p>
-                                <p className="mt-2 text-white ">+1 (555) 000-0000</p>
+                                <p className="mt-2 text-white ">+91 88638 32703</p>
                             </div>
 
                         </div>
