@@ -20,8 +20,8 @@ export const navData = [
   { name: 'Our Team', path: '/ourteam', icon: <HiRectangleGroup /> },
   { name: 'Gallery', path: '/gallery', icon: <HiViewColumns /> },
   {
-    name: 'Sponser',
-    path: '/sponser',
+    name: 'Sponsor',
+    path: '/sponsor',
     icon: <HiChatBubbleBottomCenterText />,
   },
   {
@@ -76,7 +76,7 @@ const Nav = () => {
       transition={{ duration: 0.1, }}
     >
       <nav className='flex w-full screen-max-width md:justify-center justify-between items-center'>
-        <img src='/ojasslogo.webp'  className='w-20 ' />
+        <img src='/logo.webp'  className='w-16 ' />
         <div className='flex flex-1 justify-center max-md:hidden'>
           {navData.map((link, index) => {
             return (

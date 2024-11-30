@@ -16,30 +16,30 @@ const Glimpse = () => {
                         <img src="/glimpsetext.webp" alt="" className='w-80 md:w-full' />
                     </div>
                     <div className='w-full flex flex-wrap justify-center items-center gap-10 my-10'>
-                        <div className='w-80 h-96 relative bg-white/10 rounded-xl p-4 px-6'>
+                        <div className='w-72 h-80 relative bg-white/10 rounded-xl p-4 px-6'>
                             <div className='border w-full h-full py-2 '>
-                                <div className='border absolute w-[286px] h-[335px] right-4 '>
+                                <div className='border absolute w-[256px] h-[271px] right-4 '>
                                     <img src="/gimg1.webp" alt="" className='w-full h-full object-cover px-2' />
                                 </div>
                             </div>
                         </div>
-                        <div className='w-80 h-96 relative bg-white/10 rounded-xl p-4 px-6'>
+                        <div className='w-72 h-80 relative bg-white/10 rounded-xl p-4 px-6'>
                             <div className='border w-full h-full py-2 '>
-                                <div className='border absolute w-[286px] h-[335px] right-4 '>
+                                <div className='border absolute w-[256px] h-[271px] right-4 '>
                                     <img src="/gimg2.webp" alt="" className='w-full h-full object-cover px-2' />
                                 </div>
                             </div>
                         </div>
-                        <div className='w-80 h-96 relative bg-white/10 rounded-xl p-4 px-6'>
+                        <div className='w-72 h-80 relative bg-white/10 rounded-xl p-4 px-6'>
                             <div className='border w-full h-full py-2 '>
-                                <div className='border absolute w-[286px] h-[335px] right-4 '>
+                                <div className='border absolute w-[256px] h-[271px] right-4 '>
                                     <img src="/gimg3.webp" alt="" className='w-full h-full object-cover px-2' />
                                 </div>
                             </div>
                         </div>
-                        <div className='w-80 h-96 relative bg-white/10 rounded-xl p-4 px-6'>
+                        <div className='w-72 h-80 relative bg-white/10 rounded-xl p-4 px-6'>
                             <div className='border w-full h-full py-2 '>
-                                <div className='border absolute w-[286px] h-[335px] right-4 '>
+                                <div className='border absolute w-[256px] h-[271px] right-4 '>
                                     <img src="/gimg4.webp" alt="" className='w-full h-full object-cover px-2' />
                                 </div>
                             </div>

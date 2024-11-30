@@ -12,43 +12,79 @@ import Autoplay from "embla-carousel-autoplay";
 const Data = [
   {
     id: "1",
-    imgUrl: "https://ojass-2024.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FSuhaniShah.35847e3a.webp&w=384&q=75"
+    imgUrl: "/pastspeaker/1.webp"
   },
   {
     id: "2",
-    imgUrl: "https://ojass-2024.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FzakeerKhan.3127a77e.webp&w=384&q=75"
+    imgUrl: "/pastspeaker/2.webp"
   },
   {
     id: "3",
-    imgUrl: "https://ojass-2024.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FSuhaniShah.35847e3a.webp&w=384&q=75"
+    imgUrl: "/pastspeaker/3.webp"
   },
   {
     id: "4",
-    imgUrl: "https://ojass-2024.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FzakeerKhan.3127a77e.webp&w=384&q=75"
+    imgUrl: "/pastspeaker/4.webp"
   },
   {
     id: "5",
-    imgUrl: "https://ojass-2024.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FSuhaniShah.35847e3a.webp&w=384&q=75"
+    imgUrl: "/pastspeaker/5.webp"
   },
   {
     id: "6",
-    imgUrl: "https://ojass-2024.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FzakeerKhan.3127a77e.webp&w=384&q=75"
+    imgUrl: "/pastspeaker/6.webp"
   },
   {
     id: "7",
-    imgUrl: "https://ojass-2024.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FSuhaniShah.35847e3a.webp&w=384&q=75"
+    imgUrl: "/pastspeaker/7.webp"
   },
   {
     id: "8",
-    imgUrl: "https://ojass-2024.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FzakeerKhan.3127a77e.webp&w=384&q=75"
+    imgUrl: "/pastspeaker/8.webp"
   },
   {
     id: "9",
-    imgUrl: "https://ojass-2024.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FSuhaniShah.35847e3a.webp&w=384&q=75"
+    imgUrl: "/pastspeaker/9.webp"
   },
   {
-    id: "10",
-    imgUrl: "https://ojass-2024.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FzakeerKhan.3127a77e.webp&w=384&q=75"
+    id: "11",
+    imgUrl: "/pastspeaker/11.webp"
+  },
+  {
+    id: "13",
+    imgUrl: "/pastspeaker/13.webp"
+  },
+  {
+    id: "14",
+    imgUrl: "/pastspeaker/14.webp"
+  },
+  {
+    id: "15",
+    imgUrl: "/pastspeaker/15.webp"
+  },
+  {
+    id: "16",
+    imgUrl: "/pastspeaker/16.webp"
+  },
+  {
+    id: "17",
+    imgUrl: "/pastspeaker/17.webp"
+  },
+  {
+    id: "18",
+    imgUrl: "/pastspeaker/18.webp"
+  },
+  {
+    id: "19",
+    imgUrl: "/pastspeaker/19.webp"
+  },
+  {
+    id: "20",
+    imgUrl: "/pastspeaker/20.webp"
+  },
+  {
+    id: "21",
+    imgUrl: "/pastspeaker/21.webp"
   }
 ]
 
@@ -68,7 +104,7 @@ const PastCelebCard = () => {
 
             <CarouselItem key={index} className="sm:basis-1/1 md:basis-1/3 lg:basis-1/5">
 
-              <div className=" w-[100%] h-[37vh] cursor-pointer text-white scale-95 bg-white/5 rounded-lg border-gray-200 border-[2px] shadow-md transition-all duration-300 hover:scale-100">
+              <div className=" w-[100%] h-[35vh] cursor-pointer text-white scale-95 bg-white/5 rounded-lg border-gray-200 border-[2px] shadow-md transition-all duration-300 hover:scale-100">
                 <img src={data.imgUrl} alt="" className="object-cover h-full w-full rounded-lg"/>
               </div>
             </CarouselItem>

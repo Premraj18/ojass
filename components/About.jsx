@@ -39,9 +39,12 @@ const About = () => {
                     >
                         {/* <img src="https://i.postimg.cc/j5L5bX2d/pexels-andrea-piacquadio-3757946.jpg" alt=""
                             className="relative object-cover border-2 lg:w-[500px] w-full h-96 rounded-tr-3xl rounded-bl-3xl" /> */}
-                        <iframe className='w-[350px] md:w-[550px] h-[315px] md:h-[415px] rounded-3xl' src="https://www.youtube.com/embed/Zh2j5CyPV9o?si=qxwqd8dYum076apM" title="YouTube video player" 
+                        {/* <iframe className='w-[350px] md:w-[550px] h-[315px] md:h-[415px] rounded-3xl' src="https://www.youtube.com/embed/Zh2j5CyPV9o?si=qxwqd8dYum076apM" title="YouTube video player" 
                         frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                        referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+                        referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe> */}
+                        <iframe className='w-[350px] md:w-[550px] h-[315px] md:h-[415px] rounded-3xl' src="https://www.youtube.com/embed/h1gpXrnNNMI?si=xB8cvh65O-KOfOCK" title="YouTube video player" 
+                        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     </motion.div>
                     <motion.div className="w-full px-4 mb-10 lg:w-1/2 lg:mb-0 "
                         variants={variants}
@@ -87,10 +90,10 @@ const About = () => {
                                 We collaborate closely with you, turning your ideas into stunning, functional realities.
                             </motion.li>
                         </ul>
-                        <Link href='/about'
+                        {/* <Link href='/about'
                             className="px-4 py-3 text-white transition-all transform border border-white hover:bg-white/15 rounded-full  hover:text-gray-100" variants={variants}>
                             Discover more
-                        </Link>
+                        </Link> */}
                     </motion.div>
                 </div>
             </motion.div>

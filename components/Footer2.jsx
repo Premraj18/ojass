@@ -17,13 +17,13 @@ export default function Foter() {
                                 <Link href='/' className="text-gray-50 hover:text-red-500 cursor-pointer " >Home |</Link>
                             </li>
                             <li>
-                                <Link href='/about' className="text-gray-50 hover:text-red-500 cursor-pointer" >About |</Link>
+                                <Link href='/event' className="text-gray-50 hover:text-red-500 cursor-pointer" >Event |</Link>
                             </li>
                             <li>
                                 <Link href='/ourteam' className="text-gray-50 hover:text-red-500 cursor-pointer" >Team |</Link>
                             </li>
                             <li>
-                                <Link href='/achivements' className="text-gray-50 hover:text-red-500 cursor-pointer" >Achivements |</Link>
+                                <Link href='/sponsor' className="text-gray-50 hover:text-red-500 cursor-pointer" >Sponsor |</Link>
                             </li>
                             <li>
                                 <Link href='/contact' className="text-gray-50 hover:text-red-500 cursor-pointer" >Contact us</Link>
@@ -47,7 +47,7 @@ export default function Foter() {
                                 <p className="text-gray-50  lg:text-base flex gap-x-5 my-3 items-center justify-center" ><BsTelephone size={25}/><span>+91 8210258224</span></p>
                             </li>
                             <li>
-                                <p className="text-gray-50  lg:text-base flex gap-x-5 my-3 items-center justify-center" ><MdMail size={25}/><span>daksh.nitjsr@nitjsr.ac.in</span> </p>
+                                <p className="text-gray-50  lg:text-base flex gap-x-5 my-3 items-center justify-center" ><MdMail size={25}/><span>ojass@nitjsr.ac.in</span> </p>
                             </li>
                         </nav>
                     </div>

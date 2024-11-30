@@ -96,12 +96,14 @@ const Hero = () => {
                             S
                         </motion.p>
                     </motion.div>
-                    <motion.div className="md:w-2/3 text-center font-light flex justify-center items-center px-5"
+                    <motion.div className="md:w-2/3 text-center font-light flex flex-col gap-3 justify-center items-center px-5"
                         variants={cosmosvarients}
                         initial='initial'
                         whileInView='animate'
                     >
-                        <motion.p className='md:text-2xl text-gray-300 text-xl tracking-[8px] uppercase ' variants={cosmosvarients}>Techno-Management Fest of NIT Jamshedpur</motion.p>
+                        <motion.p className='md:text-2xl text-gray-300 text-xl tracking-[8px] uppercase ' variants={cosmosvarients}>Techno-Management Fest of NIT Jamshedpur 22nd edition</motion.p>
+                        {/* <motion.p className='md:text-2xl text-gray-300 text-xl tracking-[8px] uppercase ' variants={cosmosvarients}>22nd edition</motion.p> */}
+                        <motion.p className='md:text-2xl text-gray-300 uppercase pt-3' variants={cosmosvarients}>14-16 February 2025</motion.p>
                     </motion.div>
                 </div>
                 <div className='z-20'>
@@ -111,10 +113,10 @@ const Hero = () => {
                     <Event/>
                 </div>
                 <div className='w-full z-10'>
-                    <Glimpse/>
+                    <Celeb/>
                 </div>
                 <div className='w-full z-10'>
-                    <Celeb/>
+                    <Glimpse/>
                 </div>
                 <div className='w-full z-10'>
                     {/* <Footer/> */}
