@@ -44,7 +44,7 @@ export default function Foter() {
                                 <p className="text-gray-50  lg:text-base text-sm text-center flex justify-center items-center" ><MdLocationPin size={35}/> <span> National Institute of Technology Jamshedpur, <br/> Adityapur, Jamshedpur, Jharkhand 831014 </span></p>
                             </li>
                             <li>
-                                <p className="text-gray-50  lg:text-base text-sm flex gap-x-5 my-3 items-center justify-center" ><BsTelephone size={25}/><span>+91 8210258224</span></p>
+                                <p className="text-gray-50  lg:text-base text-sm flex gap-x-5 my-3 items-center justify-center" ><BsTelephone size={25}/><span>+91 8863832703</span></p>
                             </li>
                             <li>
                                 <p className="text-gray-50  lg:text-base text-sm flex gap-x-5 my-3 items-center justify-center" ><MdMail size={25}/><span>ojass@nitjsr.ac.in</span> </p>

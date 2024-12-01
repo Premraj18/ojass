@@ -33,7 +33,7 @@ const Page = () => {
         {
           Data?.map((e, i) => (
             <div key={e.id} className="group sm:w-auto relative cursor-pointer flex items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30">
-              <div className="block border w-72 rounded-lg bg-black sm:h-72 h-56">
+              <div className="block border md:w-72 md:h-72 w-60 h-60 rounded-lg bg-black  ">
                 <img className="h-full w-full rounded-xl object-cover transition-transform duration-500 group-hover:rotate-3 group-hover:scale-125" src={e.img} alt="" />
               </div>
               <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent  group-hover:via-black/60 group-hover:to-black/70"></div>

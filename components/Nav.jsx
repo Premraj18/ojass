@@ -76,7 +76,7 @@ const Nav = () => {
       transition={{ duration: 0.1, }}
     >
       <nav className='flex w-full screen-max-width md:justify-center justify-between items-center'>
-        <img src='/logo.webp'  className='w-16 ' />
+        <Link href='/'> <img src='/logo.webp'  className='w-16 ' /></Link>
         <div className='flex flex-1 justify-center max-md:hidden'>
           {navData.map((link, index) => {
             return (
