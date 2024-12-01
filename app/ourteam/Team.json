@@ -1,143 +1,143 @@
 [
       {
-        "name": "Jay Singh",
-        "img": "team/img1.jpg",
-        "post": "President",
-        "linkedin": "https://linkedin.com/in/jay-singh",
-        "email": "jay.singh@example.com"
-      },
-      {
         "name": "Vishal",
-        "img": "team/img1.jpg",
+        "img": "team/1.webp",
+        "post": "Convenor",
+        "linkedin": "https://www.linkedin.com/in/vishal-r16/",
+        "email": "vishal.work16@gmail.com"
+      },
+      {
+        "name": "Anurag Das",
+        "img": "team/2.webp",
+        "post": "Convenor",
+        "linkedin": "https://www.linkedin.com/in/anurag-das-62a42a2b9",
+        "email": "jtechsec.sc@nitjsr.ac.in"
+      },
+      {
+        "name": "Haritima Sinha",
+        "img": "team/3.webp",
         "post": "Joint Technical Secretary",
-        "linkedin": "https://linkedin.com/in/vishal",
-        "email": "vishal@example.com"
-      },
-      {
-        "name": "Raj Srivastava",
-        "img": "team/img1.jpg",
-        "post": "General Sec",
         "linkedin": "https://linkedin.com/in/raj-srivastava",
-        "email": "raj.srivastava@example.com"
+        "email": "2022ugcm004@nitjsr.ac.in"
       },
       {
-        "name": "Nitish Kumar",
-        "img": "team/img1.jpg",
-        "post": "General Sec",
+        "name": "Ankit Kumar ",
+        "img": "team/4.webp",
+        "post": "General secretary ",
         "linkedin": "https://linkedin.com/in/nitish-kumar",
-        "email": "nitish.kumar@example.com"
+        "email": "ankptel0811@gmail.com"
       },
       {
-        "name": "Shivam Kumar",
-        "img": "team/img1.jpg",
-        "post": "Joint Sec",
+        "name": "Shrestha Agrawal",
+        "img": "team/5.webp",
+        "post": "General secretary ",
         "linkedin": "https://linkedin.com/in/shivam-kumar",
-        "email": "shivam.kumar@example.com"
+        "email": "agrawalshrestha10@gmail.com"
       },
       {
-        "name": "Shivansh Goel",
-        "img": "team/img1.jpg",
-        "post": "Executive Head",
+        "name": "Prince Kumar",
+        "img": "team/6.webp",
+        "post": "Executive Secretary",
         "linkedin": "https://linkedin.com/in/shivansh-goel",
-        "email": "shivansh.goel@example.com"
+        "email": "2021ugce031@nitjsr.ac.in"
       },
       {
-        "name": "Rajat Raj",
-        "img": "team/img1.jpg",
-        "post": "Executive Head",
+        "name": "Priyanshu Raj",
+        "img": "team/7.webp",
+        "post": "Joint Secretary ",
         "linkedin": "https://linkedin.com/in/rajat-raj",
-        "email": "rajat.raj@example.com"
+        "email": "priyanshuraj6869@gmail.com"
       },
       {
-        "name": "Abhinav Pandey",
-        "img": "team/img1.jpg",
-        "post": "Finance Head",
+        "name": "Aditya Pal",
+        "img": "team/8.webp",
+        "post": "Joint Secretary ",
         "linkedin": "https://linkedin.com/in/abhinav-pandey",
-        "email": "abhinav.pandey@example.com"
+        "email": "aditpal391@gmail.com"
       },
       {
-        "name": "Anubhav Anand",
-        "img": "team/img1.jpg",
+        "name": "Shristy Singh",
+        "img": "team/9.webp",
         "post": "CA Head",
         "linkedin": "https://linkedin.com/in/anubhav-anand",
-        "email": "anubhav.anand@example.com"
+        "email": "shristysingh1410@gmail.com"
       },
       {
-        "name": "Divyansh Dubey",
-        "img": "team/img1.jpg",
+        "name": "Divyanshu Prasad Soumya",
+        "img": "team/10.webp",
         "post": "CA Head",
         "linkedin": "https://linkedin.com/in/divyansh-dubey",
-        "email": "divyansh.dubey@example.com"
+        "email": "2021ugme029@nitjsr.ac.in"
       },
       {
-        "name": "Adarsh Prakash",
-        "img": "team/img1.jpg",
-        "post": "P&O Head",
+        "name": "Avinash Kanaujia",
+        "img": "team/11.webp",
+        "post": "PR Head",
         "linkedin": "https://linkedin.com/in/adarsh-prakash",
-        "email": "adarsh.prakash@example.com"
+        "email": "avinashkanaujia2219@gmail.com"
       },
       {
-        "name": "Nikhil Anand",
-        "img": "team/img1.jpg",
-        "post": "P&O Head",
+        "name": "Prinshu Gupta ",
+        "img": "team/12.webp",
+        "post": "PR Head",
         "linkedin": "https://linkedin.com/in/nikhil-anand",
-        "email": "nikhil.anand@example.com"
+        "email": "prinshugupta8271@gmail.com"
       },
       {
-        "name": "Aditya Raj",
-        "img": "team/img1.jpg",
-        "post": "Logistics Head",
+        "name": "Lokesh kumar kori",
+        "img": "team/13.webp",
+        "post": "EM Head",
         "linkedin": "https://linkedin.com/in/aditya-raj",
-        "email": "aditya.raj@example.com"
+        "email": "aryanlokesh0007@gmail.com"
       },
       {
-        "name": "Alok Shankar",
-        "img": "team/img1.jpg",
-        "post": "Logistics Head",
+        "name": "Pritish Nair",
+        "img": "team/14.webp",
+        "post": "EM Head",
         "linkedin": "https://linkedin.com/in/alok-shankar",
-        "email": "alok.shankar@example.com"
+        "email": "2021ugme095@nitjsr.ac.in"
       },
       {
-        "name": "Mohit Ranjan",
-        "img": "team/img1.jpg",
-        "post": "Logistics Head",
+        "name": "Ayushi Kumari",
+        "img": "team/15.webp",
+        "post": "Creative Head",
         "linkedin": "https://linkedin.com/in/mohit-ranjan",
-        "email": "mohit.ranjan@example.com"
+        "email": "ayushikumari0305@gmail.com"
       },
       {
-        "name": "Amay Harshit",
-        "img": "team/img1.jpg",
-        "post": "PR Head",
+        "name": "Priyanshu Vats",
+        "img": "team/16.webp",
+        "post": "Logistics Head",
         "linkedin": "https://linkedin.com/in/amay-harshit",
-        "email": "amay.harshit@example.com"
+        "email": "priyanshuvats321@gmail.com"
       },
       {
-        "name": "Aditya Jha",
-        "img": "team/img1.jpg",
-        "post": "PR Head",
+        "name": "Sourav Kumar",
+        "img": "team/17.webp",
+        "post": "Logistics Head",
         "linkedin": "https://linkedin.com/in/aditya-jha",
-        "email": "aditya.jha@example.com"
+        "email": "2021ugcs038@nitjsr.ac.in"
       },
       {
         "name": "Satish Kumar",
-        "img": "team/img1.jpg",
+        "img": "team/18.webp",
         "post": "P&A Head",
         "linkedin": "https://linkedin.com/in/satish-kumar",
         "email": "satish.kumar@example.com"
       },
       {
-        "name": "Karan Murmu",
-        "img": "team/img1.jpg",
-        "post": "Creative Head",
+        "name": "Anuj Bajpai",
+        "img": "team/19.webp",
+        "post": "Hospitality Head ",
         "linkedin": "https://linkedin.com/in/karan-murmu",
-        "email": "karan.murmu@example.com"
+        "email": "theanujbajpai@gmail.com"
       },
       {
-        "name": "Shubham Tiwary",
-        "img": "team/img1.jpg",
+        "name": "Prem Raj",
+        "img": "team/20.webp",
         "post": "Web & App Head",
         "linkedin": "https://linkedin.com/in/shubham-tiwary",
-        "email": "shubham.tiwary@example.com"
+        "email": "2022ugee073@nitjsr.ac.in"
       }
 ]
   
