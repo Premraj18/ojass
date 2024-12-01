@@ -5,6 +5,11 @@ import Layout from "@/components/Layout";
 
 const inter = Inter({ subsets: ["latin"] });
 
+export const metadata: Metadata = {
+  title: 'OJASS\'25 | NIT Jamshedpur',
+  description: 'OJASS 2025: The 22nd edition of the Techno-Management Fest of NIT Jamshedpur. Join us from 14-16 February 2025.',
+}
+
 // cname.vercel-dns.com.
 // 76.76.21.21
 
