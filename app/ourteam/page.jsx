@@ -43,8 +43,8 @@ const Page = () => {
                   {e.post}
                 </p>
                 <p className="mb-3 flex gap-8 items-center text-xl text-slate-300 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                  <a href=""><BsLinkedin/></a>
-                  <a href=""><FiMail/></a>
+                  <a href={e.linkedin} target='_blank'><BsLinkedin/></a>
+                  <a href={e.email} target='_blank'><FiMail/></a>
                 </p>
               </div>
             </div>
