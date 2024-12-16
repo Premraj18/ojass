@@ -11,7 +11,7 @@ const Page = () => {
   const i = eve.num;
   const j = eve.subnum;
   const dataeve = Data[i][j];
-  console.log(dataeve)
+  // console.log(dataeve)
   return (
     <>
       <section className="flex items-center w-full font-poppins  bg-[url('/subeve2.jpeg')]  bg-center bg-cover bg-no-repeat bg-fixed">
