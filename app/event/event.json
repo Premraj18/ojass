@@ -14,14 +14,7 @@
                 "first_runner_up": "₹15,000",
                 "participants": "Certificates to all Participants"
             },
-            "details": {
-                "duration": "36-hour hackathon",
-                "focus": "Promotes usage of new and trending technologies",
-                "evaluation_rounds": 3,
-                "final_round": {
-                    "description": "Presentation and product demonstration"
-                }
-            },
+            "details": "It’s a 36-hour hackathon, promoting the usage of new and trending technologies. It will consist of 3 rounds of evaluations. The last round would also involve a presentation and the product demonstration.",
             "rules": [
                 "The project needs to be implemented from scratch in a new repository.",
                 "Referencing documentation is allowed, but plagiarism is strictly prohibited and will lead to disqualification.",
@@ -44,17 +37,7 @@
                 "secondRunnerUp": "₹4,000",
                 "participationCertificates": "Certificates to all Participants."
             },
-            "details": {
-                "prelims": {
-                    "duration": "2.5 hours",
-                    "problems": 6
-                },
-                "finals": {
-                    "duration": "3 hours",
-                    "problems": 6
-                },
-                "note": "Both Rounds are Offline, at NIT Jamshedpur Campus."
-            },
+            "details": "Prelims: It will be a 2.5-hour contest with six programming problems. Finals: It will be a 3-hour contest consisting of six programming problems to solve. Note: Both Rounds are Offline, at NIT Jamshedpur Campus.",
             "rules": [
                 "The decision of the organizing team is final and binding.",
                 "Usage of any wrong means will lead to immediate disqualification."

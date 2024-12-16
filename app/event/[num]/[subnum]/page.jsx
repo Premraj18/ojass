@@ -1,25 +1,71 @@
+"use client"
 import React from 'react'
+import { BiCheckDouble } from "react-icons/bi";
+import Link from 'next/link';
+import Data from '../../event.json'
+import { useParams } from 'next/navigation';
 
-const page = () => {
+
+const Page = () => {
+  const eve = useParams();
+  const i = eve.num;
+  const j = eve.subnum;
+  const dataeve = Data[i][j];
+  console.log(dataeve)
   return (
     <>
-      <div className="w-full min-h-[100vh] sm:mt-0 lg:pt-14 pt-20 bg-[url('/eventbg1.jpeg')] bg-center bg-cover bg-no-repeat bg-fixed">
-        <div className='min-h-[100vh] -mt-20 relative  w-full flex flex-col items-center justify-center'
+      <section className="flex items-center w-full font-poppins  bg-[url('/subeve2.jpeg')]  bg-center bg-cover bg-no-repeat bg-fixed">
+        <div className="justify-center flex-1 w-full mx-auto md:px-6 sm:pt-28 sm:pb-20"
           style={{
-            background: 'linear-gradient(to bottom, rgba(2, 2, 2, 0.633),rgba(2, 2, 2, 0.633))'
+            background: 'linear-gradient(to bottom, rgba(2, 2, 2, 0.533),rgba(2, 2, 2, 0.533))'
           }}
         >
-          <div className='pt-44 w-full flex justify-center items-center'>
-            <img src="/abouttext2.webp" alt="" className='w-[80%] lg:w-1/3' />
+          <div className="px-4 mb-10 md:text-center md:mb-20">
+            <div className='flex justify-center'>
+              <h2 className='text-5xl font-semibold font-serif'>{dataeve.name}</h2>
+            </div>
           </div>
-          <div className='min-h-[80vh]'>
-
+          <div className="flex flex-wrap  items-center justify-center lg:px-32 w-full">
+            <div className="w-full px-4 mb-10 lg:w-1/2 flex justify-center lg:mb-0">
+              <img src={dataeve.img} alt="" className='w-[350px] md:w-[430px] h-[315px] md:h-[400px] rounded-3xl object-cover' />
+            </div>
+            <div className="w-full px-4 lg:pl-10 mb-10 lg:w-1/2 lg:mb-0 ">
+              <h2
+                className="py-3 pl-2 mb-4 text-3xl font-bold text-gray-200 border-l-4 border-white 00 ">
+                Description
+              </h2>
+              <p className="mb-4 text-base leading-7 w-3/4 text-gray-300 ">
+                {dataeve.description}
+              </p>
+            </div>
           </div>
-
+          <div className='flex flex-col justify-center items-center mt-16 gap-5'>
+            <h2 className='text-4xl font-semibold'>Prize Worth</h2>
+            <div className='flex flex-col justify-center items-center gap-2 font-medium text-lg bg-white/15 p-6 rounded-lg w-96'>
+              <p>Total : {dataeve.prizes.total} </p>
+              <p>Winner : {dataeve.prizes.winner}</p>
+              <p>First Runner Up : {dataeve.prizes.first_runner_up}</p>
+              <p>Certificates to all Participants</p>
+            </div>
+          </div>
+          <div className='flex flex-col justify-center items-center mt-16 gap-5'>
+            <h2 className='text-4xl font-semibold'>Details</h2>
+            <p className='font-medium text-lg px-3 lg:px-40'>{dataeve.details}</p>
+          </div>
+          <div className='flex flex-col justify-center items-center'>
+            <div className='w-3/4 flex flex-col justify-center items-center mt-16 gap-5 bg-white/15 p-6 rounded-lg'>
+              <h2 className='text-4xl font-semibold'>Rules</h2>
+              <div className='flex flex-col justify-center gap-2 font-medium text-lg'>
+                {dataeve.rules.map((data, idx) => (
+                  <p>{idx + 1}. {data}</p>
+                ))}
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
+      </section>
     </>
   )
 }
 
-export default page
+export default Page
