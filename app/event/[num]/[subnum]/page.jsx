@@ -56,8 +56,8 @@ const Page = () => {
             <div className='md:w-3/4 mx-3 flex flex-col justify-center items-center mt-16 gap-5 bg-white/15 p-6 rounded-lg'>
               <h2 className='text-4xl font-semibold'>Rules</h2>
               <div className='flex flex-col justify-center gap-2 font-medium text-lg'>
-                {dataeve.rules.map((data, idx) => (
-                  <p>{idx + 1}. {data}</p>
+                {dataeve.rules?.map((data, idx) => (
+                  <p key={idx}>{idx + 1}. {data}</p>
                 ))}
               </div>
             </div>
