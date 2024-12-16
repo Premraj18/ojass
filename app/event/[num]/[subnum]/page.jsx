@@ -34,14 +34,14 @@ const Page = () => {
                 className="py-3 pl-2 mb-4 text-3xl font-bold text-gray-200 border-l-4 border-white 00 ">
                 Description
               </h2>
-              <p className="mb-4 text-base leading-7 w-3/4 text-gray-300 ">
+              <p className="mb-4 text-base leading-7 md:w-3/4 text-gray-300 ">
                 {dataeve.description}
               </p>
             </div>
           </div>
-          <div className='flex flex-col justify-center items-center lg:mt-16 gap-5'>
+          <div className='flex flex-col justify-center items-center lg:mt-16 gap-5 px-3'>
             <h2 className='text-4xl font-semibold'>Prize Worth</h2>
-            <div className='flex flex-col justify-center items-center gap-2 font-medium text-lg bg-white/15 p-6 rounded-lg w-96'>
+            <div className='flex flex-col justify-center items-center gap-2 font-medium text-lg bg-white/15 p-6 rounded-lg md:w-96 w-80'>
               <p>Total : {dataeve.prizes.total} </p>
               <p>Winner : {dataeve.prizes.winner}</p>
               <p>First Runner Up : {dataeve.prizes.first_runner_up}</p>
