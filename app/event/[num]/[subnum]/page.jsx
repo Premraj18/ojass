@@ -15,14 +15,14 @@ const Page = () => {
   return (
     <>
       <section className="flex items-center w-full font-poppins  bg-[url('/subeve2.jpeg')]  bg-center bg-cover bg-no-repeat bg-fixed">
-        <div className="justify-center flex-1 w-full mx-auto md:px-6 sm:pt-28 sm:pb-20"
+        <div className="justify-center flex-1 w-full mx-auto md:px-6 pt-28 pb-20"
           style={{
             background: 'linear-gradient(to bottom, rgba(2, 2, 2, 0.533),rgba(2, 2, 2, 0.533))'
           }}
         >
           <div className="px-4 mb-10 md:text-center md:mb-20">
             <div className='flex justify-center'>
-              <h2 className='text-5xl font-semibold font-serif'>{dataeve.name}</h2>
+              <h2 className='lg:text-5xl text-3xl font-semibold font-serif'>{dataeve.name}</h2>
             </div>
           </div>
           <div className="flex flex-wrap  items-center justify-center lg:px-32 w-full">
@@ -39,7 +39,7 @@ const Page = () => {
               </p>
             </div>
           </div>
-          <div className='flex flex-col justify-center items-center mt-16 gap-5'>
+          <div className='flex flex-col justify-center items-center lg:mt-16 gap-5'>
             <h2 className='text-4xl font-semibold'>Prize Worth</h2>
             <div className='flex flex-col justify-center items-center gap-2 font-medium text-lg bg-white/15 p-6 rounded-lg w-96'>
               <p>Total : {dataeve.prizes.total} </p>
@@ -53,7 +53,7 @@ const Page = () => {
             <p className='font-medium text-lg px-3 lg:px-40'>{dataeve.details}</p>
           </div>
           <div className='flex flex-col justify-center items-center'>
-            <div className='w-3/4 flex flex-col justify-center items-center mt-16 gap-5 bg-white/15 p-6 rounded-lg'>
+            <div className='md:w-3/4 mx-3 flex flex-col justify-center items-center mt-16 gap-5 bg-white/15 p-6 rounded-lg'>
               <h2 className='text-4xl font-semibold'>Rules</h2>
               <div className='flex flex-col justify-center gap-2 font-medium text-lg'>
                 {dataeve.rules.map((data, idx) => (
