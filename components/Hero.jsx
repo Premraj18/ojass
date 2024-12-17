@@ -8,6 +8,7 @@ import Celeb from './Celeb';
 import Glimpse from './Glimpse';
 import Footer from './Footer';
 import Foter from "./Footer2";
+import countapi from 'countapi-js';
 
 const variants = {
     initial: {
@@ -49,6 +50,10 @@ const Hero = () => {
 
     const yBg = useTransform(scrollYProgress, [0, 1], ["0%", "180%"]);
     const xBg = useTransform(scrollYProgress, [0, 1], ["0%", "150%"]);
+
+    countapi.visits('global').then((result) => {
+        // console.log(result.value);
+      });
     return (
         <div ref={ref} className="min-h-[100vh] relative -mt-24 w-full 
         flex flex-col items-center justify-center overflow-hidden bg-[url('/bghero.webp')] bg-fixed bg-center bg-cover">

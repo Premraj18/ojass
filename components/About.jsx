@@ -52,11 +52,13 @@ const About = () => {
                     >
                         <motion.h2
                             className="py-3 pl-2 mb-4 text-2xl font-bold text-gray-200 border-l-4 border-white 00 " variants={variants}>
-                            We are providing a better facility
+                            Who We Are
                         </motion.h2>
                         <motion.p className="mb-4 text-base leading-7 text-gray-300 " variants={variants}>
-                            We believe in transforming spaces into captivating experiences. Our team of passionate designers
-                            merges creativity with functionality, delivering interiors that reflect your unique style and enhance your daily life.
+                            Ojass, NIT Jamshedpur's annual national-level Techno-Management Festival, stands 
+                            as the second largest event of its kind in Eastern India. With a staggering turnout 
+                            of over 8000+ footfall including students, professionals, educators, and artists 
+                            from top colleges across the nation. 
                         </motion.p>
                         <ul className="mb-10">
                             <motion.li className="flex items-center mb-4 text-base " variants={variants}>
@@ -67,7 +69,7 @@ const About = () => {
                                             d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01-.622-.636zm.287 5.984-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7 8.793l2.646-2.647a.5.5 0 0 1 .708.708z" />
                                     </svg>
                                 </span>
-                                Every project is a canvas, and we tailor our designs to align with your vision and lifestyle.
+                                Ojass offers a platform for curiosity and innovation.
                             </motion.li>
                             <motion.li className="flex items-center mb-4 text-base " variants={variants}>
                                 <span className="mr-3 text-white ">
@@ -87,7 +89,7 @@ const About = () => {
                                             d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01-.622-.636zm.287 5.984-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7 8.793l2.646-2.647a.5.5 0 0 1 .708.708z" />
                                     </svg>
                                 </span>
-                                We collaborate closely with you, turning your ideas into stunning, functional realities.
+                                Featuring a prize pool of INR 8 lakhs, the event hosts over 40+ diverse competitions during its 3 day extravaganza.
                             </motion.li>
                         </ul>
                         {/* <Link href='/about'
