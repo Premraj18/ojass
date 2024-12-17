@@ -79,7 +79,7 @@ const Data = [
 ]
 
 const EventCard = () => {
-
+  // console.log(Data)
   return (
     <main className="flex mb-10 flex-col items-center lg:mt-12 mt-5 overflow-x-hidden">
       <Carousel
