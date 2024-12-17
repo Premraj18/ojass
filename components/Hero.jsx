@@ -1,5 +1,5 @@
 "use client"
-import React, { useRef } from 'react'
+import React, { useRef,useEffect, useState } from 'react'
 import { SparklesCore } from "../components/ui/sparkles";
 import { delay, motion, useScroll, useTransform } from 'framer-motion'
 import About from './About';
@@ -51,9 +51,9 @@ const Hero = () => {
     const yBg = useTransform(scrollYProgress, [0, 1], ["0%", "180%"]);
     const xBg = useTransform(scrollYProgress, [0, 1], ["0%", "150%"]);
 
-    countapi.visits('global').then((result) => {
-        // console.log(result.value);
-      });
+    
+
+
     return (
         <div ref={ref} className="min-h-[100vh] relative -mt-24 w-full 
         flex flex-col items-center justify-center overflow-hidden bg-[url('/bghero.webp')] bg-fixed bg-center bg-cover">
