@@ -3,8 +3,23 @@ import Link from 'next/link'
 import { useContext } from 'react'
 import { BsTelephone } from 'react-icons/bs'
 import { MdLocationPin, MdMail } from 'react-icons/md'
+import { useEffect, useState } from "react";
+import Cookies from "js-cookie";
 
 export default function Foter() {
+    const [refreshCount, setRefreshCount] = useState(0);
+
+    useEffect(() => {
+        // Get the current count from the cookie or initialize to 0
+        const currentCount = parseInt(Cookies.get("refreshCount") || "0", 10);
+
+        // Increment the count
+        const newCount = currentCount + 1;
+
+        // Update the state and cookie with the new count
+        setRefreshCount(newCount);
+        Cookies.set("refreshCount", newCount);
+    }, []);
 
     return (
         <footer className="body-font " style={{ background: 'linear-gradient(rgba(0, 0, 0, 0.919),rgba(109, 109, 109, 0.133))', boxShadow: '0px 0.01px 5px rgba(24, 22, 22, 0.155)' }} >
@@ -74,7 +89,7 @@ export default function Foter() {
                         <p >Designed&Develop By: <a href="" className='text-red-500'>Prem Raj</a> </p>
                     </div>
                     <div className='lg:text-lg text-white flex pt-5 justify-center md:pt-0 md:justify-normal'>
-                        <p >Visitors : <span className='text-red-500'>45327</span> </p>
+                        <p >Visitors : <span className='text-red-500'>{45362+refreshCount}</span> </p>
                     </div>
                 </div>
             </div>
