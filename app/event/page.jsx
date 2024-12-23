@@ -2,6 +2,9 @@
 import React from 'react'
 import ViswaCodeGenesis from './viswaCodeGenesis'
 import SiliconValley from './siliconvalley'
+import AquaBotsArena from './aquabotsArena'
+import BrainBusters from './brainbusters'
+import CaseQuest from './caseQuest'
 
 const Page = () => {
   return (
@@ -19,7 +22,16 @@ const Page = () => {
             <ViswaCodeGenesis/>
           </div>
           <div className='min-h-[80vh] w-full my-5 flex items-start justify-center'>
+            <AquaBotsArena/>
+          </div>
+          {/* <div className='min-h-[80vh] w-full my-5 flex items-start justify-center'>
             <SiliconValley/>
+          </div> */}
+          <div className='min-h-[80vh] w-full my-5 flex items-start justify-center'>
+            <BrainBusters/>
+          </div>
+          <div className='min-h-[80vh] w-full my-5 flex items-start justify-center'>
+            <CaseQuest/>
           </div>
 
         </div>

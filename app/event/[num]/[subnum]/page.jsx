@@ -53,6 +53,7 @@ const Page = () => {
               <p>Total : {dataeve.prizes.total} </p>
               <p>Winner : {dataeve.prizes.winner}</p>
               <p>First Runner Up : {dataeve.prizes.first_runner_up}</p>
+              <p>Second Runner Up : {dataeve.prizes.second_runner_up}</p>
               <p>Certificates to all Participants</p>
             </div>
           </div>
@@ -74,6 +75,10 @@ const Page = () => {
                 ))}
               </div>
             </div>
+          </div>
+          <div className='flex flex-col justify-center items-center gap-5 mt-8 md:text-3xl text-xl px-2'>
+                <p className='text-center'>Event Head : {dataeve.event_head.name}</p>
+                <p className='text-center'>Conatct No : {dataeve.event_head.Phone}</p>
           </div>
         </div>
       </section>

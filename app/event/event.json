@@ -10,9 +10,10 @@
             "organizer": "Coding Chronicles",
             "description": "HACK DE SCIENCE, where creativity meets innovation! This event is designed to challenge your development skills and inspire you to create amazing projects while you compete with the brightest minds in the field.",
             "prizes": {
-                "total": "₹40,000",
+                "total": "₹50,000",
                 "winner": "₹25,000",
                 "first_runner_up": "₹15,000",
+                "second_runner_up": "₹10,000",
                 "participants": "Certificates to all Participants"
             },
             "details": [
@@ -34,7 +35,9 @@
                 "One of the members should be available at the allotted place throughout the event."
             ],
             "event_head": {
-                "description": "Photo of event head will be here"
+                "description": "Photo of event head will be here",
+                "name": "Ayush Kumar & Himanshu Pathak",
+                "Phone": "9334795115 & 9006699775"
             }
         },
 
@@ -45,10 +48,10 @@
             "redirect": "event/0/1",
             "description": "If you love competitive coding, or problem-solving in general, then this is THE event for you! Code Mania is the flagship competitive programming event of our prestigious institute. This is a team event where the size of a team can vary from 1 member to 3 members. So, this event will not only help you hone your problem-solving skills but also contribute to your capacity to work with a team under pressure!",
             "prizes": {
-                "total": "₹20,000",
-                "winner": "₹10,000",
-                "firstRunnerUp": "₹6,000",
-                "secondRunnerUp": "₹4,000",
+                "total": "₹25,000",
+                "winner": "₹12,000",
+                "first_runner_up": "₹8,000",
+                "second_runner_up": "₹5,000",
                 "participationCertificates": "Certificates to all Participants."
             },
             "details": [
@@ -60,8 +63,10 @@
                 "All submitted solutions must be original. Any violation will lead to disqualification.",
                 "The decision of the organizing team is final and binding."
             ],
-            "eventHead": {
-                "photoPlaceholder": "HERE WE WILL HAVE A PHOTO OF EVENT HEAD"
+            "event_head": {
+                "photoPlaceholder": "HERE WE WILL HAVE A PHOTO OF EVENT HEAD",
+                "name": "Hitanshu Gavri",
+                "Phone": "8601103675"
             }
         },
 
@@ -73,9 +78,10 @@
             "organizer": "Coding Chronicles",
             "description": "TensorsEncoded!, where Python and Artificial Intelligence converge! This event is designed to help you explore the fascinating world of Artificial Intelligence and its powerful applications in solving real-world problems.",
             "prizes": {
-                "total": "₹40,000",
-                "winner": "₹25,000",
-                "first_runner_up": "₹15,000",
+                "total": "₹25,000",
+                "winner": "₹12,000",
+                "first_runner_up": "₹8,000",
+                "second_runner_up": "₹5,000",
                 "participants": "Certificates to all Participants"
             },
             "details":  [
@@ -92,7 +98,9 @@
                 "The decision of judges will be final and cannot be further questioned."
             ],
             "event_head": {
-                "description": "Photo of event head will be here"
+                "description": "Photo of event head will be here",
+                "name": "Himanshu Pathak",
+                "Phone": "9006699775"
             }
         },
 
@@ -105,8 +113,8 @@
             "prizes": {
                 "total": "₹20,000",
                 "winner": "₹10,000",
-                "firstRunnerUp": "₹6,000",
-                "secondRunnerUp": "₹4,000",
+                "first_runner_up": "₹6,000",
+                "second_runner_up": "₹4,000",
                 "participationCertificates": "Certificates to all Participants."
             },
             "details": [
@@ -121,136 +129,225 @@
                 "The decision of the organizing team is final and binding.",
                 "Usage of any wrong means will lead to immediate disqualification."
             ],
-            "eventHead": {
-                "photoPlaceholder": "HERE WE WILL HAVE A PHOTO OF EVENT HEAD"
+            "event_head": {
+                "photoPlaceholder": "HERE WE WILL HAVE A PHOTO OF EVENT HEAD",
+                "name": "Aanchal Shikarwar & Neha Singh",
+                "Phone": "9380690526 & 9431751248"
             }
         }
     ],
 
     [
         {
-            "name": "HACK-DE-SCIENCE",
+            "name": "UNDERWATER TRACING",
             "teamSizeMin" : "3",
             "teamSizeMax" : "5",
             "img": "https://ojass-2024.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2FQv8sgXQ%2FVISHWA-CODE-GENESIS.png%20&w=384&q=75",
-            "rulebookurl": "https://docs.google.com/document/d/1Sqx-1ewV_iQELXFRG8lwnFJcu5tSotsL",
-            "redirect": "event/0/0",
-            "organizer": "Coding Chronicles",
-            "description": "HACK DE SCIENCE, where creativity meets innovation! This event is designed to challenge your development skills and inspire you to create amazing projects while you compete with the brightest minds in the field.",
+            "rulebookurl": "https://docs.google.com/document/d/12AMaNXjA-98ecWXqqRGMU_brh5JH6RLQ",
+            "redirect": "event/1/0",
+            "organizer": "AquaBots Arena",
+            "description": "This event challenges participants to design and operate underwater robots capable of navigating a submerged course, scanning QR codes placed underwater, and decoding the information to complete specific tasks. The event tests engineering, navigation, and automation skills under water.",
             "prizes": {
-                "total": "₹40,000",
-                "winner": "₹25,000",
-                "first_runner_up": "₹15,000",
+                "total": "₹60,000",
+                "winner": "₹30,000",
+                "first_runner_up": "₹20,000",
+                "second_runner_up": "₹10,000",
                 "participants": "Certificates to all Participants"
             },
             "details": [
-               " Round 1(Day 1): Progress Evaluation",
-                "This round will track the progress of the project and assess the initial development and approach.",
-                "Round 2(Day 2): Functionality Testing",
-                "In this round, the complete functionality of the projects will be thoroughly tested.",
-                "Round 3(Final Round): Presentation",
-                "Teams will present their projects to the jury, showcasing the utility and impact of their solution.", 
-                "Weightage of the rounds will be: 25% - 25% - 50%",
-                "Duration: 36 hours"
+                "Preparation Phase: Teams will have 30 minutes to test and calibrate their bots in the water before the race begins.",
+                "Task Phase: Bots must, Navigate the pool to locate QR codes, Scan and decode each QR code, Perform the actions described in the decoded QR code."
             ],
             "rules": [
-                "Teams of 2 to 4 participants are allowed.",
-                "All submitted work must be original. Plagiarism will lead to disqualification",
-                "The judges’ decision will be final and binding.",
-                "Participants Must bring their own Laptops or other requirements.",
-                "OJASS Team are liable to provide Charging Points and stable Internet Connection.",
-                "One of the members should be available at the allotted place throughout the event."
+                "Fair Play: Teams must not interfere with other bots during the competition.",
+                "QR Code Visibility: Teams cannot manually adjust or move QR codes during the event.",
+                "Bot Retrieval: In case of malfunction, teams may retrieve and repair bots but will incur a 2-minute penalty."
             ],
             "event_head": {
-                "description": "Photo of event head will be here"
+                "description": "Photo of event head will be here",
+                "name": "Vishal Raj",
+                "Phone": "8863832703"
             }
         },
 
         {
-            "name": "VISHWA-CODE-MANIA",
+            "name": "AQUA RACE",
             "img": "https://ojass-2024.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2F6tbmCP7%2F3.png&w=384&q=75",
-            "rulebookurl": "https://docs.google.com/document/d/1rMX1Rb0-VeHalfK-1tT5KM0L7X7XUzqR",
-            "redirect": "event/0/1",
-            "description": "If you love competitive coding, or problem-solving in general, then this is THE event for you! Code Mania is the flagship competitive programming event of our prestigious institute. This is a team event where the size of a team can vary from 1 member to 3 members. So, this event will not only help you hone your problem-solving skills but also contribute to your capacity to work with a team under pressure!",
+            "rulebookurl": "https://docs.google.com/document/d/1YabuwJIOmCGaNneiNlsxJ8NUlVh6ruyn/",
+            "redirect": "event/1/1",
+            "description": "Participants will design and build miniature boats that must navigate a zigzag course filled with obstacles from a designated starting point to the finish line. The boats can be either manually controlled (via ropes, wind, or sticks) or autonomous (using pre-designed mechanisms). The event tests creativity, engineering, and precision in steering through the course.",
             "prizes": {
-                "total": "₹20,000",
-                "winner": "₹10,000",
-                "firstRunnerUp": "₹6,000",
-                "secondRunnerUp": "₹4,000",
+                "total": "₹30,000",
+                "winner": "₹15,000",
+                "first_runner_up": "₹10,000",
+                "second_runner_up": "₹5,000",
                 "participationCertificates": "Certificates to all Participants."
             },
             "details": [
-                "Prelims: A 2-hour contest with six programming problems.",
-                "Finals: A 2-hour contest with six advanced problems to solve."             
+                "Track Dimensions: 12*12 feet (l*b), width 1.5 feet per lane.",
+                "The course includes a zigzag pattern marked by floating buoys.",
+                "Boats must navigate in a serpentine path around the buoys without skipping any turns."
             ],
             "rules": [
-                "Teams of 1 to 3 participants are allowed.",
-                "All submitted solutions must be original. Any violation will lead to disqualification.",
-                "The decision of the organizing team is final and binding."
+                "Fastest Completion Time: The boat that completes the course in the shortest time wins, adjusted for penalties.",
+                "Bonus Points: Creativity and innovation in design.",
+                "Smooth navigation through obstacles (no penalties)."
             ],
-            "eventHead": {
-                "photoPlaceholder": "HERE WE WILL HAVE A PHOTO OF EVENT HEAD"
+            "event_head": {
+                "photoPlaceholder": "HERE WE WILL HAVE A PHOTO OF EVENT HEAD",
+                "name": "Priyanshu Raj",
+                "Phone": "9155360718"
             }
-        },
+        }
+    ],
 
+    [
         {
-            "name": "TENSORENCODED",
+            "name": "BIZZTHALON (BUISNESS QUIZ)",
+            "teamSizeMin" : "3",
+            "teamSizeMax" : "5",
             "img": "https://ojass-2024.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2FQv8sgXQ%2FVISHWA-CODE-GENESIS.png%20&w=384&q=75",
-            "rulebookurl": "https://docs.google.com/document/d/1R-daEP8r5y5pMwtHak-KKjovnt9eJKbR/",
-            "redirect": "event/0/2",
-            "organizer": "Coding Chronicles",
-            "description": "TensorsEncoded!, where Python and Artificial Intelligence converge! This event is designed to help you explore the fascinating world of Artificial Intelligence and its powerful applications in solving real-world problems.",
+            "rulebookurl": "https://docs.google.com/document/d/1LC6lOMEGnN26-Fx6xI00CPpkk4t_g46P/",
+            "redirect": "event/2/0",
+            "organizer": "Brain Busters",
+            "description": "BIZZTHALON is a business quizzing event organized as part of OJASS’25, the techno-management fest of NIT Jamshedpur. The event challenges participants to demonstrate their knowledge of business, startups, economics, and related domains through a series of competitive quiz rounds.",
             "prizes": {
-                "total": "₹40,000",
-                "winner": "₹25,000",
-                "first_runner_up": "₹15,000",
+                "total": "₹20,000",
+                "winner": "₹10,000",
+                "first_runner_up": "₹6,000",
+                "second_runner_up": "₹4,000",
                 "participants": "Certificates to all Participants"
             },
-            "details":  [
-                "Pre-process the data, Select and apply appropriate machine learning algorithms, Tune their models for optimal performance.",
-                "Additionally, participants will be required to prepare a report that presents.",
-                "The approach used, Dataset handling,",
-                "Model selection and performance evaluation, Challenges faced during model building.",
-                "The time duration for this is 12 hours. "               
-             ],
+            "details": [
+                "Multiple rounds covering various aspects of the business genre.",
+                "Questions will test knowledge, teamwork, and problem-solving skills.",
+                "The team with the best cumulative performance across rounds will be declared the winner.",
+                "Each team must consist of 2 members.",
+                "Participants must present valid identification for on-campus verification.",
+                "Teams are prohibited from bringing study materials or electronic devices into the quiz venue."
+            ],
             "rules": [
-                "Team participation is allowed with a maximum of 3 participants.",
-                "There will be no penalties or negative markings in any rounds.",
-                "Any form of unfair means will lead to disqualification.",
-                "The decision of judges will be final and cannot be further questioned."
+                "Only registered team members are allowed to participate. Substitution of team members is not permitted.",
+                "Teams must adhere to principles of fair play and sportsmanship.",
+                "Any form of cheating, including plagiarism or use of unauthorized materials, will result in immediate disqualification.",
+                "Decisions made by the organizers and Quiz Masters are final and binding.",
+                "Teams must report on time for each stage. Late entries will not be accommodated."
             ],
             "event_head": {
-                "description": "Photo of event head will be here"
+                "description": "Photo of event head will be here",
+                "name": "Ishita Dey & Srinjoy Chakraborty",
+                "Phone": "9369442703 & 6287750834"
             }
         },
 
         {
-            "name": "MODELMAYHEM",
+            "name": "SCI-FI QUIZ (TECHNICAL QUIZ)",
             "img": "https://ojass-2024.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2F6tbmCP7%2F3.png&w=384&q=75",
-            "rulebookurl": "https://docs.google.com/document/d/1bfv-GJQ5NovFi6VwYR0ebvjHfoLskvcw/",
-            "redirect": "event/0/3",
-            "description": "ModelMayhem, an extraordinary event by OJASS designed to immerse participants in the ever-evolving realm of Machine Learning and Artificial Intelligence. Whether you're a budding enthusiast or a seasoned practitioner, ModelMayhem is your platform to showcase skills, solve challenging problems, and innovate with cutting-edge technologies.",
+            "rulebookurl": "https://docs.google.com/document/d/12S2aGC4XwPWm8nDVGJ0SOIyX3hLyn-S2/",
+            "redirect": "event/2/1",
+            "description": "SCI-FI QUIZ is a Sci-Tech quizzing event organized under OJASS’25, the techno-management fest of NIT Jamshedpur. This event challenges participants to demonstrate their knowledge in the fields of science, technology, business, and related domains through a series of competitive quiz rounds.",
             "prizes": {
                 "total": "₹20,000",
                 "winner": "₹10,000",
-                "firstRunnerUp": "₹6,000",
-                "secondRunnerUp": "₹4,000",
+                "first_runner_up": "₹6,000",
+                "second_runner_up": "₹4,000",
                 "participationCertificates": "Certificates to all Participants."
             },
             "details": [
-                "Round 1: Predictive Modelling Contest",
-                "Duration: 2 hours",
-                "Top 5 performers will qualify for Round 2",
-                "Round 2: Advanced Deep Learning & Generative AI",
-                "Participants will choose one of two complex problem statements.",
-                "Expected deliverables include a well-documented solution and a brief presentation of the methodology."           
+                "Stage 1: Prelims :",
+                "Duration: 2 hours.",
+                "Details: Number of Questions: 16-25 (final number determined by the Quiz Master).",
+                "Theme: Science and Technology.",
+                "Selection Criteria: Based on performance, the top 6-8 teams will advance to the Finals.",
+                "The number of advancing teams depends on total participation.",
+                "Stage 2: Finals :",
+                "Duration: 2 hours.",
+                "Details: Multiple rounds focusing on the sci-tech genre.",
+                "Questions will test knowledge, teamwork, and problem-solving skills in areas such as emerging technologies, scientific breakthroughs, and tech innovations.",
+                "The team with the best cumulative performance across rounds will be declared the winner."
             ],
             "rules": [
-                "The decision of the organizing team is final and binding.",
-                "Usage of any wrong means will lead to immediate disqualification."
+                "Only registered team members are allowed to participate. Substitution of team members is not permitted.",
+                "Teams must adhere to principles of fair play and sportsmanship.",
+                "Any form of cheating, including plagiarism or use of unauthorized materials, will result in immediate disqualification.",
+                "Decisions made by the organizers and Quiz Masters are final and binding.",
+                "Teams must report on time for each stage. Late entries will not be accommodated."
             ],
-            "eventHead": {
-                "photoPlaceholder": "HERE WE WILL HAVE A PHOTO OF EVENT HEAD"
+            "event_head": {
+                "photoPlaceholder": "HERE WE WILL HAVE A PHOTO OF EVENT HEAD",
+                "name": "Sandeep Shaw & Rohit Parashar",
+                "Phone": "8252073605 & 7488068474"
+            }
+        }
+    ],
+
+    [
+        {
+            "name": "CASE STUDY CHALLENGE",
+            "teamSizeMin" : "3",
+            "teamSizeMax" : "5",
+            "img": "https://ojass-2024.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2FQv8sgXQ%2FVISHWA-CODE-GENESIS.png%20&w=384&q=75",
+            "rulebookurl": "https://docs.google.com/document/d/1G2wuNEgO2hxAwn5IKIiAmOVj0R8bmvvp/",
+            "redirect": "event/3/0",
+            "organizer": "Case Quest",
+            "description": "The Data Analytics Case Competition is a unique platform for students to demonstrate their analytical prowess, creative thinking, and strategic problem-solving abilities. Participants will analyse real-world business problems, derive actionable insights, and present innovative solutions to industry experts. This event aims to bridge the gap between academic knowledge and practical application in the field of data analytics.",
+            "prizes": {
+                "total": "₹20,000",
+                "winner": "₹10,000",
+                "first_runner_up": "₹6,000",
+                "second_runner_up": "₹4,000",
+                "participants": "Certificates to all Participants"
+            },
+            "details": [
+                "Round 1: Problem Analysis :",
+                "Teams will receive a detailed case study and dataset via email upon registration confirmation.",
+                "Deliverables: A structured report (in PDF format) summarizing insights, methodology, and actionable recommendations.",
+                "Round 2: Presentation & Solution Pitch : Shortlisted teams from Round 1 will present their solutions to an expert panel. Format: 10-minute presentation followed by a 5-minute Q&A session."
+            ],
+            "rules": [
+               " Originality: All submissions must be original and adhere to ethical guidelines. Plagiarism will lead to disqualification.",
+                "Use of Resources: Teams may use publicly available tools, software, and datasets for reference, provided they properly cite all external sources.",
+                "Deadlines: Teams must adhere to submission timelines. Late submissions will not be entertained.",
+                "Confidentiality: Teams must treat the given case study and dataset as confidential and refrain from sharing them externally.",
+                "Communication: Teams can interact only with the event organizers for clarifications. External consultations are not allowed."
+            ],
+            "event_head": {
+                "description": "Photo of event head will be here",
+                "name": "Amarjeet Kumar",
+                "Phone": "9162540040"
+            }
+        },
+
+        {
+            "name": "CONSULTING NEXUS",
+            "img": "https://ojass-2024.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2F6tbmCP7%2F3.png&w=384&q=75",
+            "rulebookurl": "https://docs.google.com/document/d/1je11ou_JJHRcHkB8s4oW986ZuLd7vQ1Q/",
+            "redirect": "event/3/1",
+            "description": "Consulting Nexus challenges participants to think critically and solve real-world business problems. Participants will engage in analyzing case studies, solving guesstimates, tackling business puzzles, and presenting structured solutions to complex challenges in the field of management consulting.",
+            "prizes": {
+                "total": "₹20,000",
+                "winner": "₹10,000",
+                "first_runner_up": "₹6,000",
+                "second_runner_up": "₹4,000",
+                "participationCertificates": "Certificates to all Participants."
+            },
+            "details": [
+                "Round 1: Business Problem Solving :",
+                "Format: Participants will solve real-world business challenges through case studies, guesstimates, and puzzles.",
+                "Task: Each participant will be given a set of questions or cases to analyze and solve within a limited time frame.",
+                "Submission: All answers must be written legibly and submitted within the given time frame. Late submissions will not be accepted.",
+                "Round 2: Personal Interview (PI) :",
+                "Format: Shortlisted participants from Round 1 will proceed to a Personal Interview."
+            ],
+            "rules": [
+                "Eligibility: Team up to 3 participants is allowed.",
+                "Question Type: Questions will test participants' analytical, logical, and business acumen.",
+                "Time Management: Participants must adhere to the time limits specified for each round."
+            ],
+            "event_head": {
+                "photoPlaceholder": "HERE WE WILL HAVE A PHOTO OF EVENT HEAD",
+                "name": "Arpan Sarkar",
+                "Phone": "9798245587"
             }
         }
     ]
