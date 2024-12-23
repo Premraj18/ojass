@@ -5,29 +5,43 @@
             "teamSizeMin" : "3",
             "teamSizeMax" : "5",
             "img": "https://ojass-2024.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2FQv8sgXQ%2FVISHWA-CODE-GENESIS.png%20&w=384&q=75",
+            "rulebookurl": "https://docs.google.com/document/d/1Sqx-1ewV_iQELXFRG8lwnFJcu5tSotsL",
             "redirect": "event/0/0",
-            "organizer": "Vishwa-Code Genesis",
-            "description": "HACK-DE-SCIENCE is the biggest event of Vishwa-Code Genesis, designed to provide the freedom to use any development tool to bring ideas to life. It is a team-based event where solo participation is not allowed. Teams can have either 2 or 4 members.",
+            "organizer": "Coding Chronicles",
+            "description": "HACK DE SCIENCE, where creativity meets innovation! This event is designed to challenge your development skills and inspire you to create amazing projects while you compete with the brightest minds in the field.",
             "prizes": {
                 "total": "₹40,000",
                 "winner": "₹25,000",
                 "first_runner_up": "₹15,000",
                 "participants": "Certificates to all Participants"
             },
-            "details": "It’s a 36-hour hackathon, promoting the usage of new and trending technologies. It will consist of 3 rounds of evaluations. The last round would also involve a presentation and the product demonstration.",
+            "details": [
+               " Round 1(Day 1): Progress Evaluation",
+                "This round will track the progress of the project and assess the initial development and approach.",
+                "Round 2(Day 2): Functionality Testing",
+                "In this round, the complete functionality of the projects will be thoroughly tested.",
+                "Round 3(Final Round): Presentation",
+                "Teams will present their projects to the jury, showcasing the utility and impact of their solution.", 
+                "Weightage of the rounds will be: 25% - 25% - 50%",
+                "Duration: 36 hours"
+            ],
             "rules": [
-                "The project needs to be implemented from scratch in a new repository.",
-                "Referencing documentation is allowed, but plagiarism is strictly prohibited and will lead to disqualification.",
-                "The decision of the organizing team is final and binding.",
-                "Further rules will be shared at the start of the event."
+                "Teams of 2 to 4 participants are allowed.",
+                "All submitted work must be original. Plagiarism will lead to disqualification",
+                "The judges’ decision will be final and binding.",
+                "Participants Must bring their own Laptops or other requirements.",
+                "OJASS Team are liable to provide Charging Points and stable Internet Connection.",
+                "One of the members should be available at the allotted place throughout the event."
             ],
             "event_head": {
                 "description": "Photo of event head will be here"
             }
         },
+
         {
-            "name": "Vishwa-Code Mania",
+            "name": "VISHWA-CODE-MANIA",
             "img": "https://ojass-2024.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2F6tbmCP7%2F3.png&w=384&q=75",
+            "rulebookurl": "https://docs.google.com/document/d/1rMX1Rb0-VeHalfK-1tT5KM0L7X7XUzqR",
             "redirect": "event/0/1",
             "description": "If you love competitive coding, or problem-solving in general, then this is THE event for you! Code Mania is the flagship competitive programming event of our prestigious institute. This is a team event where the size of a team can vary from 1 member to 3 members. So, this event will not only help you hone your problem-solving skills but also contribute to your capacity to work with a team under pressure!",
             "prizes": {
@@ -37,43 +51,57 @@
                 "secondRunnerUp": "₹4,000",
                 "participationCertificates": "Certificates to all Participants."
             },
-            "details": "Prelims: It will be a 2.5-hour contest with six programming problems. Finals: It will be a 3-hour contest consisting of six programming problems to solve. Note: Both Rounds are Offline, at NIT Jamshedpur Campus.",
+            "details": [
+                "Prelims: A 2-hour contest with six programming problems.",
+                "Finals: A 2-hour contest with six advanced problems to solve."             
+            ],
             "rules": [
-                "The decision of the organizing team is final and binding.",
-                "Usage of any wrong means will lead to immediate disqualification."
+                "Teams of 1 to 3 participants are allowed.",
+                "All submitted solutions must be original. Any violation will lead to disqualification.",
+                "The decision of the organizing team is final and binding."
             ],
             "eventHead": {
                 "photoPlaceholder": "HERE WE WILL HAVE A PHOTO OF EVENT HEAD"
             }
         },
+
         {
-            "name": "HACK-DE-SCIENCE",
+            "name": "TENSORENCODED",
             "img": "https://ojass-2024.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2FQv8sgXQ%2FVISHWA-CODE-GENESIS.png%20&w=384&q=75",
-            "redirect": "event/0/0",
-            "organizer": "Vishwa-Code Genesis",
-            "description": "HACK-DE-SCIENCE is the biggest event of Vishwa-Code Genesis, designed to provide the freedom to use any development tool to bring ideas to life. It is a team-based event where solo participation is not allowed. Teams can have either 2 or 4 members.",
+            "rulebookurl": "https://docs.google.com/document/d/1R-daEP8r5y5pMwtHak-KKjovnt9eJKbR/",
+            "redirect": "event/0/2",
+            "organizer": "Coding Chronicles",
+            "description": "TensorsEncoded!, where Python and Artificial Intelligence converge! This event is designed to help you explore the fascinating world of Artificial Intelligence and its powerful applications in solving real-world problems.",
             "prizes": {
                 "total": "₹40,000",
                 "winner": "₹25,000",
                 "first_runner_up": "₹15,000",
                 "participants": "Certificates to all Participants"
             },
-            "details": "It’s a 36-hour hackathon, promoting the usage of new and trending technologies. It will consist of 3 rounds of evaluations. The last round would also involve a presentation and the product demonstration.",
+            "details":  [
+                "Pre-process the data, Select and apply appropriate machine learning algorithms, Tune their models for optimal performance.",
+                "Additionally, participants will be required to prepare a report that presents.",
+                "The approach used, Dataset handling,",
+                "Model selection and performance evaluation, Challenges faced during model building.",
+                "The time duration for this is 12 hours. "               
+             ],
             "rules": [
-                "The project needs to be implemented from scratch in a new repository.",
-                "Referencing documentation is allowed, but plagiarism is strictly prohibited and will lead to disqualification.",
-                "The decision of the organizing team is final and binding.",
-                "Further rules will be shared at the start of the event."
+                "Team participation is allowed with a maximum of 3 participants.",
+                "There will be no penalties or negative markings in any rounds.",
+                "Any form of unfair means will lead to disqualification.",
+                "The decision of judges will be final and cannot be further questioned."
             ],
             "event_head": {
                 "description": "Photo of event head will be here"
             }
         },
+
         {
-            "name": "Vishwa-Code Mania",
+            "name": "MODELMAYHEM",
             "img": "https://ojass-2024.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2F6tbmCP7%2F3.png&w=384&q=75",
-            "redirect": "event/0/1",
-            "description": "If you love competitive coding, or problem-solving in general, then this is THE event for you! Code Mania is the flagship competitive programming event of our prestigious institute. This is a team event where the size of a team can vary from 1 member to 3 members. So, this event will not only help you hone your problem-solving skills but also contribute to your capacity to work with a team under pressure!",
+            "rulebookurl": "https://docs.google.com/document/d/1bfv-GJQ5NovFi6VwYR0ebvjHfoLskvcw/",
+            "redirect": "event/0/3",
+            "description": "ModelMayhem, an extraordinary event by OJASS designed to immerse participants in the ever-evolving realm of Machine Learning and Artificial Intelligence. Whether you're a budding enthusiast or a seasoned practitioner, ModelMayhem is your platform to showcase skills, solve challenging problems, and innovate with cutting-edge technologies.",
             "prizes": {
                 "total": "₹20,000",
                 "winner": "₹10,000",
@@ -81,51 +109,14 @@
                 "secondRunnerUp": "₹4,000",
                 "participationCertificates": "Certificates to all Participants."
             },
-            "details": "Prelims: It will be a 2.5-hour contest with six programming problems. Finals: It will be a 3-hour contest consisting of six programming problems to solve. Note: Both Rounds are Offline, at NIT Jamshedpur Campus.",
-            "rules": [
-                "The decision of the organizing team is final and binding.",
-                "Usage of any wrong means will lead to immediate disqualification."
+            "details": [
+                "Round 1: Predictive Modelling Contest",
+                "Duration: 2 hours",
+                "Top 5 performers will qualify for Round 2",
+                "Round 2: Advanced Deep Learning & Generative AI",
+                "Participants will choose one of two complex problem statements.",
+                "Expected deliverables include a well-documented solution and a brief presentation of the methodology."           
             ],
-            "eventHead": {
-                "photoPlaceholder": "HERE WE WILL HAVE A PHOTO OF EVENT HEAD"
-            }
-        },
-        {
-            "name": "HACK-DE-SCIENCE",
-            "img": "https://ojass-2024.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2FQv8sgXQ%2FVISHWA-CODE-GENESIS.png%20&w=384&q=75",
-            "redirect": "event/0/0",
-            "organizer": "Vishwa-Code Genesis",
-            "description": "HACK-DE-SCIENCE is the biggest event of Vishwa-Code Genesis, designed to provide the freedom to use any development tool to bring ideas to life. It is a team-based event where solo participation is not allowed. Teams can have either 2 or 4 members.",
-            "prizes": {
-                "total": "₹40,000",
-                "winner": "₹25,000",
-                "first_runner_up": "₹15,000",
-                "participants": "Certificates to all Participants"
-            },
-            "details": "It’s a 36-hour hackathon, promoting the usage of new and trending technologies. It will consist of 3 rounds of evaluations. The last round would also involve a presentation and the product demonstration.",
-            "rules": [
-                "The project needs to be implemented from scratch in a new repository.",
-                "Referencing documentation is allowed, but plagiarism is strictly prohibited and will lead to disqualification.",
-                "The decision of the organizing team is final and binding.",
-                "Further rules will be shared at the start of the event."
-            ],
-            "event_head": {
-                "description": "Photo of event head will be here"
-            }
-        },
-        {
-            "name": "Vishwa-Code Mania",
-            "img": "https://ojass-2024.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2F6tbmCP7%2F3.png&w=384&q=75",
-            "redirect": "event/0/1",
-            "description": "If you love competitive coding, or problem-solving in general, then this is THE event for you! Code Mania is the flagship competitive programming event of our prestigious institute. This is a team event where the size of a team can vary from 1 member to 3 members. So, this event will not only help you hone your problem-solving skills but also contribute to your capacity to work with a team under pressure!",
-            "prizes": {
-                "total": "₹20,000",
-                "winner": "₹10,000",
-                "firstRunnerUp": "₹6,000",
-                "secondRunnerUp": "₹4,000",
-                "participationCertificates": "Certificates to all Participants."
-            },
-            "details": "Prelims: It will be a 2.5-hour contest with six programming problems. Finals: It will be a 3-hour contest consisting of six programming problems to solve. Note: Both Rounds are Offline, at NIT Jamshedpur Campus.",
             "rules": [
                 "The decision of the organizing team is final and binding.",
                 "Usage of any wrong means will lead to immediate disqualification."
@@ -139,31 +130,47 @@
     [
         {
             "name": "HACK-DE-SCIENCE",
-            "img": "https://ojass-2024.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2FnwJZGS3%2F7.png&w=384&q=75",
-            "redirect": "event/1/0",
-            "organizer": "Vishwa-Code Genesis",
-            "description": "HACK-DE-SCIENCE is the biggest event of Vishwa-Code Genesis, designed to provide the freedom to use any development tool to bring ideas to life. It is a team-based event where solo participation is not allowed. Teams can have either 2 or 4 members.",
+            "teamSizeMin" : "3",
+            "teamSizeMax" : "5",
+            "img": "https://ojass-2024.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2FQv8sgXQ%2FVISHWA-CODE-GENESIS.png%20&w=384&q=75",
+            "rulebookurl": "https://docs.google.com/document/d/1Sqx-1ewV_iQELXFRG8lwnFJcu5tSotsL",
+            "redirect": "event/0/0",
+            "organizer": "Coding Chronicles",
+            "description": "HACK DE SCIENCE, where creativity meets innovation! This event is designed to challenge your development skills and inspire you to create amazing projects while you compete with the brightest minds in the field.",
             "prizes": {
                 "total": "₹40,000",
                 "winner": "₹25,000",
                 "first_runner_up": "₹15,000",
                 "participants": "Certificates to all Participants"
             },
-            "details": "It’s a 36-hour hackathon, promoting the usage of new and trending technologies. It will consist of 3 rounds of evaluations. The last round would also involve a presentation and the product demonstration.",
+            "details": [
+               " Round 1(Day 1): Progress Evaluation",
+                "This round will track the progress of the project and assess the initial development and approach.",
+                "Round 2(Day 2): Functionality Testing",
+                "In this round, the complete functionality of the projects will be thoroughly tested.",
+                "Round 3(Final Round): Presentation",
+                "Teams will present their projects to the jury, showcasing the utility and impact of their solution.", 
+                "Weightage of the rounds will be: 25% - 25% - 50%",
+                "Duration: 36 hours"
+            ],
             "rules": [
-                "The project needs to be implemented from scratch in a new repository.",
-                "Referencing documentation is allowed, but plagiarism is strictly prohibited and will lead to disqualification.",
-                "The decision of the organizing team is final and binding.",
-                "Further rules will be shared at the start of the event."
+                "Teams of 2 to 4 participants are allowed.",
+                "All submitted work must be original. Plagiarism will lead to disqualification",
+                "The judges’ decision will be final and binding.",
+                "Participants Must bring their own Laptops or other requirements.",
+                "OJASS Team are liable to provide Charging Points and stable Internet Connection.",
+                "One of the members should be available at the allotted place throughout the event."
             ],
             "event_head": {
                 "description": "Photo of event head will be here"
             }
         },
+
         {
-            "name": "Vishwa-Code Mania",
-            "img": "https://ojass-2024.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2FnwJZGS3%2F7.png&w=384&q=75",
-            "redirect": "event/1/1",
+            "name": "VISHWA-CODE-MANIA",
+            "img": "https://ojass-2024.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2F6tbmCP7%2F3.png&w=384&q=75",
+            "rulebookurl": "https://docs.google.com/document/d/1rMX1Rb0-VeHalfK-1tT5KM0L7X7XUzqR",
+            "redirect": "event/0/1",
             "description": "If you love competitive coding, or problem-solving in general, then this is THE event for you! Code Mania is the flagship competitive programming event of our prestigious institute. This is a team event where the size of a team can vary from 1 member to 3 members. So, this event will not only help you hone your problem-solving skills but also contribute to your capacity to work with a team under pressure!",
             "prizes": {
                 "total": "₹20,000",
@@ -172,43 +179,57 @@
                 "secondRunnerUp": "₹4,000",
                 "participationCertificates": "Certificates to all Participants."
             },
-            "details": "Prelims: It will be a 2.5-hour contest with six programming problems. Finals: It will be a 3-hour contest consisting of six programming problems to solve. Note: Both Rounds are Offline, at NIT Jamshedpur Campus.",
+            "details": [
+                "Prelims: A 2-hour contest with six programming problems.",
+                "Finals: A 2-hour contest with six advanced problems to solve."             
+            ],
             "rules": [
-                "The decision of the organizing team is final and binding.",
-                "Usage of any wrong means will lead to immediate disqualification."
+                "Teams of 1 to 3 participants are allowed.",
+                "All submitted solutions must be original. Any violation will lead to disqualification.",
+                "The decision of the organizing team is final and binding."
             ],
             "eventHead": {
                 "photoPlaceholder": "HERE WE WILL HAVE A PHOTO OF EVENT HEAD"
             }
         },
+
         {
-            "name": "HACK-DE-SCIENCE",
-            "img": "https://ojass-2024.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2FnwJZGS3%2F7.png&w=384&q=75",
-            "redirect": "event/1/0",
-            "organizer": "Vishwa-Code Genesis",
-            "description": "HACK-DE-SCIENCE is the biggest event of Vishwa-Code Genesis, designed to provide the freedom to use any development tool to bring ideas to life. It is a team-based event where solo participation is not allowed. Teams can have either 2 or 4 members.",
+            "name": "TENSORENCODED",
+            "img": "https://ojass-2024.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2FQv8sgXQ%2FVISHWA-CODE-GENESIS.png%20&w=384&q=75",
+            "rulebookurl": "https://docs.google.com/document/d/1R-daEP8r5y5pMwtHak-KKjovnt9eJKbR/",
+            "redirect": "event/0/2",
+            "organizer": "Coding Chronicles",
+            "description": "TensorsEncoded!, where Python and Artificial Intelligence converge! This event is designed to help you explore the fascinating world of Artificial Intelligence and its powerful applications in solving real-world problems.",
             "prizes": {
                 "total": "₹40,000",
                 "winner": "₹25,000",
                 "first_runner_up": "₹15,000",
                 "participants": "Certificates to all Participants"
             },
-            "details": "It’s a 36-hour hackathon, promoting the usage of new and trending technologies. It will consist of 3 rounds of evaluations. The last round would also involve a presentation and the product demonstration.",
+            "details":  [
+                "Pre-process the data, Select and apply appropriate machine learning algorithms, Tune their models for optimal performance.",
+                "Additionally, participants will be required to prepare a report that presents.",
+                "The approach used, Dataset handling,",
+                "Model selection and performance evaluation, Challenges faced during model building.",
+                "The time duration for this is 12 hours. "               
+             ],
             "rules": [
-                "The project needs to be implemented from scratch in a new repository.",
-                "Referencing documentation is allowed, but plagiarism is strictly prohibited and will lead to disqualification.",
-                "The decision of the organizing team is final and binding.",
-                "Further rules will be shared at the start of the event."
+                "Team participation is allowed with a maximum of 3 participants.",
+                "There will be no penalties or negative markings in any rounds.",
+                "Any form of unfair means will lead to disqualification.",
+                "The decision of judges will be final and cannot be further questioned."
             ],
             "event_head": {
                 "description": "Photo of event head will be here"
             }
         },
+
         {
-            "name": "Vishwa-Code Mania",
-            "img": "https://ojass-2024.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2FnwJZGS3%2F7.png&w=384&q=75",
-            "redirect": "event/1/1",
-            "description": "If you love competitive coding, or problem-solving in general, then this is THE event for you! Code Mania is the flagship competitive programming event of our prestigious institute. This is a team event where the size of a team can vary from 1 member to 3 members. So, this event will not only help you hone your problem-solving skills but also contribute to your capacity to work with a team under pressure!",
+            "name": "MODELMAYHEM",
+            "img": "https://ojass-2024.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2F6tbmCP7%2F3.png&w=384&q=75",
+            "rulebookurl": "https://docs.google.com/document/d/1bfv-GJQ5NovFi6VwYR0ebvjHfoLskvcw/",
+            "redirect": "event/0/3",
+            "description": "ModelMayhem, an extraordinary event by OJASS designed to immerse participants in the ever-evolving realm of Machine Learning and Artificial Intelligence. Whether you're a budding enthusiast or a seasoned practitioner, ModelMayhem is your platform to showcase skills, solve challenging problems, and innovate with cutting-edge technologies.",
             "prizes": {
                 "total": "₹20,000",
                 "winner": "₹10,000",
@@ -216,51 +237,14 @@
                 "secondRunnerUp": "₹4,000",
                 "participationCertificates": "Certificates to all Participants."
             },
-            "details": "Prelims: It will be a 2.5-hour contest with six programming problems. Finals: It will be a 3-hour contest consisting of six programming problems to solve. Note: Both Rounds are Offline, at NIT Jamshedpur Campus.",
-            "rules": [
-                "The decision of the organizing team is final and binding.",
-                "Usage of any wrong means will lead to immediate disqualification."
+            "details": [
+                "Round 1: Predictive Modelling Contest",
+                "Duration: 2 hours",
+                "Top 5 performers will qualify for Round 2",
+                "Round 2: Advanced Deep Learning & Generative AI",
+                "Participants will choose one of two complex problem statements.",
+                "Expected deliverables include a well-documented solution and a brief presentation of the methodology."           
             ],
-            "eventHead": {
-                "photoPlaceholder": "HERE WE WILL HAVE A PHOTO OF EVENT HEAD"
-            }
-        },
-        {
-            "name": "HACK-DE-SCIENCE",
-            "img": "https://ojass-2024.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2FnwJZGS3%2F7.png&w=384&q=75",
-            "redirect": "event/1/0",
-            "organizer": "Vishwa-Code Genesis",
-            "description": "HACK-DE-SCIENCE is the biggest event of Vishwa-Code Genesis, designed to provide the freedom to use any development tool to bring ideas to life. It is a team-based event where solo participation is not allowed. Teams can have either 2 or 4 members.",
-            "prizes": {
-                "total": "₹40,000",
-                "winner": "₹25,000",
-                "first_runner_up": "₹15,000",
-                "participants": "Certificates to all Participants"
-            },
-            "details": "It’s a 36-hour hackathon, promoting the usage of new and trending technologies. It will consist of 3 rounds of evaluations. The last round would also involve a presentation and the product demonstration.",
-            "rules": [
-                "The project needs to be implemented from scratch in a new repository.",
-                "Referencing documentation is allowed, but plagiarism is strictly prohibited and will lead to disqualification.",
-                "The decision of the organizing team is final and binding.",
-                "Further rules will be shared at the start of the event."
-            ],
-            "event_head": {
-                "description": "Photo of event head will be here"
-            }
-        },
-        {
-            "name": "Vishwa-Code Mania",
-            "img": "https://ojass-2024.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2FnwJZGS3%2F7.png&w=384&q=75",
-            "redirect": "event/1/1",
-            "description": "If you love competitive coding, or problem-solving in general, then this is THE event for you! Code Mania is the flagship competitive programming event of our prestigious institute. This is a team event where the size of a team can vary from 1 member to 3 members. So, this event will not only help you hone your problem-solving skills but also contribute to your capacity to work with a team under pressure!",
-            "prizes": {
-                "total": "₹20,000",
-                "winner": "₹10,000",
-                "firstRunnerUp": "₹6,000",
-                "secondRunnerUp": "₹4,000",
-                "participationCertificates": "Certificates to all Participants."
-            },
-            "details": "Prelims: It will be a 2.5-hour contest with six programming problems. Finals: It will be a 3-hour contest consisting of six programming problems to solve. Note: Both Rounds are Offline, at NIT Jamshedpur Campus.",
             "rules": [
                 "The decision of the organizing team is final and binding.",
                 "Usage of any wrong means will lead to immediate disqualification."

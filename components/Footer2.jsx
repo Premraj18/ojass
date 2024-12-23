@@ -86,7 +86,7 @@ export default function Foter() {
                 </div>
                 <div className='flex md:flex-row flex-col justify-between'>
                     <div className='lg:text-lg text-white flex pt-5 justify-center md:pt-0 md:justify-normal'>
-                        <p >Designed&Develop By: <a href="" className='text-red-500'>Prem Raj</a> </p>
+                        <p className='text-center md:text-left'>Designed&Develop By: <span className='text-red-500'>Prem Raj, Aditya Vikram & Ayush Singh</span> </p>
                     </div>
                     <div className='lg:text-lg text-white flex pt-5 justify-center md:pt-0 md:justify-normal'>
                         <p >Visitors : <span className='text-red-500'>{45362+refreshCount}</span> </p>
