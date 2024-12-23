@@ -59,8 +59,8 @@ const Page = () => {
           <div className='flex flex-col mt-16 gap-5'>
             <h2 className='text-4xl text-center font-semibold'>Details</h2>
             {dataeve.details?.map((data, idx) => (
-              <div className='lg:px-20'>
-                <p key={idx} className='font-medium text-lg px-3 lg:px-40'>- {data}</p>
+              <div key={idx} className='lg:px-20'>
+                <p className='font-medium text-lg px-3 lg:px-40'>- {data}</p>
               </div>
               // <p key={idx}>{idx + 1}. {data}</p>
             ))}
