@@ -37,7 +37,7 @@ const Page = () => {
               <p className="mb-4 text-base leading-7 md:w-3/4 text-gray-300 ">
                 {dataeve.description}
               </p>
-              <div className='flex lg:text-xl text-xl md:text-base items-baseline gap-7 max-sm:justify-end max-sm:flex-1'>
+              <div className='flex lg:text-xl text-xl md:text-base items-baseline gap-7'>
                 <div to='/sponser'>
                   <button className={`px-5 py-1 text-base rounded-full border-2 bg-white/10 hover:text-black`} >Participate</button>
                 </div>
