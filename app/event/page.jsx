@@ -6,6 +6,8 @@ import AquaBotsArena from './aquabotsArena'
 import BrainBusters from './brainbusters'
 import CaseQuest from './caseQuest'
 import CryptoCraft from './cryptocraft'
+import Department from './departmentevent'
+import Game from './gamecrafts'
 
 const Page = () => {
   return (
@@ -23,6 +25,15 @@ const Page = () => {
             <ViswaCodeGenesis/>
           </div>
           <div className='min-h-[80vh] w-full my-5 flex items-start justify-center'>
+            <Game/>
+          </div>
+          <div className='min-h-[80vh] w-full my-5 flex items-start justify-center'>
+            <CryptoCraft/>
+          </div>
+          <div className='min-h-[80vh] w-full my-5 flex items-start justify-center'>
+            <Department/>
+          </div>
+          <div className='min-h-[80vh] w-full my-5 flex items-start justify-center'>
             <AquaBotsArena/>
           </div>
           {/* <div className='min-h-[80vh] w-full my-5 flex items-start justify-center'>
@@ -34,9 +45,7 @@ const Page = () => {
           <div className='min-h-[80vh] w-full my-5 flex items-start justify-center'>
             <CaseQuest/>
           </div>
-          <div className='min-h-[80vh] w-full my-5 flex items-start justify-center'>
-            <CryptoCraft/>
-          </div>
+          
 
         </div>
       </div>

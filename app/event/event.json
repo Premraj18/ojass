@@ -497,10 +497,10 @@
             "organizer": "Department Events",
             "description": "Electrospcection is a two-round event that challenges participants on both theoretical knowledge and practical circuit design skills. The first round tests your understanding of electrical and electronic components, while the final round requires you to apply your knowledge by constructing a functional circuit.",
             "prizes": {
-                "total": "₹50,000",
-                "winner": "₹25,000",
-                "first_runner_up": "₹15,000",
-                "second_runner_up": "₹10,000",
+                "total": "₹20,000",
+                "winner": "₹10,000",
+                "first_runner_up": "₹6,000",
+                "second_runner_up": "₹4,000",
                 "participants": "Certificates to all Participants"
             },
             "details": [
@@ -523,103 +523,279 @@
             ],
             "event_head": {
                 "description": "Photo of event head will be here",
-                "name": "Ayush Kumar & Himanshu Pathak",
-                "Phone": "9334795115 & 9006699775"
+                "name": "Gangadhar & Ritisha ",
+                "Phone": "8677981857 & 93411 07928"
             }
         },
 
         {
-            "name": "VISHWA-CODE-MANIA",
+            "name": "WAXCOMBS",
             "img": "https://ojass-2024.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2F6tbmCP7%2F3.png&w=384&q=75",
-            "rulebookurl": "https://docs.google.com/document/d/1rMX1Rb0-VeHalfK-1tT5KM0L7X7XUzqR",
-            "redirect": "event/0/1",
-            "description": "If you love competitive coding, or problem-solving in general, then this is THE event for you! Code Mania is the flagship competitive programming event of our prestigious institute. This is a team event where the size of a team can vary from 1 member to 3 members. So, this event will not only help you hone your problem-solving skills but also contribute to your capacity to work with a team under pressure!",
+            "rulebookurl": "https://docs.google.com/document/d/1B0PXQ1eE45Cgr4GNM1NbuAaCJH70Nx9f/",
+            "redirect": "event/5/1",
+            "description": "WaxCombs challenges participants to demonstrate precision, patience, and creativity. Teams will first create an irregular wax shape using materials provided by the organizers. Then, each team will draw a token with a specific shape to carve from their wax casting. This task, inspired by the Squid Game concept, tests skill and teamwork. The fastest team to complete the task wins, but breaking the wax shape results in elimination.",
             "prizes": {
-                "total": "₹25,000",
-                "winner": "₹12,000",
-                "first_runner_up": "₹8,000",
-                "second_runner_up": "₹5,000",
+                "total": "₹15,000",
+                "winner": "₹8,000",
+                "first_runner_up": "₹5,000",
+                "second_runner_up": "₹2,000",
                 "participationCertificates": "Certificates to all Participants."
             },
             "details": [
-                "Prelims: A 2-hour contest with six programming problems.",
-                "Finals: A 2-hour contest with six advanced problems to solve."             
+                "Wax Casting: Teams will use wax and clay to create an irregular shape, guided by the organizing team.",
+                "Shape Selection: Each team will randomly pick a token with a specific shape (e.g., star, circle, triangle).",
+                "Carving Challenge: Teams must carve the chosen shape from their wax casting using a pin or similar tools provided.",
+                "Teams that break their wax shape are immediately eliminated.",
+                "Time Limit and Judging: The fastest team to carve the shape successfully without breaking wins the challenge."
             ],
             "rules": [
-                "Teams of 1 to 3 participants are allowed.",
-                "All submitted solutions must be original. Any violation will lead to disqualification.",
-                "The decision of the organizing team is final and binding."
+                "All teams must use only the materials and tools provided.",
+                "Once a shape is selected, it cannot be changed.",
+                "No external assistance is allowed.",
+                "Breaking the wax shape results in immediate disqualification."
             ],
             "event_head": {
                 "photoPlaceholder": "HERE WE WILL HAVE A PHOTO OF EVENT HEAD",
-                "name": "Hitanshu Gavri",
-                "Phone": "8601103675"
+                "name": "Sumit Gupta & Om Diwan ",
+                "Phone": "9304553584 & 86691 60769"
             }
         },
 
         {
-            "name": "TENSORENCODED",
+            "name": "SANRACHNA (BRIDGE BUILDING)",
             "img": "https://ojass-2024.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2FQv8sgXQ%2FVISHWA-CODE-GENESIS.png%20&w=384&q=75",
-            "rulebookurl": "https://docs.google.com/document/d/1R-daEP8r5y5pMwtHak-KKjovnt9eJKbR/",
-            "redirect": "event/0/2",
+            "rulebookurl": "https://docs.google.com/document/d/1iPxuOWjpbDRCr_rMTPnCoNu3PQ6LnyLp/",
+            "redirect": "event/5/2",
             "organizer": "Coding Chronicles",
-            "description": "TensorsEncoded!, where Python and Artificial Intelligence converge! This event is designed to help you explore the fascinating world of Artificial Intelligence and its powerful applications in solving real-world problems.",
-            "prizes": {
-                "total": "₹25,000",
-                "winner": "₹12,000",
-                "first_runner_up": "₹8,000",
-                "second_runner_up": "₹5,000",
-                "participants": "Certificates to all Participants"
-            },
-            "details":  [
-                "Pre-process the data, Select and apply appropriate machine learning algorithms, Tune their models for optimal performance.",
-                "Additionally, participants will be required to prepare a report that presents.",
-                "The approach used, Dataset handling,",
-                "Model selection and performance evaluation, Challenges faced during model building.",
-                "The time duration for this is 12 hours. "               
-             ],
-            "rules": [
-                "Team participation is allowed with a maximum of 3 participants.",
-                "There will be no penalties or negative markings in any rounds.",
-                "Any form of unfair means will lead to disqualification.",
-                "The decision of judges will be final and cannot be further questioned."
-            ],
-            "event_head": {
-                "description": "Photo of event head will be here",
-                "name": "Himanshu Pathak",
-                "Phone": "9006699775"
-            }
-        },
-
-        {
-            "name": "MODELMAYHEM",
-            "img": "https://ojass-2024.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2F6tbmCP7%2F3.png&w=384&q=75",
-            "rulebookurl": "https://docs.google.com/document/d/1bfv-GJQ5NovFi6VwYR0ebvjHfoLskvcw/",
-            "redirect": "event/0/3",
-            "description": "ModelMayhem, an extraordinary event by OJASS designed to immerse participants in the ever-evolving realm of Machine Learning and Artificial Intelligence. Whether you're a budding enthusiast or a seasoned practitioner, ModelMayhem is your platform to showcase skills, solve challenging problems, and innovate with cutting-edge technologies.",
+            "description": "This is a hands-on event that combines theoretical knowledge with practical application. Participants will construct a simply supported bridge using ice-cream sticks provided on the spot. The event emphasizes creativity, resourcefulness, and problem-solving skills. Teams will first participate in a engineering and aptitude quiz, and those who qualify will move on to the bridge-building round.",
             "prizes": {
                 "total": "₹20,000",
                 "winner": "₹10,000",
                 "first_runner_up": "₹6,000",
                 "second_runner_up": "₹4,000",
+                "participants": "Certificates to all Participants"
+            },
+            "details":  [
+                "Round 1: Online Quiz :",
+                "Format: A quiz focused on civil engineering concepts and aptitude.",
+                "Eligibility: Teams scoring above a pre-determined threshold will qualify for Round 2.",
+                "Platform: Online or on-site (to be specified by organizers).",
+                "Round 2: Bridge Construction :",
+                "Objective: Build a simply supported bridge using the materials provided.",
+                "Use of trusses is allowed",
+                "Only materials provided by the organizers may be used.",
+                "Time Limit: To be declared at time of event"
+             ],
+            "rules": [
+                "Team Composition:  Teams must consist of 4-5 members.",
+                "Material Usage:  Smart and efficient use of resources is critical. Teams will receive limited quantities of ice-cream sticks and thread.",
+                "Design Constraints:  The structure must adhere to the specified dimensions.",
+                "Use of adhesives, other than those provided, is prohibited.",
+                "Fair Play:  Teams must work independently without external assistance.",
+                "Any form of cheating will result in immediate disqualification.",
+                "Changes:  Organizers reserve the right to make changes to the rules, event format, or materials provided, if necessary."
+            ],
+            "event_head": {
+                "description": "Photo of event head will be here",
+                "name": "Aman Raj",
+                "Phone": "8340464538"
+            }
+        },
+
+        {
+            "name": "CANSYS (CAD-CAE)",
+            "img": "https://ojass-2024.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2F6tbmCP7%2F3.png&w=384&q=75",
+            "rulebookurl": "https://docs.google.com/document/d/1SdJPkWDutuz48vocZ93DGsdoiY7x-L8K/",
+            "redirect": "event/5/3",
+            "description": "This event focuses on the design and analysis of structural and mechanical components using advanced software tools like CATIA/SolidWorks for modelling and ANSYS for simulation. Participants will explore the feasibility of designs through visualization, drafting, assembly, and performance analysis.",
+            "prizes": {
+                "total": "₹15,000",
+                "winner": "₹8,000",
+                "first_runner_up": "₹5,000",
+                "second_runner_up": "₹2,000",
                 "participationCertificates": "Certificates to all Participants."
             },
             "details": [
-                "Round 1: Predictive Modelling Contest",
-                "Duration: 2 hours",
-                "Top 5 performers will qualify for Round 2",
-                "Round 2: Advanced Deep Learning & Generative AI",
-                "Participants will choose one of two complex problem statements.",
-                "Expected deliverables include a well-documented solution and a brief presentation of the methodology."           
+                "Round 1: 3D Part Modelling and Drafting",
+                "Format: Participants will create a 3D part model and generate its drafting views using CATIA/SolidWorks.",
+                "Objective: Showcase proficiency in part modelling and technical drafting.",
+                "Round 2: 3D Modelling, Assembly, and Analysis",
+                "Format: Participants will design and assemble 3D mechanical components in CATIA/SolidWorks.",
+                "Perform structural analysis of the assembled model using ANSYS.",
+                "Objective: Evaluate design feasibility and functionality through simulation."
             ],
             "rules": [
-                "The decision of the organizing team is final and binding.",
-                "Usage of any wrong means will lead to immediate disqualification."
+                "Team Size: Teams must consist of 1-2 members.",
+                "Equipment: Teams are required to bring their own laptop with charger. The laptop must have CATIA/SolidWorks and ANSYS pre-installed and ready to use.",
+                "Fair Play: Any use of unfair means, including plagiarism or external assistance, will result in immediate disqualification.",
+                "Decision Authority: The decision of the judges or event coordinators will be final and binding.",
+                "Time Management: Participants must adhere to the time limits specified for each round."
             ],
             "event_head": {
                 "photoPlaceholder": "HERE WE WILL HAVE A PHOTO OF EVENT HEAD",
-                "name": "Aanchal Shikarwar & Neha Singh",
-                "Phone": "9380690526 & 9431751248"
+                "name": "Paras Parimal & Shrajjal Prakash",
+                "Phone": "8877023130 & 7004867971"
+            }
+        }
+    ],
+
+    [
+        {
+            "name": "BGMI",
+            "teamSizeMin" : "3",
+            "teamSizeMax" : "5",
+            "img": "https://ojass-2024.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2FQv8sgXQ%2FVISHWA-CODE-GENESIS.png%20&w=384&q=75",
+            "rulebookurl": "https://docs.google.com/document/d/1Tzw2e0WE3QON95Jxt2Anqh9PyZCwn4G8/",
+            "redirect": "event/6/0",
+            "organizer": "Game Crafts",
+            "description": "The BGMI Tournament is an exhilarating e-sports event organized as a part of OJASS’25, the annual techno-management fest of NIT Jamshedpur. This competition invites participants to showcase their strategic, tactical, and gaming skills in an engaging battle royale format.",
+            "prizes": {
+                "total": "₹15,000",
+                "winner": "₹8,000",
+                "first_runner_up": "₹5,000",
+                "second_runner_up": "₹2,000",
+                "participants": "Certificates to all Participants"
+            },
+            "details": [
+                "Stage 1: Qualifiers :",
+                "Duration: 45 minutes per match  ",
+                "Details:  ",
+                "Map: Erangel (Classic Mode).  ",
+                "Format: Squad mode (4 players per team).  ",
+                "Selection Criteria: Based on cumulative points from kills, placement, and other performance metrics, the top teams will advance to the finals.  ",
+                "Number of advancing teams will depend on total participation.  ",
+                "Stage 2: Finals :",
+                "Duration: 45 minutes per match",
+                "Details:",
+                "Multiple matches across different maps (Erangel, Miramar, Sanhok).  ",
+                "Scoring based on kills, placement, and bonus objectives (if applicable).  ",
+                "The team with the highest cumulative score across all matches will be declared the winner."
+            ],
+            "rules": [
+                "Device: Players must use their own devices (smartphones/tablets).  ",
+                "Emulators: Use of emulators is strictly prohibited.  ",
+                "Network: Players are responsible for their internet connectivity; organizers will not be liable for disconnections. However, wi-fi would be available in the venue. ",
+                "Game Settings: All in-game settings will be default unless specified otherwise."
+            ],
+            "event_head": {
+                "photoPlaceholder": "HERE WE WILL HAVE A PHOTO OF EVENT HEAD",
+                "name": "Lokesh Aryan",
+                "Phone": "8602834901"
+            }
+        },
+
+        {
+            "name": "ENDGAME",
+            "img": "https://ojass-2024.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2F6tbmCP7%2F3.png&w=384&q=75",
+            "rulebookurl": "https://docs.google.com/document/d/1l0igrNWK4WbmaxFJgQ8oVm2D_A_u6sZd",
+            "redirect": "event/6/1",
+            "description": "The Endgame is an on-board rapid chess combat designed to test the strategic and tactical prowess of participants. Each match is played in a rapid format, ensuring dynamic and thrilling gameplay.",
+            "prizes": {
+                "total": "₹15,000",
+                "winner": "₹8,000",
+                "first_runner_up": "₹5,000",
+                "second_runner_up": "₹2,000",
+                "participationCertificates": "Certificates to all Participants."
+            },
+            "details": [
+                "Stage 1: Qualifiers :",
+                "Duration: 15 minutes per match  ",
+                "Format: Individual (1v1 matches).",
+                "Time Control: 10 minutes per player, with a 5-second increment per move.",
+                "Selection Criteria: Based on cumulative points (win = 2, draw = 1, loss = 0). The top players advance to the finals.",
+                "Number of advancing players depends on total participation.",
+                "Stage 2: Finals :",
+                "Duration: 15 minutes per match  ",
+                "Multiple matches in a knockout format.",
+                "Tiebreakers (if applicable): Blitz (5+3) followed by Armageddon (5 vs 4 minutes).",
+                "The winner will be determined by cumulative victories in the finals."
+            ],
+            "rules": [
+                "Time Control: All matches follow the 10+5 rapid time control.",
+                "Fair Play: All moves must adhere to FIDE rules of chess. Cheating (e.g., external help) will result in immediate disqualification.",
+                "Chess Clock: Players must press the clock after completing each move.",
+                "Illegal Moves: Any illegal move, once made, must be corrected. Repeated illegal moves may result in penalties."
+            ],
+            "event_head": {
+                "photoPlaceholder": "HERE WE WILL HAVE A PHOTO OF EVENT HEAD",
+                "name": "Ankit Singh",
+                "Phone": "9128631228"
+            }
+        },
+
+        {
+            "name": "VALORANT",
+            "img": "https://ojass-2024.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2FQv8sgXQ%2FVISHWA-CODE-GENESIS.png%20&w=384&q=75",
+            "rulebookurl": "https://docs.google.com/document/d/1MW6Vhn0G5wcEUVlR18iwjYI0RTi6wCGY/",
+            "redirect": "event/6/2",
+            "organizer": "Coding Chronicles",
+            "description": "The Valorant Tournament is an electrifying e-sports event organized as a part of OJASS’25, the annual techno-management fest of NIT Jamshedpur. This competition invites participants to showcase their strategic, tactical, and aiming skills in Riot Games' popular 5v5 tactical shooter.",
+            "prizes": {
+                "total": "₹15,000",
+                "winner": "₹8,000",
+                "first_runner_up": "₹5,000",
+                "second_runner_up": "₹2,000",
+                "participants": "Certificates to all Participants"
+            },
+            "details":  [
+                "Stage 1: Qualifiers",
+                "Duration: Best of 1 (Bo1) per match  ",
+                "Format: Standard Competitive Mode (5 players per team) . ",
+                "Selection Criteria: Based on match outcomes. Teams will be eliminated in a knockout format until a predetermined number of teams advance to the finals.",
+                "Stage 2: Finals",
+                "Duration: Best of 3 (Bo3) per match  ",
+                "Details: The finals will feature the top teams from the qualifiers. The team that wins two out of three maps will be crowned the winner.  ",
+                "Map Pool: Ascent, Bind, Haven, Lotus, Pearl, Split."
+             ],
+            "rules": [
+                "Platform: PC-only tournament. Players must bring their own laptops.  ",
+                "Game Version: The latest version of Valorant will be used.  ",
+                "Network: Internet connectivity will be provided by the organizers via wi-fi. "
+            ],
+            "event_head": {
+                "description": "Photo of event head will be here",
+                "name": "Anurag Das",
+                "Phone": "8340671871"
+            }
+        },
+
+        {
+            "name": "FIFA",
+            "img": "https://ojass-2024.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2F6tbmCP7%2F3.png&w=384&q=75",
+            "rulebookurl": "https://docs.google.com/document/d/1ZLVbFqqdBaEWIAqO59QdgTDmE3iT6myW",
+            "redirect": "event/6/3",
+            "description": "The FIFA Tournament is a thrilling e-sports event organized as a part of OJASS’25, the annual techno-management fest of NIT Jamshedpur. This competition invites participants to showcase their skills in football simulation, focusing on strategy, precision, and gameplay tactics.",
+            "prizes": {
+                "total": "₹15,000",
+                "winner": "₹8,000",
+                "first_runner_up": "₹5,000",
+                "second_runner_up": "₹2,000",
+                "participationCertificates": "Certificates to all Participants."
+            },
+            "details": [
+                "Stage 1: Qualifiers",
+                "Duration: 12 minutes per match (6 minutes per half)  ",
+                "Details:  ",
+                "Platform: Laptop or mobile phone (Specified version of the FIFA game to be announced).",
+                "Format: Single-player matches.",
+                "Selection Criteria: Based on match outcomes, goal difference, and fair play points, the top players will advance to the finals.",
+                "The number of advancing players will depend on total participation.",
+                "Stage 2: Finals",
+                "Duration: 12 minutes per match (6 minutes per half)",
+                "Details:",
+                "Multiple knockout rounds leading to a final match.",
+                "Scoring based on match wins and, in case of ties, penalty shootouts.",
+                "The player with the most wins or, in the case of the final, the highest scorer will be declared the champion."
+            ],
+            "rules": [
+                "Devices: Only laptops or mobile phones with default FIFA settings are allowed.",
+                "Controllers: Players are permitted to use external controllers if compatible with their device.",
+                "Network: Players are responsible for their internet connectivity; however, organizers will provide a stable Wi-Fi connection at the venue."
+            ],
+            "event_head": {
+                "photoPlaceholder": "HERE WE WILL HAVE A PHOTO OF EVENT HEAD",
+                "name": "Anurag Das",
+                "Phone": "8340671871"
             }
         }
     ]
