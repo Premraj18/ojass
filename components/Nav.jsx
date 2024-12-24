@@ -34,15 +34,20 @@ export const navData = [
 import Link from 'next/link';
 
 import { usePathname } from 'next/navigation'
-import { useRef, useState } from 'react';
+import { useRef, useState, useEffect } from 'react';
 
 const Nav = () => {
   const pathname = usePathname();
-  // console.log(pathname)
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [hidden, setHidden] = useState(false);
+
+  useEffect(() => {
+    // Check if user is logged in
+    const token = localStorage.getItem('token');
+    setIsLoggedIn(!!token);
+  }, []);
 
   const { scrollY } = useScroll();
-
-  const [hidden, setHidden] = useState(false)
 
   useMotionValueEvent(scrollY, 'change', (latest) => {
     if (latest > 50) {
@@ -94,14 +99,33 @@ const Nav = () => {
             )
           })}
         </div>
-        <div className='md:flex items-baseline text-white gap-7 max-sm:justify-end max-sm:flex-1 hidden '>
-          <button className='border p-1 px-4 bg-white/15 rounded-full'>Sign up</button>
+        <div className='md:flex items-baseline text-white gap-4 max-sm:justify-end max-sm:flex-1 hidden'>
+          {isLoggedIn ? (
+            <Link href="/dashboard">
+              <button className='border p-1 px-4 bg-white/15 rounded-full hover:bg-white/20 transition-colors'>
+                Dashboard
+              </button>
+            </Link>
+          ) : (
+            <>
+              <Link href="/login">
+                <button className='px-4 py-1 hover:text-gray-300 transition-colors'>
+                  Log in
+                </button>
+              </Link>
+              <Link href="/signup">
+                <button className='border p-1 px-4 bg-white/15 rounded-full hover:bg-white/20 transition-colors'>
+                  Sign up
+                </button>
+              </Link>
+            </>
+          )}
         </div>
 
         {/* Mobile view */}
 
-        <div onClick={toggleCart} className='cursor-pointer md:hidden font-semibold md:absolute md:right-0 md:mx-8 md:mt-0'>
-          <button className={``}><FiMenu size={30} /></button>
+        <div onClick={toggleCart} className='cursor-pointer md:hidden font-semibold'>
+          <button><FiMenu size={30} /></button>
         </div>
         <div ref={ref} className="w-full md:hidden h-[100vh] sideCart bg-black absolute top-0 right-0 py-10 transition-transform transform translate-x-full ">
           <span onClick={toggleCart} className="absolute top-8 right-4 cursor-pointer"><RxCross2 size={30} /></span>
@@ -123,10 +147,27 @@ const Nav = () => {
                 )
               })}
             </div>
-            <div className='flex lg:text-xl text-xl md:text-base items-baseline gap-7 max-sm:justify-end max-sm:flex-1'>
-              <div to='/sponser'>
-                <button className={`px-5 py-1 text-base rounded-full border-2 bg-white/10 hover:text-black`} >Sign up</button>
-              </div>
+            <div className='flex flex-col gap-4 w-full px-8'>
+              {isLoggedIn ? (
+                <Link href="/dashboard" onClick={toggleCart}>
+                  <button className='w-full py-2 border bg-white/15 rounded-full hover:bg-white/20 transition-colors'>
+                    Dashboard
+                  </button>
+                </Link>
+              ) : (
+                <>
+                  <Link href="/login" onClick={toggleCart}>
+                    <button className='w-full py-2 text-white hover:text-gray-300 transition-colors'>
+                      Log in
+                    </button>
+                  </Link>
+                  <Link href="/signup" onClick={toggleCart}>
+                    <button className='w-full py-2 border bg-white/15 rounded-full hover:bg-white/20 transition-colors'>
+                      Sign up
+                    </button>
+                  </Link>
+                </>
+              )}
             </div>
           </div>
         </div>

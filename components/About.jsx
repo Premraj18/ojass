@@ -42,9 +42,15 @@ const About = () => {
                         {/* <iframe className='w-[350px] md:w-[550px] h-[315px] md:h-[415px] rounded-3xl' src="https://www.youtube.com/embed/Zh2j5CyPV9o?si=qxwqd8dYum076apM" title="YouTube video player" 
                         frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                         referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe> */}
-                        <iframe className='w-[350px] md:w-[550px] h-[315px] md:h-[415px] rounded-3xl' src="https://www.youtube.com/embed/h1gpXrnNNMI?si=xB8cvh65O-KOfOCK" title="YouTube video player" 
-                        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <iframe 
+                            className='w-[350px] md:w-[550px] h-[315px] md:h-[415px] rounded-3xl' 
+                            src="https://www.youtube.com/embed/h1gpXrnNNMI?si=xB8cvh65O-KOfOCK" 
+                            title="YouTube video player" 
+                            frameBorder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            referrerPolicy="strict-origin-when-cross-origin"
+                            allowFullScreen
+                        />
                     </motion.div>
                     <motion.div className="w-full px-4 mb-10 lg:w-1/2 lg:mb-0 "
                         variants={variants}
