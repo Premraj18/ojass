@@ -5,6 +5,7 @@ import SiliconValley from './siliconvalley'
 import AquaBotsArena from './aquabotsArena'
 import BrainBusters from './brainbusters'
 import CaseQuest from './caseQuest'
+import CryptoCraft from './cryptocraft'
 
 const Page = () => {
   return (
@@ -18,7 +19,7 @@ const Page = () => {
           <div className='pt-60 pb-10 w-full flex justify-center items-center'>
             <img src="/eventtext.webp" alt="" className='w-[80%] lg:w-[25%]' />
           </div>
-          <div className='min-h-[80vh] w-full my-5 flex items-start justify-center'>
+          <div className='min-h-[90vh] w-full my-5 flex items-start justify-center'>
             <ViswaCodeGenesis/>
           </div>
           <div className='min-h-[80vh] w-full my-5 flex items-start justify-center'>
@@ -32,6 +33,9 @@ const Page = () => {
           </div>
           <div className='min-h-[80vh] w-full my-5 flex items-start justify-center'>
             <CaseQuest/>
+          </div>
+          <div className='min-h-[80vh] w-full my-5 flex items-start justify-center'>
+            <CryptoCraft/>
           </div>
 
         </div>
