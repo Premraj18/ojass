@@ -8,6 +8,7 @@ import CaseQuest from './caseQuest'
 import CryptoCraft from './cryptocraft'
 import Department from './departmentevent'
 import Game from './gamecrafts'
+import Lens from './lenscraft'
 
 const Page = () => {
   return (
@@ -29,6 +30,9 @@ const Page = () => {
           </div>
           <div className='min-h-[80vh] w-full my-5 flex items-start justify-center'>
             <CryptoCraft/>
+          </div>
+          <div className='min-h-[80vh] w-full my-5 flex items-start justify-center'>
+            <Lens/>
           </div>
           <div className='min-h-[80vh] w-full my-5 flex items-start justify-center'>
             <Department/>

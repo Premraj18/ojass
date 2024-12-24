@@ -798,5 +798,109 @@
                 "Phone": "8340671871"
             }
         }
+    ],
+
+    [
+        {
+            "name": "CineScript",
+            "teamSizeMin" : "3",
+            "teamSizeMax" : "5",
+            "img": "https://ojass-2024.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2FQv8sgXQ%2FVISHWA-CODE-GENESIS.png%20&w=384&q=75",
+            "rulebookurl": "https://docs.google.com/document/d/197zqQK8_xfhmxUm7nn634hqpyPFkiQEt/",
+            "redirect": "event/7/0",
+            "organizer": "Lens Craft",
+            "description": "Event Type: Filmmaking - CineSprint challenges participants to create a 5–10-minute short film within a limited timeframe. This event combines the technical aspects of filmmaking, including camera work, editing, and sound design, with storytelling and creativity.",
+            "prizes": {
+                "total": "₹35,000",
+                "winner": "₹18,000",
+                "first_runner_up": "₹10,000",
+                "second_runner_up": "₹7,000",
+                "participants": "Certificates to all Participants"
+            },
+            "details": [
+                "Open theme (A general theme in which all categories are allowed )",
+                "Filmmaking Process: Teams can prepare or present a short film filmed after January 2024",
+                "Submission: Completed short films must be submitted in a specific format by the deadline.",
+                "Screening & Judging: Short films will be screened for an audience and judged by a panel of experts."
+            ],
+            "rules": [
+                "No abusive language, explicit violence, or offensive material.",
+                "No discriminatory or sensitive content targeting race, religion, gender, or sexuality.",
+                "All content must be original, and plagiarism will lead to disqualification.",
+                "Films should align with the provided theme."
+            ],
+            "event_head": {
+                "photoPlaceholder": "HERE WE WILL HAVE A PHOTO OF EVENT HEAD",
+                "name": "Shubham & Harshit Raj",
+                "Phone": "9570053383 & 7014425052"
+            }
+        },
+
+        {
+            "name": "FRAMES & TALES",
+            "img": "https://ojass-2024.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2F6tbmCP7%2F3.png&w=384&q=75",
+            "rulebookurl": "https://docs.google.com/document/d/1HxrbQ3o9c57blLt3kUkgUAC1d0BIK3Wm",
+            "redirect": "event/7/1",
+            "description": "Frames & Tales is a photography event where participants create a photo story based on a specific theme or genre. The event integrates technical photography skills with the art of storytelling.",
+            "prizes": {
+                "total": "₹20,000",
+                "winner": "₹10,000",
+                "first_runner_up": "₹6,000",
+                "second_runner_up": "₹4,000",
+                "participationCertificates": "Certificates to all Participants."
+            },
+            "details": [
+                "Theme Release: Themes/genres will be revealed at the beginning of the event.",
+                "Photo Story Creation: Participants will be given a time period within which they will conceptualize and shoot a series of 5-10 photos that narrate a cohesive story based on the given theme.",
+                "Submission/Presentation: participants need to present the story in front of the judges on the scheduled time. (Photos must be submitted with a short caption for each image and a title for the story.)"
+
+            ],
+            "rules": [
+                "Only registered team members are allowed to participate. Substitution of team members is not permitted.",
+                "Teams must adhere to principles of fair play and sportsmanship.",
+                "Any form of cheating, including plagiarism or use of unauthorized materials, will result in immediate disqualification.",
+                "Decisions made by the organizers are final and binding."
+            ],
+            "event_head": {
+                "photoPlaceholder": "HERE WE WILL HAVE A PHOTO OF EVENT HEAD",
+                "name": "Gourav Kumar & Pratyush Gupta",
+                "Phone": "7667835972 & 9199396460"
+            }
+        },
+
+        {
+            "name": "LIGHT, CAMERA, OJASS",
+            "img": "https://ojass-2024.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2FQv8sgXQ%2FVISHWA-CODE-GENESIS.png%20&w=384&q=75",
+            "rulebookurl": "https://docs.google.com/document/d/1gGCU00Q7FovT73QQtrpUyneQxEeD5I4R",
+            "redirect": "event/7/2",
+            "organizer": "Coding Chronicles",
+            "description": "Light, Camera is a reel-making competition where participants craft engaging short videos based on a specific theme or concept. The event combines creative filmmaking techniques with the art of impactful storytelling to captivate and inspire audiences.",
+            "prizes": {
+                "total": "₹20,000",
+                "winner": "₹10,000",
+                "first_runner_up": "₹6,000",
+                "second_runner_up": "₹4,000",
+                "participants": "Certificates to all Participants"
+            },
+            "details":  [
+                "You will have to make a reel of OJASS which will have to be shot in the fest itself.",
+                "This is an on-spot event.",
+                "You will have to cover the events throughout the three days. You will be given three more days to edit and submit the video.",
+                "The length of the reel must be 30 seconds to 1 minute Deadline to submit the video is 3 days after the completion of the fest.",
+                "The top 3 winners will be declared for the reel section subject to the relevant number of participants."
+             ],
+            "rules": [
+                "A team can consist of a maximum of 2 members.",
+                "The final video is to be submitted along with Ojass ID and personal details to the mail ID: phocus_nit@nitjsr.ac.in ",
+                "You can shoot using any camera.",
+                "Decision of the organizing team is final and binding.",
+                "Team Phocus and OJASS will have all the rights to upload the after-movie and the reel on official handles (Phocus & OJASS official Instagram (ojass.nitjsr), Facebook, youtube handles etc)."
+            ],
+            "event_head": {
+                "description": "Photo of event head will be here",
+                "name": "Siddharth Sharma & Subhomoy Maji",
+                "Phone": "7808220898 & 6297119117"
+            }
+        }
     ]
 ]
