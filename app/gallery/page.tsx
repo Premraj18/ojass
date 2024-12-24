@@ -21,9 +21,7 @@ export default function Page() {
                 <div className=''>
                     <ParallaxScroll images={images} />
                 </div>
-                {/* <div className=''>
-                    <iframe className='w-[350px] md:w-[550px] h-[315px] md:h-[415px] rounded-3xl' src="https://www.youtube.com/embed/v025irxdSmk?si=QualeiZb-NDBwE_D" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                </div> */}
+                
             </div>
         </div>
     )

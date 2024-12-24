@@ -2,6 +2,13 @@
 import React from 'react'
 import ViswaCodeGenesis from './viswaCodeGenesis'
 import SiliconValley from './siliconvalley'
+import AquaBotsArena from './aquabotsArena'
+import BrainBusters from './brainbusters'
+import CaseQuest from './caseQuest'
+import CryptoCraft from './cryptocraft'
+import Department from './departmentevent'
+import Game from './gamecrafts'
+import Lens from './lenscraft'
 
 const Page = () => {
   return (
@@ -15,12 +22,34 @@ const Page = () => {
           <div className='pt-60 pb-10 w-full flex justify-center items-center'>
             <img src="/eventtext.webp" alt="" className='w-[80%] lg:w-[25%]' />
           </div>
-          <div className='min-h-[80vh] w-full my-5 flex items-start justify-center'>
+          <div className='min-h-[90vh] w-full my-5 flex items-start justify-center'>
             <ViswaCodeGenesis/>
           </div>
           <div className='min-h-[80vh] w-full my-5 flex items-start justify-center'>
-            <SiliconValley/>
+            <Game/>
           </div>
+          <div className='min-h-[80vh] w-full my-5 flex items-start justify-center'>
+            <CryptoCraft/>
+          </div>
+          <div className='min-h-[80vh] w-full my-5 flex items-start justify-center'>
+            <Lens/>
+          </div>
+          <div className='min-h-[80vh] w-full my-5 flex items-start justify-center'>
+            <Department/>
+          </div>
+          <div className='min-h-[80vh] w-full my-5 flex items-start justify-center'>
+            <AquaBotsArena/>
+          </div>
+          {/* <div className='min-h-[80vh] w-full my-5 flex items-start justify-center'>
+            <SiliconValley/>
+          </div> */}
+          <div className='min-h-[80vh] w-full my-5 flex items-start justify-center'>
+            <BrainBusters/>
+          </div>
+          <div className='min-h-[80vh] w-full my-5 flex items-start justify-center'>
+            <CaseQuest/>
+          </div>
+          
 
         </div>
       </div>

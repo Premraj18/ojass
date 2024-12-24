@@ -37,6 +37,14 @@ const Page = () => {
               <p className="mb-4 text-base leading-7 md:w-3/4 text-gray-300 ">
                 {dataeve.description}
               </p>
+              <div className='flex lg:text-xl text-xl md:text-base items-baseline gap-7'>
+                <div to='/sponser'>
+                  <button className={`px-5 py-1 text-base rounded-full border-2 bg-white/10 hover:text-black`} >Participate</button>
+                </div>
+                <a href={dataeve.rulebookurl} target='_blank'>
+                  <button className={`px-5 py-1 text-base rounded-full border-2 bg-white/10 hover:text-black`} >Rule Book</button>
+                </a>
+              </div>
             </div>
           </div>
           <div className='flex flex-col justify-center items-center lg:mt-16 gap-5 px-3'>
@@ -45,12 +53,18 @@ const Page = () => {
               <p>Total : {dataeve.prizes.total} </p>
               <p>Winner : {dataeve.prizes.winner}</p>
               <p>First Runner Up : {dataeve.prizes.first_runner_up}</p>
+              <p>Second Runner Up : {dataeve.prizes.second_runner_up}</p>
               <p>Certificates to all Participants</p>
             </div>
           </div>
-          <div className='flex flex-col justify-center items-center mt-16 gap-5'>
-            <h2 className='text-4xl font-semibold'>Details</h2>
-            <p className='font-medium text-lg px-3 lg:px-40'>{dataeve.details}</p>
+          <div className='flex flex-col mt-16 gap-5'>
+            <h2 className='text-4xl text-center font-semibold'>Details</h2>
+            {dataeve.details?.map((data, idx) => (
+              <div key={idx} className='lg:px-20'>
+                <p className='font-medium text-lg px-3 lg:px-40'>- {data}</p>
+              </div>
+              // <p key={idx}>{idx + 1}. {data}</p>
+            ))}
           </div>
           <div className='flex flex-col justify-center items-center'>
             <div className='md:w-3/4 mx-3 flex flex-col justify-center items-center mt-16 gap-5 bg-white/15 p-6 rounded-lg'>
@@ -61,6 +75,10 @@ const Page = () => {
                 ))}
               </div>
             </div>
+          </div>
+          <div className='flex flex-col justify-center items-center gap-5 mt-8 md:text-3xl text-xl px-2'>
+                <p className='text-center'>Event Head : {dataeve.event_head.name}</p>
+                <p className='text-center'>Conatct No : {dataeve.event_head.Phone}</p>
           </div>
         </div>
       </section>
