@@ -1,7 +1,6 @@
 "use client"
 import React from 'react'
 import ViswaCodeGenesis from './viswaCodeGenesis'
-import SiliconValley from './siliconvalley'
 import AquaBotsArena from './aquabotsArena'
 import BrainBusters from './brainbusters'
 import CaseQuest from './caseQuest'
@@ -9,6 +8,10 @@ import CryptoCraft from './cryptocraft'
 import Department from './departmentevent'
 import Game from './gamecrafts'
 import Lens from './lenscraft'
+import Market from './marketmevricks'
+import RoboRealm from './roborealm'
+import Skyward from './skywardBound'
+import VerseVoyage from './verseVoyage'
 
 const Page = () => {
   return (
@@ -35,21 +38,29 @@ const Page = () => {
             <Lens/>
           </div>
           <div className='min-h-[80vh] w-full my-5 flex items-start justify-center'>
+            <RoboRealm/>
+          </div>
+          <div className='min-h-[80vh] w-full my-5 flex items-start justify-center'>
             <Department/>
+          </div>
+          <div className='min-h-[80vh] w-full my-5 flex items-start justify-center'>
+            <Market/>
           </div>
           <div className='min-h-[80vh] w-full my-5 flex items-start justify-center'>
             <AquaBotsArena/>
           </div>
-          {/* <div className='min-h-[80vh] w-full my-5 flex items-start justify-center'>
-            <SiliconValley/>
-          </div> */}
           <div className='min-h-[80vh] w-full my-5 flex items-start justify-center'>
             <BrainBusters/>
           </div>
           <div className='min-h-[80vh] w-full my-5 flex items-start justify-center'>
             <CaseQuest/>
           </div>
-          
+          <div className='min-h-[80vh] w-full my-5 flex items-start justify-center'>
+            <Skyward/>
+          </div>
+          <div className='min-h-[80vh] w-full my-5 flex items-start justify-center'>
+            <VerseVoyage/>
+          </div>
 
         </div>
       </div>

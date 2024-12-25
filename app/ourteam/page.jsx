@@ -18,6 +18,14 @@ const variants = {
   },
 }
 
+// {
+//   "name": "Sourav Kumar",
+//   "img": "team/17.webp",
+//   "post": "Logistics Head",
+//   "linkedin": "https://www.linkedin.com/in/sourav-kumar-4a090a1b1/",
+//   "email": "mailto:2021ugcs038@nitjsr.ac.in"
+// },
+
 const Page = () => {
   return (
     <div className="w-full min-h-[100vh] sm:mt-0 lg:pt-14 pt-20 bg-[url('/img1.webp')] bg-center bg-cover bg-no-repeat bg-fixed">
