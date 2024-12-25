@@ -45,3 +45,38 @@ body {
 /* h2{
   color: rgba(144, 146, 144, 0.275)
 } */
+
+@media print {
+  @page {
+    margin: 2cm;
+    size: A4;
+  }
+
+  body {
+    background: white !important;
+  }
+
+  .print-receipt {
+    background: white !important;
+    color: black !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+    box-shadow: none !important;
+  }
+
+  .print-receipt * {
+    color: black !important;
+  }
+
+  .print-receipt .bg-gray-50,
+  .print-receipt .bg-blue-50 {
+    background-color: #f9fafb !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .print:hidden {
+    display: none !important;
+  }
+}

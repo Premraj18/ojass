@@ -1,17 +1,68 @@
 "use client"
-import React from 'react'
-import { BiCheckDouble } from "react-icons/bi";
-import Link from 'next/link';
+import React, { useState, useEffect } from 'react'
+import { useRouter } from 'next/navigation';
 import Data from '../../event.json'
 import { useParams } from 'next/navigation';
-
+import toast from 'react-hot-toast';
 
 const Page = () => {
+  const router = useRouter();
   const eve = useParams();
   const i = eve.num;
   const j = eve.subnum;
   const dataeve = Data[i][j];
-  // console.log(dataeve)
+  const [user, setUser] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const userData = localStorage.getItem('user');
+    if (!userData) {
+      router.push('/login');
+      return;
+    }
+    setUser(JSON.parse(userData));
+    setLoading(false);
+  }, [router]);
+
+  const handleRegister = async () => {
+    if (!user.paid) {
+      toast.error('Please complete your registration payment first');
+      return;
+    }
+
+    try {
+      const res = await fetch('/api/register-event', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          userId: user._id,
+          eventId: dataeve.id,
+          eventName: dataeve.name
+        }),
+      });
+
+      const data = await res.json();
+
+      if (res.ok) {
+        toast.success('Successfully registered for the event!');
+        // Update local user data
+        const updatedUser = { ...user, events: [...(user.events || []), dataeve.id] };
+        localStorage.setItem('user', JSON.stringify(updatedUser));
+        setUser(updatedUser);
+      } else {
+        throw new Error(data.error);
+      }
+    } catch (error) {
+      toast.error(error.message || 'Failed to register for event');
+    }
+  };
+
+  if (loading) return null;
+
+  const isRegistered = user?.events?.includes(dataeve.id);
+
   return (
     <>
       <section className="flex items-center w-full font-poppins  bg-[url('/subeve2.jpeg')]  bg-center bg-cover bg-no-repeat bg-fixed">
@@ -38,11 +89,27 @@ const Page = () => {
                 {dataeve.description}
               </p>
               <div className='flex lg:text-xl text-xl md:text-base items-baseline gap-7'>
-                <div to='/sponser'>
-                  <button className={`px-5 py-1 text-base rounded-full border-2 bg-white/10 hover:text-black`} >Participate</button>
-                </div>
-                <a href={dataeve.rulebookurl} target='_blank'>
-                  <button className={`px-5 py-1 text-base rounded-full border-2 bg-white/10 hover:text-black`} >Rule Book</button>
+                {isRegistered ? (
+                  <div className="px-5 py-1 text-base rounded-full border-2 bg-green-500/20 text-green-300">
+                    Already Registered
+                  </div>
+                ) : (
+                  <button
+                    onClick={handleRegister}
+                    disabled={!user.paid}
+                    className={`px-5 py-1 text-base rounded-full border-2 ${
+                      user.paid 
+                        ? 'bg-white/10 hover:text-black cursor-pointer' 
+                        : 'bg-gray-500/20 text-gray-400 cursor-not-allowed'
+                    }`}
+                  >
+                    {user.paid ? 'Register Now' : 'Complete Registration First'}
+                  </button>
+                )}
+                <a href={dataeve.rulebookurl} target='_blank' rel="noopener noreferrer">
+                  <button className="px-5 py-1 text-base rounded-full border-2 bg-white/10 hover:text-black">
+                    Rule Book
+                  </button>
                 </a>
               </div>
             </div>
