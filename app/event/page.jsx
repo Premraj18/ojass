@@ -9,6 +9,7 @@ import CryptoCraft from './cryptocraft'
 import Department from './departmentevent'
 import Game from './gamecrafts'
 import Lens from './lenscraft'
+import Market from './marketmevricks'
 
 const Page = () => {
   return (
@@ -36,6 +37,9 @@ const Page = () => {
           </div>
           <div className='min-h-[80vh] w-full my-5 flex items-start justify-center'>
             <Department/>
+          </div>
+          <div className='min-h-[80vh] w-full my-5 flex items-start justify-center'>
+            <Market/>
           </div>
           <div className='min-h-[80vh] w-full my-5 flex items-start justify-center'>
             <AquaBotsArena/>

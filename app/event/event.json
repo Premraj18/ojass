@@ -902,5 +902,115 @@
                 "Phone": "7808220898 & 6297119117"
             }
         }
+    ],
+
+    [
+        {
+            "name": "BUSINESS SIMULATION",
+            "teamSizeMin" : "3",
+            "teamSizeMax" : "5",
+            "img": "https://ojass-2024.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2FQv8sgXQ%2FVISHWA-CODE-GENESIS.png%20&w=384&q=75",
+            "rulebookurl": "https://docs.google.com/document/d/1cHDaTTyeijwyFaxEVOA8YPSUJ42h3bMk/",
+            "redirect": "event/8/0",
+            "organizer": "Market Mavericks",
+            "description": "Participants will be randomly assigned a brand name and product, and they will need to create a complete brand identity, including designing the logo, product, tagline, and motto. They will then present their creative work to the judges.",
+            "prizes": {
+                "total": "₹30,000",
+                "winner": "₹15,000",
+                "first_runner_up": "₹10,000",
+                "second_runner_up": "₹5,000",
+                "participants": "Certificates to all Participants"
+            },
+            "details": [
+                "Brand and Product Assignment:",
+                "Before the start of the event, each team will receive their brand name and the product they need to work on. This assignment will be done randomly.",
+                "Designing Phase:",
+                "Logo Design, Product Design, Tagline and Motto",
+                "Presentation: After completing the designs, teams will have to present their work to the judges,",
+                "Eligibility :",
+                "The event is open to all participants, with a maximum of 4 members per team.",
+                "Each participant can only be part of one team."
+            ],
+            "rules": [
+                "Participants must maintain a professional and respectful attitude throughout the event.",
+                "Any form of plagiarism or unethical behaviour will result in immediate disqualification."
+            ],
+            "event_head": {
+                "photoPlaceholder": "HERE WE WILL HAVE A PHOTO OF EVENT HEAD",
+                "name": "Rohit Mahanand",
+                "Phone": "8709737116"
+            }
+        },
+
+        {
+            "name": "MOCK STOCK",
+            "img": "https://ojass-2024.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2F6tbmCP7%2F3.png&w=384&q=75",
+            "rulebookurl": "https://docs.google.com/document/d/1CNQ5eMKciV8Euwi8diU7LXPmTrCcMO4H",
+            "redirect": "event/8/1",
+            "description": "A mock stock is a simulated investment in a publicly traded company, allowing participants to experience the buying and selling of stocks without any real financial risk. This event enables participants to learn about the stock market, practice investment strategies, and gain experience before investing real money.",
+            "prizes": {
+                "total": "₹20,000",
+                "winner": "₹10,000",
+                "first_runner_up": "₹6,000",
+                "second_runner_up": "₹4,000",
+                "participationCertificates": "Certificates to all Participants."
+            },
+            "details": [
+                "Download the Preferred Platform App:  Participants need to download the app on their devices.",
+                "Registration: bComplete a one-time registration process at the platform's Virtual Stock Market Game homepage (free of cost).",
+                "Referral Code:  Fill in the provided referral code to activate the account.",
+                "Trading:  Once logged in, players can view their standings, account balance, and trade stocks by navigating through the app’s tabs."
+            ],
+            "rules": [
+                "Individual Participation:",
+                "Each participant will trade stocks individually.",
+                "Decision of the Judge/Coordinator:",
+                "The decision of the judge/coordinator shall be final and binding."
+            ],
+            "event_head": {
+                "photoPlaceholder": "HERE WE WILL HAVE A PHOTO OF EVENT HEAD",
+                "name": "Ammar Adil",
+                "Phone": "9122246709"
+            }
+        },
+
+        {
+            "name": "STARTUP IDEATHON",
+            "img": "https://ojass-2024.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2FQv8sgXQ%2FVISHWA-CODE-GENESIS.png%20&w=384&q=75",
+            "rulebookurl": "https://docs.google.com/document/d/1_9aaNapuVZqonOXfgBgRQO0tE-WFKEgj/",
+            "redirect": "event/8/2",
+            "organizer": "Coding Chronicles",
+            "description": "The Startup Ideathon at OJASS’25 offers aspiring entrepreneurs a platform to present their innovative startup ideas, refine their business plans, and gain access to potential investors and seed funding. This event empowers participants to showcase their creativity, strategic thinking, and business acumen in front of an esteemed panel of judges and investors.",
+            "prizes": {
+                "total": "₹25,000",
+                "winner": "₹12,000",
+                "first_runner_up": "₹8,000",
+                "second_runner_up": "₹5,000",
+                "participants": "Certificates to all Participants"
+            },
+            "details":  [
+                "Round 1: Pitch Deck Submission (Online)",
+                "Participants must submit their detailed pitch decks by the specified deadline.",
+                "The pitch deck should provide a comprehensive overview of the startup idea, addressing key aspects such as the problem statement, solution, and business model.",
+                "Submissions will be evaluated, and shortlisted teams will proceed to the final round.",
+                "Format: PDF",
+                "Maximum Slides: 12 (excluding title and thank-you slides)",
+                "Round 2: Offline Presentation",
+                "Shortlisted teams will present their startup ideas at OJASS’25 in front of a live audience and a panel of judges."
+             ],
+            "rules": [
+                "Teams can consist of 1-4 members.",
+                "Members can be from different institutions.",
+                "All submissions must be original. Plagiarism will result in immediate disqualification.",
+                "Ideas must not infringe on intellectual property rights.",
+                "Submissions and presentations must be in English.",
+                "The pitch deck must follow the specified format and be submitted by the deadline."
+            ],
+            "event_head": {
+                "description": "Photo of event head will be here",
+                "name": "Sonu Kumar Chaudhary",
+                "Phone": "9708731471"
+            }
+        }
     ]
 ]
