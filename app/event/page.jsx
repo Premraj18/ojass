@@ -10,6 +10,7 @@ import Department from './departmentevent'
 import Game from './gamecrafts'
 import Lens from './lenscraft'
 import Market from './marketmevricks'
+import RoboRealm from './roborealm'
 
 const Page = () => {
   return (
@@ -34,6 +35,9 @@ const Page = () => {
           </div>
           <div className='min-h-[80vh] w-full my-5 flex items-start justify-center'>
             <Lens/>
+          </div>
+          <div className='min-h-[80vh] w-full my-5 flex items-start justify-center'>
+            <RoboRealm/>
           </div>
           <div className='min-h-[80vh] w-full my-5 flex items-start justify-center'>
             <Department/>
