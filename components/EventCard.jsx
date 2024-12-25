@@ -12,68 +12,74 @@ import Autoplay from "embla-carousel-autoplay";
 const Data = [
   {
     id: "1",
-    title: "VISHWA CODE GENESIS",
-    description: "Electrical circuits form the foundation of power generation, and in this event, participants design and construct electrical and electronic circuits swiftly and efficiently on a breadboard.",
+    title: "Coding Chronicles",
+    description: "A journey through the world of programming, showcasing innovative projects, problem-solving adventures, and creative web development endeavors, blending technology with impactful storytelling and growth.",
     imgUrl: "/sponser/skoda.webp"
   },
   {
     id: "2",
-    title: "SILICON VALLEY",
-    description: "Solving intricate Electrical Enginnering challenges necessitates the application of Mathematical and analytical tools, A skill set put to the test in this event that delves into the capativating realm of matlab.",
+    title: "Game Craft",
+    description: "A thrilling gaming event where participants showcase their skills in intense competitions featuring popular games like BGMI and Valorant, fostering camaraderie, excitement, and epic battles for glory and triumph.",
     imgUrl: "/sponser/img6.webp"
   },
   {
     id: "3",
-    title: "RISE OF MACHINES",
-    description: "It is crucial to control and realize the working of industrial equipment. this event deals with PLC(Programmable Logic Controller).",
+    title: "Crypto Craft",
+    description: "An engaging event delving into the world of cryptocurrencies and blockchain, fostering innovation, strategic thinking, and knowledge-sharing to master the art of digital finance and technology.",
     imgUrl: "/sponser/img7.webp"
   },
   {
     id: "4",
-    title: "AAVARTAN",
-    description: "The art of paper presentation requires study, implementation and presentation of ideas. students will need to present their ideas in a scientific and research-oriented manner.",
+    title: "Lens Craft",
+    description: "A creative competition celebrating the art of storytelling through videos and reels, where participants showcase their vision, editing skills, and originality to craft captivating visual narratives.",
     imgUrl: "/sponser/img8.webp"
   },
   {
     id: "5",
-    title: "AAKRITI",
-    description: "I-matter offers students a unique industrial visit, providing firsthand exposure to real world technology operations, and bridging the gap between theory and practice.",
+    title: "Department Event",
+    description: "A vibrant gathering that fosters collaboration, learning, and camaraderie among peers, featuring interactive activities, competitions, and showcases to highlight talent and strengthen the departmental community.",
     imgUrl: "/sponser/img9.webp"
   },
   {
     id: "6",
-    title: "CIRCUIT HOUSE",
-    description: "This event involves a case-study in which all major decisions related to the organisation are taken. this event will bring in great white-collar experience.",
+    title: "AquaBots Arena",
+    description: "A dynamic robotics competition where innovation meets engineering as participants design, build, and battle autonomous bots to conquer challenges in an aquatic-themed arena.",
     imgUrl: "/sponser/img10.webp"
   },
   {
     id: "7",
-    title: "METAMORPHICA",
-    description: "Codes are the bricks on which magnificent castles can be built. this event revolves around the interesting world of competitive programming.",
+    title: "Brain Busters",
+    description: "A stimulating quiz competition that challenges intellect and quick thinking, where participants tackle intriguing questions across diverse topics to showcase their knowledge and claim the title of quiz champion.",
     imgUrl: "/sponser/img11.webp"
   },
   {
     id: "8",
-    title: "ARTHSHASHTRA",
-    description: "This event provides students a platform to solve some problems we face in our daily lives, and thus inculcate a culture of product innovation and problem solving",
+    title: "Case Quest",
+    description: "An engaging case study competition that tests analytical skills, creativity, and strategic thinking as participants tackle real-world challenges to deliver innovative and impactful solutions.",
     imgUrl: "/sponser/img11.webp"
   },
   {
     id: "9",
-    title: "ARMAGEDDON",
-    description: "Analytica is designed to evaluate participants' analytical and problem solving skills while introducing them to the trending domains of data analytics and data science.",
+    title: "Market Mavericks",
+    description: "A dynamic event that explores the world of business and marketing, challenging participants to strategize, innovate, and showcase their entrepreneurial acumen in competitive and creative scenarios.",
     imgUrl: "/sponser/img11.webp"
   },
   {
     id: "10",
     title: " ROBO REALM",
-    description: "Placements are of utmost importance. This event tests your overall communication, technical, and aptitude skills with a subdued experience of campus placement.",
+    description: "An exciting robotics event where creativity and engineering collide, inviting participants to design, build, and compete with innovative robots in thrilling challenges and futuristic scenarios.",
     imgUrl: "/sponser/img11.webp"
   },
   {
     id: "11",
-    title: "NO GROUND ZONE",
-    description: "A brain-teasing challenge, qrious is a quiz based event revolving around the dynamic universe of electrical engineering and related sciences, stimulating intellectual curiosity.",
+    title: "Skyward Bound",
+    description: "A high-flying competition that pushes the limits of innovation and aerodynamics, where participants design and launch aircraft or drones to conquer aerial challenges and reach new heights.",
+    imgUrl: "/sponser/img11.webp"
+  },
+  {
+    id: "12",
+    title: "Verse Voyage",
+    description: "A poetic journey that invites participants to explore the power of words, expressing creativity through verses and narratives, while navigating through the realms of rhythm, rhyme, and emotion.",
     imgUrl: "/sponser/img11.webp"
   }
 ]
@@ -95,9 +101,9 @@ const EventCard = () => {
             <CarouselItem key={index} className="sm:basis-1/1 md:basis-1/3 lg:basis-1/4">
 
               <div className=" w-[100%] h-[50vh] cursor-pointer text-white p-6 rounded-[0.8rem] scale-95 bg-white/5 border-gray-200 border-[2px] shadow-md transition-all duration-300 hover:scale-100">
-                <div className="w-full h-full flex flex-col justify-center items-center text-center lg:gap-8 gap-4">
-                  <h1>{data.title}</h1>
-                  <p>{data.description}</p>
+                <div className="w-full h-full flex flex-col justify-center items-center text-center lg:gap-6 gap-4">
+                  <h1 className="uppercase">{data.title}</h1>
+                  <p className="text-justify ">{data.description}</p>
                 </div>
               </div>
             </CarouselItem>
