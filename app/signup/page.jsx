@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from 'react';
+import React, { useState, useCallback } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
@@ -13,34 +13,90 @@ const SignUp = () => {
     email: '',
     password: '',
     confirmPassword: '',
+    isNitJsr: false,
+    college: '',
+    idCard: null
   });
+  const [idCardPreview, setIdCardPreview] = useState('');
   const [error, setError] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+
+  const handleIdCardUpload = useCallback((e) => {
+    const file = e.target.files[0];
+    if (file) {
+      setFormData(prev => ({ ...prev, idCard: file }));
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        setIdCardPreview(reader.result);
+      };
+      reader.readAsDataURL(file);
+    }
+  }, []);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError('');
     setIsLoading(true);
 
-    if (formData.password !== formData.confirmPassword) {
-      setError('Passwords do not match');
-      setIsLoading(false);
-      return;
-    }
-
     try {
+      // Validate form data
+      if (!formData.name || !formData.email || !formData.password || !formData.idCard) {
+        throw new Error('All fields are required');
+      }
+
+      if (formData.password !== formData.confirmPassword) {
+        throw new Error('Passwords do not match');
+      }
+
+      if (!formData.isNitJsr && !formData.college) {
+        throw new Error('College name is required');
+      }
+
+      // First upload the image to Cloudinary
+      const imageData = new FormData();
+      imageData.append('file', formData.idCard);
+      imageData.append('upload_preset', 'ojass_id_cards');
+
+      console.log('Uploading image to Cloudinary...'); // Debug log
+
+      const uploadRes = await fetch(
+        `https://api.cloudinary.com/v1_1/dm8cs1twk/image/upload`,
+        {
+          method: 'POST',
+          body: imageData
+        }
+      );
+
+      if (!uploadRes.ok) {
+        const errorData = await uploadRes.json();
+        console.error('Cloudinary Error:', errorData);
+        throw new Error('Failed to upload ID Card: ' + (errorData.error?.message || 'Unknown error'));
+      }
+
+      const uploadData = await uploadRes.json();
+      console.log('Image upload successful:', uploadData.secure_url); // Debug log
+
+      // Now create the user with the image URL
+      const signupData = {
+        name: formData.name,
+        email: formData.email,
+        password: formData.password,
+        isNitJsr: formData.isNitJsr,
+        college: formData.isNitJsr ? 'NIT Jamshedpur' : formData.college,
+        idCardUrl: uploadData.secure_url,
+        registrationDate: new Date()
+      };
+
+      console.log('Sending signup data:', signupData); // Debug log
+
       const res = await fetch('/api/signup', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({
-          name: formData.name,
-          email: formData.email,
-          password: formData.password,
-        }),
+        body: JSON.stringify(signupData),
       });
 
       const data = await res.json();
@@ -49,13 +105,16 @@ const SignUp = () => {
         throw new Error(data.error || 'Something went wrong');
       }
 
-      // Store token and user data in localStorage
+      console.log('Signup successful:', data); // Debug log
+
+      // Store complete user data in localStorage
       localStorage.setItem('token', data.token);
       localStorage.setItem('user', JSON.stringify(data.user));
       
       // Redirect to dashboard
       router.push('/dashboard');
     } catch (err) {
+      console.error('Signup error:', err);
       setError(err.message);
       setIsLoading(false);
     }
@@ -63,14 +122,14 @@ const SignUp = () => {
 
   return (
     <div className="min-h-screen w-full flex items-center justify-center relative 
-    bg-[url('/bghero.webp')] bg-fixed bg-center bg-cover pt-24 pb-8">
-      <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-black/30 to-black/90" />
+      bg-[url('/bghero.webp')] bg-fixed bg-center bg-cover py-20">
+      <div className="absolute inset-0 bg-gradient-to-b from-black/30 to-black/90" />
       
       <motion.div 
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="w-full max-w-md p-8 rounded-2xl bg-white/10 backdrop-blur-sm relative z-10 mx-4"
+        className="w-full max-w-md p-8 rounded-2xl bg-white/10 backdrop-blur-sm relative z-10 mx-4 my-8"
       >
         <div className="text-center mb-8">
           <h1 className="text-3xl font-bold text-white mb-2">Create Account</h1>
@@ -162,16 +221,75 @@ const SignUp = () => {
             </div>
           </div>
 
+          <div className="space-y-4">
+            <div className="flex items-center space-x-3">
+              <input
+                type="checkbox"
+                id="isNitJsr"
+                checked={formData.isNitJsr}
+                onChange={(e) => setFormData({
+                  ...formData,
+                  isNitJsr: e.target.checked,
+                  college: e.target.checked ? 'NIT Jamshedpur' : ''
+                })}
+                className="w-4 h-4 rounded border-gray-600 bg-white/10 text-white focus:ring-white"
+              />
+              <label htmlFor="isNitJsr" className="text-sm font-medium text-gray-300">
+                I am a student of NIT Jamshedpur
+              </label>
+            </div>
+
+            {!formData.isNitJsr && (
+              <div>
+                <label htmlFor="college" className="block text-sm font-medium text-gray-300 mb-2">
+                  College Name
+                </label>
+                <input
+                  type="text"
+                  id="college"
+                  className="w-full px-4 py-3 rounded-full bg-white/10 border border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:border-white transition-colors"
+                  placeholder="Enter your college name"
+                  value={formData.college}
+                  onChange={(e) => setFormData({...formData, college: e.target.value})}
+                  required
+                />
+              </div>
+            )}
+          </div>
+
+          <div>
+            <label htmlFor="idCard" className="block text-sm font-medium text-gray-300 mb-2">
+              College ID Card
+            </label>
+            <input
+              type="file"
+              id="idCard"
+              accept="image/*"
+              onChange={handleIdCardUpload}
+              className="w-full px-4 py-3 rounded-full bg-white/10 border border-gray-600 text-white file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-white/20 file:text-white hover:file:bg-white/30"
+              required
+            />
+            {idCardPreview && (
+              <div className="mt-2 mb-4">
+                <img 
+                  src={idCardPreview} 
+                  alt="ID Card Preview" 
+                  className="w-full max-w-xs mx-auto rounded-lg"
+                />
+              </div>
+            )}
+          </div>
+
           <button
             type="submit"
             disabled={isLoading}
-            className="w-full py-3 px-6 rounded-full bg-white/15 border border-white text-white font-medium hover:bg-white/20 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+            className="w-full py-3 px-6 rounded-full bg-white/15 border border-white text-white font-medium hover:bg-white/20 transition-colors disabled:opacity-50 disabled:cursor-not-allowed mt-6"
           >
             {isLoading ? <Loader /> : 'Sign Up'}
           </button>
         </form>
 
-        <p className="mt-6 text-center text-gray-300">
+        <p className="mt-6 mb-2 text-center text-gray-300">
           Already have an account?{' '}
           <Link href="/login" className="text-white hover:underline">
             Log in

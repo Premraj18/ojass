@@ -1,6 +1,7 @@
 [
     [
         {
+            "id": "01",
             "name": "HACK-DE-SCIENCE",
             "teamSizeMin" : "3",
             "teamSizeMax" : "5",
@@ -42,6 +43,7 @@
         },
 
         {
+            "id": "02",
             "name": "VISHWA-CODE-MANIA",
             "img": "https://ojass-2024.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2F6tbmCP7%2F3.png&w=384&q=75",
             "rulebookurl": "https://docs.google.com/document/d/1rMX1Rb0-VeHalfK-1tT5KM0L7X7XUzqR",
@@ -71,6 +73,7 @@
         },
 
         {
+            "id": "03",
             "name": "TENSORENCODED",
             "img": "https://ojass-2024.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2FQv8sgXQ%2FVISHWA-CODE-GENESIS.png%20&w=384&q=75",
             "rulebookurl": "https://docs.google.com/document/d/1R-daEP8r5y5pMwtHak-KKjovnt9eJKbR/",
@@ -105,6 +108,7 @@
         },
 
         {
+            "id": "04",
             "name": "MODELMAYHEM",
             "img": "https://ojass-2024.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2F6tbmCP7%2F3.png&w=384&q=75",
             "rulebookurl": "https://docs.google.com/document/d/1bfv-GJQ5NovFi6VwYR0ebvjHfoLskvcw/",
@@ -139,6 +143,7 @@
 
     [
         {
+            "id": "10",
             "name": "UNDERWATER TRACING",
             "teamSizeMin" : "3",
             "teamSizeMax" : "5",
@@ -171,6 +176,7 @@
         },
 
         {
+            "id": "11",
             "name": "AQUA RACE",
             "img": "https://ojass-2024.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2F6tbmCP7%2F3.png&w=384&q=75",
             "rulebookurl": "https://docs.google.com/document/d/1YabuwJIOmCGaNneiNlsxJ8NUlVh6ruyn/",
@@ -203,6 +209,7 @@
 
     [
         {
+            "id": "20",
             "name": "BIZZTHALON (BUISNESS QUIZ)",
             "teamSizeMin" : "3",
             "teamSizeMax" : "5",
@@ -241,6 +248,7 @@
         },
 
         {
+            "id": "21",
             "name": "SCI-FI QUIZ (TECHNICAL QUIZ)",
             "img": "https://ojass-2024.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2F6tbmCP7%2F3.png&w=384&q=75",
             "rulebookurl": "https://docs.google.com/document/d/12S2aGC4XwPWm8nDVGJ0SOIyX3hLyn-S2/",
@@ -283,6 +291,7 @@
 
     [
         {
+            "id": "30",
             "name": "CASE STUDY CHALLENGE",
             "teamSizeMin" : "3",
             "teamSizeMax" : "5",
@@ -319,6 +328,7 @@
         },
 
         {
+            "id": "31",
             "name": "CONSULTING NEXUS",
             "img": "https://ojass-2024.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2F6tbmCP7%2F3.png&w=384&q=75",
             "rulebookurl": "https://docs.google.com/document/d/1je11ou_JJHRcHkB8s4oW986ZuLd7vQ1Q/",
@@ -354,6 +364,7 @@
 
     [
         {
+            "id": "40",
             "name": "CRYPTO CLASH",
             "teamSizeMin" : "3",
             "teamSizeMax" : "5",
@@ -402,6 +413,7 @@
         },
         
         {
+            "id": "41",
             "name": "MINT & BID: NFT SHOWDOWN",
             "teamSizeMin" : "3",
             "teamSizeMax" : "5",
@@ -445,6 +457,7 @@
         },
 
         {
+            "id": "42",
             "name": "HACK IT (ETHICAL HACKING)",
             "img": "https://ojass-2024.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2F6tbmCP7%2F3.png&w=384&q=75",
             "rulebookurl": "https://docs.google.com/document/d/17tYVF9Jx30RYdrQrAL1hLMdidYWkXYFr/",
@@ -488,6 +501,7 @@
 
     [
         {
+            "id": "50",
             "name": "ELECTROSPECTION",
             "teamSizeMin" : "3",
             "teamSizeMax" : "5",
@@ -529,6 +543,7 @@
         },
 
         {
+            "id": "51",
             "name": "WAXCOMBS",
             "img": "https://ojass-2024.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2F6tbmCP7%2F3.png&w=384&q=75",
             "rulebookurl": "https://docs.google.com/document/d/1B0PXQ1eE45Cgr4GNM1NbuAaCJH70Nx9f/",
@@ -562,6 +577,7 @@
         },
 
         {
+            "id": "52",
             "name": "SANRACHNA (BRIDGE BUILDING)",
             "img": "https://ojass-2024.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2FQv8sgXQ%2FVISHWA-CODE-GENESIS.png%20&w=384&q=75",
             "rulebookurl": "https://docs.google.com/document/d/1iPxuOWjpbDRCr_rMTPnCoNu3PQ6LnyLp/",
@@ -603,6 +619,7 @@
         },
 
         {
+            "id": "53",
             "name": "CANSYS (CAD-CAE)",
             "img": "https://ojass-2024.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2F6tbmCP7%2F3.png&w=384&q=75",
             "rulebookurl": "https://docs.google.com/document/d/1SdJPkWDutuz48vocZ93DGsdoiY7x-L8K/",
@@ -641,6 +658,7 @@
 
     [
         {
+            "id": "60",
             "name": "BGMI",
             "teamSizeMin" : "3",
             "teamSizeMax" : "5",
@@ -685,6 +703,7 @@
         },
 
         {
+            "id": "61",
             "name": "ENDGAME",
             "img": "https://ojass-2024.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2F6tbmCP7%2F3.png&w=384&q=75",
             "rulebookurl": "https://docs.google.com/document/d/1l0igrNWK4WbmaxFJgQ8oVm2D_A_u6sZd",
@@ -724,6 +743,7 @@
         },
 
         {
+            "id": "62",
             "name": "VALORANT",
             "img": "https://ojass-2024.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2FQv8sgXQ%2FVISHWA-CODE-GENESIS.png%20&w=384&q=75",
             "rulebookurl": "https://docs.google.com/document/d/1MW6Vhn0G5wcEUVlR18iwjYI0RTi6wCGY/",
@@ -760,6 +780,7 @@
         },
 
         {
+            "id": "63",
             "name": "FIFA",
             "img": "https://ojass-2024.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2F6tbmCP7%2F3.png&w=384&q=75",
             "rulebookurl": "https://docs.google.com/document/d/1ZLVbFqqdBaEWIAqO59QdgTDmE3iT6myW",
@@ -802,6 +823,7 @@
 
     [
         {
+            "id": "70",
             "name": "CineScript",
             "teamSizeMin" : "3",
             "teamSizeMax" : "5",
@@ -837,6 +859,7 @@
         },
 
         {
+            "id": "71",
             "name": "FRAMES & TALES",
             "img": "https://ojass-2024.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2F6tbmCP7%2F3.png&w=384&q=75",
             "rulebookurl": "https://docs.google.com/document/d/1HxrbQ3o9c57blLt3kUkgUAC1d0BIK3Wm",
@@ -869,6 +892,7 @@
         },
 
         {
+            "id": "72",
             "name": "LIGHT, CAMERA, OJASS",
             "img": "https://ojass-2024.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2FQv8sgXQ%2FVISHWA-CODE-GENESIS.png%20&w=384&q=75",
             "rulebookurl": "https://docs.google.com/document/d/1gGCU00Q7FovT73QQtrpUyneQxEeD5I4R",

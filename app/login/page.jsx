@@ -33,16 +33,16 @@ const Login = () => {
       const data = await res.json();
 
       if (!res.ok) {
-        throw new Error(data.error || 'Something went wrong');
+        throw new Error(data.error || 'Login failed');
       }
 
-      // Store token and user data in localStorage
+      // Store complete user data
       localStorage.setItem('token', data.token);
       localStorage.setItem('user', JSON.stringify(data.user));
       
-      // Redirect to dashboard
       router.push('/dashboard');
     } catch (err) {
+      console.error('Login error:', err);
       setError(err.message);
       setIsLoading(false);
     }
