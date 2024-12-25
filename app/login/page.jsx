@@ -3,6 +3,8 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
+import Loader from '@/components/Loader';
+import { FiEye, FiEyeOff } from 'react-icons/fi';
 
 const Login = () => {
   const router = useRouter();
@@ -11,10 +13,13 @@ const Login = () => {
     password: '',
   });
   const [error, setError] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
+  const [showPassword, setShowPassword] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError('');
+    setIsLoading(true);
 
     try {
       const res = await fetch('/api/login', {
@@ -35,10 +40,11 @@ const Login = () => {
       localStorage.setItem('token', data.token);
       localStorage.setItem('user', JSON.stringify(data.user));
       
-      // Redirect to dashboard instead of home
+      // Redirect to dashboard
       router.push('/dashboard');
     } catch (err) {
       setError(err.message);
+      setIsLoading(false);
     }
   };
 
@@ -84,22 +90,32 @@ const Login = () => {
             <label htmlFor="password" className="block text-sm font-medium text-gray-300 mb-2">
               Password
             </label>
-            <input
-              type="password"
-              id="password"
-              className="w-full px-4 py-3 rounded-full bg-white/10 border border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:border-white transition-colors"
-              placeholder="Enter your password"
-              value={formData.password}
-              onChange={(e) => setFormData({...formData, password: e.target.value})}
-              required
-            />
+            <div className="relative">
+              <input
+                type={showPassword ? "text" : "password"}
+                id="password"
+                className="w-full px-4 py-3 rounded-full bg-white/10 border border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:border-white transition-colors"
+                placeholder="Enter your password"
+                value={formData.password}
+                onChange={(e) => setFormData({...formData, password: e.target.value})}
+                required
+              />
+              <button
+                type="button"
+                onClick={() => setShowPassword(!showPassword)}
+                className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-white transition-colors"
+              >
+                {showPassword ? <FiEyeOff size={20} /> : <FiEye size={20} />}
+              </button>
+            </div>
           </div>
 
           <button
             type="submit"
-            className="w-full py-3 px-6 rounded-full bg-white/15 border border-white text-white font-medium hover:bg-white/20 transition-colors"
+            disabled={isLoading}
+            className="w-full py-3 px-6 rounded-full bg-white/15 border border-white text-white font-medium hover:bg-white/20 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
           >
-            Log In
+            {isLoading ? <Loader /> : 'Log In'}
           </button>
         </form>
 
