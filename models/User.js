@@ -115,25 +115,26 @@ const userSchema = new mongoose.Schema({
   toObject: { virtuals: true }
 });
 
+// Update the early bird deadline in the userSchema
+const EARLY_BIRD_DEADLINE = new Date('2025-01-10');
+
 // Update required payment amount calculation
 userSchema.virtual('requiredAmount').get(function() {
   const registrationDate = this.registrationDate || new Date();
-  const earlyBirdDeadline = new Date('2024-01-01');
   const prices = getPrices();
   
   if (this.isNitJsr) {
-    return registrationDate <= earlyBirdDeadline ? prices.nitJsrEarly : prices.nitJsrRegular;
+    return registrationDate <= EARLY_BIRD_DEADLINE ? prices.nitJsrEarly : prices.nitJsrRegular;
   } else {
-    return registrationDate <= earlyBirdDeadline ? prices.otherEarly : prices.otherRegular;
+    return registrationDate <= EARLY_BIRD_DEADLINE ? prices.otherEarly : prices.otherRegular;
   }
 });
 
 // Add virtual for registration phase
 userSchema.virtual('registrationPhase').get(function() {
   const now = new Date();
-  const earlyBirdDeadline = new Date('2024-01-01');
   
-  return now <= earlyBirdDeadline ? 'Early Bird' : 'Regular';
+  return now <= EARLY_BIRD_DEADLINE ? 'Early Bird' : 'Regular';
 });
 
 // Ensure unique OJASS ID before saving

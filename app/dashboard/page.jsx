@@ -28,18 +28,7 @@ const Dashboard = () => {
 
   const getRegistrationInfo = () => {
     const now = new Date();
-    const earlyBirdDeadline = new Date('2024-01-01');
-    const isEarlyBird = now <= earlyBirdDeadline;
-    
-    if (user.paid) {
-      return {
-        status: 'Paid',
-        amount: `₹${user.paidAmount}`,
-        phase: user.registrationPhase
-      };
-    }
-
-    // Get prices from environment variables with fallbacks
+    const earlyBirdDeadline = new Date('2025-01-10');
     const prices = {
       nitJsrEarly: parseInt(process.env.NEXT_PUBLIC_NITJSR_EARLY_PRICE) || 1,
       nitJsrRegular: parseInt(process.env.NEXT_PUBLIC_NITJSR_REGULAR_PRICE) || 2,
@@ -47,14 +36,17 @@ const Dashboard = () => {
       otherRegular: parseInt(process.env.NEXT_PUBLIC_OTHER_REGULAR_PRICE) || 4
     };
 
-    const amount = user.isNitJsr 
-      ? (isEarlyBird ? prices.nitJsrEarly : prices.nitJsrRegular)
-      : (isEarlyBird ? prices.otherEarly : prices.otherRegular);
+    const isEarlyBird = now <= earlyBirdDeadline;
+    const phase = isEarlyBird ? 'Early Bird' : 'Regular';
+    const daysLeft = isEarlyBird ? 
+      Math.ceil((earlyBirdDeadline - now) / (1000 * 60 * 60 * 24)) : 0;
 
     return {
-      status: 'Pending',
-      amount: `₹${amount}`,
-      phase: isEarlyBird ? 'Early Bird' : 'Regular'
+      phase,
+      daysLeft,
+      amount: user?.isNitJsr 
+        ? (isEarlyBird ? prices.nitJsrEarly : prices.nitJsrRegular)
+        : (isEarlyBird ? prices.otherEarly : prices.otherRegular)
     };
   };
 
