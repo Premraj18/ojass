@@ -21,7 +21,7 @@ const Glimpse = () => {
                         <div key={e.id} className="w-72 h-80 relative bg-white/10 rounded-xl p-4 px-6">
                             <div className="border w-full h-full py-2">
                                 <div className='border absolute w-[256px] h-[271px] right-4 '>
-                                    <Image
+                                    <img
                                         src={e.imgUrl}
                                         alt={`Image ${e.id}`}
                                         width={256}
