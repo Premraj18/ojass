@@ -5,10 +5,17 @@ export async function POST(req) {
   try {
     const { username, password } = await req.json();
 
+    const adminUsernames = process.env.ADMIN_USERNAMES.split(',');
+    const adminPasswords = process.env.ADMIN_PASSWORDS.split(',');
+
+    // Check if credentials are valid
+    const isValidAdmin = adminUsernames.some(
+      (adminUsername, index) =>
+        adminUsername === username && adminPasswords[index] === password
+    );
+
     // Check credentials against environment variables
-    if (username === process.env.ADMIN_USERNAME && 
-        password === process.env.ADMIN_PASSWORD) {
-      
+    if(isValidAdmin) {
       // Generate admin token
       const token = jwt.sign(
         { role: 'admin' },
