@@ -5,6 +5,8 @@ import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import Loader from '@/components/Loader';
 import { FiEye, FiEyeOff } from 'react-icons/fi';
+import authScreenAtom from '@/atom/userAtom';
+import { useSetRecoilState } from 'recoil'
 
 const SignUp = () => {
   const router = useRouter();
@@ -22,6 +24,7 @@ const SignUp = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+  const setauthScreen = useSetRecoilState(authScreenAtom)
 
   const handleIdCardUpload = useCallback((e) => {
     const file = e.target.files[0];
@@ -284,6 +287,7 @@ const SignUp = () => {
             type="submit"
             disabled={isLoading}
             className="w-full py-3 px-6 rounded-full bg-white/15 border border-white text-white font-medium hover:bg-white/20 transition-colors disabled:opacity-50 disabled:cursor-not-allowed mt-6"
+            onClick={() => setauthScreen('false')}
           >
             {isLoading ? <Loader /> : 'Sign Up'}
           </button>

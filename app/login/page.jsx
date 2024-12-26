@@ -5,6 +5,8 @@ import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import Loader from '@/components/Loader';
 import { FiEye, FiEyeOff } from 'react-icons/fi';
+import authScreenAtom from '@/atom/userAtom';
+import { useSetRecoilState } from 'recoil'
 
 const Login = () => {
   const router = useRouter();
@@ -15,6 +17,7 @@ const Login = () => {
   const [error, setError] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
+  const setauthScreen = useSetRecoilState(authScreenAtom)
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -114,6 +117,7 @@ const Login = () => {
             type="submit"
             disabled={isLoading}
             className="w-full py-3 px-6 rounded-full bg-white/15 border border-white text-white font-medium hover:bg-white/20 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+            onClick={() => setauthScreen('false')}
           >
             {isLoading ? <Loader /> : 'Log In'}
           </button>

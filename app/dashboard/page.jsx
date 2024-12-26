@@ -5,6 +5,8 @@ import { motion } from 'framer-motion';
 import Receipt from '@/components/Receipt';
 import { useRazorpay } from '@/hooks/useRazorpay';
 import Loader from '@/components/Loader';
+import authScreenAtom from '@/atom/userAtom';
+import { useSetRecoilState } from 'recoil'
 
 const Dashboard = () => {
   const router = useRouter();
@@ -12,6 +14,7 @@ const Dashboard = () => {
   const [showReceipt, setShowReceipt] = useState(false);
   const [isProcessing, setIsProcessing] = useState(false);
   const razorpayLoaded = useRazorpay();
+  const setauthScreen = useSetRecoilState(authScreenAtom)
 
   useEffect(() => {
     // Check if user is logged in
@@ -284,6 +287,7 @@ const Dashboard = () => {
                     localStorage.removeItem('token');
                     localStorage.removeItem('user');
                     router.push('/login');
+                    setauthScreen('true');
                   }}
                   className="w-full py-3 px-4 rounded-full bg-red-500/20 text-red-300 hover:bg-red-500/30 transition-colors"
                 >

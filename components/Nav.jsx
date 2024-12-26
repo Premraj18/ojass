@@ -12,6 +12,8 @@ import { MdEmojiEvents } from "react-icons/md";
 import { RxCross2 } from 'react-icons/rx'
 import { FiMenu } from "react-icons/fi";
 import { motion, useMotionValueEvent, useScroll } from "framer-motion";
+import { useRecoilValue } from 'recoil';
+import authScreenAtom from '@/atom/userAtom'
 
 // nav data
 export const navData = [
@@ -36,16 +38,20 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation'
 import { useRef, useState, useEffect } from 'react';
 
+
 const Nav = () => {
   const pathname = usePathname();
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [hidden, setHidden] = useState(false);
 
+  const authScreenState = useRecoilValue(authScreenAtom);
+  // console.log(authScreenState)
+
   useEffect(() => {
     // Check if user is logged in
     const token = localStorage.getItem('token');
     setIsLoggedIn(!!token);
-  }, []);
+  }, [isLoggedIn]);
 
   const { scrollY } = useScroll();
 
@@ -100,7 +106,7 @@ const Nav = () => {
           })}
         </div>
         <div className='md:flex items-baseline text-white gap-4 max-sm:justify-end max-sm:flex-1 hidden'>
-          {isLoggedIn ? (
+          {authScreenState === 'false' ? (
             <Link href="/dashboard">
               <button className='border p-1 px-4 bg-white/15 rounded-full hover:bg-white/20 transition-colors'>
                 Dashboard
@@ -148,7 +154,7 @@ const Nav = () => {
               })}
             </div>
             <div className='flex flex-col gap-4 w-full px-8'>
-              {isLoggedIn ? (
+              {authScreenState === 'false' ? (
                 <Link href="/dashboard" onClick={toggleCart}>
                   <button className='w-full py-2 border bg-white/15 rounded-full hover:bg-white/20 transition-colors'>
                     Dashboard

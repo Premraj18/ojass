@@ -32,6 +32,7 @@ export default function RootLayout({
         <link rel="icon" type="image/webp+png" href="/logo.webp" />
       </head>
       <body className={inter.className}>
+        
         <Layout>
           {children}
         </Layout>
