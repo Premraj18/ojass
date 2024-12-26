@@ -3,8 +3,8 @@
         {
             "id": "01",
             "name": "HACK-DE-SCIENCE",
-            "teamSizeMin" : "3",
-            "teamSizeMax" : "5",
+            "teamSizeMin" : "2",
+            "teamSizeMax" : "4",
             "img": "https://ojass-2024.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2FQv8sgXQ%2FVISHWA-CODE-GENESIS.png%20&w=384&q=75",
             "rulebookurl": "https://docs.google.com/document/d/1Sqx-1ewV_iQELXFRG8lwnFJcu5tSotsL",
             "redirect": "event/0/0",
@@ -45,6 +45,8 @@
         {
             "id": "02",
             "name": "VISHWA-CODE-MANIA",
+            "teamSizeMin" : "1",
+            "teamSizeMax" : "3",
             "img": "https://ojass-2024.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2F6tbmCP7%2F3.png&w=384&q=75",
             "rulebookurl": "https://docs.google.com/document/d/1rMX1Rb0-VeHalfK-1tT5KM0L7X7XUzqR",
             "redirect": "event/0/1",
@@ -75,6 +77,8 @@
         {
             "id": "03",
             "name": "TENSORENCODED",
+            "teamSizeMin" : "1",
+            "teamSizeMax" : "3",
             "img": "https://ojass-2024.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2FQv8sgXQ%2FVISHWA-CODE-GENESIS.png%20&w=384&q=75",
             "rulebookurl": "https://docs.google.com/document/d/1R-daEP8r5y5pMwtHak-KKjovnt9eJKbR/",
             "redirect": "event/0/2",
@@ -110,6 +114,8 @@
         {
             "id": "04",
             "name": "MODELMAYHEM",
+            "teamSizeMin" : "1",
+            "teamSizeMax" : "3",
             "img": "https://ojass-2024.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2F6tbmCP7%2F3.png&w=384&q=75",
             "rulebookurl": "https://docs.google.com/document/d/1bfv-GJQ5NovFi6VwYR0ebvjHfoLskvcw/",
             "redirect": "event/0/3",
@@ -145,8 +151,8 @@
         {
             "id": "10",
             "name": "UNDERWATER TRACING",
-            "teamSizeMin" : "3",
-            "teamSizeMax" : "5",
+            "teamSizeMin" : "2",
+            "teamSizeMax" : "4",
             "img": "https://ojass-2024.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2FQv8sgXQ%2FVISHWA-CODE-GENESIS.png%20&w=384&q=75",
             "rulebookurl": "https://docs.google.com/document/d/12AMaNXjA-98ecWXqqRGMU_brh5JH6RLQ",
             "redirect": "event/1/0",
@@ -178,6 +184,8 @@
         {
             "id": "11",
             "name": "AQUA RACE",
+            "teamSizeMin" : "1",
+            "teamSizeMax" : "4",
             "img": "https://ojass-2024.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2F6tbmCP7%2F3.png&w=384&q=75",
             "rulebookurl": "https://docs.google.com/document/d/1YabuwJIOmCGaNneiNlsxJ8NUlVh6ruyn/",
             "redirect": "event/1/1",
@@ -211,8 +219,8 @@
         {
             "id": "20",
             "name": "BIZZTHALON (BUISNESS QUIZ)",
-            "teamSizeMin" : "3",
-            "teamSizeMax" : "5",
+            "teamSizeMin" : "2",
+            "teamSizeMax" : "2",
             "img": "https://ojass-2024.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2FQv8sgXQ%2FVISHWA-CODE-GENESIS.png%20&w=384&q=75",
             "rulebookurl": "https://docs.google.com/document/d/1LC6lOMEGnN26-Fx6xI00CPpkk4t_g46P/",
             "redirect": "event/2/0",
@@ -250,6 +258,8 @@
         {
             "id": "21",
             "name": "SCI-FI QUIZ (TECHNICAL QUIZ)",
+            "teamSizeMin" : "1",
+            "teamSizeMax" : "2",
             "img": "https://ojass-2024.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2F6tbmCP7%2F3.png&w=384&q=75",
             "rulebookurl": "https://docs.google.com/document/d/12S2aGC4XwPWm8nDVGJ0SOIyX3hLyn-S2/",
             "redirect": "event/2/1",
@@ -293,8 +303,8 @@
         {
             "id": "30",
             "name": "CASE STUDY CHALLENGE",
-            "teamSizeMin" : "3",
-            "teamSizeMax" : "5",
+            "teamSizeMin" : "2",
+            "teamSizeMax" : "4",
             "img": "https://ojass-2024.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2FQv8sgXQ%2FVISHWA-CODE-GENESIS.png%20&w=384&q=75",
             "rulebookurl": "https://docs.google.com/document/d/1G2wuNEgO2hxAwn5IKIiAmOVj0R8bmvvp/",
             "redirect": "event/3/0",
@@ -330,6 +340,8 @@
         {
             "id": "31",
             "name": "CONSULTING NEXUS",
+            "teamSizeMin" : "1",
+            "teamSizeMax" : "3",
             "img": "https://ojass-2024.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2F6tbmCP7%2F3.png&w=384&q=75",
             "rulebookurl": "https://docs.google.com/document/d/1je11ou_JJHRcHkB8s4oW986ZuLd7vQ1Q/",
             "redirect": "event/3/1",
@@ -366,8 +378,8 @@
         {
             "id": "40",
             "name": "CRYPTO CLASH",
-            "teamSizeMin" : "3",
-            "teamSizeMax" : "5",
+            "teamSizeMin" : "1",
+            "teamSizeMax" : "2",
             "img": "https://ojass-2024.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2FQv8sgXQ%2FVISHWA-CODE-GENESIS.png%20&w=384&q=75",
             "rulebookurl": "https://docs.google.com/document/d/1AVlet6tv_StEZyKVtPRGfNjpRLgf7bKk/",
             "redirect": "event/4/0",
@@ -415,8 +427,8 @@
         {
             "id": "41",
             "name": "MINT & BID: NFT SHOWDOWN",
-            "teamSizeMin" : "3",
-            "teamSizeMax" : "5",
+            "teamSizeMin" : "1",
+            "teamSizeMax" : "3",
             "img": "https://ojass-2024.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2FQv8sgXQ%2FVISHWA-CODE-GENESIS.png%20&w=384&q=75",
             "rulebookurl": "https://docs.google.com/document/d/1wQZg9DJFhvbQVZT7qCwuVDFIVOQtvsfo/",
             "redirect": "event/4/1",
@@ -459,6 +471,8 @@
         {
             "id": "42",
             "name": "HACK IT (ETHICAL HACKING)",
+            "teamSizeMin" : "2",
+            "teamSizeMax" : "4",
             "img": "https://ojass-2024.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2F6tbmCP7%2F3.png&w=384&q=75",
             "rulebookurl": "https://docs.google.com/document/d/17tYVF9Jx30RYdrQrAL1hLMdidYWkXYFr/",
             "redirect": "event/4/2",
@@ -503,8 +517,8 @@
         {
             "id": "50",
             "name": "ELECTROSPECTION",
-            "teamSizeMin" : "3",
-            "teamSizeMax" : "5",
+            "teamSizeMin" : "2",
+            "teamSizeMax" : "2",
             "img": "https://ojass-2024.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2FQv8sgXQ%2FVISHWA-CODE-GENESIS.png%20&w=384&q=75",
             "rulebookurl": "https://docs.google.com/document/d/1m3iOBnY3qF3uRNSov8Ij2D1laKDkPbyr",
             "redirect": "event/5/0",
@@ -545,6 +559,8 @@
         {
             "id": "51",
             "name": "WAXCOMBS",
+            "teamSizeMin" : "2",
+            "teamSizeMax" : "3",
             "img": "https://ojass-2024.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2F6tbmCP7%2F3.png&w=384&q=75",
             "rulebookurl": "https://docs.google.com/document/d/1B0PXQ1eE45Cgr4GNM1NbuAaCJH70Nx9f/",
             "redirect": "event/5/1",
@@ -579,6 +595,8 @@
         {
             "id": "52",
             "name": "SANRACHNA (BRIDGE BUILDING)",
+            "teamSizeMin" : "4",
+            "teamSizeMax" : "5",
             "img": "https://ojass-2024.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2FQv8sgXQ%2FVISHWA-CODE-GENESIS.png%20&w=384&q=75",
             "rulebookurl": "https://docs.google.com/document/d/1iPxuOWjpbDRCr_rMTPnCoNu3PQ6LnyLp/",
             "redirect": "event/5/2",
@@ -621,6 +639,8 @@
         {
             "id": "53",
             "name": "CANSYS (CAD-CAE)",
+            "teamSizeMin" : "1",
+            "teamSizeMax" : "2",
             "img": "https://ojass-2024.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2F6tbmCP7%2F3.png&w=384&q=75",
             "rulebookurl": "https://docs.google.com/document/d/1SdJPkWDutuz48vocZ93DGsdoiY7x-L8K/",
             "redirect": "event/5/3",
@@ -660,7 +680,7 @@
         {
             "id": "60",
             "name": "BGMI",
-            "teamSizeMin" : "3",
+            "teamSizeMin" : "4",
             "teamSizeMax" : "5",
             "img": "https://ojass-2024.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2FQv8sgXQ%2FVISHWA-CODE-GENESIS.png%20&w=384&q=75",
             "rulebookurl": "https://docs.google.com/document/d/1Tzw2e0WE3QON95Jxt2Anqh9PyZCwn4G8/",
@@ -705,6 +725,8 @@
         {
             "id": "61",
             "name": "ENDGAME",
+            "teamSizeMin" : "1",
+            "teamSizeMax" : "1",
             "img": "https://ojass-2024.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2F6tbmCP7%2F3.png&w=384&q=75",
             "rulebookurl": "https://docs.google.com/document/d/1l0igrNWK4WbmaxFJgQ8oVm2D_A_u6sZd",
             "redirect": "event/6/1",
@@ -745,6 +767,8 @@
         {
             "id": "62",
             "name": "VALORANT",
+            "teamSizeMin" : "5",
+            "teamSizeMax" : "6",
             "img": "https://ojass-2024.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2FQv8sgXQ%2FVISHWA-CODE-GENESIS.png%20&w=384&q=75",
             "rulebookurl": "https://docs.google.com/document/d/1MW6Vhn0G5wcEUVlR18iwjYI0RTi6wCGY/",
             "redirect": "event/6/2",
@@ -782,6 +806,8 @@
         {
             "id": "63",
             "name": "FIFA",
+            "teamSizeMin" : "1",
+            "teamSizeMax" : "1",
             "img": "https://ojass-2024.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2F6tbmCP7%2F3.png&w=384&q=75",
             "rulebookurl": "https://docs.google.com/document/d/1ZLVbFqqdBaEWIAqO59QdgTDmE3iT6myW",
             "redirect": "event/6/3",
@@ -861,6 +887,8 @@
         {
             "id": "71",
             "name": "FRAMES & TALES",
+            "teamSizeMin" : "1",
+            "teamSizeMax" : "3",
             "img": "https://ojass-2024.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2F6tbmCP7%2F3.png&w=384&q=75",
             "rulebookurl": "https://docs.google.com/document/d/1HxrbQ3o9c57blLt3kUkgUAC1d0BIK3Wm",
             "redirect": "event/7/1",
@@ -894,6 +922,8 @@
         {
             "id": "72",
             "name": "LIGHT, CAMERA, OJASS",
+            "teamSizeMin" : "1",
+            "teamSizeMax" : "2",
             "img": "https://ojass-2024.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2FQv8sgXQ%2FVISHWA-CODE-GENESIS.png%20&w=384&q=75",
             "rulebookurl": "https://docs.google.com/document/d/1gGCU00Q7FovT73QQtrpUyneQxEeD5I4R",
             "redirect": "event/7/2",
@@ -930,9 +960,10 @@
 
     [
         {
+            "id": "80",
             "name": "BUSINESS SIMULATION",
-            "teamSizeMin" : "3",
-            "teamSizeMax" : "5",
+            "teamSizeMin" : "2",
+            "teamSizeMax" : "4",
             "img": "https://ojass-2024.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2FQv8sgXQ%2FVISHWA-CODE-GENESIS.png%20&w=384&q=75",
             "rulebookurl": "https://docs.google.com/document/d/1cHDaTTyeijwyFaxEVOA8YPSUJ42h3bMk/",
             "redirect": "event/8/0",
@@ -967,7 +998,10 @@
         },
 
         {
+            "id": "81",
             "name": "MOCK STOCK",
+            "teamSizeMin" : "1",
+            "teamSizeMax" : "1",
             "img": "https://ojass-2024.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2F6tbmCP7%2F3.png&w=384&q=75",
             "rulebookurl": "https://docs.google.com/document/d/1CNQ5eMKciV8Euwi8diU7LXPmTrCcMO4H",
             "redirect": "event/8/1",
@@ -999,7 +1033,10 @@
         },
 
         {
+            "id": "82",
             "name": "STARTUP IDEATHON",
+            "teamSizeMin" : "1",
+            "teamSizeMax" : "4",
             "img": "https://ojass-2024.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2FQv8sgXQ%2FVISHWA-CODE-GENESIS.png%20&w=384&q=75",
             "rulebookurl": "https://docs.google.com/document/d/1_9aaNapuVZqonOXfgBgRQO0tE-WFKEgj/",
             "redirect": "event/8/2",
@@ -1040,9 +1077,10 @@
 
     [
         {
+            "id": "90",
             "name": "KURUSHETRA (ROBO WAR)",
-            "teamSizeMin" : "3",
-            "teamSizeMax" : "5",
+            "teamSizeMin" : "2",
+            "teamSizeMax" : "4",
             "img": "https://ojass-2024.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2FQv8sgXQ%2FVISHWA-CODE-GENESIS.png%20&w=384&q=75",
             "rulebookurl": "https://docs.google.com/document/d/1-ZAvwIunDOKHQflxilcF7xMTLG7By0EY/",
             "redirect": "event/9/0",
@@ -1074,7 +1112,10 @@
         },
 
         {
+            "id": "91",
             "name": "MAZE MARATHON (MICRO MOUSE)",
+            "teamSizeMin" : "2",
+            "teamSizeMax" : "5",
             "img": "https://ojass-2024.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2F6tbmCP7%2F3.png&w=384&q=75",
             "rulebookurl": "https://docs.google.com/document/d/17D4cl3HiLxGHx93kyra4Ire9TpjpDenN/",
             "redirect": "event/9/1",
@@ -1105,13 +1146,13 @@
         },
 
         {
+            "id": "92",
             "name": "ROBO SOCCER",
-            "teamSizeMin" : "3",
-            "teamSizeMax" : "5",
+            "teamSizeMin" : "2",
+            "teamSizeMax" : "4",
             "img": "https://ojass-2024.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2FQv8sgXQ%2FVISHWA-CODE-GENESIS.png%20&w=384&q=75",
             "rulebookurl": "https://docs.google.com/document/d/1TobBSf9RhwyHiYIql2EgBQ9nStrpS6h2",
             "redirect": "event/9/2",
-            "organizer": "Market Mavericks",
             "description": "Design a wired or wireless robot. This bot must navigate the arena, carrying a ball of diameter 5-10 cm, and skilfully score by pushing or throwing it into the opponent's goalpost.",
             "prizes": {
                 "total": "₹40,000",
@@ -1141,7 +1182,10 @@
         },
 
         {
+            "id": "93",
             "name": "ROBO RUMBLE (ATV BOT)",
+            "teamSizeMin" : "2",
+            "teamSizeMax" : "5",
             "img": "https://ojass-2024.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2F6tbmCP7%2F3.png&w=384&q=75",
             "rulebookurl": "https://docs.google.com/document/d/1cunjXs4zWyfbjuzA_zcAwEp49_KsTD-f/",
             "redirect": "event/9/3",
@@ -1174,11 +1218,13 @@
         },
 
         {
+            "id": "94",
             "name": "TRACEBOT CHALLENGE (LINE TRACING)",
+            "teamSizeMin" : "1",
+            "teamSizeMax" : "4",
             "img": "https://ojass-2024.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2FQv8sgXQ%2FVISHWA-CODE-GENESIS.png%20&w=384&q=75",
             "rulebookurl": "https://docs.google.com/document/d/19HKcyYW9OjHO5RLUQSEZG61b1C3xLko8/",
             "redirect": "event/9/4",
-            "organizer": "Coding Chronicles",
             "description": "Teams are challenged to design and build a line-following robot capable of autonomous operation. The robot must navigate a predefined track featuring straight paths, sharp turns, curves, and intersections. Additionally, the robot should demonstrate its ability to detect and follow the shortest path efficiently.",
             "prizes": {
                 "total": "₹25,000",
@@ -1215,9 +1261,10 @@
 
     [
         {
+            "id": "100",
             "name": "DRONE RACE CHALLENGE",
-            "teamSizeMin" : "3",
-            "teamSizeMax" : "5",
+            "teamSizeMin" : "1",
+            "teamSizeMax" : "4",
             "img": "https://ojass-2024.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2FQv8sgXQ%2FVISHWA-CODE-GENESIS.png%20&w=384&q=75",
             "rulebookurl": "https://docs.google.com/document/d/1YZVO-AQXlj1IJ959kKKaciHmGnyTtXSO/",
             "redirect": "event/10/0",
@@ -1253,7 +1300,10 @@
         },
 
         {
+            "id": "101",
             "name": "GLIDE IT!",
+            "teamSizeMin" : "1",
+            "teamSizeMax" : "3",
             "img": "https://ojass-2024.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2F6tbmCP7%2F3.png&w=384&q=75",
             "rulebookurl": "https://docs.google.com/document/d/1tXCGlIyp3estC1NVXEKEOXh0dcGflJpr/",
             "redirect": "event/10/1",
@@ -1297,11 +1347,13 @@
         },
 
         {
+            "id": "102",
             "name": "NO GROUND ZONE",
+            "teamSizeMin" : "1",
+            "teamSizeMax" : "4",
             "img": "https://ojass-2024.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2FQv8sgXQ%2FVISHWA-CODE-GENESIS.png%20&w=384&q=75",
             "rulebookurl": "https://docs.google.com/document/d/1kDKdQ_3OqGEQvXFJZ_mdAXaikQ5rdhRv/",
             "redirect": "event/10/2",
-            "organizer": "Coding Chronicles",
             "description": "No Ground Zone is a competition for aviation enthusiasts. Want to put your aviation knowledge into reality and get exciting prizes for it? Then get ready for OJASS, as in its NO Ground Zone, it has plenty of opportunities waiting.",
             "prizes": {
                 "total": "₹35,000",
@@ -1332,9 +1384,10 @@
 
     [
         {
+            "id": "110",
             "name": "DEBATE THE UN",
-            "teamSizeMin" : "3",
-            "teamSizeMax" : "5",
+            "teamSizeMin" : "1",
+            "teamSizeMax" : "1",
             "img": "https://ojass-2024.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2FQv8sgXQ%2FVISHWA-CODE-GENESIS.png%20&w=384&q=75",
             "rulebookurl": "https://docs.google.com/document/d/1j_8SLuBpazINA18ZQ04CScLUXVFUFYVT/",
             "redirect": "event/11/0",
@@ -1369,7 +1422,10 @@
         },
 
         {
+            "id": "111",
             "name": "MOCK IPL AUCTION",
+            "teamSizeMin" : "1",
+            "teamSizeMax" : "4",
             "img": "https://ojass-2024.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2F6tbmCP7%2F3.png&w=384&q=75",
             "rulebookurl": "https://docs.google.com/document/d/1fRnHHgWt7tNUN7leiavOnp7WMukHvAHW/",
             "redirect": "event/11/1",
