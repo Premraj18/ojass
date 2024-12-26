@@ -159,7 +159,7 @@ const AdminDashboard = () => {
           {activeTab === 'students' ? (
             <div className="bg-gray-800 rounded-lg p-6">
               <h2 className="text-xl font-semibold text-white mb-4">Students</h2>
-              <div className="flex gap-2 mb-6">
+              <div className="flex flex-wrap gap-2 mb-6">
                 <input
                   type="text"
                   value={searchQuery}

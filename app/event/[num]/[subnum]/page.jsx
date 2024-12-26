@@ -88,7 +88,7 @@ const Page = () => {
               <p className="mb-4 text-base leading-7 md:w-3/4 text-gray-300 ">
                 {dataeve.description}
               </p>
-              <div className='flex lg:text-xl text-xl md:text-base items-baseline gap-7'>
+              <div className='flex flex-wrap lg:text-xl text-xl md:text-base items-baseline gap-7'>
                 {isRegistered ? (
                   <div className="px-5 py-1 text-base rounded-full border-2 bg-green-500/20 text-green-300">
                     Already Registered
