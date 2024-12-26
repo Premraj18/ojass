@@ -20,10 +20,10 @@ function generateOjassId() {
 
 // Helper function to get prices from env with fallbacks
 const getPrices = () => ({
-  nitJsrEarly: parseInt(process.env.NITJSR_EARLY_PRICE) || 1,
-  nitJsrRegular: parseInt(process.env.NITJSR_REGULAR_PRICE) || 2,
-  otherEarly: parseInt(process.env.OTHER_EARLY_PRICE) || 3,
-  otherRegular: parseInt(process.env.OTHER_REGULAR_PRICE) || 4
+  nitJsrEarly: parseInt(process.env.NEXT_PUBLIC_NITJSR_EARLY_PRICE) || 1,
+  nitJsrRegular: parseInt(process.env.NEXT_PUBLIC_NITJSR_REGULAR_PRICE) || 2,
+  otherEarly: parseInt(process.env.NEXT_PUBLIC_OTHER_EARLY_PRICE) || 3,
+  otherRegular: parseInt(process.env.NEXT_PUBLIC_OTHER_REGULAR_PRICE) || 4
 });
 
 const userSchema = new mongoose.Schema({

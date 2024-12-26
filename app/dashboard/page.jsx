@@ -35,10 +35,10 @@ const Dashboard = () => {
     const now = new Date();
     const earlyBirdDeadline = new Date('2025-01-10');
     const prices = {
-      nitJsrEarly: parseInt(process.env.NITJSR_EARLY_PRICE) || 1,
-      nitJsrRegular: parseInt(process.env.NITJSR_REGULAR_PRICE) || 2,
-      otherEarly: parseInt(process.env.OTHER_EARLY_PRICE) || 3,
-      otherRegular: parseInt(process.env.OTHER_REGULAR_PRICE) || 4
+      nitJsrEarly: parseInt(process.env.NEXT_PUBLIC_NITJSR_EARLY_PRICE) || 1,
+      nitJsrRegular: parseInt(process.env.NEXT_PUBLIC_NITJSR_REGULAR_PRICE) || 2,
+      otherEarly: parseInt(process.env.NEXT_PUBLIC_OTHER_EARLY_PRICE) || 3,
+      otherRegular: parseInt(process.env.NEXT_PUBLIC_OTHER_REGULAR_PRICE) || 4
     };
 
     const isEarlyBird = now <= earlyBirdDeadline;
@@ -72,10 +72,10 @@ const Dashboard = () => {
 
       // Get prices from environment variables with fallbacks
       const prices = {
-        nitJsrEarly: parseInt(process.env.NITJSR_EARLY_PRICE) || 1,
-        nitJsrRegular: parseInt(process.env.NITJSR_REGULAR_PRICE) || 2,
-        otherEarly: parseInt(process.env.OTHER_EARLY_PRICE) || 3,
-        otherRegular: parseInt(process.env.OTHER_REGULAR_PRICE) || 4
+        nitJsrEarly: parseInt(process.env.NEXT_PUBLIC_NITJSR_EARLY_PRICE) || 1,
+        nitJsrRegular: parseInt(process.env.NEXT_PUBLIC_NITJSR_REGULAR_PRICE) || 2,
+        otherEarly: parseInt(process.env.NEXT_PUBLIC_OTHER_EARLY_PRICE) || 3,
+        otherRegular: parseInt(process.env.NEXT_PUBLIC_OTHER_REGULAR_PRICE) || 4
       };
 
       const amount = userData.isNitJsr
