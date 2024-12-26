@@ -223,7 +223,7 @@ const Dashboard = () => {
                 {!user.paid && (
                   <p className="text-sm text-yellow-400">
                     {registrationInfo.phase === 'Early Bird'
-                      ? '* Early bird offer ends on January 1st, 2024'
+                      ? '* Early bird offer ends on January 10th, 2024'
                       : '* Regular registration fee applies'}
                   </p>
                 )}
