@@ -6,6 +6,123 @@ import toast from 'react-hot-toast';
 import UserDetailsModal from '@/components/admin/UserDetailsModal';
 import AdminNav from '@/components/admin/AdminNav';
 
+const TeamDetailsPopover = ({ participant, eventDetails, event, onClose }) => {
+  if (!eventDetails || !event) return null;
+
+  const isTeamEvent = parseInt(event.teamSizeMin) > 1;
+
+  const handleOverlayClick = (e) => {
+    if (e.target === e.currentTarget) {
+      onClose();
+    }
+  };
+
+  return (
+    <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50" onClick={handleOverlayClick}>
+      <div className="bg-gray-800 rounded-lg p-6 max-w-lg w-full mx-4 relative" onClick={e => e.stopPropagation()}>
+        <button 
+          onClick={onClose}
+          className="absolute top-4 right-4 text-gray-400 hover:text-white"
+        >
+          ✕
+        </button>
+        
+        <h3 className="text-xl font-semibold text-white mb-4">
+          {event.name}
+        </h3>
+        
+        <div className="space-y-4 max-h-[70vh] overflow-y-auto pr-2">
+          {/* Participant Info */}
+          <div className="bg-gray-700/50 p-4 rounded-lg">
+            <div className="flex items-center gap-2 mb-2">
+              <h4 className="text-lg font-medium text-white">{participant.name}</h4>
+              <span className={`px-2 py-1 rounded-full text-sm ${
+                eventDetails.isTeamLeader ? 'bg-green-500/20 text-green-400' : 'bg-blue-500/20 text-blue-400'
+              }`}>
+                {eventDetails.isTeamLeader ? 'Team Leader' : 'Team Member'}
+              </span>
+            </div>
+            <div className="grid grid-cols-2 gap-2 text-sm">
+              <p className="text-gray-400">OJASS ID: <span className="text-gray-200">{participant.ojassId}</span></p>
+              <p className="text-gray-400">College: <span className="text-gray-200">{participant.college}</span></p>
+              <p className="text-gray-400">Email: <span className="text-gray-200">{participant.email}</span></p>
+            </div>
+          </div>
+
+          {/* Team Information */}
+          {isTeamEvent && (
+            <div className="bg-gray-700/50 p-4 rounded-lg">
+              <h4 className="text-lg font-medium text-white mb-3">Team Details</h4>
+              
+              {eventDetails.isTeamLeader ? (
+                <>
+                  <p className="text-gray-400 mb-2">Team Members ({eventDetails.teamMembers?.length || 0}):</p>
+                  <div className="space-y-2">
+                    {eventDetails.teamMembers?.map((memberId, idx) => (
+                      <div key={idx} className="bg-gray-600/50 p-2 rounded flex items-center justify-between">
+                        <span className="text-gray-200">{memberId}</span>
+                        <span className="text-xs text-gray-400">Member {idx + 1}</span>
+                      </div>
+                    ))}
+                  </div>
+                </>
+              ) : (
+                <>
+                  <p className="text-gray-400">Team Leader:</p>
+                  <div className="bg-gray-600/50 p-2 rounded mt-1">
+                    <span className="text-gray-200">{eventDetails.teamLeader}</span>
+                  </div>
+                </>
+              )}
+            </div>
+          )}
+
+          {/* Event & Registration Details */}
+          <div className="bg-gray-700/50 p-4 rounded-lg">
+            <h4 className="text-lg font-medium text-white mb-3">Registration Details</h4>
+            <div className="space-y-2">
+              <div className="flex justify-between items-center">
+                <span className="text-gray-400">Registration Date:</span>
+                <span className="text-gray-200">
+                  {new Date(eventDetails.registrationDate).toLocaleString('en-IN', {
+                    day: 'numeric',
+                    month: 'short',
+                    year: 'numeric',
+                    hour: '2-digit',
+                    minute: '2-digit'
+                  })}
+                </span>
+              </div>
+              <div className="flex justify-between items-center">
+                <span className="text-gray-400">Payment Status:</span>
+                <span className={`px-2 py-1 rounded-full text-sm ${
+                  participant.paid ? 'bg-green-500/20 text-green-400' : 'bg-red-500/20 text-red-400'
+                }`}>
+                  {participant.paid ? 'Paid' : 'Payment Pending'}
+                </span>
+              </div>
+              {participant.payment && (
+                <>
+                  <div className="flex justify-between items-center">
+                    <span className="text-gray-400">Payment Amount:</span>
+                    <span className="text-gray-200">₹{participant.payment.amount || 0}</span>
+                  </div>
+                  {participant.payment.razorpayPaymentId && (
+                    <div className="flex justify-between items-center">
+                      <span className="text-gray-400">Payment ID:</span>
+                      <span className="text-gray-200">{participant.payment.razorpayPaymentId}</span>
+                    </div>
+                  )}
+                </>
+              )}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
 const AdminDashboard = () => {
   const router = useRouter();
   const [searchQuery, setSearchQuery] = useState('');
@@ -18,6 +135,7 @@ const AdminDashboard = () => {
   const [totalPages, setTotalPages] = useState(1);
   const ITEMS_PER_PAGE = 10;
   const [selectedUser, setSelectedUser] = useState(null);
+  const [selectedTeamDetails, setSelectedTeamDetails] = useState(null);
 
   useEffect(() => {
     const isAdmin = localStorage.getItem('adminToken');
@@ -101,21 +219,18 @@ const AdminDashboard = () => {
     }
   };
 
-  const handleParticipantClick = async (participantId) => {
-    setLoading(true);
-    try {
-      const res = await fetch(`/api/admin/user/${participantId}`);
-      const data = await res.json();
-      
-      if (res.ok) {
-        setSelectedUser(data.user);
-      } else {
-        throw new Error(data.error);
-      }
-    } catch (error) {
-      toast.error('Failed to fetch user details');
-    } finally {
-      setLoading(false);
+  const handleParticipantClick = (participant) => {
+    const event = eventData.flat().find(e => e.id === selectedEvent);
+    const eventDetails = participant.eventDetails?.find(d => d.eventId === selectedEvent);
+    
+    if (event && eventDetails) {
+      setSelectedTeamDetails({
+        participant,
+        eventDetails,
+        event
+      });
+    } else {
+      toast.error('Could not load team details');
     }
   };
 
@@ -266,18 +381,75 @@ const AdminDashboard = () => {
               </select>
 
               <div className="space-y-4">
-                {eventParticipants.map(participant => (
-                  <div 
-                    key={participant._id} 
-                    className="bg-gray-700 p-4 rounded-lg cursor-pointer hover:bg-gray-600 transition-colors"
-                    onClick={() => handleParticipantClick(participant._id)}
-                  >
-                    <h3 className="text-lg font-semibold text-white">{participant.name}</h3>
-                    <p className="text-gray-300">OJASS ID: {participant.ojassId}</p>
-                    <p className="text-gray-300">College: {participant.college}</p>
-                    <p className="text-gray-300">Registration Date: {new Date(participant.registrationDate).toLocaleDateString()}</p>
+                {eventParticipants.map(participant => {
+                  const eventDetails = participant.eventDetails?.find(d => d.eventId === selectedEvent);
+                  const event = eventData.flat().find(e => e.id === selectedEvent);
+                  const isTeamEvent = event && parseInt(event.teamSizeMin) > 1;
+                  const registrationDate = eventDetails?.registrationDate || participant.registrationDate;
+
+                  return (
+                    <div 
+                      key={participant._id} 
+                      className="bg-gray-700 p-4 rounded-lg cursor-pointer hover:bg-gray-600 transition-colors"
+                      onClick={() => handleParticipantClick(participant)}
+                    >
+                      <div className="flex justify-between items-start">
+                        <div>
+                          <div className="flex items-center gap-2">
+                            <h3 className="text-lg font-semibold text-white">{participant.name}</h3>
+                            {isTeamEvent && eventDetails && (
+                              <span className={`px-2 py-1 rounded-full text-sm ${
+                                eventDetails.isTeamLeader ? 'bg-green-500/20 text-green-400' : 'bg-blue-500/20 text-blue-400'
+                              }`}>
+                                {eventDetails.isTeamLeader ? 'Leader' : 'Member'}
+                              </span>
+                            )}
+                          </div>
+                          <p className="text-gray-300">OJASS ID: {participant.ojassId}</p>
+                          <p className="text-gray-300">College: {participant.college}</p>
+                          
+                          {isTeamEvent && eventDetails && (
+                            <div className="mt-2">
+                              {!eventDetails.isTeamLeader && eventDetails.teamLeader && (
+                                <p className="text-gray-300">
+                                  Team Leader: <span className="text-blue-400">{eventDetails.teamLeader}</span>
+                                </p>
+                              )}
+                              {eventDetails.isTeamLeader && eventDetails.teamMembers && eventDetails.teamMembers.length > 0 && (
+                                <div>
+                                  <p className="text-gray-400">Team Size: {eventDetails.teamMembers.length + 1}</p>
+                                </div>
+                              )}
+                            </div>
+                          )}
+                        </div>
+                        <div className="text-right text-sm flex flex-col items-end gap-2">
+                          <span className={`px-2 py-1 rounded-full ${
+                            participant.paid ? 'bg-green-500/20 text-green-400' : 'bg-red-500/20 text-red-400'
+                          }`}>
+                            {participant.paid ? 'Paid' : 'Unpaid'}
+                          </span>
+                          {registrationDate && (
+                            <p className="text-gray-400">
+                              {new Date(registrationDate).toLocaleString('en-IN', {
+                                day: 'numeric',
+                                month: 'short',
+                                year: 'numeric',
+                                hour: '2-digit',
+                                minute: '2-digit'
+                              })}
+                            </p>
+                          )}
+                        </div>
+                      </div>
+                    </div>
+                  );
+                })}
+                {selectedEvent && eventParticipants.length === 0 && (
+                  <div className="text-center text-gray-400 py-8">
+                    No participants found for this event
                   </div>
-                ))}
+                )}
               </div>
             </div>
           )}
@@ -301,12 +473,22 @@ const AdminDashboard = () => {
         </div>
       </footer>
 
-      {/* User Details Modal */}
-      {selectedUser && (
+      {/* User Details Modal - Only for student search */}
+      {activeTab === 'students' && selectedUser && (
         <UserDetailsModal
           user={selectedUser}
           eventData={eventData}
           onClose={() => setSelectedUser(null)}
+        />
+      )}
+
+      {/* Team Details Popover - For event participants */}
+      {selectedTeamDetails && (
+        <TeamDetailsPopover
+          participant={selectedTeamDetails.participant}
+          eventDetails={selectedTeamDetails.eventDetails}
+          event={selectedTeamDetails.event}
+          onClose={() => setSelectedTeamDetails(null)}
         />
       )}
     </div>

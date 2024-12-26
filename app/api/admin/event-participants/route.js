@@ -18,7 +18,18 @@ export async function GET(req) {
 
     const participants = await User.find({
       events: eventId
-    }).select('name ojassId college registrationDate');
+    }).select({
+      name: 1,
+      email: 1,
+      phone: 1,
+      ojassId: 1,
+      college: 1,
+      paid: 1,
+      events: 1,
+      eventDetails: 1,
+      registrationDate: 1,
+      payment: 1
+    }).sort({ registrationDate: -1 });
 
     return NextResponse.json({ participants });
   } catch (error) {

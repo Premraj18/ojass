@@ -1,164 +1,40 @@
 import mongoose from 'mongoose';
 
-// Function to generate random OJASS ID
-function generateOjassId() {
-  const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
-  let result = 'OJASS-';
-  for (let i = 0; i < 6; i++) {
-    result += characters.charAt(Math.floor(Math.random() * characters.length));
-  }
-  return result;
-}
-
-// Helper function to get prices from env with fallbacks
-const getPrices = () => ({
-  nitJsrEarly: parseInt(process.env.NITJSR_EARLY_PRICE) || 1,
-  nitJsrRegular: parseInt(process.env.NITJSR_REGULAR_PRICE) || 2,
-  otherEarly: parseInt(process.env.OTHER_EARLY_PRICE) || 3,
-  otherRegular: parseInt(process.env.OTHER_REGULAR_PRICE) || 4
-});
-
 const userSchema = new mongoose.Schema({
-  name: {
-    type: String,
-    required: [true, 'Name is required'],
-    trim: true
-  },
-  email: {
-    type: String,
-    required: [true, 'Email is required'],
-    unique: true,
-    trim: true,
-    lowercase: true
-  },
-  password: {
-    type: String,
-    required: [true, 'Password is required']
-  },
-  ojassId: {
-    type: String,
-    unique: true,
-    default: generateOjassId
-  },
-  isNitJsr: {
-    type: Boolean,
-    required: [true, 'Please specify if you are from NIT Jamshedpur'],
-    default: false
-  },
-  college: {
-    type: String,
-    required: [true, 'College name is required'],
-    trim: true
-  },
+  name: String,
+  email: String,
+  password: String,
+  ojassId: String,
+  college: String,
+  isNitJsr: Boolean,
   paid: {
     type: Boolean,
     default: false
   },
-  paidAmount: {
-    type: Number,
-    default: 0
-  },
+  idCardUrl: String,
   registrationDate: {
     type: Date,
     default: Date.now
   },
-  idCardUrl: {
-    type: String,
-    required: [true, 'ID Card image is required']
-  },
-  paymentId: {
-    type: String,
-    sparse: true
-  },
-  paymentDate: {
-    type: Date
-  },
-  payment: {
-    receiptId: {
-      type: String,
-      sparse: true
-    },
-    razorpayOrderId: {
-      type: String,
-      sparse: true
-    },
-    razorpayPaymentId: {
-      type: String,
-      sparse: true
-    },
-    amount: {
-      type: Number,
-      default: 0
-    },
-    date: {
-      type: Date
-    },
-    status: {
-      type: String,
-      enum: ['pending', 'completed', 'failed'],
-      default: 'pending'
-    }
-  },
-  events: [{
-    type: String,  // Event IDs
-    sparse: true
-  }],
-  eventDetails: [{
+  events: [String], // Array of event IDs
+  eventDetails: [{ // Array of event registration details
     eventId: String,
     eventName: String,
-    registrationDate: Date
-  }]
-}, { 
-  timestamps: true,
-  // Add this to ensure virtuals are included in the response
-  toJSON: { virtuals: true },
-  toObject: { virtuals: true }
-});
-
-// Update the early bird deadline in the userSchema
-const EARLY_BIRD_DEADLINE = new Date('2025-01-10');
-
-// Update required payment amount calculation
-userSchema.virtual('requiredAmount').get(function() {
-  const registrationDate = this.registrationDate || new Date();
-  const prices = getPrices();
-  
-  if (this.isNitJsr) {
-    return registrationDate <= EARLY_BIRD_DEADLINE ? prices.nitJsrEarly : prices.nitJsrRegular;
-  } else {
-    return registrationDate <= EARLY_BIRD_DEADLINE ? prices.otherEarly : prices.otherRegular;
+    registrationDate: Date,
+    isTeamLeader: Boolean,
+    teamMembers: [String], // Array of team member OJASS IDs
+    isTeamMember: Boolean,
+    teamLeader: String // OJASS ID of team leader
+  }],
+  payment: {
+    receiptId: String,
+    razorpayOrderId: String,
+    razorpayPaymentId: String,
+    amount: Number,
+    date: Date,
+    status: String
   }
 });
 
-// Add virtual for registration phase
-userSchema.virtual('registrationPhase').get(function() {
-  const now = new Date();
-  
-  return now <= EARLY_BIRD_DEADLINE ? 'Early Bird' : 'Regular';
-});
-
-// Ensure unique OJASS ID before saving
-userSchema.pre('save', async function(next) {
-  if (this.isNew) {
-    let isUnique = false;
-    let attempts = 0;
-    
-    while (!isUnique && attempts < 10) {
-      const ojassId = generateOjassId();
-      const existingUser = await this.constructor.findOne({ ojassId });
-      
-      if (!existingUser) {
-        this.ojassId = ojassId;
-        isUnique = true;
-      }
-      attempts++;
-    }
-    
-    if (!isUnique) {
-      throw new Error('Unable to generate unique OJASS ID');
-    }
-  }
-  next();
-});
-
-export default mongoose.models.User || mongoose.model('User', userSchema); 
+const User = mongoose.models.User || mongoose.model('User', userSchema);
+export default User; 

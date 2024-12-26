@@ -8,14 +8,58 @@ export async function POST(req) {
     
     const { userId, eventId } = await req.json();
 
-    if (!userId || !eventId) {
+    // Find user and check if they're registered
+    const user = await User.findById(userId);
+    if (!user || !user.events?.includes(eventId)) {
       return NextResponse.json(
-        { error: 'Missing required fields' },
-        { status: 400 }
+        { error: 'Event registration not found' },
+        { status: 404 }
       );
     }
 
-    // Find user and remove event
+    // Get event details
+    const eventDetails = user.eventDetails?.find(d => d.eventId === eventId);
+    
+    // If user is team leader, unregister all team members
+    if (eventDetails?.isTeamLeader && eventDetails.teamMembers?.length > 0) {
+      // Find and update all team members
+      await Promise.all([
+        // Remove event from team members
+        User.updateMany(
+          { 
+            ojassId: { $in: eventDetails.teamMembers }
+          },
+          {
+            $pull: {
+              events: eventId,
+              eventDetails: { eventId: eventId }
+            }
+          }
+        ),
+        // Remove team members from the event
+        User.updateMany(
+          { 
+            'eventDetails.teamMembers': user.ojassId,
+            'eventDetails.eventId': eventId
+          },
+          {
+            $pull: {
+              events: eventId,
+              eventDetails: { eventId: eventId }
+            }
+          }
+        )
+      ]);
+    }
+    // If user is team member, only allow if team is being unregistered by leader
+    else if (eventDetails?.isTeamMember) {
+      return NextResponse.json(
+        { error: 'Only team leaders can unregister the team' },
+        { status: 403 }
+      );
+    }
+
+    // Update the user (whether team leader or individual participant)
     const updatedUser = await User.findByIdAndUpdate(
       userId,
       {
@@ -25,19 +69,14 @@ export async function POST(req) {
         }
       },
       { new: true }
-    );
-
-    if (!updatedUser) {
-      return NextResponse.json(
-        { error: 'User not found' },
-        { status: 404 }
-      );
-    }
+    ).select('-password');
 
     return NextResponse.json({
       success: true,
-      events: updatedUser.events,
-      message: 'Successfully unregistered from event'
+      user: updatedUser,
+      message: eventDetails?.isTeamLeader 
+        ? 'Successfully unregistered team from event'
+        : 'Successfully unregistered from event'
     });
   } catch (error) {
     console.error('Event unregistration error:', error);

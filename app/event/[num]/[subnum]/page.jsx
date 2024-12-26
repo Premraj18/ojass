@@ -16,56 +16,72 @@ const Page = () => {
 
   useEffect(() => {
     const userData = localStorage.getItem('user');
-    if (!userData) {
+    if (userData) {
+      setUser(JSON.parse(userData));
+    }
+    setLoading(false);
+  }, []);
+
+  const handleRegister = () => {
+    // If not logged in, redirect to login
+    if (!user) {
       router.push('/login');
       return;
     }
-    setUser(JSON.parse(userData));
-    setLoading(false);
-  }, [router]);
 
-  const handleRegister = async () => {
     if (!user.paid) {
       toast.error('Please complete your registration payment first');
       return;
     }
 
-    try {
-      const res = await fetch('/api/register-event', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          userId: user._id,
-          eventId: dataeve.id,
-          eventName: dataeve.name
-        }),
-      });
-
-      const data = await res.json();
-
-      if (res.ok) {
-        toast.success('Successfully registered for the event!');
-        // Update local user data
-        const updatedUser = { ...user, events: [...(user.events || []), dataeve.id] };
-        localStorage.setItem('user', JSON.stringify(updatedUser));
-        setUser(updatedUser);
-      } else {
-        throw new Error(data.error);
-      }
-    } catch (error) {
-      toast.error(error.message || 'Failed to register for event');
-    }
+    // Redirect to dashboard/events for registration
+    router.push('/dashboard/events');
+    toast.success('Please complete your registration in the Events section');
   };
 
   if (loading) return null;
 
   const isRegistered = user?.events?.includes(dataeve.id);
+  const isTeamEvent = parseInt(dataeve.teamSizeMin) > 1;
+
+  const getRegistrationButton = () => {
+    if (!user) {
+      return (
+        <button
+          onClick={() => router.push('/login')}
+          className="px-5 py-1 text-base rounded-full border-2 bg-white/10 hover:text-black cursor-pointer"
+        >
+          Login to Register
+        </button>
+      );
+    }
+
+    if (isRegistered) {
+      return (
+        <div className="px-5 py-1 text-base rounded-full border-2 bg-green-500/20 text-green-300">
+          Already Registered
+        </div>
+      );
+    }
+
+    return (
+      <button
+        onClick={handleRegister}
+        disabled={!user.paid}
+        className={`px-5 py-1 text-base rounded-full border-2 ${
+          user.paid 
+            ? 'bg-white/10 hover:text-black cursor-pointer' 
+            : 'bg-gray-500/20 text-gray-400 cursor-not-allowed'
+        }`}
+      >
+        {user.paid ? `Register ${isTeamEvent ? 'Team' : 'Now'}` : 'Complete Registration First'}
+      </button>
+    );
+  };
 
   return (
     <>
-      <section className="flex items-center w-full font-poppins  bg-[url('/subeve2.jpeg')]  bg-center bg-cover bg-no-repeat bg-fixed">
+      <section className="flex items-center w-full font-poppins bg-[url('/subeve2.jpeg')] bg-center bg-cover bg-no-repeat bg-fixed">
         <div className="justify-center flex-1 w-full mx-auto md:px-6 pt-28 pb-20"
           style={{
             background: 'linear-gradient(to bottom, rgba(2, 2, 2, 0.533),rgba(2, 2, 2, 0.533))'
@@ -89,23 +105,7 @@ const Page = () => {
                 {dataeve.description}
               </p>
               <div className='flex flex-wrap lg:text-xl text-xl md:text-base items-baseline gap-7'>
-                {isRegistered ? (
-                  <div className="px-5 py-1 text-base rounded-full border-2 bg-green-500/20 text-green-300">
-                    Already Registered
-                  </div>
-                ) : (
-                  <button
-                    onClick={handleRegister}
-                    disabled={!user.paid}
-                    className={`px-5 py-1 text-base rounded-full border-2 ${
-                      user.paid 
-                        ? 'bg-white/10 hover:text-black cursor-pointer' 
-                        : 'bg-gray-500/20 text-gray-400 cursor-not-allowed'
-                    }`}
-                  >
-                    {user.paid ? 'Register Now' : 'Complete Registration First'}
-                  </button>
-                )}
+                {getRegistrationButton()}
                 <a href={dataeve.rulebookurl} target='_blank' rel="noopener noreferrer">
                   <button className="px-5 py-1 text-base rounded-full border-2 bg-white/10 hover:text-black">
                     Rule Book
@@ -130,7 +130,6 @@ const Page = () => {
               <div key={idx} className='lg:px-20'>
                 <p className='font-medium text-lg px-3 lg:px-40'>- {data}</p>
               </div>
-              // <p key={idx}>{idx + 1}. {data}</p>
             ))}
           </div>
           <div className='flex flex-col justify-center items-center'>
@@ -144,8 +143,8 @@ const Page = () => {
             </div>
           </div>
           <div className='flex flex-col justify-center items-center gap-5 mt-8 md:text-3xl text-xl px-2'>
-                <p className='text-center'>Event Head : {dataeve.event_head.name}</p>
-                <p className='text-center'>Conatct No : {dataeve.event_head.Phone}</p>
+            <p className='text-center'>Event Head : {dataeve.event_head.name}</p>
+            <p className='text-center'>Contact No : {dataeve.event_head.Phone}</p>
           </div>
         </div>
       </section>

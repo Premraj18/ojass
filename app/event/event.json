@@ -1,7 +1,7 @@
 [
     [
         {
-            "id": "01",
+            "id": "0-1",
             "name": "HACK-DE-SCIENCE",
             "teamSizeMin" : "2",
             "teamSizeMax" : "4",
@@ -43,7 +43,7 @@
         },
 
         {
-            "id": "02",
+            "id": "0-2",
             "name": "VISHWA-CODE-MANIA",
             "teamSizeMin" : "1",
             "teamSizeMax" : "3",
@@ -75,7 +75,7 @@
         },
 
         {
-            "id": "03",
+            "id": "0-3",
             "name": "TENSORENCODED",
             "teamSizeMin" : "1",
             "teamSizeMax" : "3",
@@ -112,7 +112,7 @@
         },
 
         {
-            "id": "04",
+            "id": "0-4",
             "name": "MODELMAYHEM",
             "teamSizeMin" : "1",
             "teamSizeMax" : "3",
@@ -149,7 +149,7 @@
 
     [
         {
-            "id": "10",
+            "id": "1-0",
             "name": "UNDERWATER TRACING",
             "teamSizeMin" : "2",
             "teamSizeMax" : "4",
@@ -182,7 +182,7 @@
         },
 
         {
-            "id": "11",
+            "id": "1-1",
             "name": "AQUA RACE",
             "teamSizeMin" : "1",
             "teamSizeMax" : "4",
@@ -217,7 +217,7 @@
 
     [
         {
-            "id": "20",
+            "id": "2-0",
             "name": "BIZZTHALON (BUISNESS QUIZ)",
             "teamSizeMin" : "2",
             "teamSizeMax" : "2",
@@ -256,7 +256,7 @@
         },
 
         {
-            "id": "21",
+            "id": "2-1",
             "name": "SCI-FI QUIZ (TECHNICAL QUIZ)",
             "teamSizeMin" : "1",
             "teamSizeMax" : "2",
@@ -301,7 +301,7 @@
 
     [
         {
-            "id": "30",
+            "id": "3-0",
             "name": "CASE STUDY CHALLENGE",
             "teamSizeMin" : "2",
             "teamSizeMax" : "4",
@@ -338,7 +338,7 @@
         },
 
         {
-            "id": "31",
+            "id": "3-1",
             "name": "CONSULTING NEXUS",
             "teamSizeMin" : "1",
             "teamSizeMax" : "3",
@@ -376,7 +376,7 @@
 
     [
         {
-            "id": "40",
+            "id": "4-0",
             "name": "CRYPTO CLASH",
             "teamSizeMin" : "1",
             "teamSizeMax" : "2",
@@ -425,7 +425,7 @@
         },
         
         {
-            "id": "41",
+            "id": "4-1",
             "name": "MINT & BID: NFT SHOWDOWN",
             "teamSizeMin" : "1",
             "teamSizeMax" : "3",
@@ -469,7 +469,7 @@
         },
 
         {
-            "id": "42",
+            "id": "4-2",
             "name": "HACK IT (ETHICAL HACKING)",
             "teamSizeMin" : "2",
             "teamSizeMax" : "4",
@@ -515,7 +515,7 @@
 
     [
         {
-            "id": "50",
+            "id": "5-0",
             "name": "ELECTROSPECTION",
             "teamSizeMin" : "2",
             "teamSizeMax" : "2",
@@ -557,7 +557,7 @@
         },
 
         {
-            "id": "51",
+            "id": "5-1",
             "name": "WAXCOMBS",
             "teamSizeMin" : "2",
             "teamSizeMax" : "3",
@@ -593,7 +593,7 @@
         },
 
         {
-            "id": "52",
+            "id": "5-2",
             "name": "SANRACHNA (BRIDGE BUILDING)",
             "teamSizeMin" : "4",
             "teamSizeMax" : "5",
@@ -637,7 +637,7 @@
         },
 
         {
-            "id": "53",
+            "id": "5-3",
             "name": "CANSYS (CAD-CAE)",
             "teamSizeMin" : "1",
             "teamSizeMax" : "2",
@@ -678,7 +678,7 @@
 
     [
         {
-            "id": "60",
+            "id": "6-0",
             "name": "BGMI",
             "teamSizeMin" : "4",
             "teamSizeMax" : "5",
@@ -723,7 +723,7 @@
         },
 
         {
-            "id": "61",
+            "id": "6-1",
             "name": "ENDGAME",
             "teamSizeMin" : "1",
             "teamSizeMax" : "1",
@@ -765,7 +765,7 @@
         },
 
         {
-            "id": "62",
+            "id": "6-2",
             "name": "VALORANT",
             "teamSizeMin" : "5",
             "teamSizeMax" : "6",
@@ -804,7 +804,7 @@
         },
 
         {
-            "id": "63",
+            "id": "6-3",
             "name": "FIFA",
             "teamSizeMin" : "1",
             "teamSizeMax" : "1",
@@ -849,7 +849,7 @@
 
     [
         {
-            "id": "70",
+            "id": "7-0",
             "name": "CineScript",
             "teamSizeMin" : "3",
             "teamSizeMax" : "5",
@@ -885,7 +885,7 @@
         },
 
         {
-            "id": "71",
+            "id": "7-1",
             "name": "FRAMES & TALES",
             "teamSizeMin" : "1",
             "teamSizeMax" : "3",
@@ -920,7 +920,7 @@
         },
 
         {
-            "id": "72",
+            "id": "7-2",
             "name": "LIGHT, CAMERA, OJASS",
             "teamSizeMin" : "1",
             "teamSizeMax" : "2",
@@ -960,7 +960,7 @@
 
     [
         {
-            "id": "80",
+            "id": "8-0",
             "name": "BUSINESS SIMULATION",
             "teamSizeMin" : "2",
             "teamSizeMax" : "4",
@@ -998,7 +998,7 @@
         },
 
         {
-            "id": "81",
+            "id": "8-1",
             "name": "MOCK STOCK",
             "teamSizeMin" : "1",
             "teamSizeMax" : "1",
@@ -1033,7 +1033,7 @@
         },
 
         {
-            "id": "82",
+            "id": "8-2",
             "name": "STARTUP IDEATHON",
             "teamSizeMin" : "1",
             "teamSizeMax" : "4",
@@ -1077,7 +1077,7 @@
 
     [
         {
-            "id": "90",
+            "id": "9-0",
             "name": "KURUSHETRA (ROBO WAR)",
             "teamSizeMin" : "2",
             "teamSizeMax" : "4",
@@ -1112,7 +1112,7 @@
         },
 
         {
-            "id": "91",
+            "id": "9-1",
             "name": "MAZE MARATHON (MICRO MOUSE)",
             "teamSizeMin" : "2",
             "teamSizeMax" : "5",
@@ -1146,7 +1146,7 @@
         },
 
         {
-            "id": "92",
+            "id": "9-2",
             "name": "ROBO SOCCER",
             "teamSizeMin" : "2",
             "teamSizeMax" : "4",
@@ -1182,7 +1182,7 @@
         },
 
         {
-            "id": "93",
+            "id": "9-3",
             "name": "ROBO RUMBLE (ATV BOT)",
             "teamSizeMin" : "2",
             "teamSizeMax" : "5",
@@ -1218,7 +1218,7 @@
         },
 
         {
-            "id": "94",
+            "id": "9-4",
             "name": "TRACEBOT CHALLENGE (LINE TRACING)",
             "teamSizeMin" : "1",
             "teamSizeMax" : "4",
@@ -1261,7 +1261,7 @@
 
     [
         {
-            "id": "100",
+            "id": "10-0",
             "name": "DRONE RACE CHALLENGE",
             "teamSizeMin" : "1",
             "teamSizeMax" : "4",
@@ -1300,7 +1300,7 @@
         },
 
         {
-            "id": "101",
+            "id": "10-1",
             "name": "GLIDE IT!",
             "teamSizeMin" : "1",
             "teamSizeMax" : "3",
@@ -1347,7 +1347,7 @@
         },
 
         {
-            "id": "102",
+            "id": "10-2",
             "name": "NO GROUND ZONE",
             "teamSizeMin" : "1",
             "teamSizeMax" : "4",
@@ -1384,7 +1384,7 @@
 
     [
         {
-            "id": "110",
+            "id": "11-0",
             "name": "DEBATE THE UN",
             "teamSizeMin" : "1",
             "teamSizeMax" : "1",
@@ -1422,7 +1422,7 @@
         },
 
         {
-            "id": "111",
+            "id": "11-1",
             "name": "MOCK IPL AUCTION",
             "teamSizeMin" : "1",
             "teamSizeMax" : "4",
