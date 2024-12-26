@@ -13,6 +13,7 @@ import { RxCross2 } from 'react-icons/rx'
 import { FiMenu } from "react-icons/fi";
 import { motion, useMotionValueEvent, useScroll } from "framer-motion";
 import { useRecoilValue } from 'recoil';
+import { useSetRecoilState } from "recoil";
 import authScreenAtom from '@/atom/userAtom'
 
 // nav data
@@ -45,12 +46,17 @@ const Nav = () => {
   const [hidden, setHidden] = useState(false);
 
   const authScreenState = useRecoilValue(authScreenAtom);
-  // console.log(authScreenState)
+  console.log(authScreenState)
 
+  const setUser = useSetRecoilState(authScreenAtom);
   useEffect(() => {
     // Check if user is logged in
     const token = localStorage.getItem('token');
     setIsLoggedIn(!!token);
+    if(!!token){
+      setUser("false")
+    }
+    else setUser("true")
   }, [isLoggedIn]);
 
   const { scrollY } = useScroll();
