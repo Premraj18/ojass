@@ -1,3 +1,5 @@
+// NEXT_PUBLIC_PAYMENT_ACTIVE payment can only be activated when this is true
+
 "use client";
 import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
@@ -41,13 +43,13 @@ const Dashboard = () => {
 
     const isEarlyBird = now <= earlyBirdDeadline;
     const phase = isEarlyBird ? 'Early Bird' : 'Regular';
-    const daysLeft = isEarlyBird ? 
+    const daysLeft = isEarlyBird ?
       Math.ceil((earlyBirdDeadline - now) / (1000 * 60 * 60 * 24)) : 0;
 
     return {
       phase,
       daysLeft,
-      amount: user?.isNitJsr 
+      amount: user?.isNitJsr
         ? (isEarlyBird ? prices.nitJsrEarly : prices.nitJsrRegular)
         : (isEarlyBird ? prices.otherEarly : prices.otherRegular)
     };
@@ -61,7 +63,7 @@ const Dashboard = () => {
 
     try {
       setIsProcessing(true);
-      
+
       // Get user ID from localStorage to ensure we have the latest data
       const userData = JSON.parse(localStorage.getItem('user'));
       if (!userData?._id) {
@@ -76,7 +78,7 @@ const Dashboard = () => {
         otherRegular: parseInt(process.env.OTHER_REGULAR_PRICE) || 4
       };
 
-      const amount = userData.isNitJsr 
+      const amount = userData.isNitJsr
         ? (registrationInfo.phase === 'Early Bird' ? prices.nitJsrEarly : prices.nitJsrRegular)
         : (registrationInfo.phase === 'Early Bird' ? prices.otherEarly : prices.otherRegular);
 
@@ -179,8 +181,8 @@ const Dashboard = () => {
   return (
     <div className="min-h-screen w-full pt-20 pb-10 bg-[url('/bghero.webp')] bg-fixed bg-center bg-cover">
       <div className="fixed inset-0 bg-gradient-to-b from-black/30 to-black/90 top-0" />
-      
-      <motion.div 
+
+      <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
@@ -220,19 +222,19 @@ const Dashboard = () => {
                 </p>
                 {!user.paid && (
                   <p className="text-sm text-yellow-400">
-                    {registrationInfo.phase === 'Early Bird' 
-                      ? '* Early bird offer ends on January 1st, 2024' 
+                    {registrationInfo.phase === 'Early Bird'
+                      ? '* Early bird offer ends on January 1st, 2024'
                       : '* Regular registration fee applies'}
                   </p>
                 )}
               </div>
-              
+
               <div className="mt-6">
                 <h3 className="text-lg font-medium text-white mb-3">ID Card</h3>
                 <div className="rounded-lg overflow-hidden">
-                  <img 
-                    src={user.idCardUrl} 
-                    alt="College ID Card" 
+                  <img
+                    src={user.idCardUrl}
+                    alt="College ID Card"
                     className="w-full max-w-xs mx-auto rounded-lg"
                   />
                 </div>
@@ -243,46 +245,56 @@ const Dashboard = () => {
               <h2 className="text-xl font-semibold text-white mb-4">Quick Actions</h2>
               <div className="space-y-4">
                 {!user.paid && (
-                  <button 
-                    onClick={handlePayment}
-                    disabled={isProcessing || !razorpayLoaded}
-                    className="w-full py-3 px-4 rounded-full bg-green-500/20 text-green-300 hover:bg-green-500/30 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
-                  >
-                    {isProcessing ? (
-                      <Loader />
-                    ) : (
-                      <>
-                        Pay Registration Fee ({registrationInfo.amount})
-                        {registrationInfo.phase === 'Early Bird' && (
-                          <span className="block text-sm mt-1">Early Bird Offer!</span>
-                        )}
-                      </>
-                    )}
-                  </button>
+                  // NEXT_PUBLIC_PAYMENT_ACTIVE=true
+                  process.env.NEXT_PUBLIC_PAYMENT_ACTIVE === 'true' ? (
+                    <button
+                      onClick={handlePayment}
+                      disabled={isProcessing || !razorpayLoaded}
+                      className="w-full py-3 px-4 rounded-full bg-green-500/20 text-green-300 hover:bg-green-500/30 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                    >
+                      {isProcessing ? (
+                        <Loader />
+                      ) : (
+                        <>
+                          Pay Registration Fee ({registrationInfo.amount})
+                          {registrationInfo.phase === 'Early Bird' && (
+                            <span className="block text-sm mt-1">Early Bird Offer!</span>
+                          )}
+                        </>
+                      )}
+                    </button>
+                  ) : (
+                    <button
+                      className="w-full py-3 px-4 rounded-full bg-white/10 text-white hover:bg-white/20 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                      disabled
+                    >
+                      Payment is not active
+                    </button>
+                  )
                 )}
                 {user.paid && (
-                  <button 
+                  <button
                     onClick={() => router.push('/dashboard/receipt')}
                     className="w-full py-3 px-4 rounded-full bg-blue-500/20 text-blue-300 hover:bg-blue-500/30 transition-colors"
                   >
                     View Receipt
                   </button>
                 )}
-                <button 
+                <button
                   onClick={() => handleEventAction('register')}
                   className="w-full py-3 px-4 rounded-full bg-white/10 text-white hover:bg-white/20 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                   disabled={!user.paid}
                 >
                   {user.paid ? 'Register for Events' : 'Complete Registration First'}
                 </button>
-                <button 
+                <button
                   onClick={() => handleEventAction('view')}
                   className="w-full py-3 px-4 rounded-full bg-white/10 text-white hover:bg-white/20 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                   disabled={!user.paid}
                 >
                   {user.paid ? 'View My Events' : 'Complete Registration First'}
                 </button>
-                <button 
+                <button
                   onClick={() => {
                     localStorage.removeItem('token');
                     localStorage.removeItem('user');
