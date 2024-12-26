@@ -211,7 +211,7 @@ const Dashboard = () => {
                 <p>
                   <span className="text-gray-400">Payment Status:</span>{' '}
                   <span className={user.paid ? 'text-green-400' : 'text-red-400'}>
-                    {registrationInfo.status}
+                    {user.paid ? "Payed" : "Not payed"}
                   </span>
                 </p>
                 <p>
