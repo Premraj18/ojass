@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { BsTelephone } from 'react-icons/bs'
 import { MdLocationPin, MdMail } from 'react-icons/md'
 import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from 'react-icons/fa'
+import { BsYoutube } from 'react-icons/bs'
 import { useEffect, useState } from "react";
 import Cookies from "js-cookie";
 
@@ -35,23 +36,24 @@ export default function Footer2() {
 
                         {/* Social Links */}
                         <div className="mt-6 flex gap-4">
-                            <a href="#" className="text-gray-300 hover:text-white transition-colors">
+                            <a target='_blank' href="https://www.facebook.com/Ojassnitjamshedpur/" className="text-gray-300 hover:text-white transition-colors">
                                 <FaFacebookF size={20} />
                             </a>
-                            <a href="#" className="text-gray-300 hover:text-white transition-colors">
-                                <FaTwitter size={20} />
+                            <a target='_blank' href="https://www.youtube.com/@OJASS.NITJSR" className="text-gray-300 hover:text-white transition-colors">
+                                <BsYoutube size={20} />
                             </a>
-                            <a href="#" className="text-gray-300 hover:text-white transition-colors">
+                            <a target='_blank' href="https://www.instagram.com/ojass.nitjsr/" className="text-gray-300 hover:text-white transition-colors">
                                 <FaInstagram size={20} />
                             </a>
-                            <a href="#" className="text-gray-300 hover:text-white transition-colors">
+                            <a target='_blank' href="https://www.linkedin.com/company/ojassnitjsr/" className="text-gray-300 hover:text-white transition-colors">
                                 <FaLinkedinIn size={20} />
                             </a>
                         </div>
                     </div>
 
                     {/* Contact Info */}
-                    <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:col-span-2 md:grid-cols-3">
+                    <div className="flex flex-wrap justify-center md:grid grid-cols-1 gap-8 sm:grid-cols-2 lg:col-span-2 md:grid-cols-3 lg:mt-4">
+                        
                         <div>
                             <h3 className="text-xl font-semibold text-white mb-6">Quick Links</h3>
                             <nav className="flex flex-col space-y-3">
@@ -98,7 +100,7 @@ export default function Footer2() {
                 {/* Bottom Bar */}
                 <div className="mt-12 border-t border-gray-700 pt-6">
                     <div className="flex flex-col md:flex-row justify-between items-center">
-                        <div className="text-gray-300 mb-4 md:mb-0">
+                        <div className="text-gray-300 mb-4 md:mb-0 text-center md:text-left">
                             <p>Designed & Developed By: <span className="text-red-500">Prem Raj, Aditya Vikram & Ayush Singh</span></p>
                         </div>
                         <div className="text-gray-300">

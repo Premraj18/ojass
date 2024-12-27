@@ -22,7 +22,7 @@ const variants = {
 //   "name": "Sourav Kumar",
 //   "img": "team/17.webp",
 //   "post": "Logistics Head",
-//   "linkedin": "https://www.linkedin.com/in/sourav-kumar-4a090a1b1",
+//   "linkedin": "https://www.linkedin.com/in/sourav-kumar-4a090a1b1/",
 //   "email": "mailto:2021ugcs038@nitjsr.ac.in"
 // },
 
