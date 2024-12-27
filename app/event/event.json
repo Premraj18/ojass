@@ -532,22 +532,20 @@
                 "participants": "Certificates to all Participants"
             },
             "details": [
-               " Round 1(Day 1): Progress Evaluation",
-                "This round will track the progress of the project and assess the initial development and approach.",
-                "Round 2(Day 2): Functionality Testing",
-                "In this round, the complete functionality of the projects will be thoroughly tested.",
-                "Round 3(Final Round): Presentation",
-                "Teams will present their projects to the jury, showcasing the utility and impact of their solution.", 
-                "Weightage of the rounds will be: 25% - 25% - 50%",
-                "Duration: 36 hours"
+                "Round 1: Quiz Round",
+                "Prelims (Elimination Round):",
+                "Format: 30 multiple-choice questions (MCQs)",
+                "Duration: 30 minutes",
+                "Content: The questions will cover theoretical concepts related to circuits, electrical and electronic components.                ",
+                "Round 2: Final Round",
+                "Format:",
+                "Participants will receive a problem statement and must implement an electronic circuit to solve it.",
+                "The circuit should be designed and built within the given time frame."
+                
             ],
             "rules": [
-                "Teams of 2 to 4 participants are allowed.",
-                "All submitted work must be original. Plagiarism will lead to disqualification",
-                "The judges’ decision will be final and binding.",
-                "Participants Must bring their own Laptops or other requirements.",
-                "OJASS Team are liable to provide Charging Points and stable Internet Connection.",
-                "One of the members should be available at the allotted place throughout the event."
+                "Any form of unfair means will lead to disqualification.",
+                "The judges’ decision will be final and binding."
             ],
             "event_head": {
                 "description": "Photo of event head will be here",
@@ -857,7 +855,7 @@
             "rulebookurl": "https://docs.google.com/document/d/197zqQK8_xfhmxUm7nn634hqpyPFkiQEt/",
             "redirect": "event/7/0",
             "organizer": "Lens Craft",
-            "description": "Event Type: Filmmaking - CineSprint challenges participants to create a 5–10-minute short film within a limited timeframe. This event combines the technical aspects of filmmaking, including camera work, editing, and sound design, with storytelling and creativity.",
+            "description": "Event Type: Filmmaking - CineScript challenges participants to create a 5–10-minute short film within a limited timeframe. This event combines the technical aspects of filmmaking, including camera work, editing, and sound design, with storytelling and creativity.",
             "prizes": {
                 "total": "₹35,000",
                 "winner": "₹18,000",
