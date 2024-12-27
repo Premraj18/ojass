@@ -213,7 +213,7 @@ const Dashboard = () => {
                 <p>
                   <span className="text-gray-400">Payment Status:</span>{' '}
                   <span className={user.paid ? 'text-green-400' : 'text-red-400'}>
-                    {user.paid ? "Payed" : "Not payed"}
+                    {user.paid ? "Paid" : "Not Paid"}
                   </span>
                 </p>
                 <p>
@@ -223,7 +223,7 @@ const Dashboard = () => {
                 {!user.paid && (
                   <p className="text-sm text-yellow-400">
                     {registrationInfo.phase === 'Early Bird'
-                      ? '* Early bird offer ends on January 1st, 2024'
+                      ? '* Early bird offer ends on January 10th, 2025'
                       : '* Regular registration fee applies'}
                   </p>
                 )}
