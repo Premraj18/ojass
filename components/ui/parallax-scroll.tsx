@@ -37,7 +37,7 @@ export const ParallaxScroll = ({
     >
       {/* <h2 className='text-center tracking-wider text-7xl pt-10'>Gallery</h2> */}
       <div className='pt-10 flex w-full justify-center items-center'>
-        <img src="/gallerytext.webp" alt="" className='w-60 md:w-1/4 md:pt-16 pt-10' />
+        <Image width={400} height={100} src="/gallerytext.webp" alt="Gallery" className='w-60 md:w-1/4 md:pt-16 pt-10' />
       </div>
       <div
         className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-start  max-w-8xl mx-auto gap-20 pt-10 px-10"
@@ -49,7 +49,7 @@ export const ParallaxScroll = ({
               style={{ y: translateFirst }} // Apply the translateY motion value here
               key={"grid-1" + idx}
             >
-              <img
+              <Image
                 src={el}
                 className="h-80 w-full border md:object-cover object-left-top rounded-lg gap-10 !m-0 !p-0"
                 height="400"
@@ -62,7 +62,7 @@ export const ParallaxScroll = ({
         <div className="grid gap-16">
           {secondPart.map((el, idx) => (
             <motion.div style={{ y: translateSecond }} key={"grid-2" + idx}>
-              <img
+              <Image
                 src={el}
                 className="h-80 w-full border md:object-cover object-left-top rounded-lg gap-10 !m-0 !p-0"
                 height="400"
@@ -75,7 +75,7 @@ export const ParallaxScroll = ({
         <div className="grid gap-16">
           {thirdPart.map((el, idx) => (
             <motion.div style={{ y: translateThird }} key={"grid-3" + idx}>
-              <img
+              <Image
                 src={el}
                 className="h-80 w-full border md:object-cover object-left-top rounded-lg gap-10 !m-0 !p-0"
                 height="400"

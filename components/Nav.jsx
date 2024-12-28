@@ -38,6 +38,7 @@ import Link from 'next/link';
 
 import { usePathname } from 'next/navigation'
 import { useRef, useState, useEffect } from 'react';
+import Image from 'next/image';
 
 
 const Nav = () => {
@@ -46,7 +47,7 @@ const Nav = () => {
   const [hidden, setHidden] = useState(false);
 
   const authScreenState = useRecoilValue(authScreenAtom);
-  console.log(authScreenState)
+  // console.log(authScreenState)
 
   const setUser = useSetRecoilState(authScreenAtom);
   useEffect(() => {
@@ -93,7 +94,7 @@ const Nav = () => {
       transition={{ duration: 0.1, }}
     >
       <nav className='flex w-full screen-max-width md:justify-center justify-between items-center'>
-        <Link href='/'> <img src='/logo.webp'  className='w-16 ' /></Link>
+        <Link href='/'> <Image width={400} height={100} src='/logo.webp' alt='logo'  className='w-16 ' priority /></Link>
         <div className='flex flex-1 justify-center max-md:hidden'>
           {navData.map((link, index) => {
             return (

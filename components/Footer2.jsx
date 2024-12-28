@@ -6,6 +6,7 @@ import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from 'react-icons/f
 import { BsYoutube } from 'react-icons/bs'
 import { useEffect, useState } from "react";
 import Cookies from "js-cookie";
+import Image from 'next/image'
 
 export default function Footer2() {
     const [refreshCount, setRefreshCount] = useState(0);
@@ -24,7 +25,7 @@ export default function Footer2() {
                     {/* About Section */}
                     <div className="flex flex-col justify-center">
                         <Link href="/" className="flex items-center mb-4">
-                            <img src="/logo.webp" alt="OJASS Logo" className="w-16 h-16" />
+                            <Image width={400} height={100} src="/logo.webp" alt="OJASS Logo" className="w-16 h-16" />
                             <h2 className="text-2xl font-bold text-white ml-2">OJASS'25</h2>
                         </Link>
                         <p className="mt-4 max-w-md text-gray-300 text-sm">

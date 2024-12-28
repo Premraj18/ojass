@@ -9,6 +9,7 @@ import { useRazorpay } from '@/hooks/useRazorpay';
 import Loader from '@/components/Loader';
 import authScreenAtom from '@/atom/userAtom';
 import { useSetRecoilState } from 'recoil'
+import Image from 'next/image';
 
 const Dashboard = () => {
   const router = useRouter();
@@ -232,7 +233,9 @@ const Dashboard = () => {
               <div className="mt-6">
                 <h3 className="text-lg font-medium text-white mb-3">ID Card</h3>
                 <div className="rounded-lg overflow-hidden">
-                  <img
+                  <Image
+                    width={400} 
+                    height={100}
                     src={user.idCardUrl}
                     alt="College ID Card"
                     className="w-full max-w-xs mx-auto rounded-lg"

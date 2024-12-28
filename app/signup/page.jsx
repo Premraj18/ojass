@@ -7,6 +7,7 @@ import Loader from '@/components/Loader';
 import { FiEye, FiEyeOff } from 'react-icons/fi';
 import authScreenAtom from '@/atom/userAtom';
 import { useSetRecoilState } from 'recoil'
+import Image from 'next/image';
 
 const SignUp = () => {
   const router = useRouter();
@@ -274,7 +275,9 @@ const SignUp = () => {
             />
             {idCardPreview && (
               <div className="mt-2 mb-4">
-                <img 
+                <Image 
+                  width={400} 
+                  height={100}
                   src={idCardPreview} 
                   alt="ID Card Preview" 
                   className="w-full max-w-xs mx-auto rounded-lg"

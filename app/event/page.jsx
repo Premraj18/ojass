@@ -12,6 +12,7 @@ import Market from './marketmevricks'
 import RoboRealm from './roborealm'
 import Skyward from './skywardBound'
 import VerseVoyage from './verseVoyage'
+import Image from 'next/image'
 
 const Page = () => {
   return (
@@ -23,7 +24,7 @@ const Page = () => {
           }}
         >
           <div className='pt-60 pb-10 w-full flex justify-center items-center'>
-            <img src="/eventtext.webp" alt="" className='w-[80%] lg:w-[25%]' />
+            <Image width={400} height={100} src="/eventtext.webp" alt="event" className='w-[80%] lg:w-[25%]' />
           </div>
           <div className='min-h-[90vh] w-full my-5 flex items-start justify-center'>
             <ViswaCodeGenesis/>

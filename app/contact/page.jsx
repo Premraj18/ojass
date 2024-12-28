@@ -1,5 +1,6 @@
 "use client"
 import React, { useState } from 'react'
+import Image from 'next/image';
 
 const Page = () => {
     const [name, setName] = useState('');
@@ -31,7 +32,7 @@ const Page = () => {
                 >
                     {/* <h2 className='text-5xl text-center mt-20 underline'>Team Ojass</h2> */}
                     <div className='pt-48 w-full flex justify-center items-center'>
-                        <img src="/contacttext.webp" alt="" className='w-[80%] lg:w-1/3' />
+                        <Image src="/contacttext.webp" width={400} height={100} alt="contact" className='w-[80%] lg:w-1/3' />
                     </div>
                     {/* <div className='flex justify-center px-5'>
                         <p className='text-center my-10 lg:w-[50%]'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur, ut corrupti sint libero repellendus voluptas, fugit animi error, modi cupiditate nulla illum sequi.</p>

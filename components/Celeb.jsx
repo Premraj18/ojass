@@ -8,6 +8,7 @@ import 'swiper/css/pagination';
 import './styles.css';
 
 import { Pagination, Autoplay } from 'swiper/modules';
+import Image from 'next/image';
 
 const Data = [
     {
@@ -49,8 +50,8 @@ const Celeb = () => {
     return (
         <div className='mb-5 md:mb-20 flex flex-col justify-center items-center'>
             <div className='flex justify-center mb-10'>
-                <img src="/celebtext.webp" alt="" className='hidden md:block w-80 md:w-[50vw] ' />
-                <img src="/celebtext2.webp" alt="" className='md:hidden w-80 md:w-[50vw] ' />
+                <Image width={400} height={100} src="/celebtext.webp" alt="celeb" className='hidden md:block w-80 md:w-[50vw] ' />
+                <Image width={400} height={100} src="/celebtext2.webp" alt="celeb" className='md:hidden w-80 md:w-[50vw] ' />
             </div>
             <div className='min-h-[50vh] w-full'>
                 <PastCelebCard/>

@@ -6,6 +6,10 @@ module.exports = {
         protocol: 'https',
         hostname: 'images.unsplash.com',
       },
+      {
+        protocol: 'https',
+        hostname: 'res.cloudinary.com', // Add Cloudinary as a trusted source
+      },
     ]
     },
   };

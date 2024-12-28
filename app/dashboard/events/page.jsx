@@ -4,6 +4,7 @@ import { useRouter } from 'next/navigation';
 import eventData from '@/app/event/event.json';
 import toast from 'react-hot-toast';
 import TeamRegistrationModal from '@/components/TeamRegistrationModal';
+import Image from 'next/image';
 
 const EventsPage = () => {
   const router = useRouter();
@@ -141,7 +142,9 @@ const EventsPage = () => {
                 key={event.id}
                 className="bg-white/10 backdrop-blur-sm rounded-lg overflow-hidden"
               >
-                <img 
+                <Image 
+                  width={400} 
+                  height={100}
                   src={event.img} 
                   alt={event.name}
                   className="w-full h-48 object-cover"
