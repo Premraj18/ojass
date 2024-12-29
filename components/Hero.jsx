@@ -3,6 +3,7 @@ import React, { useRef,useEffect, useState } from 'react'
 import { SparklesCore } from "../components/ui/sparkles";
 import { delay, motion, useScroll, useTransform } from 'framer-motion'
 import About from './About';
+import Alpha from './Alpha';
 import Event from './Event';
 import Celeb from './Celeb';
 import Glimpse from './Glimpse';
@@ -113,6 +114,9 @@ const Hero = () => {
                 </div>
                 <div className='z-20'>
                     <About />
+                </div>
+                <div className='w-full z-10'>
+                    <Alpha/>
                 </div>
                 <div className='w-full z-10'>
                     <Event/>

@@ -7,6 +7,7 @@ import { BsYoutube } from 'react-icons/bs'
 import { useEffect, useState } from "react";
 import Cookies from "js-cookie";
 import Image from 'next/image'
+import toast from 'react-hot-toast'
 
 export default function Footer2() {
     const [refreshCount, setRefreshCount] = useState(0);
@@ -17,6 +18,40 @@ export default function Footer2() {
         setRefreshCount(newCount);
         Cookies.set("refreshCount", newCount);
     }, []);
+
+    const [name, setName] = useState('')
+    const [message, setMessage] = useState('')
+
+    const handleSubmit = async (event) => {
+        event.preventDefault();
+
+        if (name == '' || message == '') {
+            toast.error( "Please fill all the credentials!")
+            return;
+        }
+
+        const formData = new FormData();
+        formData.append("name",name)
+        formData.append("message",message)
+    
+        formData.append("access_key", "3e4907d6-f1d4-46b2-89e5-74232098d23a");
+    
+        const response = await fetch("https://api.web3forms.com/submit", {
+          method: "POST",
+          body: formData
+        });
+    
+        const data = await response.json();
+    
+        if (data.success) {
+            toast.success("message sent successfully");
+            setName('');
+            setMessage('');
+        } else {
+          console.log("Error", data);
+          toast.error( data.message);
+        }
+    };
 
     return (
         <footer className="relative" style={{ background: 'linear-gradient(rgba(0, 0, 0, 0.919),rgba(109, 109, 109, 0.133))' }}>
@@ -29,9 +64,9 @@ export default function Footer2() {
                             <h2 className="text-2xl font-bold text-white ml-2">OJASS'25</h2>
                         </Link>
                         <p className="mt-4 max-w-md text-gray-300 text-sm">
-                            Ojass, NIT Jamshedpur's annual national-level Techno-Management Festival, 
-                            stands as the second largest event of its kind in Eastern India. With a 
-                            staggering turnout of over 8000+ footfall including students, professionals, 
+                            Ojass, NIT Jamshedpur's annual national-level Techno-Management Festival,
+                            stands as the second largest event of its kind in Eastern India. With a
+                            staggering turnout of over 8000+ footfall including students, professionals,
                             educators, and artists from top colleges across the nation.
                         </p>
 
@@ -53,26 +88,44 @@ export default function Footer2() {
                     </div>
 
                     {/* Contact Info */}
-                    <div className="flex flex-wrap justify-center md:grid grid-cols-1 gap-8 sm:grid-cols-2 lg:col-span-2 md:grid-cols-3 lg:mt-4">
-                        
-                        <div>
-                            <h3 className="text-xl font-semibold text-white mb-6">Quick Links</h3>
-                            <nav className="flex flex-col space-y-3">
-                                <Link href="/" className="text-gray-300 hover:text-white transition-colors">Home</Link>
-                                <Link href="/event" className="text-gray-300 hover:text-white transition-colors">Events</Link>
-                                <Link href="/ourteam" className="text-gray-300 hover:text-white transition-colors">Our Team</Link>
-                                <Link href="/gallery" className="text-gray-300 hover:text-white transition-colors">Gallery</Link>
-                            </nav>
-                        </div>
+                    <div className="flex flex-wrap justify-center md:grid grid-cols-1 gap-8 sm:grid-cols-2 lg:col-span-2 md:grid-cols-2 lg:mt-4">
+                        <div className='flex flex-wrap'>
+                            <div>
+                                <h3 className="text-xl font-semibold text-white mb-6">Quick Links</h3>
+                                <nav className="flex flex-col space-y-3">
+                                    <Link href="/" className="text-gray-300 hover:text-white transition-colors">Home</Link>
+                                    <Link href="/event" className="text-gray-300 hover:text-white transition-colors">Events</Link>
+                                    <Link href="/ourteam" className="text-gray-300 hover:text-white transition-colors">Our Team</Link>
+                                    <Link href="/gallery" className="text-gray-300 hover:text-white transition-colors">Gallery</Link>
+                                </nav>
+                            </div>
 
-                        <div>
-                            <h3 className="text-xl font-semibold text-white mb-6">Legal</h3>
-                            <nav className="flex flex-col space-y-3">
-                                <Link href="/privacy-policy" className="text-gray-300 hover:text-white transition-colors">Privacy Policy</Link>
-                                <Link href="/terms-and-condition" className="text-gray-300 hover:text-white transition-colors">Terms & Conditions</Link>
-                                <Link href="/cancellation-and-refund-policy" className="text-gray-300 hover:text-white transition-colors">Refund Policy</Link>
-                                <Link href="/shipping-and-delivery" className="text-gray-300 hover:text-white transition-colors">Shipping Policy</Link>
-                            </nav>
+                            <div>
+                                <h3 className="text-xl font-semibold text-white mb-6">Legal</h3>
+                                <nav className="flex flex-col space-y-3">
+                                    <Link href="/privacy-policy" className="text-gray-300 hover:text-white transition-colors">Privacy Policy</Link>
+                                    <Link href="/terms-and-condition" className="text-gray-300 hover:text-white transition-colors">Terms & Conditions</Link>
+                                    <Link href="/cancellation-and-refund-policy" className="text-gray-300 hover:text-white transition-colors">Refund Policy</Link>
+                                    <Link href="/shipping-and-delivery" className="text-gray-300 hover:text-white transition-colors">Shipping Policy</Link>
+                                </nav>
+                            </div>
+                            <div>
+                                <div className="p-4 flex gap-2 rounded-lg">
+                                    <input type="text" className="w-full p-2 mb-2 border bg-transparent rounded-lg bg-light-blue" placeholder="Your Name"
+                                        value={name}
+                                        onChange={(e) => setName(e.target.value)}
+                                    />
+                                    <textarea className="w-full p-2 border bg-transparent rounded-lg bg-light-blue" rows="1" placeholder="Your Review"
+                                        value={message}
+                                        onChange={(e) => setMessage(e.target.value)}
+                                    ></textarea>
+                                </div>
+                                <div className='flex justify-center items-center'>
+                                    <div onClick={handleSubmit} className='border cursor-pointer w-32  rounded-lg bg-light-blue p-2 text-center hover:scale-[1.02]'>
+                                        Submit
+                                    </div>
+                                </div>
+                            </div>
                         </div>
 
                         <div>
