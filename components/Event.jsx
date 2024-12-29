@@ -2,6 +2,7 @@
 import React from 'react'
 import EventCard from "./EventCard"
 import Link from 'next/link'
+import Image from 'next/image'
 
 const Event = () => {
   return (
@@ -10,7 +11,7 @@ const Event = () => {
       <div className="h-full w-full justify-center items-center pb-20 flex flex-col [-webkit-text-stroke:0.5px_#f5f5f5] text-transparent ">
         {/* <h2 className='text-center tracking-wider text-4xl lg:text-6xl pt-8'>Events</h2> */}
         <div className='mb-10'>
-          <img src="/eventtext.webp" alt="" className='w-52 md:w-full'/>
+          <Image width={400} height={100} src="/eventtext.webp" alt="event" className='w-52 md:w-full'/>
         </div>
         <div className='w-full'>
           <EventCard />

@@ -3,6 +3,7 @@ import { useState, useEffect, useCallback } from 'react';
 import { useRouter } from 'next/navigation';
 import eventData from '@/app/event/event.json';
 import toast from 'react-hot-toast';
+import Image from 'next/image';
 
 const MyEventsPage = () => {
   const router = useRouter();
@@ -129,7 +130,9 @@ const MyEventsPage = () => {
                   key={event.id}
                   className="bg-white/10 backdrop-blur-sm rounded-lg overflow-hidden"
                 >
-                  <img 
+                  <Image 
+                    width={400} 
+                    height={100}
                     src={event.img} 
                     alt={event.name}
                     className="w-full h-48 object-cover"

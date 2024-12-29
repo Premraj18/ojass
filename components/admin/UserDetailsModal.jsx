@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { useState } from 'react';
 
 const UserDetailsModal = ({ user, eventData, onClose }) => {
@@ -28,7 +29,9 @@ const UserDetailsModal = ({ user, eventData, onClose }) => {
           >
             ×
           </button>
-          <img 
+          <Image 
+            height={12}
+            width={12}
             src={user.idCardUrl} 
             alt="College ID"
             className="max-w-full max-h-[90vh] object-contain"
@@ -95,7 +98,9 @@ const UserDetailsModal = ({ user, eventData, onClose }) => {
                 className="cursor-pointer hover:opacity-90 transition-opacity inline-block"
                 onClick={() => setIsFullScreen(true)}
               >
-                <img 
+                <Image
+                  width={12}
+                  height={12}
                   src={user.idCardUrl} 
                   alt="College ID" 
                   className="max-w-md rounded-lg border border-gray-700"

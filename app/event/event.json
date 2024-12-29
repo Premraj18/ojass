@@ -218,14 +218,14 @@
     [
         {
             "id": "2-0",
-            "name": "BIZZTHALON (BUISNESS QUIZ)",
+            "name": "BIZZATHALON (BUISNESS QUIZ)",
             "teamSizeMin" : "2",
             "teamSizeMax" : "2",
             "img": "/event/21.webp",
             "rulebookurl": "https://docs.google.com/document/d/1LC6lOMEGnN26-Fx6xI00CPpkk4t_g46P/",
             "redirect": "event/2/0",
             "organizer": "Brain Busters",
-            "description": "BIZZTHALON is a business quizzing event organized as part of OJASS’25, the techno-management fest of NIT Jamshedpur. The event challenges participants to demonstrate their knowledge of business, startups, economics, and related domains through a series of competitive quiz rounds.",
+            "description": "BIZZATHALON is a business quizzing event organized as part of OJASS’25, the techno-management fest of NIT Jamshedpur. The event challenges participants to demonstrate their knowledge of business, startups, economics, and related domains through a series of competitive quiz rounds.",
             "prizes": {
                 "total": "₹20,000",
                 "winner": "₹10,000",

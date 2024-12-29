@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from 'next/image';
 
 const page = () => {
   return (
@@ -10,7 +11,7 @@ const page = () => {
           }}
         >
           <div className='pt-44 w-full flex justify-center items-center'>
-            <img src="/abouttext2.webp" alt="" className='w-[80%] lg:w-1/3' />
+            <Image src="/abouttext2.webp" width={400} height={100} alt="about" className='w-[80%] lg:w-1/3' />
           </div>
           <div className='min-h-[80vh]'>
 

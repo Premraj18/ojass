@@ -3,6 +3,7 @@ import React from 'react'
 import { BiCheckDouble } from "react-icons/bi";
 import { delay, motion } from 'framer-motion'
 import Link from 'next/link';
+import Image from 'next/image';
 
 const variants = {
     initial: {
@@ -29,7 +30,7 @@ const About = () => {
             >
                 <div className="px-4 mb-10 md:text-center md:mb-20">
                     <div className='flex justify-center'>
-                        <img src="/abouttext2.webp" alt="" className='w-56 md:w-80 ' />
+                        <Image width={400} height={100} src="/abouttext2.webp" alt="about" className='w-56 md:w-80 ' />
                     </div>
                 </div>
                 <div className="flex flex-wrap items-center justify-center lg:px-32 w-full">

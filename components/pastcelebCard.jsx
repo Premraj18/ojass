@@ -8,6 +8,7 @@ import {
   CarouselPrevious,
 } from "@/app/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
+import Image from "next/image";
 
 const Data = [
   {
@@ -105,7 +106,7 @@ const PastCelebCard = () => {
             <CarouselItem key={index} className="sm:basis-1/1 md:basis-1/3 lg:basis-1/5">
 
               <div className=" w-[100%] md:h-[35vh] h-72 cursor-pointer text-white scale-95 bg-white/5 rounded-lg border-gray-200 border-[2px] shadow-md transition-all duration-300 hover:scale-100">
-                <img src={data.imgUrl} alt="" className="object-cover h-full w-full rounded-lg"/>
+                <Image width={400} height={100} src={data.imgUrl} alt="img" className="object-cover h-full w-full rounded-lg"/>
               </div>
             </CarouselItem>
 
