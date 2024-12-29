@@ -3,6 +3,34 @@ import User from '@/models/User';
 import jwt from 'jsonwebtoken';
 import { NextResponse } from 'next/server';
 
+async function addContactToBrevo(name, email, college) {
+  try {
+    const response = await fetch('https://api.brevo.com/v3/contacts', {
+      method: 'POST',
+      headers: {
+        'accept': 'application/json',
+        'api-key': process.env.BREVO_API_KEY,
+        'content-type': 'application/json',
+      },
+      body: JSON.stringify({
+        email,
+        attributes: {
+          FIRSTNAME: name,
+          COLLEGE: college
+        },
+        listIds: [parseInt(process.env.BREVO_LIST_ID)],
+        updateEnabled: true
+      })
+    });
+
+    if (!response.ok) {
+      console.error('Failed to add contact to Brevo:', await response.text());
+    }
+  } catch (error) {
+    console.error('Error adding contact to Brevo:', error);
+  }
+}
+
 export async function POST(req) {
   try {
     await connectDB();
@@ -58,6 +86,9 @@ export async function POST(req) {
     console.log('Creating user with data:', userData); // Debug log
 
     const user = await User.create(userData);
+
+    // Add user to Brevo contact list
+    await addContactToBrevo(name, email, userData.college);
 
     console.log('User created:', user); // Debug log
 
