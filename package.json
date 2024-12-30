@@ -30,11 +30,8 @@
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.9.2",
     "next": "14.2.4",
-<<<<<<< HEAD
     "next-themes": "^0.4.4",
-=======
     "puppeteer": "^23.11.1",
->>>>>>> 0bfce1938dcbf3267285b2648219d422c34dcb0f
     "razorpay": "^2.9.5",
     "react": "^18",
     "react-dom": "^18",
