@@ -135,7 +135,7 @@ const page = () => {
                             <p>Participants stand a chance to win:   </p>
                             <p>- Prizes worth ₹50,000.</p>
                             <p>- Goodies, certificates, merchandise, and much more! </p>
-                            <p>Second Runner Up :</p>
+                            {/* <p>Second Runner Up :</p> */}
                             <p>- Participation certificates for all finalists.</p>
                         </div>
                     </div>
