@@ -26,118 +26,125 @@ export default function Modal() {
         }
     }, []);
     const router = useRouter();
-    const [formData, setFormData] = useState({
-        name: '',
-        email: '',
-        password: '',
-        confirmPassword: '',
-        isNitJsr: false,
-        college: '',
-        idCard: null
-    });
-    const [idCardPreview, setIdCardPreview] = useState('');
-    const [error, setError] = useState('');
-    const [isLoading, setIsLoading] = useState(false);
-    const [showPassword, setShowPassword] = useState(false);
-    const [showConfirmPassword, setShowConfirmPassword] = useState(false);
-    const setauthScreen = useSetRecoilState(authScreenAtom)
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    password: '',
+    confirmPassword: '',
+    isNitJsr: false,
+    college: '',
+    idCard: null
+  });
+  const [idCardPreview, setIdCardPreview] = useState('');
+  const [error, setError] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
+  const [showPassword, setShowPassword] = useState(false);
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+  const setauthScreen = useSetRecoilState(authScreenAtom)
 
-    const handleIdCardUpload = useCallback((e) => {
-        const file = e.target.files[0];
-        if (file) {
-            setFormData(prev => ({ ...prev, idCard: file }));
-            const reader = new FileReader();
-            reader.onloadend = () => {
-                setIdCardPreview(reader.result);
-            };
-            reader.readAsDataURL(file);
+  const handleIdCardUpload = useCallback((e) => {
+    const file = e.target.files[0];
+    if (file) {
+      setFormData(prev => ({ ...prev, idCard: file }));
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        setIdCardPreview(reader.result);
+      };
+      reader.readAsDataURL(file);
+    }
+  }, []);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setError('');
+    setIsLoading(true);
+
+    try {
+      // Validate form data
+      if (!formData.name || !formData.email || !formData.password || !formData.idCard || !formData.phone) {
+        throw new Error('All fields are required');
+      }
+
+      if (formData.password !== formData.confirmPassword) {
+        throw new Error('Passwords do not match');
+      }
+
+      if (!formData.isNitJsr && !formData.college) {
+        throw new Error('College name is required');
+      }
+
+      // Validate phone number format
+      if (!/^[0-9]{10}$/.test(formData.phone)) {
+        throw new Error('Please enter a valid 10-digit phone number');
+      }
+
+      // First upload the image to Cloudinary
+      const imageData = new FormData();
+      imageData.append('file', formData.idCard);
+      imageData.append('upload_preset', 'ojass_id_cards');
+
+    //   console.log('Uploading image to Cloudinary...'); // Debug log
+
+      const uploadRes = await fetch(
+        `https://api.cloudinary.com/v1_1/dm8cs1twk/image/upload`,
+        {
+          method: 'POST',
+          body: imageData
         }
-    }, []);
+      );
 
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        setError('');
-        setIsLoading(true);
+      if (!uploadRes.ok) {
+        const errorData = await uploadRes.json();
+        console.error('Cloudinary Error:', errorData);
+        throw new Error('Failed to upload ID Card: ' + (errorData.error?.message || 'Unknown error'));
+      }
 
-        try {
-            // Validate form data
-            if (!formData.name || !formData.email || !formData.password || !formData.idCard) {
-                throw new Error('All fields are required');
-            }
+      const uploadData = await uploadRes.json();
+    //   console.log('Image upload successful:', uploadData.secure_url); // Debug log
 
-            if (formData.password !== formData.confirmPassword) {
-                throw new Error('Passwords do not match');
-            }
+      // Now create the user with the image URL
+      const signupData = {
+        name: formData.name,
+        email: formData.email,
+        phone: formData.phone,
+        password: formData.password,
+        isNitJsr: formData.isNitJsr,
+        college: formData.isNitJsr ? 'NIT Jamshedpur' : formData.college,
+        idCardUrl: uploadData.secure_url,
+        registrationDate: new Date()
+      };
 
-            if (!formData.isNitJsr && !formData.college) {
-                throw new Error('College name is required');
-            }
+    //   console.log('Sending signup data:', signupData); // Debug log
 
-            // First upload the image to Cloudinary
-            const imageData = new FormData();
-            imageData.append('file', formData.idCard);
-            imageData.append('upload_preset', 'ojass_id_cards');
+      const res = await fetch('/api/signup', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(signupData),
+      });
 
-            console.log('Uploading image to Cloudinary...'); // Debug log
+      const data = await res.json();
 
-            const uploadRes = await fetch(
-                `https://api.cloudinary.com/v1_1/dm8cs1twk/image/upload`,
-                {
-                    method: 'POST',
-                    body: imageData
-                }
-            );
+      if (!res.ok) {
+        throw new Error(data.error || 'Something went wrong');
+      }
 
-            if (!uploadRes.ok) {
-                const errorData = await uploadRes.json();
-                console.error('Cloudinary Error:', errorData);
-                throw new Error('Failed to upload ID Card: ' + (errorData.error?.message || 'Unknown error'));
-            }
+    //   console.log('Signup successful:', data); // Debug log
 
-            const uploadData = await uploadRes.json();
-            console.log('Image upload successful:', uploadData.secure_url); // Debug log
-
-            // Now create the user with the image URL
-            const signupData = {
-                name: formData.name,
-                email: formData.email,
-                password: formData.password,
-                isNitJsr: formData.isNitJsr,
-                college: formData.isNitJsr ? 'NIT Jamshedpur' : formData.college,
-                idCardUrl: uploadData.secure_url,
-                registrationDate: new Date()
-            };
-
-            console.log('Sending signup data:', signupData); // Debug log
-
-            const res = await fetch('/api/signup', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(signupData),
-            });
-
-            const data = await res.json();
-
-            if (!res.ok) {
-                throw new Error(data.error || 'Something went wrong');
-            }
-
-            console.log('Signup successful:', data); // Debug log
-
-            // Store complete user data in localStorage
-            localStorage.setItem('token', data.token);
-            localStorage.setItem('user', JSON.stringify(data.user));
-
-            // Redirect to dashboard
-            router.push('/dashboard');
-        } catch (err) {
-            console.error('Signup error:', err);
-            setError(err.message);
-            setIsLoading(false);
-        }
-    };
+      // Store complete user data in localStorage
+      localStorage.setItem('token', data.token);
+      localStorage.setItem('user', JSON.stringify(data.user));
+      
+      // Redirect to dashboard
+      router.push('/dashboard');
+    } catch (err) {
+      console.error('Signup error:', err);
+      setError(err.message);
+      setIsLoading(false);
+    }
+  };
 
 
     return (
@@ -156,7 +163,7 @@ export default function Modal() {
 
                         <div className="bg-black">
                             <div className="sm:flex flex-col">
-                            <div onClick={() => setOpen(false)} className='cursor-pointer text-white flex justify-end p-2'><RxCross2 size={30}/></div>
+                                <div onClick={() => setOpen(false)} className='cursor-pointer text-white flex justify-end p-2'><RxCross2 size={30} /></div>
                                 <div className="flex justify-center items-center">
                                     <motion.div
                                         initial={{ opacity: 0, y: 20 }}
@@ -204,6 +211,29 @@ export default function Modal() {
                                                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                                                     required
                                                 />
+                                            </div>
+
+                                            <div>
+                                                <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2">
+                                                    Phone Number
+                                                </label>
+                                                <input
+                                                    type="tel"
+                                                    id="phone"
+                                                    pattern="[0-9]{10}"
+                                                    maxLength={10}
+                                                    className="w-full px-4 py-3 rounded-full bg-white/10 border border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:border-white transition-colors"
+                                                    placeholder="Enter your 10-digit phone number"
+                                                    value={formData.phone}
+                                                    onChange={(e) => {
+                                                        const value = e.target.value.replace(/\D/g, '').slice(0, 10);
+                                                        setFormData({ ...formData, phone: value });
+                                                    }}
+                                                    required
+                                                />
+                                                <p className="mt-1 text-sm text-gray-400">
+                                                    Enter a 10-digit number without spaces or special characters
+                                                </p>
                                             </div>
 
                                             <div>
