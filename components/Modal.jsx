@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState, useCallback } from 'react';
+import React, { useState, useCallback, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
@@ -15,7 +15,16 @@ import { RxCross2 } from "react-icons/rx";
 
 
 export default function Modal() {
-    const [open, setOpen] = useState(true)
+    const [open, setOpen] = useState(false)
+    useEffect(() => {
+        // Check if the modal has been shown before
+        const hasShownModal = localStorage.getItem('hasShownModal');
+
+        if (!hasShownModal) {
+            setOpen(true); // Open the modal
+            localStorage.setItem('hasShownModal', 'true'); // Set the flag
+        }
+    }, []);
     const router = useRouter();
     const [formData, setFormData] = useState({
         name: '',
