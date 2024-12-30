@@ -1,7 +1,7 @@
 [
     [
         {
-            "id": "0-1",
+            "id": "0-0",
             "name": "HACK-DE-SCIENCE",
             "teamSizeMin" : "2",
             "teamSizeMax" : "4",
@@ -43,7 +43,7 @@
         },
 
         {
-            "id": "0-2",
+            "id": "0-1",
             "name": "VISHWA-CODE-MANIA",
             "teamSizeMin" : "1",
             "teamSizeMax" : "3",
@@ -75,7 +75,7 @@
         },
 
         {
-            "id": "0-3",
+            "id": "0-2",
             "name": "TENSORENCODED",
             "teamSizeMin" : "1",
             "teamSizeMax" : "3",
@@ -112,7 +112,7 @@
         },
 
         {
-            "id": "0-4",
+            "id": "0-3",
             "name": "MODELMAYHEM",
             "teamSizeMin" : "1",
             "teamSizeMax" : "3",
