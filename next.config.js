@@ -2,6 +2,9 @@
 const nextConfig = {
   output: 'standalone',
   reactStrictMode: true,
+  experimental: {
+    optimizePackageImports: ["@chakra-ui/react"],
+  },
   images: {
      remotePatterns: [
       {

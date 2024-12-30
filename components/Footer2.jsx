@@ -12,6 +12,11 @@ import toast from 'react-hot-toast'
 export default function Footer2() {
     const [refreshCount, setRefreshCount] = useState(0);
 
+    const [isOpen, setIsOpen] = useState(false);
+
+    const openModal = () => setIsOpen(true);
+    const closeModal = () => setIsOpen(false);
+
     useEffect(() => {
         const currentCount = parseInt(Cookies.get("refreshCount") || "0", 10);
         const newCount = currentCount + 1;
@@ -20,36 +25,46 @@ export default function Footer2() {
     }, []);
 
     const [name, setName] = useState('')
+    const [email, setEmail] = useState('')
+    const [phone, setPhone] = useState('')
     const [message, setMessage] = useState('')
 
     const handleSubmit = async (event) => {
         event.preventDefault();
 
-        if (name == '' || message == '') {
-            toast.error( "Please fill all the credentials!")
+        if (name == '' || message == '' || email == '' || phone == '') {
+            toast.error("Please fill all the credentials!")
+            return;
+        }
+        if(phone.length != 10){
+            toast.error("Please enter valid phone number");
             return;
         }
 
         const formData = new FormData();
-        formData.append("name",name)
-        formData.append("message",message)
-    
-        formData.append("access_key", "3e4907d6-f1d4-46b2-89e5-74232098d23a");
-    
+        formData.append("name", name)
+        formData.append("name", email)
+        formData.append("name", phone)
+        formData.append("message", message)
+
+        formData.append("access_key", "86cad20b-6450-456f-9d68-d07e99061062");
+        // 3e4907d6-f1d4-46b2-89e5-74232098d23a
         const response = await fetch("https://api.web3forms.com/submit", {
-          method: "POST",
-          body: formData
+            method: "POST",
+            body: formData
         });
-    
+
         const data = await response.json();
-    
+
         if (data.success) {
             toast.success("message sent successfully");
             setName('');
+            setEmail('');
+            setPhone('');
             setMessage('');
         } else {
-          console.log("Error", data);
-          toast.error( data.message);
+            console.log("Error", data);
+            toast.error(data.message);
         }
     };
 
@@ -110,21 +125,52 @@ export default function Footer2() {
                                 </nav>
                             </div>
                             <div>
-                                <div className="p-4 flex gap-2 rounded-lg">
-                                    <input type="text" className="w-full p-2 mb-2 border bg-transparent rounded-lg bg-light-blue" placeholder="Your Name"
-                                        value={name}
-                                        onChange={(e) => setName(e.target.value)}
-                                    />
-                                    <textarea className="w-full p-2 border bg-transparent rounded-lg bg-light-blue" rows="1" placeholder="Your Review"
-                                        value={message}
-                                        onChange={(e) => setMessage(e.target.value)}
-                                    ></textarea>
+                                <div className='flex justify-center items-center mt-4'>
+                                    <button onClick={openModal} className='w-full p-2 border bg-white/15 rounded-full hover:bg-white/20 transition-colors'>
+                                        Drop Your Query
+                                    </button>
                                 </div>
-                                <div className='flex justify-center items-center'>
-                                    <div onClick={handleSubmit} className='border cursor-pointer w-32  rounded-lg bg-light-blue p-2 text-center hover:scale-[1.02]'>
-                                        Submit
+                                {/* Modal */}
+                                {isOpen && (
+                                    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50">
+                                        <div className="bg-white w-11/12 max-w-md p-6 rounded-lg shadow-lg">
+                                            <h2 className="text-xl font-bold mb-4 text-black">Drop Your Query</h2>
+                                            <div className="p-4 bg-dark-blue rounded-lg text-gray-800">
+                                                <input type="text" className="w-full p-2 mb-2 border border-blue-500 rounded-lg bg-light-blue" placeholder="Your Name"
+                                                    value={name}
+                                                    onChange={(e) => setName(e.target.value)}
+                                                />
+                                                <input type="email" className="w-full p-2 mb-2 border border-blue-500 rounded-lg bg-light-blue" placeholder="Your email"
+                                                    value={email}
+                                                    onChange={(e) => setEmail(e.target.value)}
+                                                />
+                                                <input type="number" minLength={10} maxLength={10} className="w-full p-2 mb-2 border border-blue-500 rounded-lg bg-light-blue" placeholder="Your Number"
+                                                    value={phone}
+                                                    onChange={(e) => setPhone(e.target.value)}
+                                                />
+                                                <textarea className="w-full p-2 border border-blue-500 rounded-lg bg-light-blue" rows="4" placeholder="Your query"
+                                                    value={message}
+                                                    onChange={(e) => setMessage(e.target.value)}
+                                                ></textarea>
+                                                <button
+                                                    onClick={handleSubmit}
+                                                    className="px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-800 focus:outline-none"
+                                                >
+                                                    Submit
+                                                </button>
+
+                                            </div>
+                                            <div className="flex justify-end">
+                                                <button
+                                                    onClick={closeModal}
+                                                    className="px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 focus:outline-none"
+                                                >
+                                                    Close
+                                                </button>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
+                                )}
                             </div>
                         </div>
 

@@ -21,6 +21,7 @@ export const navData = [
   { name: 'Home', path: '/', icon: <HiHome /> },
   { name: 'Event', path: '/event', icon: <MdEmojiEvents /> },
   { name: 'Our Team', path: '/ourteam', icon: <HiRectangleGroup /> },
+  { name: 'Alpha', path: '/alpha', icon: <HiRectangleGroup /> },
   { name: 'Gallery', path: '/gallery', icon: <HiViewColumns /> },
   {
     name: 'Sponsor',
