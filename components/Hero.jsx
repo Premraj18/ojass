@@ -1,5 +1,5 @@
 "use client"
-import React, { useRef,useEffect, useState } from 'react'
+import React, { useRef, useEffect, useState } from 'react'
 import { SparklesCore } from "../components/ui/sparkles";
 import { delay, motion, useScroll, useTransform } from 'framer-motion'
 import About from './About';
@@ -8,7 +8,8 @@ import Event from './Event';
 import Celeb from './Celeb';
 import Glimpse from './Glimpse';
 import Footer from './Footer';
-import Foter from "./Footer2";
+import Footer2 from "./Footer2";
+import Modal from "./Modal";
 import countapi from 'countapi-js';
 
 const variants = {
@@ -52,7 +53,10 @@ const Hero = () => {
     const yBg = useTransform(scrollYProgress, [0, 1], ["0%", "180%"]);
     const xBg = useTransform(scrollYProgress, [0, 1], ["0%", "150%"]);
 
-    
+    const [isOpen, setIsOpen] = useState(false);
+
+    const openModal = () => setIsOpen(true);
+    const closeModal = () => setIsOpen(false);
 
 
     return (
@@ -110,26 +114,33 @@ const Hero = () => {
                         <motion.p className='md:text-2xl text-gray-300 text-xl tracking-[8px] uppercase ' variants={cosmosvarients}>Techno-Management Fest of NIT Jamshedpur 22nd edition</motion.p>
                         {/* <motion.p className='md:text-2xl text-gray-300 text-xl tracking-[8px] uppercase ' variants={cosmosvarients}>22nd edition</motion.p> */}
                         <motion.p className='md:text-2xl text-gray-300 uppercase pt-3' variants={cosmosvarients}>14-16 February 2025</motion.p>
+                        {/* <motion.button onClick={openModal} className='z-10 w-40 mt-4 py-2 border bg-white/15 rounded-full hover:bg-white/20 transition-colors' variants={cosmosvarients}>
+                            Register Now
+                        </motion.button> */}
                     </motion.div>
+                  
                 </div>
                 <div className='z-20'>
                     <About />
                 </div>
-                <div className='w-full z-10'>
+                {/* <div className='w-full z-10'>
                     <Alpha/>
+                </div> */}
+                <div className='w-full z-10'>
+                    <Event />
                 </div>
                 <div className='w-full z-10'>
-                    <Event/>
+                    <Celeb />
                 </div>
                 <div className='w-full z-10'>
-                    <Celeb/>
-                </div>
-                <div className='w-full z-10'>
-                    <Glimpse/>
+                    <Glimpse />
                 </div>
                 <div className='w-full z-10'>
                     {/* <Footer/> */}
-                    <Foter/>
+                    <Footer2 />
+                </div>
+                <div className='w-full z-10'>
+                    <Modal/>
                 </div>
             </div>
         </div>

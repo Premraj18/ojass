@@ -7,11 +7,11 @@ import { RecoilRoot } from 'recoil';
 const Layout = ({ children }) => {
   return (
     <RecoilRoot>
-      <div className="">
-        <Nav/>
-        {children}
-        {/* <Foter/> */}
-      </div>
+        <div className="">
+          <Nav />
+          {children}
+          {/* <Foter/> */}
+        </div>
     </RecoilRoot>
   )
 };
