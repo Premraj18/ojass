@@ -30,11 +30,12 @@ const UserDetailsModal = ({ user, eventData, onClose }) => {
             ×
           </button>
           <Image 
-            height={12}
-            width={12}
+            height={1200}
+            width={1200}
             src={user.idCardUrl} 
             alt="College ID"
             className="max-w-full max-h-[90vh] object-contain"
+            priority
           />
         </div>
       </div>
@@ -65,6 +66,7 @@ const UserDetailsModal = ({ user, eventData, onClose }) => {
               <div className="space-y-2">
                 <p className="text-gray-300">OJASS ID: {user.ojassId}</p>
                 <p className="text-gray-300">Email: {user.email}</p>
+                <p className="text-gray-300">Phone: {user.phone}</p>
                 <p className="text-gray-300">College: {user.college}</p>
                 <p className="text-gray-300">Registration Date: {new Date(user.registrationDate).toLocaleDateString()}</p>
               </div>
@@ -99,11 +101,12 @@ const UserDetailsModal = ({ user, eventData, onClose }) => {
                 onClick={() => setIsFullScreen(true)}
               >
                 <Image
-                  width={12}
-                  height={12}
+                  width={800}
+                  height={600}
                   src={user.idCardUrl} 
                   alt="College ID" 
                   className="max-w-md rounded-lg border border-gray-700"
+                  priority
                 />
                 <p className="text-sm text-gray-400 mt-2">Click to view full screen</p>
               </div>

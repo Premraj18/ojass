@@ -65,6 +65,7 @@ export async function POST(req) {
         _id: updatedUser._id,
         name: updatedUser.name,
         email: updatedUser.email,
+        phone: updatedUser.phone,
         ojassId: updatedUser.ojassId,
         college: updatedUser.college,
         isNitJsr: updatedUser.isNitJsr,

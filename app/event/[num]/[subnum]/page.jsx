@@ -95,7 +95,7 @@ const Page = () => {
           </div>
           <div className="flex flex-wrap  items-center justify-center lg:px-32 w-full">
             <div className="w-full px-4 mb-10 lg:w-1/2 flex justify-center lg:mb-0">
-              <Image src={dataeve.img} width={400} height={100} alt="img" className='w-[350px] md:w-[430px] h-[315px] md:h-[400px] rounded-3xl object-cover' />
+              <img src={dataeve.img} alt="" className='w-[350px] md:w-[430px] h-[315px] md:h-[400px] rounded-3xl object-cover' />
             </div>
             <div className="w-full px-4 lg:pl-10 mb-10 lg:w-1/2 lg:mb-0 ">
               <h2

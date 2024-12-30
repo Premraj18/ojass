@@ -12,8 +12,10 @@ const Login = () => {
   const router = useRouter();
   const [formData, setFormData] = useState({
     email: '',
+    phone: '',
     password: '',
   });
+  const [loginMethod, setLoginMethod] = useState('email'); // 'email' or 'phone'
   const [error, setError] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
@@ -30,7 +32,11 @@ const Login = () => {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          email: loginMethod === 'email' ? formData.email : undefined,
+          phone: loginMethod === 'phone' ? formData.phone : undefined,
+          password: formData.password,
+        }),
       });
 
       const data = await res.json();
@@ -74,20 +80,62 @@ const Login = () => {
         )}
 
         <form onSubmit={handleSubmit} className="space-y-6">
-          <div>
-            <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
-              Email Address
-            </label>
-            <input
-              type="email"
-              id="email"
-              className="w-full px-4 py-3 rounded-full bg-white/10 border border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:border-white transition-colors"
-              placeholder="Enter your email"
-              value={formData.email}
-              onChange={(e) => setFormData({...formData, email: e.target.value})}
-              required
-            />
+          <div className="flex justify-center space-x-4 mb-4">
+            <button
+              type="button"
+              onClick={() => setLoginMethod('email')}
+              className={`px-4 py-2 rounded-full ${
+                loginMethod === 'email'
+                  ? 'bg-white/20 text-white'
+                  : 'bg-transparent text-gray-400'
+              }`}
+            >
+              Email
+            </button>
+            <button
+              type="button"
+              onClick={() => setLoginMethod('phone')}
+              className={`px-4 py-2 rounded-full ${
+                loginMethod === 'phone'
+                  ? 'bg-white/20 text-white'
+                  : 'bg-transparent text-gray-400'
+              }`}
+            >
+              Phone
+            </button>
           </div>
+
+          {loginMethod === 'email' ? (
+            <div>
+              <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
+                Email Address
+              </label>
+              <input
+                type="email"
+                id="email"
+                className="w-full px-4 py-3 rounded-full bg-white/10 border border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:border-white transition-colors"
+                placeholder="Enter your email"
+                value={formData.email}
+                onChange={(e) => setFormData({...formData, email: e.target.value})}
+                required
+              />
+            </div>
+          ) : (
+            <div>
+              <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2">
+                Phone Number
+              </label>
+              <input
+                type="tel"
+                id="phone"
+                className="w-full px-4 py-3 rounded-full bg-white/10 border border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:border-white transition-colors"
+                placeholder="Enter your phone number"
+                value={formData.phone}
+                onChange={(e) => setFormData({...formData, phone: e.target.value})}
+                required
+              />
+            </div>
+          )}
 
           <div>
             <label htmlFor="password" className="block text-sm font-medium text-gray-300 mb-2">

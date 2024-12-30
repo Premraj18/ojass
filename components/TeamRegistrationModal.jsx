@@ -62,11 +62,27 @@ const TeamRegistrationModal = ({ event, user, onClose, onSuccess }) => {
       const res = await fetch(`/api/verify-member?ojassId=${member.id}`);
       const data = await res.json();
 
-      if (!res.ok) {
-        throw new Error(data.error);
+      if (data.status === 'not_found') {
+        const updatedMembers = [...teamMembers];
+        updatedMembers[index] = {
+          ...teamMembers[index],
+          status: null,
+          verified: false,
+          name: ''
+        };
+        setTeamMembers(updatedMembers);
+        throw new Error(data.message);
       }
 
-      if (!data.paid) {
+      if (data.status === 'not_paid') {
+        // Update member with not paid status
+        const updatedMembers = [...teamMembers];
+        updatedMembers[index] = {
+          ...member,
+          status: 'not_paid',
+          name: data.name
+        };
+        setTeamMembers(updatedMembers);
         throw new Error(`${member.id} hasn't completed registration payment`);
       }
 
@@ -79,6 +95,7 @@ const TeamRegistrationModal = ({ event, user, onClose, onSuccess }) => {
       updatedMembers[index] = {
         ...member,
         verified: true,
+        status: 'verified',
         name: data.name
       };
       setTeamMembers(updatedMembers);
@@ -93,6 +110,7 @@ const TeamRegistrationModal = ({ event, user, onClose, onSuccess }) => {
     updatedMembers[index] = {
       id: value,
       verified: false,
+      status: null,
       name: ''
     };
     setTeamMembers(updatedMembers);

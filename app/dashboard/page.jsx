@@ -113,6 +113,7 @@ const Dashboard = () => {
         prefill: {
           name: userData.name,
           email: userData.email,
+          contact: userData.phone
         },
         theme: {
           color: "#3399cc",
@@ -202,6 +203,7 @@ const Dashboard = () => {
               <div className="space-y-3 text-gray-300">
                 <p><span className="text-gray-400">Name:</span> {user.name}</p>
                 <p><span className="text-gray-400">Email:</span> {user.email}</p>
+                <p><span className="text-gray-400">Phone:</span> {user.phone}</p>
                 <p><span className="text-gray-400">OJASS ID:</span> {user.ojassId}</p>
                 <p><span className="text-gray-400">College:</span> {user.college}</p>
                 <p><span className="text-gray-400">Student Type:</span> {user.isNitJsr ? 'NIT Jamshedpur Student' : 'Other College Student'}</p>

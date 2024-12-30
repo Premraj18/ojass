@@ -3,22 +3,52 @@ import User from '@/models/User';
 import jwt from 'jsonwebtoken';
 import { NextResponse } from 'next/server';
 
+async function addContactToBrevo(name, email, college, phone) {
+  try {
+    const response = await fetch('https://api.brevo.com/v3/contacts', {
+      method: 'POST',
+      headers: {
+        'accept': 'application/json',
+        'api-key': process.env.BREVO_API_KEY,
+        'content-type': 'application/json',
+      },
+      body: JSON.stringify({
+        email,
+        attributes: {
+          FIRSTNAME: name,
+          COLLEGE: college,
+          PHONE: phone
+        },
+        listIds: [parseInt(process.env.BREVO_LIST_ID)],
+        updateEnabled: true
+      })
+    });
+
+    if (!response.ok) {
+      console.error('Failed to add contact to Brevo:', await response.text());
+    }
+  } catch (error) {
+    console.error('Error adding contact to Brevo:', error);
+  }
+}
+
 export async function POST(req) {
   try {
     await connectDB();
     
-    const { name, email, password, isNitJsr, college, idCardUrl } = await req.json();
+    const { name, email, password, isNitJsr, college, idCardUrl, phone } = await req.json();
 
     console.log('Received signup data:', { 
       name, 
-      email, 
+      email,
+      phone,
       isNitJsr, 
       college, 
       hasIdCard: !!idCardUrl 
     }); // Debug log
 
     // Validate required fields
-    if (!name || !email || !password || isNitJsr === undefined || !college || !idCardUrl) {
+    if (!name || !email || !password || isNitJsr === undefined || !college || !idCardUrl || !phone) {
       const missingFields = [];
       if (!name) missingFields.push('name');
       if (!email) missingFields.push('email');
@@ -26,6 +56,7 @@ export async function POST(req) {
       if (isNitJsr === undefined) missingFields.push('isNitJsr');
       if (!college) missingFields.push('college');
       if (!idCardUrl) missingFields.push('idCardUrl');
+      if (!phone) missingFields.push('phone');
 
       return NextResponse.json(
         { error: `Missing required fields: ${missingFields.join(', ')}` },
@@ -33,11 +64,24 @@ export async function POST(req) {
       );
     }
 
-    // Check if user already exists
-    const existingUser = await User.findOne({ email });
+    // Validate phone number format
+    if (!/^[0-9]{10}$/.test(phone)) {
+      return NextResponse.json(
+        { error: 'Invalid phone number format. Please enter a 10-digit number.' },
+        { status: 400 }
+      );
+    }
+
+    // Check if user already exists by email or phone
+    const existingUser = await User.findOne({ 
+      $or: [
+        { email },
+        { phone }
+      ]
+    });
     if (existingUser) {
       return NextResponse.json(
-        { error: 'User already exists' },
+        { error: existingUser.email === email ? 'Email already registered' : 'Phone number already registered' },
         { status: 400 }
       );
     }
@@ -46,6 +90,7 @@ export async function POST(req) {
     const userData = {
       name,
       email,
+      phone,
       password,
       isNitJsr: Boolean(isNitJsr),
       college: isNitJsr ? 'NIT Jamshedpur' : college,
@@ -59,6 +104,9 @@ export async function POST(req) {
 
     const user = await User.create(userData);
 
+    // Add user to Brevo contact list
+    await addContactToBrevo(name, email, userData.college, userData.phone);
+
     console.log('User created:', user); // Debug log
 
     // Generate JWT token
@@ -67,6 +115,7 @@ export async function POST(req) {
         userId: user._id,
         ojassId: user.ojassId,
         name: user.name,
+        phone: user.phone,
         college: user.college,
         isNitJsr: user.isNitJsr
       },
@@ -80,6 +129,7 @@ export async function POST(req) {
         _id: user._id.toString(),
         name: user.name,
         email: user.email,
+        phone: user.phone,
         ojassId: user.ojassId,
         college: user.college,
         isNitJsr: user.isNitJsr,

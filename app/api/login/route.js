@@ -7,13 +7,18 @@ export async function POST(req) {
   try {
     await connectDB();
     
-    const { email, password } = await req.json();
+    const { email, password, phone } = await req.json();
 
-    // Find user
-    const user = await User.findOne({ email });
+    // Find user by email or phone
+    const user = await User.findOne({ 
+      $or: [
+        { email: email || '' }, 
+        { phone: phone || '' }
+      ] 
+    });
     if (!user || user.password !== password) {
       return NextResponse.json(
-        { error: 'Invalid email or password' },
+        { error: 'Invalid credentials' },
         { status: 401 }
       );
     }
@@ -38,6 +43,7 @@ export async function POST(req) {
         _id: user._id.toString(),
         name: user.name,
         email: user.email,
+        phone: user.phone,
         ojassId: user.ojassId,
         college: user.college,
         isNitJsr: user.isNitJsr,
