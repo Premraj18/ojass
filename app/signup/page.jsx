@@ -14,6 +14,7 @@ const SignUp = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
+    phone: '',
     password: '',
     confirmPassword: '',
     isNitJsr: false,
@@ -46,7 +47,7 @@ const SignUp = () => {
 
     try {
       // Validate form data
-      if (!formData.name || !formData.email || !formData.password || !formData.idCard) {
+      if (!formData.name || !formData.email || !formData.password || !formData.idCard || !formData.phone) {
         throw new Error('All fields are required');
       }
 
@@ -56,6 +57,11 @@ const SignUp = () => {
 
       if (!formData.isNitJsr && !formData.college) {
         throw new Error('College name is required');
+      }
+
+      // Validate phone number format
+      if (!/^[0-9]{10}$/.test(formData.phone)) {
+        throw new Error('Please enter a valid 10-digit phone number');
       }
 
       // First upload the image to Cloudinary
@@ -86,6 +92,7 @@ const SignUp = () => {
       const signupData = {
         name: formData.name,
         email: formData.email,
+        phone: formData.phone,
         password: formData.password,
         isNitJsr: formData.isNitJsr,
         college: formData.isNitJsr ? 'NIT Jamshedpur' : formData.college,
@@ -175,6 +182,29 @@ const SignUp = () => {
               onChange={(e) => setFormData({...formData, email: e.target.value})}
               required
             />
+          </div>
+
+          <div>
+            <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2">
+              Phone Number
+            </label>
+            <input
+              type="tel"
+              id="phone"
+              pattern="[0-9]{10}"
+              maxLength={10}
+              className="w-full px-4 py-3 rounded-full bg-white/10 border border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:border-white transition-colors"
+              placeholder="Enter your 10-digit phone number"
+              value={formData.phone}
+              onChange={(e) => {
+                const value = e.target.value.replace(/\D/g, '').slice(0, 10);
+                setFormData({...formData, phone: value});
+              }}
+              required
+            />
+            <p className="mt-1 text-sm text-gray-400">
+              Enter a 10-digit number without spaces or special characters
+            </p>
           </div>
 
           <div>

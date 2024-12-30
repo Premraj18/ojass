@@ -46,6 +46,7 @@ const TeamDetailsPopover = ({ participant, eventDetails, event, onClose }) => {
               <p className="text-gray-400">OJASS ID: <span className="text-gray-200">{participant.ojassId}</span></p>
               <p className="text-gray-400">College: <span className="text-gray-200">{participant.college}</span></p>
               <p className="text-gray-400">Email: <span className="text-gray-200">{participant.email}</span></p>
+              <p className="text-gray-400">Phone: <span className="text-gray-200">{participant.phone}</span></p>
             </div>
           </div>
 
@@ -318,6 +319,7 @@ const AdminDashboard = () => {
                             <h3 className="text-lg font-semibold text-white">{user.name}</h3>
                             <p className="text-gray-300">OJASS ID: {user.ojassId}</p>
                             <p className="text-gray-300">College: {user.college}</p>
+                            <p className="text-gray-300">Phone: {user.phone}</p>
                           </div>
                           <div className="text-right">
                             <p className="text-gray-300">
@@ -407,6 +409,7 @@ const AdminDashboard = () => {
                           </div>
                           <p className="text-gray-300">OJASS ID: {participant.ojassId}</p>
                           <p className="text-gray-300">College: {participant.college}</p>
+                          <p className="text-gray-300">Phone: {participant.phone}</p>
                           
                           {isTeamEvent && eventDetails && (
                             <div className="mt-2">
