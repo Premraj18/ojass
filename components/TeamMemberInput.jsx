@@ -26,6 +26,16 @@ const TeamMemberInput = ({
     }
   };
 
+  const getInputStyle = () => {
+    if (member.verified) {
+      return 'bg-green-500/20 text-green-300 border-green-500';
+    }
+    if (member.status === 'not_paid') {
+      return 'bg-red-500/20 text-red-300 border-red-500';
+    }
+    return 'bg-gray-700 text-white border-gray-600';
+  };
+
   return (
     <div className="space-y-1">
       <div className="flex items-center gap-2">
@@ -34,13 +44,7 @@ const TeamMemberInput = ({
           value={member.id}
           onChange={(e) => onChange(index, e.target.value.toUpperCase())}
           placeholder={`Team Member ${index + 2} OJASS ID${isRequired ? ' *' : ' (Optional)'}`}
-          className={`flex-1 px-4 py-2 rounded-lg ${
-            member.verified 
-              ? 'bg-green-500/20 text-green-300' 
-              : 'bg-gray-700 text-white'
-          } border ${
-            member.verified ? 'border-green-500' : 'border-gray-600'
-          } focus:border-blue-500`}
+          className={`flex-1 px-4 py-2 rounded-lg ${getInputStyle()} border focus:border-blue-500`}
           required={isRequired}
           disabled={disabled || isVerifying || member.verified}
         />
@@ -69,6 +73,9 @@ const TeamMemberInput = ({
 
       {member.verified && (
         <p className="text-green-400 text-sm">✓ Verified: {member.name}</p>
+      )}
+      {member.status === 'not_paid' && (
+        <p className="text-red-400 text-sm">⚠ Not Paid: {member.name}</p>
       )}
       <p className="text-xs text-gray-400">Format: OJASS-XXXXXX (X can be numbers or letters)</p>
     </div>

@@ -20,15 +20,16 @@ export async function GET(req) {
 
     if (!user) {
       return NextResponse.json(
-        { error: 'User not found' },
-        { status: 404 }
+        { error: 'User not found', status: 'not_found', message: `User with ID ${ojassId} does not exist` },
+        { status: 200 }
       );
     }
 
     return NextResponse.json({
       name: user.name,
       paid: user.paid,
-      events: user.events || []
+      events: user.events || [],
+      status: user.paid ? 'verified' : 'not_paid'
     });
   } catch (error) {
     console.error('Member verification error:', error);
