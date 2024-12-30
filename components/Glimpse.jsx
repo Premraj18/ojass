@@ -1,6 +1,7 @@
 "use client";
 import Image from 'next/image';
 import Link from 'next/link';
+import GlimpseCard from './glimseCard'
 
 const Data = [
     { id: "1", imgUrl: "/gimg1.webp" },
@@ -17,21 +18,7 @@ const Glimpse = () => {
                     <Image  src="/glimpsetext.webp" alt="glimse" width={400} height={100} />
                 </div>
                 <div className="w-full flex flex-wrap justify-center items-center gap-10 my-10">
-                    {Data.map((e) => (
-                        <div key={e.id} className="w-72 h-80 relative bg-white/10 rounded-xl p-4 px-6">
-                            <div className="border w-full h-full py-2">
-                                <div className='border absolute w-[256px] h-[271px] right-4 '>
-                                    <Image
-                                        src={e.imgUrl}
-                                        alt={`Image ${e.id}`}
-                                        width={400} 
-                                        height={100}
-                                        className="w-full h-full object-cover px-2"
-                                    />
-                                </div>
-                            </div>
-                        </div>
-                    ))}
+                    <GlimpseCard/>
                 </div>
                 <div>
                     <Link href="/gallery">
