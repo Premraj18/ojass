@@ -47,7 +47,7 @@ export default function Footer2() {
         formData.append("name", phone)
         formData.append("message", message)
 
-        formData.append("access_key", "3e4907d6-f1d4-46b2-89e5-74232098d23a");
+        formData.append("access_key", "86cad20b-6450-456f-9d68-d07e99061062");
         // 3e4907d6-f1d4-46b2-89e5-74232098d23a
         const response = await fetch("https://api.web3forms.com/submit", {
             method: "POST",

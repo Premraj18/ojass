@@ -11,6 +11,7 @@ import Footer from './Footer';
 import Footer2 from "./Footer2";
 import Modal from "./Modal";
 import countapi from 'countapi-js';
+import Link from 'next/link';
 
 const variants = {
     initial: {
@@ -114,9 +115,11 @@ const Hero = () => {
                         <motion.p className='md:text-2xl text-gray-300 text-xl tracking-[8px] uppercase ' variants={cosmosvarients}>Techno-Management Fest of NIT Jamshedpur 22nd edition</motion.p>
                         {/* <motion.p className='md:text-2xl text-gray-300 text-xl tracking-[8px] uppercase ' variants={cosmosvarients}>22nd edition</motion.p> */}
                         <motion.p className='md:text-2xl text-gray-300 uppercase pt-3' variants={cosmosvarients}>14-16 February 2025</motion.p>
-                        {/* <motion.button onClick={openModal} className='z-10 w-40 mt-4 py-2 border bg-white/15 rounded-full hover:bg-white/20 transition-colors' variants={cosmosvarients}>
-                            Register Now
-                        </motion.button> */}
+                        <Link href='signup' className='z-20'>
+                            <motion.button className='z-10 w-40 mt-4 py-2 border bg-white/15 rounded-full hover:bg-white/20 transition-colors' variants={cosmosvarients}>
+                                Register Now
+                            </motion.button>
+                        </Link>
                     </motion.div>
                   
                 </div>
