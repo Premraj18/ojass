@@ -36,7 +36,7 @@ export async function POST(req) {
   try {
     await connectDB();
     
-    const { name, email, password, isNitJsr, college, idCardUrl, phone } = await req.json();
+    const { name, email, password, isNitJsr, college, idCardUrl, phone, referralCode } = await req.json();
 
     console.log('Received signup data:', { 
       name, 
@@ -44,7 +44,8 @@ export async function POST(req) {
       phone,
       isNitJsr, 
       college, 
-      hasIdCard: !!idCardUrl 
+      hasIdCard: !!idCardUrl,
+      referralCode: referralCode || 'None'
     }); // Debug log
 
     // Validate required fields
@@ -97,7 +98,8 @@ export async function POST(req) {
       idCardUrl,
       registrationDate: new Date(),
       paid: false,
-      paidAmount: 0
+      paidAmount: 0,
+      referralCode: referralCode || undefined // Add referral code if provided
     };
 
     console.log('Creating user with data:', userData); // Debug log
@@ -140,6 +142,7 @@ export async function POST(req) {
         registrationPhase: user.registrationPhase,
         events: user.events || [],
         eventDetails: user.eventDetails || [],
+        referralCode: user.referralCode,
         payment: {
           receiptId: user.payment?.receiptId || user.paymentId,
           razorpayOrderId: user.payment?.razorpayOrderId,

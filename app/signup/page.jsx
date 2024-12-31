@@ -19,7 +19,8 @@ const SignUp = () => {
     confirmPassword: '',
     isNitJsr: false,
     college: '',
-    idCard: null
+    idCard: null,
+    referralCode: ''
   });
   const [idCardPreview, setIdCardPreview] = useState('');
   const [error, setError] = useState('');
@@ -97,7 +98,8 @@ const SignUp = () => {
         isNitJsr: formData.isNitJsr,
         college: formData.isNitJsr ? 'NIT Jamshedpur' : formData.college,
         idCardUrl: uploadData.secure_url,
-        registrationDate: new Date()
+        registrationDate: new Date(),
+        referralCode: formData.referralCode
       };
 
       console.log('Sending signup data:', signupData); // Debug log
@@ -314,6 +316,20 @@ const SignUp = () => {
                 />
               </div>
             )}
+          </div>
+
+          <div>
+            <label htmlFor="referralCode" className="block text-sm font-medium text-gray-300 mb-2">
+              Referral Code (Optional)
+            </label>
+            <input
+              type="text"
+              id="referralCode"
+              className="w-full px-4 py-3 rounded-full bg-white/10 border border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:border-white transition-colors"
+              placeholder="Enter referral code if you have one"
+              value={formData.referralCode}
+              onChange={(e) => setFormData({...formData, referralCode: e.target.value})}
+            />
           </div>
 
           <button
