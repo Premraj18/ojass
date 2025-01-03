@@ -105,6 +105,11 @@ const userSchema = new mongoose.Schema({
     isTeamMember: Boolean,
     teamLeader: String
   }],
+  referralCode: {
+    type: String,
+    trim: true,
+    sparse: true
+  },
   paymentId: {
     type: String,
     sparse: true
