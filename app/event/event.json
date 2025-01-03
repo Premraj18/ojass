@@ -12,9 +12,6 @@
             "description": "HACK DE SCIENCE, where creativity meets innovation! This event is designed to challenge your development skills and inspire you to create amazing projects while you compete with the brightest minds in the field.",
             "prizes": {
                 "total": "₹50,000",
-                "winner": "₹25,000",
-                "first_runner_up": "₹15,000",
-                "second_runner_up": "₹10,000",
                 "participants": "Certificates to all Participants"
             },
             "details": [
@@ -53,9 +50,6 @@
             "description": "If you love competitive coding, or problem-solving in general, then this is THE event for you! Code Mania is the flagship competitive programming event of our prestigious institute. This is a team event where the size of a team can vary from 1 member to 3 members. So, this event will not only help you hone your problem-solving skills but also contribute to your capacity to work with a team under pressure!",
             "prizes": {
                 "total": "₹25,000",
-                "winner": "₹12,000",
-                "first_runner_up": "₹8,000",
-                "second_runner_up": "₹5,000",
                 "participationCertificates": "Certificates to all Participants."
             },
             "details": [
@@ -86,9 +80,6 @@
             "description": "TensorsEncoded!, where Python and Artificial Intelligence converge! This event is designed to help you explore the fascinating world of Artificial Intelligence and its powerful applications in solving real-world problems.",
             "prizes": {
                 "total": "₹25,000",
-                "winner": "₹12,000",
-                "first_runner_up": "₹8,000",
-                "second_runner_up": "₹5,000",
                 "participants": "Certificates to all Participants"
             },
             "details":  [
@@ -122,9 +113,6 @@
             "description": "ModelMayhem, an extraordinary event by OJASS designed to immerse participants in the ever-evolving realm of Machine Learning and Artificial Intelligence. Whether you're a budding enthusiast or a seasoned practitioner, ModelMayhem is your platform to showcase skills, solve challenging problems, and innovate with cutting-edge technologies.",
             "prizes": {
                 "total": "₹20,000",
-                "winner": "₹10,000",
-                "first_runner_up": "₹6,000",
-                "second_runner_up": "₹4,000",
                 "participationCertificates": "Certificates to all Participants."
             },
             "details": [
@@ -160,9 +148,6 @@
             "description": "This event challenges participants to design and operate underwater robots capable of navigating a submerged course, scanning QR codes placed underwater, and decoding the information to complete specific tasks. The event tests engineering, navigation, and automation skills under water.",
             "prizes": {
                 "total": "₹60,000",
-                "winner": "₹30,000",
-                "first_runner_up": "₹20,000",
-                "second_runner_up": "₹10,000",
                 "participants": "Certificates to all Participants"
             },
             "details": [
@@ -192,9 +177,6 @@
             "description": "Participants will design and build miniature boats that must navigate a zigzag course filled with obstacles from a designated starting point to the finish line. The boats can be either manually controlled (via ropes, wind, or sticks) or autonomous (using pre-designed mechanisms). The event tests creativity, engineering, and precision in steering through the course.",
             "prizes": {
                 "total": "₹30,000",
-                "winner": "₹15,000",
-                "first_runner_up": "₹10,000",
-                "second_runner_up": "₹5,000",
                 "participationCertificates": "Certificates to all Participants."
             },
             "details": [
@@ -228,9 +210,6 @@
             "description": "BIZZATHALON is a business quizzing event organized as part of OJASS’25, the techno-management fest of NIT Jamshedpur. The event challenges participants to demonstrate their knowledge of business, startups, economics, and related domains through a series of competitive quiz rounds.",
             "prizes": {
                 "total": "₹20,000",
-                "winner": "₹10,000",
-                "first_runner_up": "₹6,000",
-                "second_runner_up": "₹4,000",
                 "participants": "Certificates to all Participants"
             },
             "details": [
@@ -266,9 +245,6 @@
             "description": "SCI-FI QUIZ is a Sci-Tech quizzing event organized under OJASS’25, the techno-management fest of NIT Jamshedpur. This event challenges participants to demonstrate their knowledge in the fields of science, technology, business, and related domains through a series of competitive quiz rounds.",
             "prizes": {
                 "total": "₹20,000",
-                "winner": "₹10,000",
-                "first_runner_up": "₹6,000",
-                "second_runner_up": "₹4,000",
                 "participationCertificates": "Certificates to all Participants."
             },
             "details": [
@@ -312,9 +288,6 @@
             "description": "The Data Analytics Case Competition is a unique platform for students to demonstrate their analytical prowess, creative thinking, and strategic problem-solving abilities. Participants will analyse real-world business problems, derive actionable insights, and present innovative solutions to industry experts. This event aims to bridge the gap between academic knowledge and practical application in the field of data analytics.",
             "prizes": {
                 "total": "₹20,000",
-                "winner": "₹10,000",
-                "first_runner_up": "₹6,000",
-                "second_runner_up": "₹4,000",
                 "participants": "Certificates to all Participants"
             },
             "details": [
@@ -348,9 +321,6 @@
             "description": "Consulting Nexus challenges participants to think critically and solve real-world business problems. Participants will engage in analyzing case studies, solving guesstimates, tackling business puzzles, and presenting structured solutions to complex challenges in the field of management consulting.",
             "prizes": {
                 "total": "₹20,000",
-                "winner": "₹10,000",
-                "first_runner_up": "₹6,000",
-                "second_runner_up": "₹4,000",
                 "participationCertificates": "Certificates to all Participants."
             },
             "details": [
@@ -387,9 +357,6 @@
             "description": "Test participants' knowledge of cryptocurrency markets and trading strategies by managing a virtual crypto portfolio over a specific time period.",
             "prizes": {
                 "total": "₹25,000",
-                "winner": "₹12,000",
-                "first_runner_up": "₹8,000",
-                "second_runner_up": "₹5,000",
                 "participants": "Certificates to all Participants"
             },
             "details": [
@@ -436,9 +403,6 @@
             "description": "Participants will design, mint, and auction their own NFTs, showcasing creativity, technical skills, and market strategy.",
             "prizes": {
                 "total": "₹25,000",
-                "winner": "₹12,000",
-                "first_runner_up": "₹8,000",
-                "second_runner_up": "₹5,000",
                 "participants": "Certificates to all Participants"
             },
             "details": [
@@ -479,9 +443,6 @@
             "description": "The Ethical Hacking Event at OJASS’25 challenges participants to demonstrate their hacking skills in a safe and controlled environment. Participants will solve real-world cybersecurity challenges, including penetration testing, vulnerability exploitation, and defence mechanisms, while adhering to ethical practices.",
             "prizes": {
                 "total": "₹30,000",
-                "winner": "₹15,000",
-                "first_runner_up": "₹10,000",
-                "second_runner_up": "₹5,000",
                 "participationCertificates": "Certificates to all Participants."
             },
             "details": [
@@ -526,9 +487,6 @@
             "description": "Electrospcection is a two-round event that challenges participants on both theoretical knowledge and practical circuit design skills. The first round tests your understanding of electrical and electronic components, while the final round requires you to apply your knowledge by constructing a functional circuit.",
             "prizes": {
                 "total": "₹20,000",
-                "winner": "₹10,000",
-                "first_runner_up": "₹6,000",
-                "second_runner_up": "₹4,000",
                 "participants": "Certificates to all Participants"
             },
             "details": [
@@ -565,9 +523,6 @@
             "description": "WaxCombs challenges participants to demonstrate precision, patience, and creativity. Teams will first create an irregular wax shape using materials provided by the organizers. Then, each team will draw a token with a specific shape to carve from their wax casting. This task, inspired by the Squid Game concept, tests skill and teamwork. The fastest team to complete the task wins, but breaking the wax shape results in elimination.",
             "prizes": {
                 "total": "₹15,000",
-                "winner": "₹8,000",
-                "first_runner_up": "₹5,000",
-                "second_runner_up": "₹2,000",
                 "participationCertificates": "Certificates to all Participants."
             },
             "details": [
@@ -602,9 +557,6 @@
             "description": "This is a hands-on event that combines theoretical knowledge with practical application. Participants will construct a simply supported bridge using ice-cream sticks provided on the spot. The event emphasizes creativity, resourcefulness, and problem-solving skills. Teams will first participate in a engineering and aptitude quiz, and those who qualify will move on to the bridge-building round.",
             "prizes": {
                 "total": "₹20,000",
-                "winner": "₹10,000",
-                "first_runner_up": "₹6,000",
-                "second_runner_up": "₹4,000",
                 "participants": "Certificates to all Participants"
             },
             "details":  [
@@ -645,9 +597,6 @@
             "description": "This event focuses on the design and analysis of structural and mechanical components using advanced software tools like CATIA/SolidWorks for modelling and ANSYS for simulation. Participants will explore the feasibility of designs through visualization, drafting, assembly, and performance analysis.",
             "prizes": {
                 "total": "₹15,000",
-                "winner": "₹8,000",
-                "first_runner_up": "₹5,000",
-                "second_runner_up": "₹2,000",
                 "participationCertificates": "Certificates to all Participants."
             },
             "details": [
@@ -687,9 +636,6 @@
             "description": "The BGMI Tournament is an exhilarating e-sports event organized as a part of OJASS’25, the annual techno-management fest of NIT Jamshedpur. This competition invites participants to showcase their strategic, tactical, and gaming skills in an engaging battle royale format.",
             "prizes": {
                 "total": "₹15,000",
-                "winner": "₹8,000",
-                "first_runner_up": "₹5,000",
-                "second_runner_up": "₹2,000",
                 "participants": "Certificates to all Participants"
             },
             "details": [
@@ -731,9 +677,6 @@
             "description": "The Endgame is an on-board rapid chess combat designed to test the strategic and tactical prowess of participants. Each match is played in a rapid format, ensuring dynamic and thrilling gameplay.",
             "prizes": {
                 "total": "₹15,000",
-                "winner": "₹8,000",
-                "first_runner_up": "₹5,000",
-                "second_runner_up": "₹2,000",
                 "participationCertificates": "Certificates to all Participants."
             },
             "details": [
@@ -774,9 +717,6 @@
             "description": "The Valorant Tournament is an electrifying e-sports event organized as a part of OJASS’25, the annual techno-management fest of NIT Jamshedpur. This competition invites participants to showcase their strategic, tactical, and aiming skills in Riot Games' popular 5v5 tactical shooter.",
             "prizes": {
                 "total": "₹15,000",
-                "winner": "₹8,000",
-                "first_runner_up": "₹5,000",
-                "second_runner_up": "₹2,000",
                 "participants": "Certificates to all Participants"
             },
             "details":  [
@@ -812,9 +752,6 @@
             "description": "The FIFA Tournament is a thrilling e-sports event organized as a part of OJASS’25, the annual techno-management fest of NIT Jamshedpur. This competition invites participants to showcase their skills in football simulation, focusing on strategy, precision, and gameplay tactics.",
             "prizes": {
                 "total": "₹15,000",
-                "winner": "₹8,000",
-                "first_runner_up": "₹5,000",
-                "second_runner_up": "₹2,000",
                 "participationCertificates": "Certificates to all Participants."
             },
             "details": [
@@ -858,9 +795,6 @@
             "description": "Event Type: Filmmaking - CineScript challenges participants to create a 5–10-minute short film within a limited timeframe. This event combines the technical aspects of filmmaking, including camera work, editing, and sound design, with storytelling and creativity.",
             "prizes": {
                 "total": "₹35,000",
-                "winner": "₹18,000",
-                "first_runner_up": "₹10,000",
-                "second_runner_up": "₹7,000",
                 "participants": "Certificates to all Participants"
             },
             "details": [
@@ -893,9 +827,6 @@
             "description": "Frames & Tales is a photography event where participants create a photo story based on a specific theme or genre. The event integrates technical photography skills with the art of storytelling.",
             "prizes": {
                 "total": "₹20,000",
-                "winner": "₹10,000",
-                "first_runner_up": "₹6,000",
-                "second_runner_up": "₹4,000",
                 "participationCertificates": "Certificates to all Participants."
             },
             "details": [
@@ -929,9 +860,6 @@
             "description": "Light, Camera is a reel-making competition where participants craft engaging short videos based on a specific theme or concept. The event combines creative filmmaking techniques with the art of impactful storytelling to captivate and inspire audiences.",
             "prizes": {
                 "total": "₹20,000",
-                "winner": "₹10,000",
-                "first_runner_up": "₹6,000",
-                "second_runner_up": "₹4,000",
                 "participants": "Certificates to all Participants"
             },
             "details":  [
@@ -969,9 +897,6 @@
             "description": "Participants will be randomly assigned a brand name and product, and they will need to create a complete brand identity, including designing the logo, product, tagline, and motto. They will then present their creative work to the judges.",
             "prizes": {
                 "total": "₹30,000",
-                "winner": "₹15,000",
-                "first_runner_up": "₹10,000",
-                "second_runner_up": "₹5,000",
                 "participants": "Certificates to all Participants"
             },
             "details": [
@@ -1006,9 +931,6 @@
             "description": "A mock stock is a simulated investment in a publicly traded company, allowing participants to experience the buying and selling of stocks without any real financial risk. This event enables participants to learn about the stock market, practice investment strategies, and gain experience before investing real money.",
             "prizes": {
                 "total": "₹20,000",
-                "winner": "₹10,000",
-                "first_runner_up": "₹6,000",
-                "second_runner_up": "₹4,000",
                 "participationCertificates": "Certificates to all Participants."
             },
             "details": [
@@ -1042,9 +964,6 @@
             "description": "The Startup Ideathon at OJASS’25 offers aspiring entrepreneurs a platform to present their innovative startup ideas, refine their business plans, and gain access to potential investors and seed funding. This event empowers participants to showcase their creativity, strategic thinking, and business acumen in front of an esteemed panel of judges and investors.",
             "prizes": {
                 "total": "₹25,000",
-                "winner": "₹12,000",
-                "first_runner_up": "₹8,000",
-                "second_runner_up": "₹5,000",
                 "participants": "Certificates to all Participants"
             },
             "details":  [
@@ -1085,10 +1004,7 @@
             "organizer": "Robo Realm",
             "description": "Robo War is an adrenaline-pumping robotics competition where participants design and build robots to battle it out in a specially designed arena. The goal is to showcase engineering prowess, strategy, and innovation as robots clash in intense, high-energy combat until one emerges victorious.",
             "prizes": {
-                "total": "₹60,000",
-                "winner": "₹30,000",
-                "first_runner_up": "₹20,000",
-                "second_runner_up": "₹10,000",
+                "total": "₹70,000",
                 "participants": "Certificates to all Participants"
             },
             "details": [
@@ -1120,9 +1036,6 @@
             "description": "In this competition, the mission of the autonomous robot is to negotiate a maze from specified corner to its centre in the shortest possible time.",
             "prizes": {
                 "total": "₹40,000",
-                "winner": "₹20,000",
-                "first_runner_up": "₹15,000",
-                "second_runner_up": "₹5,000",
                 "participationCertificates": "Certificates to all Participants."
             },
             "details": [
@@ -1154,9 +1067,6 @@
             "description": "Design a wired or wireless robot. This bot must navigate the arena, carrying a ball of diameter 5-10 cm, and skilfully score by pushing or throwing it into the opponent's goalpost.",
             "prizes": {
                 "total": "₹40,000",
-                "winner": "₹25,000",
-                "first_runner_up": "₹10,000",
-                "second_runner_up": "₹5,000",
                 "participants": "Certificates to all Participants"
             },
             "details": [
@@ -1190,9 +1100,6 @@
             "description": "Robo Rumble is an adrenaline-pumping All-Terrain Vehicle (ATV) Robotics Challenge. Participants must design and build a robot capable of traversing a challenging obstacle course featuring bridges, mud pits, uneven terrain, and potholes. This event tests the engineering creativity and technical prowess of participants in overcoming real-world engineering challenges.",
             "prizes": {
                 "total": "₹40,000",
-                "winner": "₹25,000",
-                "first_runner_up": "₹10,000",
-                "second_runner_up": "₹5,000",
                 "participationCertificates": "Certificates to all Participants."
             },
             "details": [
@@ -1226,9 +1133,6 @@
             "description": "Teams are challenged to design and build a line-following robot capable of autonomous operation. The robot must navigate a predefined track featuring straight paths, sharp turns, curves, and intersections. Additionally, the robot should demonstrate its ability to detect and follow the shortest path efficiently.",
             "prizes": {
                 "total": "₹25,000",
-                "winner": "₹12,000",
-                "first_runner_up": "₹8,000",
-                "second_runner_up": "₹5,000",
                 "participants": "Certificates to all Participants"
             },
             "details":  [
@@ -1270,9 +1174,6 @@
             "description": "The Drone Race Challenge is a thrilling test of piloting skills, precision, and speed. Participants will navigate their drones through a challenging obstacle course, racing against time to achieve the fastest completion. The event focuses on control, agility, and strategic navigation.",
             "prizes": {
                 "total": "₹50,000",
-                "winner": "₹25,000",
-                "first_runner_up": "₹15,000",
-                "second_runner_up": "₹10,000",
                 "participants": "Certificates to all Participants"
             },
             "details": [
@@ -1308,9 +1209,6 @@
             "description": "Participants will design, build, and test a glider using provided materials, aiming for maximum flight distance, stability, and creativity.",
             "prizes": {
                 "total": "₹15,000",
-                "winner": "₹8,000",
-                "first_runner_up": "₹4,000",
-                "second_runner_up": "₹3,000",
                 "participationCertificates": "Certificates to all Participants."
             },
             "details": [
@@ -1355,9 +1253,6 @@
             "description": "No Ground Zone is a competition for aviation enthusiasts. Want to put your aviation knowledge into reality and get exciting prizes for it? Then get ready for OJASS, as in its NO Ground Zone, it has plenty of opportunities waiting.",
             "prizes": {
                 "total": "₹35,000",
-                "winner": "₹20,000",
-                "first_runner_up": "₹10,000",
-                "second_runner_up": "₹5,000",
                 "participants": "Certificates to all Participants"
             },
             "details":  [
@@ -1393,9 +1288,6 @@
             "description": "Debate the UN, organized by the Literary and Debating Society of OJASS’25, invites individuals to showcase their analytical, debating, and diplomacy skills in a simulated United Nations environment. Participants will engage in structured discussions, representing countries or stakeholders to address global issues.",
             "prizes": {
                 "total": "₹30,000",
-                "winner": "₹15,000",
-                "first_runner_up": "₹10,000",
-                "second_runner_up": "₹5,000",
                 "participants": "Certificates to all Participants"
             },
             "details": [
@@ -1430,9 +1322,6 @@
             "description": "The Mock IPL Auction is an engaging and strategic event designed for cricket enthusiasts to simulate the experience of building their dream team through a real-time auction. Participants will step into the role of team owners and bidders, managing a fixed budget of virtual money to compete for international T20 players.",
             "prizes": {
                 "total": "₹25,000",
-                "winner": "₹12,000",
-                "first_runner_up": "₹8,000",
-                "second_runner_up": "₹5,000",
                 "participationCertificates": "Certificates to all Participants."
             },
             "details": [

@@ -119,9 +119,9 @@ const Page = () => {
             <h2 className='text-4xl font-semibold'>Prize Worth</h2>
             <div className='flex flex-col justify-center items-center gap-2 font-medium text-lg bg-white/15 p-6 rounded-lg md:w-96 w-80'>
               <p>Total : {dataeve.prizes.total} </p>
-              <p>Winner : {dataeve.prizes.winner}</p>
+              {/* <p>Winner : {dataeve.prizes.winner}</p>
               <p>First Runner Up : {dataeve.prizes.first_runner_up}</p>
-              <p>Second Runner Up : {dataeve.prizes.second_runner_up}</p>
+              <p>Second Runner Up : {dataeve.prizes.second_runner_up}</p> */}
               <p>Certificates to all Participants</p>
             </div>
           </div>
