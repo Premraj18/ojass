@@ -19,7 +19,9 @@ export async function GET(req) {
     const users = await User.find({
       $or: [
         { name: { $regex: query, $options: 'i' } },
-        { ojassId: { $regex: query, $options: 'i' } }
+        { ojassId: { $regex: query, $options: 'i' } },
+        { email: { $regex: query, $options: 'i' } },
+        { phone: { $regex: query, $options: 'i' } }
       ]
     }).select('-password');
 
