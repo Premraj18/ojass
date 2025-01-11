@@ -30,7 +30,7 @@ export default function RootLayout({
           name="description"
           content="OJASS 2025: The 22nd edition of the Techno-Management Fest of NIT Jamshedpur. Join us from 14-16 February 2025."
         />
-        <link rel="icon" type="image/webp+png" href="/logo.webp" />
+        <link rel="icon" type="image/webp+png" href="/favicon.webp" />
       </head>
       <body className={inter.className}>
         
