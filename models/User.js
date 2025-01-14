@@ -150,7 +150,7 @@ const userSchema = new mongoose.Schema({
 });
 
 // Update the early bird deadline in the userSchema
-const EARLY_BIRD_DEADLINE = new Date('2025-01-10');
+const EARLY_BIRD_DEADLINE = new Date('2025-01-11');
 
 // Update required payment amount calculation
 userSchema.virtual('requiredAmount').get(function() {

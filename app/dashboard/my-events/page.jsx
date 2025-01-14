@@ -123,7 +123,7 @@ const MyEventsPage = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {registeredEvents.map((event) => {
               const details = event.registrationDetails;
-              const isTeamEvent = parseInt(event.teamSizeMin) > 1;
+              const isTeamEvent = parseInt(event.teamSizeMax) > 1;
 
               return (
                 <div 

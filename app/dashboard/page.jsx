@@ -34,7 +34,7 @@ const Dashboard = () => {
 
   const getRegistrationInfo = () => {
     const now = new Date();
-    const earlyBirdDeadline = new Date('2025-01-10');
+    const earlyBirdDeadline = new Date('2025-01-11');
     const prices = {
       nitJsrEarly: parseInt(process.env.NEXT_PUBLIC_NITJSR_EARLY_PRICE) || 1,
       nitJsrRegular: parseInt(process.env.NEXT_PUBLIC_NITJSR_REGULAR_PRICE) || 2,

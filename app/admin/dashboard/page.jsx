@@ -9,7 +9,7 @@ import AdminNav from '@/components/admin/AdminNav';
 const TeamDetailsPopover = ({ participant, eventDetails, event, onClose }) => {
   if (!eventDetails || !event) return null;
 
-  const isTeamEvent = parseInt(event.teamSizeMin) > 1;
+  const isTeamEvent = parseInt(event.teamSizeMax) > 1;
 
   const handleOverlayClick = (e) => {
     if (e.target === e.currentTarget) {
@@ -386,7 +386,7 @@ const AdminDashboard = () => {
                 {eventParticipants.map(participant => {
                   const eventDetails = participant.eventDetails?.find(d => d.eventId === selectedEvent);
                   const event = eventData.flat().find(e => e.id === selectedEvent);
-                  const isTeamEvent = event && parseInt(event.teamSizeMin) > 1;
+                  const isTeamEvent = event && parseInt(event.teamSizeMax) > 1;
                   const registrationDate = eventDetails?.registrationDate || participant.registrationDate;
 
                   return (
