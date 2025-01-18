@@ -30,15 +30,7 @@ const NotificationsPage = () => {
       }
 
       const data = await response.json();
-      
-      // Force React to see this as new data
-      setNotifications(prevNotifications => {
-        const newNotifications = data.notifications;
-        if (JSON.stringify(prevNotifications) !== JSON.stringify(newNotifications)) {
-          return newNotifications;
-        }
-        return prevNotifications;
-      });
+      setNotifications(data.notifications);
       
     } catch (error) {
       console.error('Error fetching notifications:', error);
@@ -48,40 +40,10 @@ const NotificationsPage = () => {
     }
   }, []);
 
-  // Initial fetch
+  // Initial fetch only
   useEffect(() => {
     fetchNotifications();
   }, [fetchNotifications]);
-
-  // Polling for updates
-  // useEffect(() => {
-  //   const intervalId = setInterval(fetchNotifications, 5000); // Poll every 5 seconds
-  //   return () => clearInterval(intervalId);
-  // }, [fetchNotifications]);
-
-  // Refresh on visibility change
-  useEffect(() => {
-    const handleVisibilityChange = () => {
-      if (document.visibilityState === 'visible') {
-        fetchNotifications();
-      }
-    };
-    document.addEventListener('visibilitychange', handleVisibilityChange);
-    return () => document.removeEventListener('visibilitychange', handleVisibilityChange);
-  }, [fetchNotifications]);
-
-  // Refresh on focus
-  useEffect(() => {
-    const handleFocus = () => fetchNotifications();
-    window.addEventListener('focus', handleFocus);
-    return () => window.removeEventListener('focus', handleFocus);
-  }, [fetchNotifications]);
-
-  // Force refresh when route changes
-  useEffect(() => {
-    router.events?.on('routeChangeComplete', fetchNotifications);
-    return () => router.events?.off('routeChangeComplete', fetchNotifications);
-  }, [router.events, fetchNotifications]);
 
   const formatDate = (dateString) => {
     const date = new Date(dateString);
@@ -93,19 +55,6 @@ const NotificationsPage = () => {
       minute: '2-digit'
     });
   };
-
-  if (loading) {
-    return (
-      <div className="min-h-screen pt-16 md:pt-20 bg-[url('/bghero.webp')] bg-fixed bg-center bg-cover">
-        <div className="fixed inset-0 bg-gradient-to-b from-black/30 to-black/90 -z-10" />
-        <div className="container mx-auto px-4 py-6 md:py-8">
-          <div className="flex justify-center items-center h-64">
-            <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-500"></div>
-          </div>
-        </div>
-      </div>
-    );
-  }
 
   return (
     <div className="min-h-screen pt-16 md:pt-20 bg-[url('/bghero.webp')] bg-fixed bg-center bg-cover">
@@ -141,15 +90,11 @@ const NotificationsPage = () => {
           </button>
         </div>
 
-        {/* Loading state */}
-        {loading && (
+        {loading ? (
           <div className="flex justify-center items-center h-64">
             <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-500"></div>
           </div>
-        )}
-
-        {/* Content */}
-        {!loading && (
+        ) : (
           <>
             {notifications.length === 0 ? (
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 md:p-8 text-center">
@@ -159,7 +104,7 @@ const NotificationsPage = () => {
               <div className="space-y-4 md:space-y-6">
                 {notifications.map((notification) => (
                   <motion.div
-                    key={`${notification._id}-${notification.updatedAt}`}
+                    key={notification._id}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     className="bg-white/10 backdrop-blur-sm rounded-xl p-4 md:p-6"
