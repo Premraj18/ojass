@@ -16,6 +16,9 @@ const Dashboard = () => {
   const [user, setUser] = useState(null);
   const [showReceipt, setShowReceipt] = useState(false);
   const [isProcessing, setIsProcessing] = useState(false);
+  const [notificationCount, setNotificationCount] = useState(0);
+  const [hasNewNotifications, setHasNewNotifications] = useState(false);
+  const [newNotificationCount, setNewNotificationCount] = useState(0);
   const razorpayLoaded = useRazorpay();
   const setauthScreen = useSetRecoilState(authScreenAtom)
 
@@ -32,9 +35,43 @@ const Dashboard = () => {
     setUser(JSON.parse(userData));
   }, [router]);
 
+  useEffect(() => {
+    const checkNotifications = async () => {
+      try {
+        const response = await fetch('/api/notifications/list');
+        const data = await response.json();
+        
+        if (response.ok) {
+          const currentCount = data.notifications.length;
+          setNotificationCount(currentCount);
+          
+          // Get last seen count from localStorage
+          const lastSeenCount = parseInt(localStorage.getItem('lastSeenNotificationCount') || '0');
+          
+          // Calculate new notifications
+          if (currentCount > lastSeenCount) {
+            setHasNewNotifications(true);
+            setNewNotificationCount(currentCount - lastSeenCount);
+          } else {
+            setHasNewNotifications(false);
+            setNewNotificationCount(0);
+          }
+        }
+      } catch (error) {
+        console.error('Error checking notifications:', error);
+      }
+    };
+
+    // Check immediately and then every minute
+    checkNotifications();
+    const interval = setInterval(checkNotifications, 60000);
+
+    return () => clearInterval(interval);
+  }, []);
+
   const getRegistrationInfo = () => {
     const now = new Date();
-    const earlyBirdDeadline = new Date('2025-01-16');
+    const earlyBirdDeadline = new Date(process.env.NEXT_PUBLIC_EARLY_REGISTRATION_END_DATE);
     const prices = {
       nitJsrEarly: parseInt(process.env.NEXT_PUBLIC_NITJSR_EARLY_PRICE) || 1,
       nitJsrRegular: parseInt(process.env.NEXT_PUBLIC_NITJSR_REGULAR_PRICE) || 2,
@@ -298,6 +335,23 @@ const Dashboard = () => {
                   disabled={!user.paid}
                 >
                   {user.paid ? 'View My Events' : 'Complete Registration First'}
+                </button>
+                <button
+                  onClick={() => {
+                    localStorage.setItem('lastSeenNotificationCount', notificationCount);
+                    router.push('/dashboard/notifications');
+                  }}
+                  className="relative w-full py-3 px-4 rounded-full bg-white/10 text-white hover:bg-white/20 transition-colors group"
+                >
+                  View Notifications
+                  {hasNewNotifications && (
+                    <span className="absolute right-3 top-1/2 -translate-y-1/2 flex h-6 w-6">
+                      <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                      <span className="relative inline-flex rounded-full h-6 w-6 bg-blue-500 text-white text-xs items-center justify-center">
+                        {newNotificationCount}
+                      </span>
+                    </span>
+                  )}
                 </button>
                 <button
                   onClick={() => {
