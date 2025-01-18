@@ -40,21 +40,29 @@ self.addEventListener('push', function(event) {
         }
       } catch (error) {
         console.error('Error processing image:', error);
-        // Continue without image if there's an error
       }
     }
 
-    console.log('Showing notification with options:', JSON.stringify(notificationOptions));
-    
-    event.waitUntil(
-      self.registration.showNotification(
+    // Create a promise for showing the notification
+    const showNotificationPromise = self.registration.showNotification(
+      options.title || 'Ojass Notification',
+      notificationOptions
+    ).catch(error => {
+      console.error('Error showing notification:', error);
+      // Fallback to basic notification without image
+      delete notificationOptions.image;
+      return self.registration.showNotification(
         options.title || 'Ojass Notification',
         notificationOptions
-      )
-    );
+      );
+    });
+
+    // Ensure the event.waitUntil gets a promise
+    event.waitUntil(showNotificationPromise);
+
   } catch (error) {
     console.error('Error in push event handler:', error);
-    // Fallback notification
+    // Ensure we still return a promise even if there's an error
     event.waitUntil(
       self.registration.showNotification('Ojass Notification', {
         body: 'New notification from Ojass',
@@ -64,15 +72,46 @@ self.addEventListener('push', function(event) {
   }
 });
 
+// Keep message port open for click events
 self.addEventListener('notificationclick', function(event) {
-  console.log('Notification clicked');
-  event.notification.close();
-  
-  const urlToOpen = event.notification.data?.url || 'https://ojass.org/dashboard/notifications';
+  const clickPromise = new Promise(async (resolve) => {
+    try {
+      console.log('Notification clicked');
+      event.notification.close();
+      
+      const urlToOpen = event.notification.data?.url || 'https://ojass.org/dashboard/notifications';
+      
+      // Focus on existing window if available
+      const windowClients = await clients.matchAll({
+        type: 'window',
+        includeUncontrolled: true
+      });
+      
+      for (let client of windowClients) {
+        if (client.url === urlToOpen && 'focus' in client) {
+          await client.focus();
+          resolve();
+          return;
+        }
+      }
+      
+      // If no existing window, open new one
+      await clients.openWindow(urlToOpen);
+      resolve();
+    } catch (error) {
+      console.error('Error handling notification click:', error);
+      resolve(); // Resolve anyway to ensure the promise completes
+    }
+  });
 
-  event.waitUntil(
-    clients.openWindow(urlToOpen)
-      .then(() => console.log('Opened window successfully'))
-      .catch(error => console.error('Error opening window:', error))
-  );
+  event.waitUntil(clickPromise);
+});
+
+// Handle installation and activation
+self.addEventListener('install', function(event) {
+  event.waitUntil(self.skipWaiting());
+});
+
+self.addEventListener('activate', function(event) {
+  event.waitUntil(self.clients.claim());
 }); 
