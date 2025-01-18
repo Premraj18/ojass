@@ -10,28 +10,21 @@ const NotificationsPage = () => {
   const [loading, setLoading] = useState(true);
   const router = useRouter();
 
-  useEffect(() => {
-    fetchNotifications();
-    // Set up an interval to refresh notifications every 30 seconds
-    const intervalId = setInterval(fetchNotifications, 30000);
-    
-    // Cleanup interval on unmount
-    return () => clearInterval(intervalId);
-  }, []);
-
   const fetchNotifications = async () => {
     try {
-      // Add timestamp to prevent caching
+      setLoading(true);
       const timestamp = new Date().getTime();
       const response = await fetch(`/api/notifications/list?t=${timestamp}`, {
+        method: 'GET',
         headers: {
           'Cache-Control': 'no-cache, no-store, must-revalidate',
           'Pragma': 'no-cache',
-          'Expires': '0',
+          'Expires': '0'
         },
-        cache: 'no-store'
+        cache: 'no-store',
+        next: { revalidate: 0 }
       });
-      
+
       if (!response.ok) {
         throw new Error('Failed to fetch notifications');
       }
@@ -46,6 +39,47 @@ const NotificationsPage = () => {
       setLoading(false);
     }
   };
+
+  // Initial fetch
+  useEffect(() => {
+    fetchNotifications();
+
+    // Set up polling for updates every 10 seconds
+    const intervalId = setInterval(fetchNotifications, 10000);
+
+    // Cleanup on unmount
+    return () => clearInterval(intervalId);
+  }, []);
+
+  // Add event listener for visibility change
+  useEffect(() => {
+    const handleVisibilityChange = () => {
+      if (document.visibilityState === 'visible') {
+        fetchNotifications();
+      }
+    };
+
+    document.addEventListener('visibilitychange', handleVisibilityChange);
+    
+    // Cleanup
+    return () => {
+      document.removeEventListener('visibilitychange', handleVisibilityChange);
+    };
+  }, []);
+
+  // Add event listener for focus
+  useEffect(() => {
+    const handleFocus = () => {
+      fetchNotifications();
+    };
+
+    window.addEventListener('focus', handleFocus);
+    
+    // Cleanup
+    return () => {
+      window.removeEventListener('focus', handleFocus);
+    };
+  }, []);
 
   const formatDate = (dateString) => {
     const date = new Date(dateString);
@@ -104,50 +138,62 @@ const NotificationsPage = () => {
           </button>
         </div>
 
-        {notifications.length === 0 ? (
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 md:p-8 text-center">
-            <p className="text-gray-300 text-base md:text-lg">No notifications sent yet.</p>
+        {/* Loading state */}
+        {loading && (
+          <div className="flex justify-center items-center h-64">
+            <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-500"></div>
           </div>
-        ) : (
-          <div className="space-y-4 md:space-y-6">
-            {notifications.map((notification) => (
-              <motion.div
-                key={notification._id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                className="bg-white/10 backdrop-blur-sm rounded-xl p-4 md:p-6"
-              >
-                <div className="flex flex-col gap-4">
-                  {notification.imageUrl && (
-                    <div className="w-full">
-                      <div className="relative pt-[56.25%]">
-                        <Image
-                          src={notification.imageUrl}
-                          alt="Notification image"
-                          fill
-                          className="rounded-lg object-cover absolute inset-0"
-                          unoptimized={true}
-                          priority={true}
+        )}
+
+        {/* Content */}
+        {!loading && (
+          <>
+            {notifications.length === 0 ? (
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 md:p-8 text-center">
+                <p className="text-gray-300 text-base md:text-lg">No notifications sent yet.</p>
+              </div>
+            ) : (
+              <div className="space-y-4 md:space-y-6">
+                {notifications.map((notification) => (
+                  <motion.div
+                    key={`${notification._id}-${notification.updatedAt}`}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    className="bg-white/10 backdrop-blur-sm rounded-xl p-4 md:p-6"
+                  >
+                    <div className="flex flex-col gap-4">
+                      {notification.imageUrl && (
+                        <div className="w-full">
+                          <div className="relative pt-[56.25%]">
+                            <Image
+                              src={notification.imageUrl}
+                              alt="Notification image"
+                              fill
+                              className="rounded-lg object-cover absolute inset-0"
+                              unoptimized={true}
+                              priority={true}
+                            />
+                          </div>
+                        </div>
+                      )}
+                      <div className="flex-1 space-y-2">
+                        <div className="flex flex-col gap-1">
+                          <h2 className="text-lg md:text-xl font-semibold text-white break-words">{notification.title}</h2>
+                          <span className="text-xs text-gray-400">
+                            {formatDate(notification.createdAt)}
+                          </span>
+                        </div>
+                        <div 
+                          className="text-gray-300 text-sm md:text-base prose prose-invert max-w-none break-words"
+                          dangerouslySetInnerHTML={{ __html: notification.content }}
                         />
                       </div>
                     </div>
-                  )}
-                  <div className="flex-1 space-y-2">
-                    <div className="flex flex-col gap-1">
-                      <h2 className="text-lg md:text-xl font-semibold text-white break-words">{notification.title}</h2>
-                      <span className="text-xs text-gray-400">
-                        {formatDate(notification.createdAt)}
-                      </span>
-                    </div>
-                    <div 
-                      className="text-gray-300 text-sm md:text-base prose prose-invert max-w-none break-words"
-                      dangerouslySetInnerHTML={{ __html: notification.content }}
-                    />
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
+                  </motion.div>
+                ))}
+              </div>
+            )}
+          </>
         )}
       </motion.div>
     </div>

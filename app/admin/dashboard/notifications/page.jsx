@@ -20,18 +20,27 @@ const NotificationsPage = () => {
   const [loading, setLoading] = useState(true);
   const router = useRouter();
 
-  useEffect(() => {
-    fetchRecentNotifications();
-  }, []);
-
   const fetchRecentNotifications = async () => {
     try {
-      const response = await fetch('/api/notifications/list');
-      const data = await response.json();
+      setLoading(true);
+      const timestamp = new Date().getTime();
+      const response = await fetch(`/api/notifications/list?t=${timestamp}`, {
+        method: 'GET',
+        headers: {
+          'Cache-Control': 'no-cache, no-store, must-revalidate',
+          'Pragma': 'no-cache',
+          'Expires': '0'
+        },
+        cache: 'no-store',
+        next: { revalidate: 0 }
+      });
       
-      if (response.ok) {
-        setRecentNotifications(data.notifications.slice(0, 5)); // Show last 5 notifications
+      if (!response.ok) {
+        throw new Error('Failed to fetch notifications');
       }
+
+      const data = await response.json();
+      setRecentNotifications(data.notifications.slice(0, 5)); // Show last 5 notifications
     } catch (error) {
       console.error('Error fetching notifications:', error);
       toast.error('Failed to load recent notifications');
@@ -39,6 +48,42 @@ const NotificationsPage = () => {
       setLoading(false);
     }
   };
+
+  // Initial fetch and polling setup
+  useEffect(() => {
+    fetchRecentNotifications();
+    
+    // Poll for updates every 10 seconds
+    const intervalId = setInterval(fetchRecentNotifications, 10000);
+    
+    return () => clearInterval(intervalId);
+  }, []);
+
+  // Refresh on visibility change
+  useEffect(() => {
+    const handleVisibilityChange = () => {
+      if (document.visibilityState === 'visible') {
+        fetchRecentNotifications();
+      }
+    };
+
+    document.addEventListener('visibilitychange', handleVisibilityChange);
+    return () => {
+      document.removeEventListener('visibilitychange', handleVisibilityChange);
+    };
+  }, []);
+
+  // Refresh on window focus
+  useEffect(() => {
+    const handleFocus = () => {
+      fetchRecentNotifications();
+    };
+
+    window.addEventListener('focus', handleFocus);
+    return () => {
+      window.removeEventListener('focus', handleFocus);
+    };
+  }, []);
 
   const handleImageChange = (e) => {
     const file = e.target.files[0];
@@ -86,6 +131,8 @@ const NotificationsPage = () => {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
+          'Cache-Control': 'no-cache',
+          'Pragma': 'no-cache'
         },
         body: JSON.stringify(payload),
       });
@@ -97,7 +144,9 @@ const NotificationsPage = () => {
       setContent('');
       setImage(null);
       setImagePreview('');
-      fetchRecentNotifications(); // Refresh the list
+      
+      // Force immediate refresh of notifications
+      await fetchRecentNotifications();
     } catch (error) {
       console.error('Error:', error);
       toast.error('Failed to send notification');
@@ -203,7 +252,18 @@ const NotificationsPage = () => {
 
             {/* Recent Notifications */}
             <div className="bg-gray-800 rounded-xl p-4 md:p-6 h-[82vh] flex flex-col">
-              <h2 className="text-xl md:text-2xl font-bold text-white mb-6">Recent Notifications</h2>
+              <div className="flex items-center justify-between mb-6">
+                <h2 className="text-xl md:text-2xl font-bold text-white">Recent Notifications</h2>
+                <button
+                  onClick={fetchRecentNotifications}
+                  className="text-white hover:text-gray-300 transition-colors"
+                  title="Refresh notifications"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99" />
+                  </svg>
+                </button>
+              </div>
               
               {loading ? (
                 <div className="flex justify-center items-center flex-grow">
@@ -217,7 +277,7 @@ const NotificationsPage = () => {
                 <div className="space-y-4 overflow-y-auto flex-grow custom-scrollbar">
                   {recentNotifications.map((notification) => (
                     <div
-                      key={notification._id}
+                      key={`${notification._id}-${notification.updatedAt}`}
                       className="bg-gray-700/50 rounded-lg p-4"
                     >
                       <div className="flex flex-col gap-2">
