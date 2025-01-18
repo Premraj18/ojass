@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { motion } from 'framer-motion';
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
@@ -10,10 +10,10 @@ const NotificationsPage = () => {
   const [loading, setLoading] = useState(true);
   const router = useRouter();
 
-  const fetchNotifications = async () => {
+  const fetchNotifications = useCallback(async () => {
     try {
       setLoading(true);
-      const timestamp = new Date().getTime();
+      const timestamp = Date.now();
       const response = await fetch(`/api/notifications/list?t=${timestamp}`, {
         method: 'GET',
         headers: {
@@ -31,55 +31,19 @@ const NotificationsPage = () => {
 
       const data = await response.json();
       setNotifications(data.notifications);
-      localStorage.setItem('lastSeenNotificationCount', data.notifications.length.toString());
+      
     } catch (error) {
       console.error('Error fetching notifications:', error);
       toast.error('Failed to load notifications');
     } finally {
       setLoading(false);
     }
-  };
+  }, []);
 
-  // Initial fetch
+  // Initial fetch only
   useEffect(() => {
     fetchNotifications();
-
-    // Set up polling for updates every 10 seconds
-    const intervalId = setInterval(fetchNotifications, 10000);
-
-    // Cleanup on unmount
-    return () => clearInterval(intervalId);
-  }, []);
-
-  // Add event listener for visibility change
-  useEffect(() => {
-    const handleVisibilityChange = () => {
-      if (document.visibilityState === 'visible') {
-        fetchNotifications();
-      }
-    };
-
-    document.addEventListener('visibilitychange', handleVisibilityChange);
-    
-    // Cleanup
-    return () => {
-      document.removeEventListener('visibilitychange', handleVisibilityChange);
-    };
-  }, []);
-
-  // Add event listener for focus
-  useEffect(() => {
-    const handleFocus = () => {
-      fetchNotifications();
-    };
-
-    window.addEventListener('focus', handleFocus);
-    
-    // Cleanup
-    return () => {
-      window.removeEventListener('focus', handleFocus);
-    };
-  }, []);
+  }, [fetchNotifications]);
 
   const formatDate = (dateString) => {
     const date = new Date(dateString);
@@ -91,19 +55,6 @@ const NotificationsPage = () => {
       minute: '2-digit'
     });
   };
-
-  if (loading) {
-    return (
-      <div className="min-h-screen pt-16 md:pt-20 bg-[url('/bghero.webp')] bg-fixed bg-center bg-cover">
-        <div className="fixed inset-0 bg-gradient-to-b from-black/30 to-black/90 -z-10" />
-        <div className="container mx-auto px-4 py-6 md:py-8">
-          <div className="flex justify-center items-center h-64">
-            <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-500"></div>
-          </div>
-        </div>
-      </div>
-    );
-  }
 
   return (
     <div className="min-h-screen pt-16 md:pt-20 bg-[url('/bghero.webp')] bg-fixed bg-center bg-cover">
@@ -129,24 +80,21 @@ const NotificationsPage = () => {
           </div>
           <button
             onClick={fetchNotifications}
-            className="text-white hover:text-gray-300 transition-colors"
+            disabled={loading}
+            className="text-white hover:text-gray-300 transition-colors disabled:opacity-50"
             title="Refresh notifications"
           >
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className={`w-6 h-6 ${loading ? 'animate-spin' : ''}`}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99" />
             </svg>
           </button>
         </div>
 
-        {/* Loading state */}
-        {loading && (
+        {loading ? (
           <div className="flex justify-center items-center h-64">
             <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-500"></div>
           </div>
-        )}
-
-        {/* Content */}
-        {!loading && (
+        ) : (
           <>
             {notifications.length === 0 ? (
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 md:p-8 text-center">
@@ -156,7 +104,7 @@ const NotificationsPage = () => {
               <div className="space-y-4 md:space-y-6">
                 {notifications.map((notification) => (
                   <motion.div
-                    key={`${notification._id}-${notification.updatedAt}`}
+                    key={notification._id}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     className="bg-white/10 backdrop-blur-sm rounded-xl p-4 md:p-6"
