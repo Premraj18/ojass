@@ -17,11 +17,11 @@ self.addEventListener('push', function(event) {
       icon: iconUrl,
       badge: iconUrl,
       vibrate: [200, 100, 200],
-      tag: 'ojass-notification',
+      tag: Date.now().toString(),
       renotify: true,
       requireInteraction: true,
       data: {
-        url: options.data?.url || 'https://ojass.org/dashboard/notifications',
+        url: options.data?.url || `https://ojass.org/dashboard/notifications?t=${Date.now()}`,
         timestamp: Date.now()
       }
     };
@@ -33,8 +33,10 @@ self.addEventListener('push', function(event) {
         
         // Only accept HTTPS URLs
         if (options.image.startsWith('https://')) {
-          notificationOptions.image = options.image;
-          console.log('Added image to notification:', options.image);
+          // Add cache buster to image URL
+          const imageCacheBuster = options.image.includes('?') ? '&' : '?';
+          notificationOptions.image = `${options.image}${imageCacheBuster}t=${Date.now()}`;
+          console.log('Added image to notification:', notificationOptions.image);
         } else {
           console.log('Skipping non-HTTPS image URL');
         }
@@ -43,13 +45,11 @@ self.addEventListener('push', function(event) {
       }
     }
 
-    // Create a promise for showing the notification
     const showNotificationPromise = self.registration.showNotification(
       options.title || 'Ojass Notification',
       notificationOptions
     ).catch(error => {
       console.error('Error showing notification:', error);
-      // Fallback to basic notification without image
       delete notificationOptions.image;
       return self.registration.showNotification(
         options.title || 'Ojass Notification',
@@ -57,30 +57,43 @@ self.addEventListener('push', function(event) {
       );
     });
 
-    // Ensure the event.waitUntil gets a promise
     event.waitUntil(showNotificationPromise);
 
   } catch (error) {
     console.error('Error in push event handler:', error);
-    // Ensure we still return a promise even if there's an error
     event.waitUntil(
       self.registration.showNotification('Ojass Notification', {
         body: 'New notification from Ojass',
-        icon: new URL('/ojasslogo.webp', self.registration.scope).href
+        icon: new URL('/ojasslogo.webp', self.registration.scope).href,
+        data: {
+          url: `https://ojass.org/dashboard/notifications?t=${Date.now()}`
+        }
       })
     );
   }
 });
 
-// Keep message port open for click events
 self.addEventListener('notificationclick', function(event) {
   const clickPromise = new Promise(async (resolve) => {
     try {
       console.log('Notification clicked');
       event.notification.close();
       
-      const urlToOpen = event.notification.data?.url || 'https://ojass.org/dashboard/notifications';
+      // Add timestamp to URL to prevent caching
+      const baseUrl = event.notification.data?.url || 'https://ojass.org/dashboard/notifications';
+      const urlToOpen = baseUrl.includes('?') 
+        ? `${baseUrl}&t=${Date.now()}` 
+        : `${baseUrl}?t=${Date.now()}`;
       
+      // Clear any existing cache for the notifications page
+      if ('caches' in self) {
+        try {
+          await caches.delete('notification-cache');
+        } catch (err) {
+          console.error('Error clearing cache:', err);
+        }
+      }
+
       // Focus on existing window if available
       const windowClients = await clients.matchAll({
         type: 'window',
@@ -88,8 +101,10 @@ self.addEventListener('notificationclick', function(event) {
       });
       
       for (let client of windowClients) {
-        if (client.url === urlToOpen && 'focus' in client) {
+        if (client.url.includes(baseUrl) && 'focus' in client) {
           await client.focus();
+          // Reload the page to get fresh data
+          await client.navigate(urlToOpen);
           resolve();
           return;
         }
@@ -100,18 +115,27 @@ self.addEventListener('notificationclick', function(event) {
       resolve();
     } catch (error) {
       console.error('Error handling notification click:', error);
-      resolve(); // Resolve anyway to ensure the promise completes
+      resolve();
     }
   });
 
   event.waitUntil(clickPromise);
 });
 
-// Handle installation and activation
 self.addEventListener('install', function(event) {
   event.waitUntil(self.skipWaiting());
 });
 
 self.addEventListener('activate', function(event) {
-  event.waitUntil(self.clients.claim());
+  // Clear any existing caches
+  event.waitUntil(
+    Promise.all([
+      self.clients.claim(),
+      caches.keys().then(cacheNames => {
+        return Promise.all(
+          cacheNames.map(cacheName => caches.delete(cacheName))
+        );
+      })
+    ])
+  );
 }); 
