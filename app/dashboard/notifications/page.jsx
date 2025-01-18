@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { motion } from 'framer-motion';
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
@@ -10,10 +10,10 @@ const NotificationsPage = () => {
   const [loading, setLoading] = useState(true);
   const router = useRouter();
 
-  const fetchNotifications = async () => {
+  const fetchNotifications = useCallback(async () => {
     try {
       setLoading(true);
-      const timestamp = new Date().getTime();
+      const timestamp = Date.now();
       const response = await fetch(`/api/notifications/list?t=${timestamp}`, {
         method: 'GET',
         headers: {
@@ -30,56 +30,58 @@ const NotificationsPage = () => {
       }
 
       const data = await response.json();
-      setNotifications(data.notifications);
-      localStorage.setItem('lastSeenNotificationCount', data.notifications.length.toString());
+      
+      // Force React to see this as new data
+      setNotifications(prevNotifications => {
+        const newNotifications = data.notifications;
+        if (JSON.stringify(prevNotifications) !== JSON.stringify(newNotifications)) {
+          return newNotifications;
+        }
+        return prevNotifications;
+      });
+      
     } catch (error) {
       console.error('Error fetching notifications:', error);
       toast.error('Failed to load notifications');
     } finally {
       setLoading(false);
     }
-  };
+  }, []);
 
   // Initial fetch
   useEffect(() => {
     fetchNotifications();
+  }, [fetchNotifications]);
 
-    // Set up polling for updates every 10 seconds
-    const intervalId = setInterval(fetchNotifications, 10000);
+  // Polling for updates
+  // useEffect(() => {
+  //   const intervalId = setInterval(fetchNotifications, 5000); // Poll every 5 seconds
+  //   return () => clearInterval(intervalId);
+  // }, [fetchNotifications]);
 
-    // Cleanup on unmount
-    return () => clearInterval(intervalId);
-  }, []);
-
-  // Add event listener for visibility change
+  // Refresh on visibility change
   useEffect(() => {
     const handleVisibilityChange = () => {
       if (document.visibilityState === 'visible') {
         fetchNotifications();
       }
     };
-
     document.addEventListener('visibilitychange', handleVisibilityChange);
-    
-    // Cleanup
-    return () => {
-      document.removeEventListener('visibilitychange', handleVisibilityChange);
-    };
-  }, []);
+    return () => document.removeEventListener('visibilitychange', handleVisibilityChange);
+  }, [fetchNotifications]);
 
-  // Add event listener for focus
+  // Refresh on focus
   useEffect(() => {
-    const handleFocus = () => {
-      fetchNotifications();
-    };
-
+    const handleFocus = () => fetchNotifications();
     window.addEventListener('focus', handleFocus);
-    
-    // Cleanup
-    return () => {
-      window.removeEventListener('focus', handleFocus);
-    };
-  }, []);
+    return () => window.removeEventListener('focus', handleFocus);
+  }, [fetchNotifications]);
+
+  // Force refresh when route changes
+  useEffect(() => {
+    router.events?.on('routeChangeComplete', fetchNotifications);
+    return () => router.events?.off('routeChangeComplete', fetchNotifications);
+  }, [router.events, fetchNotifications]);
 
   const formatDate = (dateString) => {
     const date = new Date(dateString);
@@ -129,10 +131,11 @@ const NotificationsPage = () => {
           </div>
           <button
             onClick={fetchNotifications}
-            className="text-white hover:text-gray-300 transition-colors"
+            disabled={loading}
+            className="text-white hover:text-gray-300 transition-colors disabled:opacity-50"
             title="Refresh notifications"
           >
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className={`w-6 h-6 ${loading ? 'animate-spin' : ''}`}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99" />
             </svg>
           </button>
