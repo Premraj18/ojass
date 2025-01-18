@@ -42,7 +42,9 @@ export default function Home() {
 
   const initializeNotifications = async () => {
     try {
+      console.log('Initializing notifications...');
       const registration = await registerServiceWorker();
+      console.log('Service Worker registered successfully');
       await subscribeToPushNotifications(registration);
       toast.success('Notifications enabled successfully!');
     } catch (error) {
@@ -53,48 +55,47 @@ export default function Home() {
 
   useEffect(() => {
     const checkAndRequestNotifications = async () => {
-      // Check if notifications are supported
+      console.log('Checking notification support...');
+      
+      if (!window.isSecureContext) {
+        console.log('Not in secure context - notifications require HTTPS');
+        return;
+      }
+
       if (!('Notification' in window)) {
         console.log('Notifications not supported');
         return;
       }
 
-      // Check if service workers are supported
       if (!('serviceWorker' in navigator)) {
         console.log('Service Workers not supported');
         return;
       }
 
-      // Get the current permission state
       const permission = Notification.permission;
+      console.log('Current notification permission:', permission);
 
-      // If permission is already granted, initialize
       if (permission === 'granted') {
         await initializeNotifications();
         return;
       }
 
-      // If permission is denied, don't show modal
       if (permission === 'denied') {
         return;
       }
 
-      // Check if user has visited before
       const hasVisited = localStorage.getItem('hasVisitedBefore');
       
-      // If first visit, just mark as visited
       if (!hasVisited) {
         localStorage.setItem('hasVisitedBefore', 'true');
         return;
       }
 
-      // If it's not the first visit and permission is not granted/denied, show modal
       setTimeout(() => {
         setShowModal(true);
-      }, 3000); // Wait 3 seconds before showing the modal
+      }, 3000);
     };
 
-    // Run the check
     checkAndRequestNotifications();
   }, []);
 
