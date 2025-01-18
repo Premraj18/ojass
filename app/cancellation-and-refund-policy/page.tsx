@@ -3,10 +3,10 @@ import React from 'react';
 const CancellationAndRefundPolicy = () => {
   return (
     <div className="max-w-4xl mx-auto px-4 py-8 mt-20">
-      <h1 className="text-3xl font-bold mb-8 text-center">OJASS Cancellation and Refund Policy</h1>
+      <h1 className="text-3xl font-bold mb-8 text-center">OJASS 2025 Cancellation and Refund Policy by Digicraft</h1>
       
       <p className="mb-8">
-        The following outlines the terms and conditions governing ticket cancellations and refunds for OJASS, the official technical fest of NIT Jamshedpur. By purchasing a ticket for OJASS, you agree to these policies.
+        The following outlines the terms and conditions governing ticket cancellations and refunds for OJASS 2025, the official technical fest of NIT Jamshedpur, operated by Digicraft. By purchasing a ticket for OJASS 2025, you agree to these policies.
       </p>
 
       <div className="space-y-8">
@@ -65,7 +65,7 @@ const CancellationAndRefundPolicy = () => {
               <h3 className="text-lg font-medium mb-2">Cancellation or Rescheduling:</h3>
               <ul className="list-disc pl-6 space-y-2">
                 <li>If an event is canceled or rescheduled, reasonable efforts will be made to notify ticket holders.</li>
-                <li>Notifications will be sent using the contact details provided during registration. However, we do not guarantee prior notification before the event date.</li>
+                <li>Notifications will be sent using the contact details provided during registration. However, Digicraft does not guarantee prior notification before the event date.</li>
               </ul>
             </div>
             <div>
@@ -78,7 +78,7 @@ const CancellationAndRefundPolicy = () => {
             <div>
               <h3 className="text-lg font-medium mb-2">Responsibility:</h3>
               <ul className="list-disc pl-6 space-y-2">
-                <li>OJASS organizers are not liable for any losses or damages arising from event cancellations, delays, or changes.</li>
+                <li>Digicraft and OJASS organizers are not liable for any losses or damages arising from event cancellations, delays, or changes.</li>
               </ul>
             </div>
           </div>
@@ -87,7 +87,7 @@ const CancellationAndRefundPolicy = () => {
         <section>
           <h2 className="text-2xl font-semibold mb-4">6. Security and Conduct</h2>
           <ol className="list-decimal pl-6 space-y-2">
-            <li>Tickets are issued subject to the venue&apos;s and OJASS organizer&apos;s rules and regulations.</li>
+            <li>Tickets are issued subject to the venue&apos;s, Digicraft&apos;s, and OJASS organizer&apos;s rules and regulations.</li>
             <li>Breach of these rules or engaging in unacceptable behaviour (e.g., causing nuisance, damage, or injury) may result in ejection from the venue without a refund.</li>
             <li>Security searches may be conducted at the venue to ensure the safety of attendees.</li>
             <li>Lost or stolen tickets will not be replaced, and the organizers bear no responsibility for such incidents.</li>
@@ -107,14 +107,14 @@ const CancellationAndRefundPolicy = () => {
           <ol className="list-decimal pl-6 space-y-2">
             <li>By purchasing a ticket, you consent to your data being used for event-related communications.</li>
             <li>If external services like Zapier are used for ticket processing, your data may be shared with such third parties.</li>
-            <li>OJASS organizers are not liable for how third-party services handle your data, and by agreeing to OJASS terms, you also agree to the respective terms of such services.</li>
+            <li>Digicraft and OJASS organizers are not liable for how third-party services handle your data, and by agreeing to OJASS terms, you also agree to the respective terms of such services.</li>
           </ol>
         </section>
 
         <section>
           <h2 className="text-2xl font-semibold mb-4">9. Loss of Personal Property</h2>
           <p>
-            The venue, OJASS organizers, and associated third parties accept no responsibility for the loss or theft of personal belongings during the event.
+            The venue, Digicraft, OJASS organizers, and associated third parties accept no responsibility for the loss or theft of personal belongings during the event.
           </p>
         </section>
 

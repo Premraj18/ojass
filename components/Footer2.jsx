@@ -204,7 +204,10 @@ export default function Footer2() {
                             <p>Designed & Developed By: <span className="text-red-500">Prem Raj, Aditya Vikram & Ayush Singh</span></p>
                         </div>
                         <div className="text-gray-300">
-                            <p>Visitors: <span className="text-red-500">{45362 + refreshCount}</span></p>
+                            <p>Visitors: <span className="text-red-500">
+                                {55362 + refreshCount}
+                                {/* 50K+ */}
+                            </span></p>
                         </div>
                     </div>
                     <div className="mt-4 text-center text-gray-300 text-sm">

@@ -5,10 +5,10 @@ import React from 'react';
 const TermsAndConditions = () => {
   return (
     <div className="max-w-4xl mx-auto px-4 py-8 mt-20">
-      <h1 className="text-3xl font-bold mb-8 text-center">OJASS Terms and Conditions</h1>
+      <h1 className="text-3xl font-bold mb-8 text-center">OJASS 2025 Terms and Conditions by Digicraft</h1>
       
       <p className="mb-8">
-        These Terms and Conditions outline the rules and guidelines for participation, access, and conduct during OJASS, the official technical fest of NIT Jamshedpur. By using our website, registering for events, or attending the fest, you agree to abide by the terms set forth below. Please read them carefully before proceeding.
+        These Terms and Conditions outline the rules and guidelines for participation, access, and conduct during OJASS 2025, the official technical fest of NIT Jamshedpur, operated by Digicraft. By using our website, registering for events, or attending the fest, you agree to abide by the terms set forth below. Please read them carefully before proceeding.
       </p>
 
       <div className="space-y-8">
@@ -18,7 +18,7 @@ const TermsAndConditions = () => {
             <li>OJASS Services: Refers to the activities, events, workshops, exhibitions, and other initiatives organized during the fest, whether online or offline.</li>
             <li>Visitor: Any individual attending OJASS events without registering for competitions or activities.</li>
             <li>Participant: Any individual registered to compete or participate in OJASS activities, events, or workshops.</li>
-            <li>Organizer: Refers to the OJASS team, including coordinators, volunteers, and staff managing the fest.</li>
+            <li>Organizer: Refers to Digicraft and the OJASS team, including coordinators, volunteers, and staff managing the fest.</li>
           </ul>
         </section>
 
@@ -57,7 +57,7 @@ const TermsAndConditions = () => {
           <h2 className="text-2xl font-semibold mb-4">5. Intellectual Property</h2>
           <p className="text-gray-700 mb-4">
             The Service and its original content, features, and functionality are owned by 
-            [Company Name] and are protected by international copyright, trademark, patent, 
+            Digicraft and are protected by international copyright, trademark, patent, 
             trade secret, and other intellectual property laws.
           </p>
         </section>
@@ -73,7 +73,7 @@ const TermsAndConditions = () => {
         <section>
           <h2 className="text-2xl font-semibold mb-4">7. Limitation of Liability</h2>
           <p className="text-gray-700 mb-4">
-            In no event shall [Company Name] be liable for any indirect, incidental, special, 
+            In no event shall Digicraft be liable for any indirect, incidental, special, 
             consequential, or punitive damages arising out of or relating to your use of the Service.
           </p>
         </section>
@@ -81,7 +81,7 @@ const TermsAndConditions = () => {
         <section>
           <h2 className="text-2xl font-semibold mb-4">8. Changes to Terms</h2>
           <p className="text-gray-700 mb-4">
-            We reserve the right to modify or replace these Terms at any time. We will provide 
+            Digicraft reserves the right to modify or replace these Terms at any time. We will provide 
             notice of any changes by posting the new Terms on this page.
           </p>
         </section>

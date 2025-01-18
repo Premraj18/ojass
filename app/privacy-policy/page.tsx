@@ -3,10 +3,10 @@ import React from 'react';
 const PrivacyPolicy = () => {
   return (
     <div className="max-w-4xl mx-auto px-4 py-8 mt-20">
-      <h1 className="text-3xl font-bold mb-8 text-center">Privacy Policy for OJASS 2025</h1>
+      <h1 className="text-3xl font-bold mb-8 text-center">Privacy Policy for OJASS 2025 by Digicraft</h1>
       
       <p className="mb-8">
-        Thank you for visiting the official website of OJASS 2025. This Privacy Policy is designed to help you understand how we collect, use, disclose, and safeguard your personal information. By accessing or using our website, you consent to the practices described in this Privacy Policy.
+        Thank you for visiting the official website of OJASS 2025, operated by Digicraft. This Privacy Policy is designed to help you understand how we collect, use, disclose, and safeguard your personal information. By accessing or using our website, you consent to the practices described in this Privacy Policy.
       </p>
 
       <section className="mb-8">
@@ -73,7 +73,7 @@ const PrivacyPolicy = () => {
       <section className="mb-8">
         <h2 className="text-xl font-semibold mb-4">7. Changes to this Privacy Policy</h2>
         <p>
-          OJASS 2025 reserves the right to modify or update this Privacy Policy at any time. Changes will take effect immediately upon posting. We encourage you to review this policy periodically for updates.
+          Digicraft reserves the right to modify or update this Privacy Policy at any time. Changes will take effect immediately upon posting. We encourage you to review this policy periodically for updates.
         </p>
       </section>
 
@@ -88,7 +88,7 @@ const PrivacyPolicy = () => {
       </section>
 
       <p className="mt-8 text-center font-medium">
-        By using the OJASS 2025 website, you agree to the terms outlined in this Privacy Policy.
+        By using the OJASS 2025 website operated by Digicraft, you agree to the terms outlined in this Privacy Policy.
       </p>
     </div>
   );
