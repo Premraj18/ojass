@@ -60,13 +60,13 @@ const EventsPage = () => {
     };
 
     checkAuth();
-
+    refreshUserData();
     // Set up polling for user data updates
-    const pollInterval = setInterval(refreshUserData, 5000); // Poll every 5 seconds
+    // const pollInterval = setInterval(refreshUserData, 5000); // Poll every 5 seconds
 
-    return () => {
-      clearInterval(pollInterval);
-    };
+    // return () => {
+    //   clearInterval(pollInterval);
+    // };
   }, [router, refreshUserData]);
 
   const handleView = (event) => {
