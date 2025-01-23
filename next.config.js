@@ -15,6 +15,11 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'res.cloudinary.com', // Add Cloudinary as a trusted source
       },
+      {
+        protocol: 'https',
+        hostname: 'www.dropbox.com',
+        pathname: '/scl/fi/**',
+      },
     ]
     },
 };
