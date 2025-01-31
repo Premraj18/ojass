@@ -60,13 +60,13 @@ const EventsPage = () => {
     };
 
     checkAuth();
-
+    refreshUserData();
     // Set up polling for user data updates
-    const pollInterval = setInterval(refreshUserData, 5000); // Poll every 5 seconds
+    // const pollInterval = setInterval(refreshUserData, 5000); // Poll every 5 seconds
 
-    return () => {
-      clearInterval(pollInterval);
-    };
+    // return () => {
+    //   clearInterval(pollInterval);
+    // };
   }, [router, refreshUserData]);
 
   const handleView = (event) => {
@@ -88,7 +88,7 @@ const EventsPage = () => {
     }
 
     // For team events
-    if (parseInt(event.teamSizeMin) > 1) {
+    if (parseInt(event.teamSizeMax) > 1) {
       setSelectedEvent(event);
       return;
     }
@@ -152,7 +152,7 @@ const EventsPage = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {categoryEvents.map((event) => {
                 const isRegistered = user.events?.includes(event.id);
-                const isTeamEvent = parseInt(event.teamSizeMin) > 1;
+                const isTeamEvent = parseInt(event.teamSizeMax) > 1;
                 const eventDetails = user.eventDetails?.find(e => e.eventId === event.id);
                 const isRegistering = registeringEventId === event.id;
                 

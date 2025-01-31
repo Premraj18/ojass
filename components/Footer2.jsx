@@ -81,7 +81,7 @@ export default function Footer2() {
                         <p className="mt-4 max-w-md text-gray-300 text-sm">
                             Ojass, NIT Jamshedpur's annual national-level Techno-Management Festival,
                             stands as the second largest event of its kind in Eastern India. With a
-                            staggering turnout of over 8000+ footfall including students, professionals,
+                            staggering turnout of over 15000+ footfall including students, professionals,
                             educators, and artists from top colleges across the nation.
                         </p>
 
@@ -204,7 +204,10 @@ export default function Footer2() {
                             <p>Designed & Developed By: <span className="text-red-500">Prem Raj, Aditya Vikram & Ayush Singh</span></p>
                         </div>
                         <div className="text-gray-300">
-                            <p>Visitors: <span className="text-red-500">{45362 + refreshCount}</span></p>
+                            <p>Visitors: <span className="text-red-500">
+                                {55362 + refreshCount}
+                                {/* 50K+ */}
+                            </span></p>
                         </div>
                     </div>
                     <div className="mt-4 text-center text-gray-300 text-sm">

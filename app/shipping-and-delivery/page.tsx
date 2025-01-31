@@ -3,9 +3,15 @@ import React from 'react';
 const ShippingAndDelivery = () => {
   return (
     <div className="max-w-4xl mx-auto px-4 py-8 mt-20">
-      <h1 className="text-3xl font-bold mb-8 text-center">Shipping and Delivery Policy for OJASS</h1>
+      <h1 className="text-3xl font-bold mb-8 text-center">Shipping and Delivery Policy for OJASS 2025 by Digicraft</h1>
 
       <div className="space-y-8">
+        <section>
+          <p className="mb-6">
+            Welcome to OJASS 2025's shipping and delivery policy, operated by Digicraft. This document outlines our procedures for ticket distribution and delivery methods.
+          </p>
+        </section>
+
         <section>
           <h2 className="text-2xl font-semibold mb-4">1. Ticket Distribution</h2>
           <ul className="list-disc pl-6 space-y-2">
@@ -42,7 +48,7 @@ const ShippingAndDelivery = () => {
 
         <section className="mt-12">
           <p className="text-center font-medium">
-            By purchasing a ticket, you agree to these policies as set by the OJASS organizers.
+            By purchasing a ticket, you agree to these policies as set by Digicraft for OJASS 2025.
           </p>
         </section>
 
