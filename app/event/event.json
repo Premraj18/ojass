@@ -1005,13 +1005,15 @@
             "description": "Robo War is an adrenaline-pumping robotics competition where participants design and build robots to battle it out in a specially designed arena. The goal is to showcase engineering prowess, strategy, and innovation as robots clash in intense, high-energy combat until one emerges victorious.",
             "prizes": {
                 "total": "₹70,000",
+                "first": "15kg - ₹70,000",
+                "second": "8kg - ₹40,000",
+                "third": "15kg - ₹10,000",
                 "participants": "Certificates to all Participants"
             },
             "details": [
                 "There will be no restrictions on the dimensions of the bot(s). ",
-                "The weight of the machine should not exceed 15 Kg (33.07 Lbs.), which includes the weight of any pneumatic source/tank. All pneumatic tanks/ sources and batteries should be on board. Only the weight of the remote controller will not be counted.",
-                "Robots with pneumatic or hydraulic mechanisms or electric lifters are allowed. ",
-                "Only active weapon bots are allowed."
+                "The weight of the machine should not exceed 15 Kg (33.07 Lbs.), 8 kg, 3kg which includes the weight of any pneumatic source/tank. All pneumatic tanks/ sources and batteries should be on board. Only the weight of the remote controller will not be counted.",
+                "Robots with pneumatic or hydraulic mechanisms or electric lifters are allowed. "
             ],
             "rules": [
                 "Remote control systems must comply with wireless frequency standards.",

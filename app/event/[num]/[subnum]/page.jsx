@@ -42,6 +42,8 @@ const Page = () => {
 
   if (loading) return null;
 
+  // console.log(dataeve)
+
   const isRegistered = user?.events?.includes(dataeve.id);
   const isTeamEvent = parseInt(dataeve.teamSizeMin) > 1;
 
@@ -118,7 +120,14 @@ const Page = () => {
           <div className='flex flex-col justify-center items-center lg:mt-16 gap-5 px-3'>
             <h2 className='text-4xl font-semibold'>Prize Worth</h2>
             <div className='flex flex-col justify-center items-center gap-2 font-medium text-lg bg-white/15 p-6 rounded-lg md:w-96 w-80'>
-              <p>Total : {dataeve.prizes.total} </p>
+              {dataeve.name === "KURUSHETRA (ROBO WAR)" ? 
+              <div>
+                <p>{dataeve.prizes.first} </p>
+                <p>{dataeve.prizes.second} </p>
+                <p>{dataeve.prizes.third} </p>
+              </div>
+                : <p>Total : {dataeve.prizes.total} </p>
+              }
               {/* <p>Winner : {dataeve.prizes.winner}</p>
               <p>First Runner Up : {dataeve.prizes.first_runner_up}</p>
               <p>Second Runner Up : {dataeve.prizes.second_runner_up}</p> */}
