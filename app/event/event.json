@@ -779,6 +779,47 @@
                 "name": "Anurag Das",
                 "Phone": "8340671871"
             }
+        },
+
+        {
+            "id": "6-4",
+            "name": "FREE FIRE",
+            "teamSizeMin" : "4",
+            "teamSizeMax" : "4",
+            "img": "/event/65.webp",
+            "rulebookurl": "https://docs.google.com/document/d/1zxM5n-b8_szwlCBv2Whp57NFVA47dXV8/",
+            "redirect": "event/6/4",
+            "description": "The FF Tournament is an exhilarating e-sports event organized as a part of OJASS’25, the annual techno-management fest of NIT Jamshedpur. This competition invites participants to showcase their strategic, tactical, and gaming skills in an engaging battle royale format.",
+            "prizes": {
+                "total": "₹15,000",
+                "participationCertificates": "Certificates to all Participants."
+            },
+            "details": [
+                "Stage 1: Qualifiers :",
+                "Duration: 30 minutes per match  ",
+                "Details:  ",
+                "Map: BARMUDA (Classic Mode).  ",
+                "Format: Squad mode (4 players per team).  ",
+                "Selection Criteria: Based on cumulative points from kills, placement, and other performance metrics, the top teams will advance to the finals.  ",
+                "Number of advancing teams will depend on total participation.  ",
+                "Stage 2: Semi Finals :",
+                "Duration: 30 minutes per match",
+                "Details:",
+                "Multiple matches across different maps (BARMUDA, ALPINE etc).  ",
+                "Scoring based on kills, placement, and bonus objectives (if applicable).  ",
+                "The team with the highest cumulative score across all matches will be declared the winner."
+            ],
+            "rules": [
+                "Devices: Players must use their own devices (smartphones/tablets).",
+                "Emulators: Use of emulators is strictly prohibited.",  
+                "Network: Players are responsible for their internet connectivity; organizers will not be liable for disconnections. However, wi-fi would be available in the venue.",
+                "Game Settings: All in-game settings will be default unless specified otherwise."
+            ],
+            "event_head": {
+                "photoPlaceholder": "HERE WE WILL HAVE A PHOTO OF EVENT HEAD",
+                "name": "Pushkar Thakur",
+                "Phone": "9693499555"
+            }
         }
     ],
 
