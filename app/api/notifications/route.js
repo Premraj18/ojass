@@ -13,11 +13,19 @@ cloudinary.config({
 });
 
 // Configure web-push with your VAPID keys
-webpush.setVapidDetails(
-  'mailto:digicraft.one@gmail.com',
-  process.env.NEXT_PUBLIC_VAPID_PUBLIC_KEY,
+if (
+  process.env.NEXT_PUBLIC_VAPID_PUBLIC_KEY &&
   process.env.VAPID_PRIVATE_KEY
-);
+) {
+  webpush.setVapidDetails(
+    'mailto:digicraft.one@gmail.com',
+    process.env.NEXT_PUBLIC_VAPID_PUBLIC_KEY,
+    process.env.VAPID_PRIVATE_KEY
+  );
+} else {
+  console.warn('VAPID keys not set. Push notifications will not work.');
+}
+
 
 function stripHtml(html) {
   return html.replace(/<[^>]*>/g, '').replace(/\s+/g, ' ').trim();
