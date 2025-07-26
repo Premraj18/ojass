@@ -117,7 +117,7 @@ const Hero = () => {
                         <motion.p className='md:text-2xl text-gray-300 uppercase pt-3' variants={cosmosvarients}>14-16 February 2025</motion.p>
                         <Link href='signup' className='z-20'>
                             <motion.button className='z-10 w-40 mt-4 py-2 border bg-white/15 rounded-full hover:bg-white/20 transition-colors' variants={cosmosvarients}>
-                                Register 
+                                Register Now
                             </motion.button>
                         </Link>
                     </motion.div>
