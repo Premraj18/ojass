@@ -54,9 +54,4 @@ We welcome contributions from developers, designers, and organizers!
 
 ---
 
-## 📜 License
-This project is licensed under the [MIT License](LICENSE).  
-
----
-
 ### Made with ❤️ by Team Ojass, NIT Jamshedpur
