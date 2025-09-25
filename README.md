@@ -1,36 +1,62 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Ojass - Techno-Management Fest of NIT Jamshedpur 🚀
 
-## Getting Started
+Ojass is the annual **Techno-Management Fest of NIT Jamshedpur**, where innovation meets technology and management skills.  
+It brings together brilliant minds from across the country to compete, collaborate, and create solutions that shape the future.  
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## ✨ About Ojass
+- **Founded by NIT Jamshedpur students** as a platform to showcase technical and managerial talent.  
+- Features **technical events, workshops, guest lectures, and cultural showcases**.  
+- Encourages students to go beyond academics and build real-world problem-solving skills.  
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🎯 Objectives
+- Promote **innovation and entrepreneurship** among students.  
+- Provide a platform for **knowledge sharing** through workshops and guest sessions.  
+- Foster collaboration across disciplines with **competitions and hackathons**.  
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+---
 
-## Learn More
+## 🏆 Events
+Ojass hosts events across multiple domains:
+- ⚡ **Robotics** – Robo Soccer, Robo Race, Line Follower  
+- 💻 **Coding & Development** – Hackathons, CP Contests, Web Dev Competitions  
+- 📊 **Management & Business** – Case Studies, B-Plan Competitions, Quizzes  
+- 🛠 **Core Engineering** – Bridge Building, CAD Modeling, Circuit Design  
+- 🎨 **Creative & Fun Events** – Design, Arts, Gaming  
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🔗 Connect With Us
+- 🌐 [Official Website](https://www.ojass.org)  
+- 📸 [Instagram](https://instagram.com/ojass.nitjsr)  
+- 💼 [LinkedIn](https://linkedin.com/company/ojassnitjsr)  
+- 🐦 [Twitter](https://twitter.com/ojassnitjsr)  
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 📌 Repository Information
+This repository contains resources related to Ojass, including:
+- Website Source Code  
+- Event Information & Registrations  
+- Contribution Guidelines  
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## 🤝 Contributing
+We welcome contributions from developers, designers, and organizers!  
+- Fork the repo  
+- Create a new branch (`feature/my-feature`)  
+- Commit your changes  
+- Open a Pull Request 🚀  
+
+---
+
+## 📜 License
+This project is licensed under the [MIT License](LICENSE).  
+
+---
+
+### Made with ❤️ by Team Ojass, NIT Jamshedpur
